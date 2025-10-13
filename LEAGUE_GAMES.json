@@ -1,0 +1,1257 @@
+{
+    "TTL": 300,
+    "games": [
+        {
+            "id": "eeeabci",
+            "stage_round_name": "Fecha 2",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "EEUU Sub20",
+                    "short_name": "EEUU Sub20",
+                    "url_name": "usa-u20",
+                    "id": "bcffa",
+                    "country_id": "bi",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#0A3161",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Francia Sub20",
+                    "short_name": "Francia Sub20",
+                    "url_name": "france-u20",
+                    "id": "ihea",
+                    "country_id": "f",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#1B29EE",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "usa-u20-vs-france-u20",
+            "scores": [
+                3,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "02-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Jueves 2 de Octubre"
+        },
+        {
+            "id": "eeecgda",
+            "stage_round_name": "Fecha 2",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Colombia Sub20",
+                    "short_name": "Colombia Sub20",
+                    "url_name": "colombia-u20",
+                    "id": "baafg",
+                    "country_id": "baj",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFCD00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Noruega Sub20",
+                    "short_name": "Noruega Sub20",
+                    "url_name": "norway-u20",
+                    "id": "fgcjb",
+                    "country_id": "ch",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "colombia-u20-vs-norway-u20",
+            "scores": [
+                0,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "02-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Jueves 2 de Octubre"
+        },
+        {
+            "id": "eeecgch",
+            "stage_round_name": "Fecha 2",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Nigeria Sub20",
+                    "short_name": "Nigeria Sub20",
+                    "url_name": "nigeria-u20",
+                    "id": "bcffc",
+                    "country_id": "id",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Arabia Saudita Sub20",
+                    "short_name": "Arabia Saudita Sub20",
+                    "url_name": "saudi-arabia-u20",
+                    "id": "beabh",
+                    "country_id": "bcc",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#27AF49",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "nigeria-u20-vs-saudi-arabia-u20",
+            "scores": [
+                3,
+                2
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "02-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Jueves 2 de Octubre"
+        },
+        {
+            "id": "eeecgcj",
+            "stage_round_name": "Fecha 2",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Sudáfrica Sub20",
+                    "short_name": "Sudáfrica Sub20",
+                    "url_name": "south-africa-u20",
+                    "id": "gaed",
+                    "country_id": "bde",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#389850",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Nueva Caledonia Sub20",
+                    "short_name": "Nueva Caledonia Sub20",
+                    "url_name": "new-caledonia-u20",
+                    "id": "iijbb",
+                    "country_id": "cgg",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "south-africa-u20-vs-new-caledonia-u20",
+            "scores": [
+                5,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "02-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Jueves 2 de Octubre"
+        },
+        {
+            "id": "eeecgcg",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Ucrania Sub20",
+                    "short_name": "Ucrania Sub20",
+                    "url_name": "ukraine-u20",
+                    "id": "cejec",
+                    "country_id": "cg",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Paraguay Sub20",
+                    "short_name": "Paraguay Sub20",
+                    "url_name": "paraguay-u20",
+                    "id": "gcaa",
+                    "country_id": "bai",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#D52B1E",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "ukraine-u20-vs-paraguay-u20",
+            "scores": [
+                2,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "03-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Viernes 3 de Octubre"
+        },
+        {
+            "id": "eeecgci",
+            "stage_round_name": "Fecha 3",
+            "winner": 2,
+            "teams": [
+                {
+                    "name": "Panamá Sub20",
+                    "short_name": "Panamá Sub20",
+                    "url_name": "panama-u20",
+                    "id": "cdhhf",
+                    "country_id": "beg",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#DA121A",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Corea del Sur Sub20",
+                    "short_name": "Corea del Sur Sub20",
+                    "url_name": "south-korea-u20",
+                    "id": "bcfff",
+                    "country_id": "ig",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "panama-u20-vs-south-korea-u20",
+            "scores": [
+                1,
+                2
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "03-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Viernes 3 de Octubre"
+        },
+        {
+            "id": "eeeabcf",
+            "stage_round_name": "Fecha 3",
+            "winner": 2,
+            "teams": [
+                {
+                    "name": "Nueva Zelanda Sub20",
+                    "short_name": "Nueva Zelanda Sub20",
+                    "url_name": "new-zealand-u20",
+                    "id": "bcfge",
+                    "country_id": "bfj",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Japón Sub20",
+                    "short_name": "Japón Sub20",
+                    "url_name": "japan-u20",
+                    "id": "feig",
+                    "country_id": "de",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#0300CC",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "new-zealand-u20-vs-japan-u20",
+            "scores": [
+                0,
+                3
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "03-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Viernes 3 de Octubre"
+        },
+        {
+            "id": "eeecgcf",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Egipto Sub20",
+                    "short_name": "Egipto Sub20",
+                    "url_name": "egypt-u20",
+                    "id": "bcfgd",
+                    "country_id": "bdb",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Chile Sub20",
+                    "short_name": "Chile Sub20",
+                    "url_name": "chile-u20",
+                    "id": "fehg",
+                    "country_id": "ci",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#DB2314",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "egypt-u20-vs-chile-u20",
+            "scores": [
+                2,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "03-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Viernes 3 de Octubre"
+        },
+        {
+            "id": "eeeabch",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "España Sub20",
+                    "short_name": "España Sub20",
+                    "url_name": "spain-u20",
+                    "id": "bcffb",
+                    "country_id": "c",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Brasil Sub20",
+                    "short_name": "Brasil Sub20",
+                    "url_name": "brazil-u20",
+                    "id": "baafh",
+                    "country_id": "cb",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FEDD00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "spain-u20-vs-brazil-u20",
+            "scores": [
+                1,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "04-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Sábado 4 de Octubre"
+        },
+        {
+            "id": "eeecgcb",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "México Sub20",
+                    "short_name": "México Sub20",
+                    "url_name": "mexico-u20",
+                    "id": "bcffg",
+                    "country_id": "db",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#006341",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Marruecos Sub20",
+                    "short_name": "Marruecos Sub20",
+                    "url_name": "morocco-u20",
+                    "id": "cejfg",
+                    "country_id": "bch",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "mexico-u20-vs-morocco-u20",
+            "scores": [
+                1,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "04-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Sábado 4 de Octubre"
+        },
+        {
+            "id": "eeeabce",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Argentina Sub20",
+                    "short_name": "Argentina Sub20",
+                    "url_name": "argentina-u20",
+                    "id": "baaff",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#74ACDF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Italia Sub20",
+                    "short_name": "Italia Sub20",
+                    "url_name": "italy-u20",
+                    "id": "fegh",
+                    "country_id": "d",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "argentina-u20-vs-italy-u20",
+            "scores": [
+                1,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "04-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Sábado 4 de Octubre"
+        },
+        {
+            "id": "eeecgcd",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Australia Sub20",
+                    "short_name": "Australia Sub20",
+                    "url_name": "australia-u20",
+                    "id": "bcfga",
+                    "country_id": "dg",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#F9BD49",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Cuba Sub20",
+                    "short_name": "Cuba Sub20",
+                    "url_name": "cuba-u20",
+                    "id": "bcffe",
+                    "country_id": "bhf",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#DA291C",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "australia-u20-vs-cuba-u20",
+            "scores": [
+                3,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "04-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Sábado 4 de Octubre"
+        },
+        {
+            "id": "eeeabcg",
+            "stage_round_name": "Fecha 3",
+            "winner": 2,
+            "teams": [
+                {
+                    "name": "Nueva Caledonia Sub20",
+                    "short_name": "Nueva Caledonia Sub20",
+                    "url_name": "new-caledonia-u20",
+                    "id": "iijbb",
+                    "country_id": "cgg",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Francia Sub20",
+                    "short_name": "Francia Sub20",
+                    "url_name": "france-u20",
+                    "id": "ihea",
+                    "country_id": "f",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#1B29EE",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "new-caledonia-u20-vs-france-u20",
+            "scores": [
+                0,
+                6
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "05-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Domingo 5 de Octubre"
+        },
+        {
+            "id": "eeecgce",
+            "stage_round_name": "Fecha 3",
+            "winner": 1,
+            "teams": [
+                {
+                    "name": "Sudáfrica Sub20",
+                    "short_name": "Sudáfrica Sub20",
+                    "url_name": "south-africa-u20",
+                    "id": "gaed",
+                    "country_id": "bde",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#389850",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "EEUU Sub20",
+                    "short_name": "EEUU Sub20",
+                    "url_name": "usa-u20",
+                    "id": "bcffa",
+                    "country_id": "bi",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#0A3161",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "south-africa-u20-vs-usa-u20",
+            "scores": [
+                2,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "05-10-2025 17:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Domingo 5 de Octubre"
+        },
+        {
+            "id": "eeeabcd",
+            "stage_round_name": "Fecha 3",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Nigeria Sub20",
+                    "short_name": "Nigeria Sub20",
+                    "url_name": "nigeria-u20",
+                    "id": "bcffc",
+                    "country_id": "id",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Colombia Sub20",
+                    "short_name": "Colombia Sub20",
+                    "url_name": "colombia-u20",
+                    "id": "baafg",
+                    "country_id": "baj",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFCD00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "nigeria-u20-vs-colombia-u20",
+            "scores": [
+                1,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "05-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Domingo 5 de Octubre"
+        },
+        {
+            "id": "eeecgcc",
+            "stage_round_name": "Fecha 3",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Arabia Saudita Sub20",
+                    "short_name": "Arabia Saudita Sub20",
+                    "url_name": "saudi-arabia-u20",
+                    "id": "beabh",
+                    "country_id": "bcc",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#27AF49",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Noruega Sub20",
+                    "short_name": "Noruega Sub20",
+                    "url_name": "norway-u20",
+                    "id": "fgcjb",
+                    "country_id": "ch",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "saudi-arabia-u20-vs-norway-u20",
+            "scores": [
+                1,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "05-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Domingo 5 de Octubre"
+        },
+        {
+            "id": "efihije",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+                {
+                    "name": "Ucrania Sub20",
+                    "short_name": "Ucrania Sub20",
+                    "url_name": "ukraine-u20",
+                    "id": "cejec",
+                    "country_id": "cg",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "España Sub20",
+                    "short_name": "España Sub20",
+                    "url_name": "spain-u20",
+                    "id": "bcffb",
+                    "country_id": "c",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "ukraine-u20-vs-spain-u20",
+            "scores": [
+                0,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "07-10-2025 16:30",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Martes 7 de Octubre"
+        },
+        {
+            "id": "efifgeb",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+                {
+                    "name": "Chile Sub20",
+                    "short_name": "Chile Sub20",
+                    "url_name": "chile-u20",
+                    "id": "fehg",
+                    "country_id": "ci",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#DB2314",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "México Sub20",
+                    "short_name": "México Sub20",
+                    "url_name": "mexico-u20",
+                    "id": "bcffg",
+                    "country_id": "db",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#006341",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "chile-u20-vs-mexico-u20",
+            "scores": [
+                1,
+                4
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "07-10-2025 20:00",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Martes 7 de Octubre"
+        },
+        {
+            "id": "efihijf",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+                {
+                    "name": "Colombia Sub20",
+                    "short_name": "Colombia Sub20",
+                    "url_name": "colombia-u20",
+                    "id": "baafg",
+                    "country_id": "baj",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFCD00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Sudáfrica Sub20",
+                    "short_name": "Sudáfrica Sub20",
+                    "url_name": "south-africa-u20",
+                    "id": "gaed",
+                    "country_id": "bde",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#389850",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "colombia-u20-vs-south-africa-u20",
+            "scores": [
+                3,
+                1
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "08-10-2025 16:30",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Miércoles 8 de Octubre"
+        },
+        {
+            "id": "efihiji",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+                {
+                    "name": "Argentina Sub20",
+                    "short_name": "Argentina Sub20",
+                    "url_name": "argentina-u20",
+                    "id": "baaff",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#74ACDF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Nigeria Sub20",
+                    "short_name": "Nigeria Sub20",
+                    "url_name": "nigeria-u20",
+                    "id": "bcffc",
+                    "country_id": "id",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "argentina-u20-vs-nigeria-u20",
+            "scores": [
+                4,
+                0
+            ],
+            "status": {
+                "enum": 3,
+                "name": "Finalizado",
+                "short_name": "Final",
+                "symbol_name": "Fin"
+            },
+            "start_time": "08-10-2025 16:30",
+            "game_time": 90,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Final",
+            "date_string": "Miércoles 8 de Octubre"
+        },
+        {
+            "id": "efihijg",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Paraguay Sub20",
+                    "short_name": "Paraguay Sub20",
+                    "url_name": "paraguay-u20",
+                    "id": "gcaa",
+                    "country_id": "bai",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#D52B1E",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Noruega Sub20",
+                    "short_name": "Noruega Sub20",
+                    "url_name": "norway-u20",
+                    "id": "fgcjb",
+                    "country_id": "ch",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "paraguay-u20-vs-norway-u20",
+            "scores": [
+                0,
+                0
+            ],
+            "status": {
+                "enum": 2,
+                "name": "Segundo Tiempo",
+                "short_name": "2°",
+                "symbol_name": "2°"
+            },
+            "start_time": "08-10-2025 20:00",
+            "game_time": 46,
+            "game_time_to_display": "46'",
+            "game_time_status_to_display": "46'",
+            "date_string": "Miércoles 8 de Octubre"
+        },
+        {
+            "id": "efihijh",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Japón Sub20",
+                    "short_name": "Japón Sub20",
+                    "url_name": "japan-u20",
+                    "id": "feig",
+                    "country_id": "de",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#0300CC",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Francia Sub20",
+                    "short_name": "Francia Sub20",
+                    "url_name": "france-u20",
+                    "id": "ihea",
+                    "country_id": "f",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#1B29EE",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "japan-u20-vs-france-u20",
+            "scores": [
+                0,
+                0
+            ],
+            "status": {
+                "enum": 2,
+                "name": "Entretiempo",
+                "short_name": "ET",
+                "symbol_name": "ET"
+            },
+            "start_time": "08-10-2025 20:00",
+            "game_time": 45,
+            "game_time_to_display": "45'",
+            "game_time_status_to_display": "ET",
+            "date_string": "Miércoles 8 de Octubre"
+        },
+        {
+            "id": "efihgag",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "EEUU Sub20",
+                    "short_name": "EEUU Sub20",
+                    "url_name": "usa-u20",
+                    "id": "bcffa",
+                    "country_id": "bi",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#0A3161",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Italia Sub20",
+                    "short_name": "Italia Sub20",
+                    "url_name": "italy-u20",
+                    "id": "fegh",
+                    "country_id": "d",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "usa-u20-vs-italy-u20",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "09-10-2025 16:30",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog.",
+            "date_string": "Jueves 9 de Octubre"
+        },
+        {
+            "id": "efihijd",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Marruecos Sub20",
+                    "short_name": "Marruecos Sub20",
+                    "url_name": "morocco-u20",
+                    "id": "cejfg",
+                    "country_id": "bch",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Corea del Sur Sub20",
+                    "short_name": "Corea del Sur Sub20",
+                    "url_name": "south-korea-u20",
+                    "id": "bcfff",
+                    "country_id": "ig",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "morocco-u20-vs-south-korea-u20",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "09-10-2025 20:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog.",
+            "date_string": "Jueves 9 de Octubre"
+        },
+        {
+            "id": "efjceee",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "España Sub20",
+                    "short_name": "España Sub20",
+                    "url_name": "spain-u20",
+                    "id": "bcffb",
+                    "country_id": "c",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#21282D",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Colombia Sub20",
+                    "short_name": "Colombia Sub20",
+                    "url_name": "colombia-u20",
+                    "id": "baafg",
+                    "country_id": "baj",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFCD00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "spain-u20-vs-colombia-u20",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "11-10-2025 17:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog.",
+            "date_string": "Sábado 11 de Octubre"
+        },
+        {
+            "id": "efjceed",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "México Sub20",
+                    "short_name": "México Sub20",
+                    "url_name": "mexico-u20",
+                    "id": "bcffg",
+                    "country_id": "db",
+                    "allow_open": false,
+                    "colors": {
+                        "color": "#006341",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Argentina Sub20",
+                    "short_name": "Argentina Sub20",
+                    "url_name": "argentina-u20",
+                    "id": "baaff",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#74ACDF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "mexico-u20-vs-argentina-u20",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "11-10-2025 20:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog.",
+            "date_string": "Sábado 11 de Octubre"
+        }
+    ]
+}

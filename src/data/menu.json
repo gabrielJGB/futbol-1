@@ -1,0 +1,399 @@
+[
+  {
+    "name": "Destacado",
+    "logo": "",
+    "items": [
+      {
+        "league": "Liga Profesional",
+        "id": "hc",
+        "logo": ""
+      },
+      {
+        "league": "Primera Nacional",
+        "id": "ebj",
+        "logo": ""
+      },
+      {
+        "league": "Libertadores",
+        "id": "bac",
+        "logo": ""
+      },
+      {
+        "league": "Sudamericana",
+        "id": "dij",
+        "logo": ""
+      },
+      {
+        "league": "Copa Argentina",
+        "id": "gea",
+        "logo": ""
+      },
+      {
+        "league": "Champions",
+        "id": "fhc",
+        "logo": ""
+      },
+      {
+        "league": "Eliminatorias Conmebol",
+        "id": "gbd",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Argentina",
+    "logo": "https://api.promiedos.com.ar/images/country/ba/1",
+    "items": [
+      {
+        "league": "Liga Profesional",
+        "id": "hc",
+        "logo": ""
+      },
+      {
+        "league": "Primera Nacional",
+        "id": "ebj",
+        "logo": ""
+      },
+      {
+        "league": "Copa Argentina",
+        "id": "gea",
+        "logo": ""
+      },
+      {
+        "league": "Copa de la Liga",
+        "id": "hcbe",
+        "logo": ""
+      },
+      {
+        "league": "Primera B Metro",
+        "id": "fahh",
+        "logo": ""
+      },
+      {
+        "league": "Federal A",
+        "id": "fahi",
+        "logo": ""
+      },
+      {
+        "league": "Primera C",
+        "id": "ffjb",
+        "logo": ""
+      },
+      {
+        "league": "Promocional Amateur",
+        "id": "iage",
+        "logo": ""
+      },
+      {
+        "league": "Liga Profesional - Reserva",
+        "id": "hhbc",
+        "logo": ""
+      },
+      {
+        "league": "Liga Femenina",
+        "id": "gcce",
+        "logo": ""
+      },
+      {
+        "league": "Copa de la Liga - Reserva",
+        "id": "hgee",
+        "logo": ""
+      },
+      {
+        "league": "Tabla Historica",
+        "id": "tablahistorica",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Internacional",
+    "logo": "https://api.promiedos.com.ar/images/country/fe/1",
+    "items": [
+      {
+        "league": "Copa Libertadores",
+        "id": "bac",
+        "logo": ""
+      },
+      {
+        "league": "Copa Sudamericana",
+        "id": "dij",
+        "logo": ""
+      },
+      {
+        "league": "Champions League",
+        "id": "fhc",
+        "logo": ""
+      },
+      {
+        "league": "Copa Intercontinental",
+        "id": "icgi",
+        "logo": ""
+      },
+      {
+        "league": "Europa League",
+        "id": "fhd",
+        "logo": ""
+      },
+      {
+        "league": "Conference League",
+        "id": "hgif",
+        "logo": ""
+      },
+      {
+        "league": "Mundial de Clubes",
+        "id": "fajg",
+        "logo": ""
+      },
+      {
+        "league": "Concacaf Champions",
+        "id": "bhb",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Inglaterra",
+    "logo": "https://api.promiedos.com.ar/images/country/b/1",
+    "items": [
+      {
+        "league": "Premier League",
+        "id": "h",
+        "logo": ""
+      },
+      {
+        "league": "Carabao Cup",
+        "id": "j",
+        "logo": ""
+      },
+      {
+        "league": "FA Cup",
+        "id": "i",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "España",
+    "logo": "https://api.promiedos.com.ar/images/country/c/1",
+    "items": [
+      {
+        "league": "La Liga",
+        "id": "bb",
+        "logo": ""
+      },
+      {
+        "league": "Copa del Rey",
+        "id": "bd",
+        "logo": ""
+      },
+      {
+        "league": "Supercopa",
+        "id": "bf",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Italia",
+    "logo": "https://api.promiedos.com.ar/images/country/d/1",
+    "items": [
+      {
+        "league": "Serie A",
+        "id": "bh",
+        "logo": ""
+      },
+      {
+        "league": "Coppa Italia",
+        "id": "ca",
+        "logo": ""
+      },
+      {
+        "league": "Supercopa",
+        "id": "cd",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Alemania",
+    "logo": "https://api.promiedos.com.ar/images/country/e/1",
+    "items": [
+      {
+        "league": "Bundesliga",
+        "id": "cf",
+        "logo": ""
+      },
+      {
+        "league": "DFB Pokal",
+        "id": "ci",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Portugal",
+    "logo": "https://api.promiedos.com.ar/images/country/bb/1",
+    "items": [
+      {
+        "league": "Primeira Liga",
+        "id": "hd",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Francia",
+    "logo": "https://api.promiedos.com.ar/images/country/f/1",
+    "items": [
+      {
+        "league": "Ligue 1",
+        "id": "df",
+        "logo": ""
+      },
+      {
+        "league": "Copa Francia",
+        "id": "dh",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Brasil",
+    "logo": "https://api.promiedos.com.ar/images/country/cb/1",
+    "items": [
+      {
+        "league": "Brasileirao",
+        "id": "bbd",
+        "logo": ""
+      },
+      {
+        "league": "Copa do Brasil",
+        "id": "bbf",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Uruguay",
+    "logo": "https://api.promiedos.com.ar/images/country/bbb/1",
+    "items": [
+      {
+        "league": "Primera división",
+        "id": "gbh",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Paraguay",
+    "logo": "https://api.promiedos.com.ar/images/country/bai/1",
+    "items": [
+      {
+        "league": "Copa de primera",
+        "id": "gcb",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Colombia",
+    "logo": "https://api.promiedos.com.ar/images/country/baj/1",
+    "items": [
+      {
+        "league": "Liga BetPlay",
+        "id": "gca",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Chile",
+    "logo": "https://api.promiedos.com.ar/images/country/ci/1",
+    "items": [
+      {
+        "league": "Primera división",
+        "id": "bdf",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Mexico",
+    "logo": "https://api.promiedos.com.ar/images/country/db/1",
+    "items": [
+      {
+        "league": "Liga MX",
+        "id": "beb",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "EEUU",
+    "logo": "https://api.promiedos.com.ar/images/country/bi/1",
+    "items": [
+      {
+        "league": "MLS",
+        "id": "bae",
+        "logo": ""
+      }
+    ]
+  },
+  {
+    "name": "Selecciones",
+    "logo": "https://api.promiedos.com.ar/images/country/fe/1",
+    "items": [
+      {
+        "league": "Mundial Sub-20",
+        "id": "ffcf",
+        "logo": ""
+      },
+      {
+        "league": "Copa America",
+        "id": "fjf",
+        "logo": ""
+      },
+      {
+        "league": "Eliminatorias Sudamericanas",
+        "id": "gbd",
+        "logo": ""
+      },
+      {
+        "league": "Eliminatorias UEFA",
+        "id": "fecb",
+        "logo": ""
+      },
+      {
+        "league": "Eurocopa",
+        "id": "gdbg",
+        "logo": ""
+      },
+      {
+        "league": "UEFA Nations League",
+        "id": "habg",
+        "logo": ""
+      },
+      {
+        "league": "Eliminatorias Eurocopa",
+        "id": "gahb",
+        "logo": ""
+      },
+      {
+        "league": "Mundial",
+        "id": "fjda",
+        "logo": ""
+      },
+      {
+        "league": "Sudamericano Sub20",
+        "id": "fefd",
+        "logo": ""
+      },
+      {
+        "league": "Eliminatorias Concacaf",
+        "id": "gbb",
+        "logo": ""
+      }
+    ]
+  }
+]

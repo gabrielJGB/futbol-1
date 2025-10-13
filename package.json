@@ -1,0 +1,33 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@preact/signals": "^2.3.1",
+		"@tailwindcss/vite": "^4.1.13",
+		"colorthief": "^2.6.0",
+		"lucide-preact": "^0.544.0",
+		"node-vibrant": "^4.0.3",
+		"preact": "^10.26.9",
+		"preact-iso": "^2.10.0",
+		"preact-render-to-string": "^6.6.1",
+		"preact-router": "^4.1.2",
+		"react-calendar": "^6.0.0",
+		"react-icons": "^5.5.0",
+		"swr": "^2.3.6",
+		"tailwindcss": "^4.1.13"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.10.2",
+		"eslint": "^9.36.0",
+		"eslint-config-preact": "^2.0.0",
+		"vite": "^7.0.4"
+	},
+	"eslintConfig": {
+		"extends": "preact"
+	}
+}
