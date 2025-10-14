@@ -6,7 +6,7 @@ import { useRef, useLayoutEffect, useState } from 'preact/hooks';
 
 // Componente para un equipo individual
 const Team = ({ name, score, id, winner }) => (
-    <div class="flex justify-between items-center p-1 px-2 bg-gray-800 text-xs text-white w-full">
+    <div class="flex justify-between items-center p-1 px-2 text-xs text-white w-full">
         <div class="flex justify-start gap-1 items-center ">
             {
                 id != -1 &&
@@ -25,10 +25,10 @@ const Team = ({ name, score, id, winner }) => (
 const Match = ({ match, matchRef }) => (
 
 
-    <div ref={matchRef} class="cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 w-48 shadow-md rounded-lg overflow-hidden border-[1px]  border-white/10">
+    <div ref={matchRef} class=" cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 w-48 shadow-md rounded-lg overflow-hidden border-[1px] bg-[#008000]/40 border-white/10">
 
         <Team winner={match.winner === 1} id={match.participants[0].id} name={match.participants[0].short_name} score={match.score ? match.score[0] : undefined} />
-        
+        <hr class={"text-[#008000]/50"}/>
         <Team winner={match.winner === 2} id={match.participants[1].id} name={match.participants[1].short_name} score={match.score ? match.score[1] : undefined} />
     </div>
 );

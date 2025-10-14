@@ -8,7 +8,7 @@ import TablesAndFixtures from './sections/TablesAndFixtures'
 import Teams from './sections/Teams'
 import History from './sections/History'
 
-import league from '../../../../LEAGUE_CHAMPIONS.json'
+import league from '../../../../LEAGUE_LIB.json'
 import games from '../../../../LEAGUE_GAMES.json'
 import { round } from "../signals";
 import Brackets from "./sections/Brackets";
@@ -20,26 +20,26 @@ import Brackets from "./sections/Brackets";
 const LeagueView = ({ leagueId }) => {
 
 
-    const { data: league, error: leagueError } = useSWR(
-        leagueId ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
-        fetcher, {
-        revalidateOnFocus: false,
-    }
-    );
+    // const { data: league, error: leagueError } = useSWR(
+    //     leagueId ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
+    //     fetcher, {
+    //     revalidateOnFocus: false,
+    // }
+    // );
 
 
-    const { data: games, isLoading: gamesLoading, error: gamesError } = useSWR(
-        // @ts-ignore
-        leagueId && round.value?.key ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/games/${leagueId}/${round.value.key}` : null,
-        fetcher, {
-        revalidateOnMount: true,
-        revalidateOnFocus: false,
-    }
-    );
+    // const { data: games, isLoading: gamesLoading, error: gamesError } = useSWR(
+    //     // @ts-ignore
+    //     leagueId && round.value?.key ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/games/${leagueId}/${round.value.key}` : null,
+    //     fetcher, {
+    //     revalidateOnMount: true,
+    //     revalidateOnFocus: false,
+    // }
+    // );
 
 
-    if (leagueError || gamesError) return <p>Error al cargar datos</p>;
-    if (!league) return <p>Cargando...</p>;
+    // if (leagueError || gamesError) return <p>Error al cargar datos</p>;
+    // if (!league) return <p>Cargando...</p>;
 
 
     useEffect(() => {
@@ -70,7 +70,7 @@ const LeagueView = ({ leagueId }) => {
         {
             "id": "section-0",
             "name": "Tablas y fixture",
-            "component": (name, league, games) => (<TablesAndFixtures name={name} league={league} games={games} gamesLoading={gamesLoading} />)
+            "component": (name, league, games) => (<TablesAndFixtures name={name} league={league} games={games} gamesLoading={false} />)
         },
         {
             "id": "section-1",

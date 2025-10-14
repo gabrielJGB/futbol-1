@@ -27,14 +27,18 @@ export default function Calendar_({ }) {
 
 
   return (
+
     <div class={"shadow shadow-gray-900 rounded"}>
-      <Calendar
-        className="calendar"
-        locale='es-AR'
-        tileClassName="text-white"
-        onChange={date => { handleDayClick(date) }}
-        value={selectedDate}
-      />
+      {
+        typeof window !== "undefined" &&
+        <Calendar
+          className="calendar"
+          locale='es-AR'
+          tileClassName="text-white"
+          onChange={date => { handleDayClick(date) }}
+          value={selectedDate || new Date()}
+        />
+      }
     </div>
   );
 }
