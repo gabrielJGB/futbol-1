@@ -1,149 +1,82 @@
-import React from 'react'
-import league from '../../../LEAGUE_LIB.json'
-
 import { h } from 'preact';
-import { useRef, useLayoutEffect, useState } from 'preact/hooks';
 
-// Componente para un equipo individual
-const Team = ({ name, score, id,winner }) => (
-    <div class="flex justify-between items-center p-1 px-2 bg-gray-800 text-xs text-white w-full">
-        <div class="flex justify-start gap-1 items-center ">
-            {
-                id != -1 &&
-                <div class={"flex items-center  justify-center h-full "}>
-                    <img style={{ width: 25 }} src={`https://api.promiedos.com.ar/images/team/${id}/1`} />
-                </div>
-            }
-            <span class={`truncate ${winner?"font-semibold":""}`}>{name} </span>
-        </div>
 
-        <span class="font-bold">{score !== undefined ? score : ''}</span>
-    </div>
-);
-
-// Componente para un partido (enfrentamiento)
-const Match = ({ match, matchRef }) => (
-    
-    
-    <div ref={matchRef} class="cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 w-48 shadow-md rounded-lg overflow-hidden border-[1px]  border-white/10">
-        
-        <Team winner={match.winner ===1} id={match.participants[0].id} name={match.participants[0].short_name} score={match.score ? match.score[0] : undefined} />
-        <hr class={"text-gray-700"} />
-        <Team winner={match.winner ===2} id={match.participants[1].id} name={match.participants[1].short_name} score={match.score ? match.score[1] : undefined} />
-    </div>
-);
-
-// Componente para una fase del torneo
-const Stage = ({ stage, registerMatchElement }) => (
-    <div class="flex flex-col  justify-around gap-2 h-auto px-4 ">
-
-        {stage.groups.map((match, index) => (
-            <Match
-                key={match.participants[0].id || index}
-                match={match}
-                matchRef={el => registerMatchElement(stage.name, index, el)}
-            />
-        ))}
-    </div>
-);
-
-// --- Componente principal de las llaves ---
-const Brackets = ({ }) => {
-
-    const data = league.brackets
-
-    const [lines, setLines] = useState([]);
-    const stageRefs = useRef({});
-    const containerRef = useRef(null);
-
-    // Usamos useLayoutEffect para asegurar que las mediciones se realicen después del renderizado del DOM
-    useLayoutEffect(() => {
-        if (!containerRef.current) return;
-
-        const newLines = [];
-        const containerRect = containerRef.current.getBoundingClientRect();
-
-        data.stages.forEach((stage, stageIndex) => {
-            // Solo dibujar líneas si no es la última fase y connect_to_next_stage es true
-            if (stageIndex >= data.stages.length - 1) return;
-
-            const nextStage = data.stages[stageIndex + 1];
-            const currentStageMatches = stage.groups;
-            const nextStageMatches = nextStage.groups;
-
-            currentStageMatches.forEach((_, matchIndex) => {
-                // Cada dos partidos de la fase actual se conectan a uno de la siguiente
-                const nextMatchIndex = Math.floor(matchIndex / 2);
-
-                const startNode = stageRefs.current[stage.name]?.[matchIndex];
-                const endNode = stageRefs.current[nextStage.name]?.[nextMatchIndex];
-
-                if (startNode && endNode) {
-                    const startRect = startNode.getBoundingClientRect();
-                    const endRect = endNode.getBoundingClientRect();
-
-                    // Coordenadas relativas al contenedor SVG
-                    const startX = startRect.right - containerRect.left;
-                    const startY = startRect.top + startRect.height / 2 - containerRect.top;
-                    const endX = endRect.left - containerRect.left;
-                    const endY = endRect.top + endRect.height / 2 - containerRect.top;
-
-                    const midX = startX + (endX - startX) / 2;
-
-                    newLines.push({
-                        id: `${stage.name}-${matchIndex}`,
-                        points: [
-                            // Línea horizontal desde el partido de origen
-                            { x1: startX, y1: startY, x2: midX, y2: startY },
-                            // Línea vertical que une las horizontales
-                            { x1: midX, y1: startY, x2: midX, y2: endY },
-                            // Línea horizontal hacia el partido de destino
-                            { x1: midX, y1: endY, x2: endX, y2: endY },
-                        ]
-                    });
-                }
-            });
-        });
-
-        setLines(newLines);
-    }, [data]);
-
-    const registerMatchElement = (stageName, matchIndex, element) => {
-        if (!stageRefs.current[stageName]) {
-            stageRefs.current[stageName] = {};
-        }
-        stageRefs.current[stageName][matchIndex] = element;
+const Game = ({ match }) => {
+    const formatDate = (iso) => {
+        const date = new Date(iso);
+        return date.toLocaleString('es-AR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+        }).replace(',', 'hs');
     };
 
-    return (
-        <div class="">
-            <div ref={containerRef} class=" relative h-max flex overflow-y-auto overflow-x-auto">
-                {/* Renderizar las Fases */}
-                {data.stages.map(stage => (
-                    <Stage key={stage.name} stage={stage} registerMatchElement={registerMatchElement} />
-                ))}
+    const totalHome = match.firstLeg.home + match.secondLeg.away;
+    const totalAway = match.firstLeg.away + match.secondLeg.home;
+    const winner = totalHome > totalAway ? 'home' : totalAway > totalHome ? 'away' : 'draw';
 
-                {/* Renderizar las líneas de conexión SVG */}
-                <svg class="absolute top-0 left-0  w-full h-full" style={{ pointerEvents: 'none' }}>
-                    {lines.map(line => (
-                        <g key={line.id}>
-                            {line.points.map((p, i) => (
-                                <line
-                                    key={i}
-                                    x1={p.x1}
-                                    y1={p.y1}
-                                    x2={p.x2}
-                                    y2={p.y2}
-                                    stroke="lime"
-                                    stroke-width="2"
-                                />
-                            ))}
-                        </g>
-                    ))}
-                </svg>
+    const getTeamClass = (team) =>
+        winner === team ? 'font-bold text-white bg-green-600 rounded px-1' : 'opacity-80';
+
+    return (
+        <div class="flex flex-col bg-neutral-900 text-white text-sm rounded-xl p-3 shadow-md w-fit min-w-[240px] gap-2">
+            <div class="flex justify-between text-xs text-neutral-400">
+                <span>{formatDate(match.date)}</span>
+                <span>Ida / Vuelta</span>
+            </div>
+
+            {/* Equipos */}
+            <div class="flex flex-col gap-1">
+                {/* Local */}
+                <div class="flex items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <img src={match.home.logo} alt={match.home.name} class="w-5 h-5 rounded-full" />
+                        <span class={getTeamClass('home')}>{match.home.name}</span>
+                    </div>
+                    <div class="flex gap-2 text-right">
+                        <span>{match.firstLeg.home}-{match.secondLeg.home}</span>
+                    </div>
+                </div>
+
+                {/* Visitante */}
+                <div class="flex items-center justify-between gap-2">
+                    <div class="flex items-center gap-2">
+                        <img src={match.away.logo} alt={match.away.name} class="w-5 h-5 rounded-full" />
+                        <span class={getTeamClass('away')}>{match.away.name}</span>
+                    </div>
+                    <div class="flex gap-2 text-right">
+                        <span>{match.firstLeg.away}-{match.secondLeg.away}</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Resultado global */}
+            <div class="flex justify-center text-xs text-neutral-400 mt-1">
+                Global: {totalHome} - {totalAway}
             </div>
         </div>
     );
 };
 
-export default Brackets;
+
+
+
+const index = () => {
+    return (
+        <div>
+            <Game
+                match={{
+                    home: { name: 'Boca Juniors', logo: '/boca.png' },
+                    away: { name: 'River Plate', logo: '/river.png' },
+                    firstLeg: { home: 1, away: 0 },
+                    secondLeg: { home: 0, away: 1 },
+                    date: '2025-10-15T15:00:00Z',
+                }}
+            />
+        </div>
+    )
+}
+
+export default index
