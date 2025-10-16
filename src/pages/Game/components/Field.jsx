@@ -102,7 +102,7 @@ const Field = ({ teams, colors, ids }) => {
      
                             <div
                                 style={{ backgroundColor: colors[0].color, color: colors[0].text_color }}
-                                class={"flex border-[2px] border-gray-900 justify-center items-center rounded-full text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>{p.jersey_num}</div>
+                                class={"flex border-[2px] border-gray-900 justify-center items-center rounded-sm text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>{p.jersey_num}</div>
                             <div
                                 style={{ textShadow: "black 1px 1px 3px", }}
                                 class={`${getPlayerNameColor(p)} text-center text-[14px] w-[80px] px-[2px]`}>{p.player_short_name}{p.is_captain?"(C)":""}</div>
@@ -130,7 +130,7 @@ const Field = ({ teams, colors, ids }) => {
                         >
                             <div
                                 style={{ backgroundColor: colors[1].color, color: colors[1].text_color }}
-                                class={"flex  border-[2px] border-gray-900 justify-center items-center rounded-full text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>
+                                class={"flex  border-[2px] border-gray-900 justify-center items-center rounded-sm text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>
                                 {p.jersey_num}</div>
                             <div
                                 style={{ textShadow: "black 1px 1px 3px", }}

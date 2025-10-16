@@ -62,7 +62,7 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
                         tvURL != undefined && !isCompleted &&
                         <img src={`https://api.promiedos.com.ar/images/tvnetworks/${tvURL.id}`} class={"mx-auto mb-[2px] h-4"} title={tvURL.name} />
                     }
-                    <span title={status.name} className="text-xs text-shadow-xs text-center text-shadow-black">{statusDisplay}</span>
+                    <span title={status.name} className="text-xs text-shadow-xs text-center text-shadow-black">{statusDisplay.replace("Fin","Final")}</span>
 
                 </div>
 

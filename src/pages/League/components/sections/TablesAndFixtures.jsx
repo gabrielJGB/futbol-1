@@ -54,13 +54,13 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
               // @ts-ignore
               name}</div>
             <div class={"w-full flex flex-row items-center justify-center flex-wrap gap-1 py-1"}>
-              {console.log(rounds)}
+              
               {
                 rounds  &&
                 rounds.map((r) => (
                   <div
                     onClick={() => { round.value = r }}
-                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black" : "bg-[#008000] text-white"} cursor-pointer hover:bg-[#C2E213]   whitespace-nowrap w-max hover:text-black  py-1 px-2 font-semibold text-xs shadow shadow-gray-800`}>{r.name}</div>
+                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black" : "bg-[#008000] text-white"} cursor-pointer hover:bg-[#C2E213] flex-1 min-w-min whitespace-nowrap  hover:text-black  py-1 px-2 font-semibold text-xs shadow shadow-gray-800 `}>{r.name}</div>
                 ))
               }
             </div>

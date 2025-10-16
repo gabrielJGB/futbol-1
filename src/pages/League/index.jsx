@@ -7,9 +7,9 @@ import { showMenu } from '../../signals/signals';
 const League = ({ id }) => {
 
 
-useEffect(() => {
-  showMenu.value = false
-}, [id])
+  useEffect(() => {
+    showMenu.value = false
+  }, [id])
 
 
 
@@ -20,9 +20,9 @@ useEffect(() => {
         <Menu />
       </div>
 
-      
-        <LeagueView leagueId={id} />
-      
+
+      <LeagueView leagueId={id} />
+
     </div>
   )
 }

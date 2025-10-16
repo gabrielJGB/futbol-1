@@ -78,11 +78,6 @@ const LeagueView = ({ leagueId }) => {
             "component": (name, league, games) => (<Stats name={name} league={league} games={games} />)
         },
         {
-            "id": "section-2",
-            "name": "Equipos",
-            "component": (name, league, games) => (<Teams name={name} league={league} games={games} />)
-        },
-        {
             "id": "section-3",
             "name": "Campeones",
             "component": (name, league, games) => (<History name={name} league={league} games={games} />)
