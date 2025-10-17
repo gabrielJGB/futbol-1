@@ -10,7 +10,7 @@ export function Header() {
 		<header class={"flex flex-row items-center px-1 md:px-0 md:pb-6 pt-2 pb-1"}>
 
 			<div
-				class={"md:hidden px-3 py-1 mr-2 text-3xl text-[#C2E213] text-center hover:bg-[#C2E213] hover:text-green-900  font-semibold rounded-md shadow shadow-gray-800 cursor-pointer"}
+				class={"md:hidden px-3 py-1 mr-2 text-3xl text-[#C2E213] text-center hover:bg-[#C2E213] hover:text-green-900  font-semibold rounded-md  cursor-pointer"}
 				onClick={() => { showMenu.value = !showMenu.value }}
 			>&#9776;
 			</div>

@@ -65,7 +65,7 @@ const getEvents = (player, isBench) => {
         if (isBench)
             arr.push(
                 <div class={"flex flex-wrap items-center gap-1 text-gray-400 text-xs font-semibold"}>
-                    
+
                     <BiChevronRight color='lime' size={20} />
                     <span>{player.events.substitution.time}'</span>
                 </div>
@@ -73,7 +73,7 @@ const getEvents = (player, isBench) => {
         else
             arr.push(
                 <div class={"flex flex-wrap items-center gap-1 text-gray-400 text-xs font-semibold"}>
-                    <BiChevronLeft color='red' size={20}  />
+                    <BiChevronLeft color='red' size={20} />
                     <span>{player.events.substitution.time}'</span>
                 </div>
 
@@ -112,9 +112,9 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
                 <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
 
-                <Link 
-// @ts-ignore
-                href={`/player/${player.name}`} class={"text-shadow-xs text-shadow-black hover:underline"}>{player.name}</Link>
+                <Link
+                    // @ts-ignore
+                    href={`/player/${player.name}`} class={"text-shadow-xs text-shadow-black hover:underline"}>{player.name}</Link>
                 {/* <a target={"_blank"} href={`https://www.google.com/search?q=${player.name}`} class={"text-shadow-xs text-shadow-black hover:underline"}>
                     {player.name}
                 </a> */}
