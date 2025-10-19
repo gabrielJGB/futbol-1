@@ -15,6 +15,7 @@ import Stats from "./components/Stats";
 import Last5Games from "./components/Last5Games";
 import News from "./components/News";
 import Related from "./components/Related";
+import Tabs from "./components/Tabs";
 
 const Player = ({ name }) => {
     const [loading, setLoading] = useState(false)
@@ -26,10 +27,8 @@ const Player = ({ name }) => {
     // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
     // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)
     // const [stats, setStats] = useState(player.gameLog.statistics[0])
-
-
-
-
+    // const [tabs, setTabs] = useState([])
+    // const [active, setActive] = useState(null)
 
 
     useEffect(() => {
@@ -76,23 +75,24 @@ const Player = ({ name }) => {
         return <div class={"text-center mt-10"}>Sin datos del jugador</div>
 
 
-    console.log(player);
-
-
-
     const getResultColor = r => r === "G" ? "bg-green-400" : r === "P" ? "bg-red-400" : "bg-yellow-300";
 
 
     return (
-        <div class={"pb-20 px-2 w-full"}>
-            <PlayerInfo player={player} />
-            <NextGame title={"Próximo partido"} player={player} />
-            <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} />
-            <Stats title={"Estadísticas"} player={player} />
-            <TeamHistory title={"Trayectoria"} player={player} />
-            <News title={"Noticias"} player={player} />
-            <Related title={"Relacionado"} player={player} />
+        <div class={"relative"}>
 
+
+            <div class={"md:px-40 pb-40 px-2"}>
+                <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
+                <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
+                <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
+                <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
+                <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
+                <News title={"Noticias"} player={player} setTabs={setTabs} />
+                <Related title={"Relacionado"} player={player} setTabs={setTabs} />
+            </div>
+
+            <Tabs tabs={tabs} />
         </div>
     )
 }

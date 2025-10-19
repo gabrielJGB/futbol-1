@@ -8,7 +8,7 @@ import TablesAndFixtures from './sections/TablesAndFixtures'
 import Teams from './sections/Teams'
 import History from './sections/History'
 
-import league from '../../../../LEAGUE_LIB.json'
+import league from '../../../../LEAGUE_ARG1.json'
 import games from '../../../../LEAGUE_GAMES.json'
 import { round } from "../signals";
 import Brackets from "./sections/Brackets";

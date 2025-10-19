@@ -1,10 +1,17 @@
-import React from 'react'
+import { useEffect, useRef } from 'preact/hooks';
 import SectionTitle from './SectionTitle'
 
-const NextGame = ({ title, player }) => {
+const NextGame = ({ title, player,setTabs }) => {
 
     if (!("league" in player.nextGame))
         return;
+
+    const ref = useRef()
+
+    useEffect(() => {
+        setTabs(prev => [...prev, {title,ref}])
+
+    }, [])
 
     const league = player.nextGame
     const leagueName = league.name
@@ -14,7 +21,7 @@ const NextGame = ({ title, player }) => {
 
 
     return (
-        <div class={"flex flex-col "}>
+        <div ref={ref} class={"flex flex-col "}>
             <SectionTitle title={title} />
             <div class={"flex flex-col  justify-center items-center bg-[#2a2a2a] md:w-max w-full py-4 px-10 shadow shadow-gray-900 rounded-xl"}>
                 <div class={"font-semibold text-lg"}>{leagueName}</div>

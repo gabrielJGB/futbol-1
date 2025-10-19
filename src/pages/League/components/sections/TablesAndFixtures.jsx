@@ -13,7 +13,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
   const tablesGroups = "tables_groups" in league && league.tables_groups
 
 
-  
+
 
   return (
     <div class={"flex flex-col gap-2"}>
@@ -24,7 +24,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
         {
           tablesGroups &&
-          <div class={"flex flex-col gap-2"}>
+          <div class={"flex flex-col gap-2 md:row-start-1 row-start-2"}>
             {
               tablesGroups.map((group, i) => (
                 <div class={"flex flex-col gap-1"}>
@@ -46,21 +46,22 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
         }
 
         {
-          
-          <div class={"flex flex-col gap-3"}>
+
+          <div class={"flex flex-col gap-3 md:row-auto row-start-1"}>
 
 
             <div class={"font-semibold text-2xl w-full text-center"}>{round.value.
               // @ts-ignore
               name}</div>
-            <div class={"w-full flex flex-row items-center justify-center flex-wrap gap-1 py-1"}>
-              
+            <div class={"w-full grid grid-cols-5 gap-1 py-1"}>
+
               {
-                rounds  &&
+                rounds &&
                 rounds.map((r) => (
                   <div
+                    title={r.name}
                     onClick={() => { round.value = r }}
-                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black" : "bg-[#008000] text-white"} cursor-pointer hover:bg-[#C2E213] flex-1 min-w-min whitespace-nowrap  hover:text-black  py-1 px-2 font-semibold text-xs shadow shadow-gray-800 `}>{r.name}</div>
+                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black" : "bg-[#008000] text-white"} cursor-pointer hover:bg-[#C2E213] hover:text-black  py-2 md:py-1 px-1 font-semibold text-start text-xs shadow shadow-gray-800  truncate `}>{r.name}</div>
                 ))
               }
             </div>

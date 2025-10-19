@@ -39,11 +39,11 @@ export function App() {
 
 	return (
 		<LocationProvider  >
-			<div class={"from-[#0f2e22] to-[#1a6449] bg-gradient-to-br h-full  md:px-10 min-h-screen "}>
+			<div class={"from-[#0f2e22] to-[#1a6449] bg-gradient-to-br h-full px-10  min-h-screen "}>
 				<Header />
 				<Router>
 					
-					<Route path="/layout" component={Layout} />
+					{/* <Route path="/layout" component={Layout} /> */}
 					<Route path="/" component={RedirectToToday} />
 					<Route path="/:date?" component={Home} />
 					<Route path="/game/:id" component={Game} />

@@ -1,9 +1,14 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef } from "preact/hooks";
 import SectionTitle from './SectionTitle'
 
-const TeamHistory = ({ title, player }) => {
+const TeamHistory = ({ title, player ,setTabs}) => {
 
+    const ref = useRef()
 
+    useEffect(() => {
+        setTabs(prev => [...prev, {title,ref}])
+
+    }, [])
 
 
     const teamHistory = player.teamHistory.map((team) => (
@@ -14,10 +19,13 @@ const TeamHistory = ({ title, player }) => {
     )).sort((a, b) => (a.year_start - b.year_start))
 
 
+    useEffect(() => {
+        setTabs(prev => [...prev, "Estadísticas"])
 
+    }, [])
 
     return (
-        <div class={"flex flex-col "}>
+        <div ref={ref} class={"flex flex-col "}>
             <SectionTitle title={title} />
 
             <div class={"overflow-x-auto"}>

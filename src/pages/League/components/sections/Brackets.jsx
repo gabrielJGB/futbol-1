@@ -192,15 +192,15 @@ const Brackets = ({ league }) => {
 
 
 
-            <div class={"grid sticky top-0 w-full z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},200px)` }}>
+            <div class={"grid   sticky top-0 w-full z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},200px)` }}>
                 {data.stages.map(stage => (
-                    <div class={" bg-[#061610]/95  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
+                    <div class={"  backdrop-blur-sm bg-[#061610]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
                 ))}
             </div>
 
             <div
                 style={{ gridTemplateColumns: `repeat(${cols},200px)` }}
-                class=" relative  grid gap-1  h-[80vh]"
+                class=" relative  grid gap-1 h-[80vh]"
             >
 
                 {data.stages.map(stage => (

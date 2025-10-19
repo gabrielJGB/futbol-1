@@ -1,9 +1,19 @@
-import React from 'react'
+import { useEffect, useRef } from "preact/hooks";
 import SectionTitle from './SectionTitle'
 
-const News = ({ title, player }) => {
+const News = ({ title, player,setTabs }) => {
+
+
+
+    const ref = useRef()
+
+    useEffect(() => {
+        setTabs(prev => [...prev, {title,ref}])
+
+    }, [])
+
     return (
-        <div class={"flex flex-col"}>
+        <div ref={ref} class={"flex flex-col"}>
             <SectionTitle title={title} />
 
             <div class={"flex md:flex-row flex-wrap flex-col gap-4"}>

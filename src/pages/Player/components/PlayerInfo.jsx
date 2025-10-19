@@ -1,10 +1,22 @@
-import { Info, MapPin } from 'lucide-preact'
-import React from 'react'
+import {  MapPin } from 'lucide-preact'
+import { useEffect, useRef } from 'preact/hooks';
 import { MdStadium } from 'react-icons/md'
 
-const PlayerInfo = ({ player }) => {
+const PlayerInfo = ({ player, setTabs,title }) => {
+
+    if (!("athlete" in player))
+        return;
+
+    const ref = useRef()
+
+    useEffect(() => {
+        setTabs(prev => [...prev, {title,ref}])
+
+    }, [])
+
+
     return (
-        <div class="text-white rounded-2xl   mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
+        <div ref={ref} class="text-white rounded-2xl   mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
 
 
             <div class="flex-1 flex flex-col gap-3">
@@ -25,9 +37,9 @@ const PlayerInfo = ({ player }) => {
                                 <img src={player.athlete.flag.href} class="w-8 rounded-sm" alt="" />
                                 <span class="text-lg md:text-base font-semibold">{player.athlete.citizenship}</span>
                             </li>
-                                {
-                             !player.athlete.active   &&
-                              <li><span class="font-semibold text-red-500 text-xs">RETIRADO </span></li>
+                            {
+                                !player.athlete.active &&
+                                <li><span class="font-semibold text-red-500 text-xs">RETIRADO </span></li>
                             }
                             {
                                 player.athlete.displayHeight &&
@@ -55,7 +67,7 @@ const PlayerInfo = ({ player }) => {
                                 <li><span class="opacity-70 font-semibold text-xs">Posición:</span> {player.athlete.position.displayName}</li>
                             }
 
-                        
+
 
                         </div>
                     </div>

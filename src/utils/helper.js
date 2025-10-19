@@ -155,3 +155,9 @@ export const getSortedArr = (leagues) => {
   return sorted
 
 }
+
+
+
+export  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };

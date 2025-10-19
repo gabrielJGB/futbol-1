@@ -1,15 +1,23 @@
 import React from 'react'
 import SectionTitle from './SectionTitle';
+import { useEffect, useRef } from 'preact/hooks';
 
-const Last5Games = ({ title, stats, events, eventsInfo }) => {
+const Last5Games = ({ title, stats, events, eventsInfo, setTabs }) => {
 
-    if (!events || !stats )
+    if (!events || !stats)
         return;
+    
+    const ref = useRef()
+
+    useEffect(() => {
+        setTabs(prev => [...prev, {title,ref}])
+
+    }, [])
 
     const getResultColor = r => r === "G" ? "bg-green-400" : r === "P" ? "bg-red-400" : "bg-yellow-300";
 
     return (
-        <div class={"flex flex-col w-full"}>
+        <div ref={ref} class={"flex flex-col w-full"}>
 
             <SectionTitle title={title} />
 

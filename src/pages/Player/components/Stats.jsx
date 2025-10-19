@@ -1,14 +1,21 @@
-import React from 'react'
+import { useEffect, useRef } from 'preact/hooks';
 import SectionTitle from './SectionTitle'
 
-const Stats = ({ title, player }) => {
+const Stats = ({ title, player, setTabs }) => {
 
     if (!("statistics " in player))
         return;
 
 
+    const ref = useRef()
+
+    useEffect(() => {
+        setTabs(prev => [...prev, { title, ref }])
+
+    }, [])
+
     return (
-        <div class={"flex flex-col"}>
+        <div ref={ref} class={"flex flex-col"}>
             <SectionTitle title={title} />
             <div class="overflow-x-auto ">
                 <table class={"shadow shadow-gray-900  bg-gray-500 w-auto  border-separate border-spacing-[2px] rounded"} >

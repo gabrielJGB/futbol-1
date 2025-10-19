@@ -13,8 +13,8 @@ export const Home = ({ date }) => {
 
 	const [menuVisible, setMenuVisible] = useState(false)
 	const [calendarVisible, setCalendarVisible] = useState(false)
-	const { data, loading } = useHome(date)
-	// const loading = false
+	// const { data, loading } = useHome(date)
+	const loading = false
 	const { route } = useLocation()
 	const day = date.split("-")[0]
 	const month = parseInt(date.split("-")[1])-1
@@ -24,7 +24,8 @@ export const Home = ({ date }) => {
 	
 
 	return (
-		<div class={"z-10 relative grid md:grid-cols-[1fr_2fr_1fr] grid-cols-1 md:gap-20 "}>
+		// 
+		<div class={"z-10 relative grid md:grid-cols-[1fr_2fr_1fr] grid-cols-1 gap-20"}>
 
 			<div class={`z-20 bg-[rgba(0,0,0,0.9)] md:h-max md:static   md:-left-auto  fixed  w-full   top-0 ${showMenu.value ? "-left-[0%]" : "-left-[100%]"} transition-all`}>
 				<Menu />

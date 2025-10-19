@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from "preact/hooks";
 import SectionTitle from './SectionTitle'
 import { Link } from 'preact-router/match'
 

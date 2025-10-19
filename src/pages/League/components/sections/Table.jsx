@@ -4,11 +4,11 @@ import React from 'react'
 const getResultElement = (elem) => {
 
     if (elem === 0) {
-        return <div class={" text-white px-[2px] bg-red-800 "}>P</div>
+        return <div class={" text-white bg-[#c20000] px-[2px] rounded-xs"}>P</div>
     } else if (elem === 1)
-        return <div class={" text-white px-[2px] bg-green-700 "}>G</div>
+        return <div class={" text-white bg-green-700 px-[2px] rounded-xs"}>G</div>
     else if (elem === 2)
-        return <div class={" text-black px-[2px] bg-yellow-400 "}>E</div>
+        return <div class={" text-black bg-[#fac500] px-[2px] rounded-xs"}>E</div>
 
 }
 
@@ -71,7 +71,7 @@ const Table = ({ table }) => {
                                         return (<td class={`${key === "Points" ? "font-semibold" : ""} text-center`}>
                                             {
                                                 typeof (val.value) === 'object' ?
-                                                    <div class={"flex text-xs font-semibold flex-row-reverse justify-center gap-[1px] flex-1"}>
+                                                    <div class={"flex text-xs font-semibold flex-row-reverse justify-center gap-[1px]"}>
                                                         {
                                                             val.value?.map((elem, i) => (
                                                                 getResultElement(elem)
