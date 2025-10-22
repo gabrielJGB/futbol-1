@@ -3,6 +3,7 @@ import React from 'react'
 
 import { h } from 'preact';
 import { useRef, useLayoutEffect, useState } from 'preact/hooks';
+import SectionTitle from '../../../../components/SectionTitle';
 
 // Componente para un equipo individual
 const Team = ({ name, id, winner }) => (
@@ -74,7 +75,7 @@ const Match = ({ match }) => (
             }
             {
                 match.games?.length > 1 &&
-                <div class={`flex flex-col items-center justify-center gap-0 pl-1  ${match.games?.length > 1 && "border-l-[1px] border-[#008000]/50"}`}>
+                <div class={`flex flex-col items-center justify-between gap-0 pl-1  ${match.games?.length > 1 && "border-l-[1px] border-[#008000]/50"}`}>
                     {
                         match.games.map((game, i) => {
                             return "scores" in game &&
@@ -105,7 +106,7 @@ const Match = ({ match }) => (
 const Stage = ({ stage }) => (
 
 
-    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] h-full w-[200px] bg-black/20 p-1 pt-2 rounded-b`}>
+    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] w-[250px]  h-full  bg-black/20 p-1 pt-2 rounded-b`}>
 
         {stage.name === "Final" && stage.groups.length == 2 && <div class={"mb-20"}></div>}
 
@@ -118,7 +119,7 @@ const Stage = ({ stage }) => (
                         <div class={"flex flex-row items-center gap-1 "}>
                             {
                                 match.games?.map((game, i) => (
-                                    <div class={"text-[10px] "}> {i === 1 && "-"} {game.start_time.split(" ")[0].replace("-20","/").replaceAll("-", "/")}</div>
+                                    <div class={"text-[10px] "}> {i === 1 && "-"} {game.start_time.split(" ")[0].replace("-20", "/").replaceAll("-", "/")}</div>
                                 ))
                             }
                         </div>
@@ -166,49 +167,50 @@ const Brackets = ({ league }) => {
     const cols = data.stages.length
     const podium = getTeams(data.stages)
 
-    console.log(league);
+
 
     return (
-
-        <div class={"flex flex-col justify-center mx-auto overflow-x-auto "} >
-
-
+        <>
+            <SectionTitle title={"Llaves"} />
 
 
-            {
-                podium != undefined &&
-                <div class={"flex flex-row justify-center gap-2 w-full mx-auto mb-4"}>
-                    {
-                        podium.map((team, i) => (
-                            <div class={` flex flex-col gap-1 justify-end items-center `}>
-                                <img style={{ height: 40 }} src={`https://api.promiedos.com.ar/images/team/${team.team.id}/1`} />
-                                <div class={`flex items-center justify-center border-t border-[#c2e213] bg-[#071811] ${team.pos === 1 && "h-[60px]"} ${team.pos === 2 && "h-[40px]"} ${team.pos === 3 && "h-[23px]"} w-[80px] text-2xl font-semibold`}>{team.pos}</div>
-                            </div>
-                        ))
-                    }
+            <div class={"flex flex-col justify-center mx-auto  overflow-auto"} >
+
+
+
+                {
+                    podium != undefined &&
+                    <div class={"flex flex-row justify-center gap-2 mx-auto mb-4"}>
+                        {
+                            podium.map((team, i) => (
+                                <div class={` flex flex-col gap-1 justify-end items-center `}>
+                                    <img style={{ height: 40 }} src={`https://api.promiedos.com.ar/images/team/${team.team.id}/1`} />
+                                    <div class={`flex items-center justify-center border-t border-[#c2e213] bg-[#071811] ${team.pos === 1 && "h-[60px]"} ${team.pos === 2 && "h-[40px]"} ${team.pos === 3 && "h-[23px]"} w-[80px] text-2xl font-semibold`}>{team.pos}</div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                }
+
+
+                <div class={"grid sticky top-0 w-min z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}>
+                    {data.stages.map(stage => (
+                        <div class={" w-[250px] backdrop-blur-sm bg-[#061610]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
+                    ))}
                 </div>
 
-            }
+                <div
+                    style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}
+                    class=" relative  grid gap-1 h-[80vh] w-min"
+                >
 
+                    {data.stages.map(stage => (
+                        <Stage key={stage.name} stage={stage} />
+                    ))}
 
-
-            <div class={"grid   sticky top-0 w-full z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},200px)` }}>
-                {data.stages.map(stage => (
-                    <div class={"  backdrop-blur-sm bg-[#061610]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
-                ))}
+                </div>
             </div>
-
-            <div
-                style={{ gridTemplateColumns: `repeat(${cols},200px)` }}
-                class=" relative  grid gap-1 h-[80vh]"
-            >
-
-                {data.stages.map(stage => (
-                    <Stage key={stage.name} stage={stage} />
-                ))}
-
-            </div>
-        </div>
+        </>
     );
 };
 

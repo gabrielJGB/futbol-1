@@ -2,6 +2,7 @@ import React from 'react'
 import Fixture from './Fixture'
 import Table from './Table'
 import { round } from '../../signals'
+import SectionTitle from '../../../../components/SectionTitle'
 
 
 const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
@@ -18,7 +19,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
   return (
     <div class={"flex flex-col gap-2"}>
 
-      <h2 class="text-[#C2E213] text-xl font-bold">{name}</h2>
+      <SectionTitle title={name} />
 
       <div class={"grid md:grid-cols-2 grid-cols-1 gap-10"}>
 
@@ -47,12 +48,8 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
         {
 
-          <div class={"flex flex-col gap-3 md:row-auto row-start-1"}>
+          <div class={"flex flex-col gap-1 md:row-auto row-start-1"}>
 
-
-            <div class={"font-semibold text-2xl w-full text-center"}>{round.value.
-              // @ts-ignore
-              name}</div>
             <div class={"w-full grid grid-cols-5 gap-1 py-1"}>
 
               {
@@ -61,10 +58,15 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
                   <div
                     title={r.name}
                     onClick={() => { round.value = r }}
-                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black" : "bg-[#008000] text-white"} cursor-pointer hover:bg-[#C2E213] hover:text-black  py-2 md:py-1 px-1 font-semibold text-start text-xs shadow shadow-gray-800  truncate `}>{r.name}</div>
+                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213] border-transparent py-2 md:py-1 px-1 font-semibold text-start text-xs shadow shadow-gray-800  truncate `}>{r.name}</div>
                 ))
               }
             </div>
+
+            <div class={"font-semibold text-2xl w-full text-center"}>{round.value.
+              // @ts-ignore
+              name}</div>
+
             {
 
               gamesLoading ?

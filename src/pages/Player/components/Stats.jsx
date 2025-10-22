@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'preact/hooks';
-import SectionTitle from './SectionTitle'
+import SectionTitle from '../../../components/SectionTitle'
 
 const Stats = ({ title, player, setTabs }) => {
 

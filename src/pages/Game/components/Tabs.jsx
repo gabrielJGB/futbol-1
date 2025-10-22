@@ -17,10 +17,10 @@ const Tabs = ({ game }) => {
 
 
   return (
-    <div className="w-full rounded">
+    <div className="w-full relative rounded">
 
 
-      <div className="flex rounded overflow-x-auto md:overflow-visible bg-[#032E15] shadow shadow-gray-900 md:mx-0 mx-1 mb-4">
+      <div className="sticky top-0 z-300 flex rounded overflow-x-auto md:overflow-visible bg-[#032E15] shadow shadow-gray-900 md:mx-0 mx-1 mb-4">
         {tabs.filter(t => t.show).map((tab) => (
           <button
             key={tab.id}

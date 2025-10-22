@@ -11,6 +11,8 @@ import { useEffect } from 'preact/hooks';
 import './style.css';
 import Player from './pages/Player/index.jsx';
 import Layout from './pages/Layout/index.jsx';
+import Menu from './components/Menu.jsx';
+import { showMenu } from './signals/signals.js';
 
 
 const RedirectToToday = () => {
@@ -23,37 +25,40 @@ const RedirectToToday = () => {
 				month: "2-digit",
 				year: "numeric",
 			})
-			.replace(/\//g, "-"); 
+			.replace(/\//g, "-");
 
-		route(`/${formatted}`, true); 
+		route(`/${formatted}`, true);
 	}, []);
 
-	return null; 
+	return null;
 };
 
 export function App() {
-	
+
 
 
 
 
 	return (
 		<LocationProvider  >
-			<div class={"from-[#0f2e22] to-[#1a6449] bg-gradient-to-br h-full px-10  min-h-screen "}>
+			<div class={"from-[#0f2e22] to-[#1a6449]  bg-gradient-to-br h-full  min-h-screen "}>
 				<Header />
-				<Router>
-					
-					{/* <Route path="/layout" component={Layout} /> */}
-					<Route path="/" component={RedirectToToday} />
-					<Route path="/:date?" component={Home} />
-					<Route path="/game/:id" component={Game} />
-					<Route path="/league/:id" component={League} />
-					<Route path="/team/:id" component={Team} />
-					<Route path="/player/:name" component={Player} />
-					<Route default component={NotFound} />
-				</Router>
+				<main class={`relative grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}>
+					<Menu />
+					<Router>
+
+						{/* <Route path="/layout" component={Layout} /> */}
+						<Route path="/" component={RedirectToToday} />
+						<Route path="/:date?" component={Home} />
+						<Route path="/game/:id" component={Game} />
+						<Route path="/league/:id" component={League} />
+						<Route path="/team/:id" component={Team} />
+						<Route path="/player/:name" component={Player} />
+						<Route default component={NotFound} />
+					</Router>
+				</main>
 			</div>
-		</LocationProvider> 
+		</LocationProvider>
 	);
 }
 

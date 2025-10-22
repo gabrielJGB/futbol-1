@@ -13,8 +13,8 @@ export const Home = ({ date }) => {
 
 	const [menuVisible, setMenuVisible] = useState(false)
 	const [calendarVisible, setCalendarVisible] = useState(false)
-	// const { data, loading } = useHome(date)
-	const loading = false
+	const { data, loading } = useHome(date)
+	// const loading = false
 	const { route } = useLocation()
 	const day = date.split("-")[0]
 	const month = parseInt(date.split("-")[1])-1
@@ -25,13 +25,11 @@ export const Home = ({ date }) => {
 
 	return (
 		// 
-		<div class={"z-10 relative grid md:grid-cols-[1fr_2fr_1fr] grid-cols-1 gap-20"}>
+		<div class={"z-10 relative grid md:grid-cols-[2fr_1fr] grid-cols-1 col-start-2 gap-15 md:px-15 px-1 pt-5 pb-20 "}>
 
-			<div class={`z-20 bg-[rgba(0,0,0,0.9)] md:h-max md:static   md:-left-auto  fixed  w-full   top-0 ${showMenu.value ? "-left-[0%]" : "-left-[100%]"} transition-all`}>
-				<Menu />
-			</div>
+			
 
-			<div class={"md:m-0 mx-1 mb-20"}>
+			<div class={"w-full"}>
 				<DateSelector />
 				{
 					loading ?
@@ -42,7 +40,7 @@ export const Home = ({ date }) => {
 				}
 			</div>
 
-			<div class={`z-20 flex flex-col md:pt-0 pt-20 md:items-start items-center md:bg-transparent bg-[rgba(0,0,0,0.95)]  md:static   md:-right-auto  fixed md:w-auto w-full h-screen top-0 ${calendarVisible ? "-right-[0%]" : "-right-[100%]"} transition-all`}>
+			<div class={` w-[350px]`}>
 				<Calendar />
 
 				{

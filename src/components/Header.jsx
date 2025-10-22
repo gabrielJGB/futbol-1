@@ -7,10 +7,10 @@ export function Header() {
 	const { url } = useLocation();
 
 	return (
-		<header class={"flex flex-row items-center px-1 md:px-0 md:pb-6 pt-2 pb-1"}>
+		<header class={"sticky top-0 z-[200] p-1 bg-[#032E15] h-[7vh]  flex flex-row gap-1 items-center   "}>
 
 			<div
-				class={"md:hidden px-3 py-1 mr-2 text-3xl text-[#C2E213] text-center hover:bg-[#C2E213] hover:text-green-900  font-semibold rounded-md  cursor-pointer"}
+				class={"block px-3 py-1 mr-2 text-2xl text-[#C2E213] text-center active:bg-[#C2E213] active:text-green-900 hover:bg-[#C2E213] hover:text-green-900  font-semibold rounded  cursor-pointer"}
 				onClick={() => { showMenu.value = !showMenu.value }}
 			>&#9776;
 			</div>

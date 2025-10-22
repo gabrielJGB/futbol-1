@@ -24,10 +24,10 @@ const Player = ({ name }) => {
     const [eventsInfo, setEventsInfo] = useState(false)
     const [stats, setStats] = useState(false)
 
+    const [tabs, setTabs] = useState([])
     // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
     // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)
     // const [stats, setStats] = useState(player.gameLog.statistics[0])
-    // const [tabs, setTabs] = useState([])
     // const [active, setActive] = useState(null)
 
 
@@ -79,20 +79,17 @@ const Player = ({ name }) => {
 
 
     return (
-        <div class={"relative"}>
+        <div class={"relative  px-1 md:px-10 pt-5 pb-20 md:col-start-2 col-start-1 "}>
 
+            <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
+            <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
+            <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
+            <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
+            <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
+            <News title={"Noticias"} player={player} setTabs={setTabs} />
+            <Related title={"Relacionado"} player={player} setTabs={setTabs} />
 
-            <div class={"md:px-40 pb-40 px-2"}>
-                <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
-                <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
-                <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
-                <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
-                <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
-                <News title={"Noticias"} player={player} setTabs={setTabs} />
-                <Related title={"Relacionado"} player={player} setTabs={setTabs} />
-            </div>
-
-            <Tabs tabs={tabs} />
+            {/* <Tabs tabs={tabs} /> */}
         </div>
     )
 }

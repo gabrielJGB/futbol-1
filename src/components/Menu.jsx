@@ -7,18 +7,22 @@ import { showMenu } from '../signals/signals'
 import { Header } from './Header'
 
 const Menu = () => {
+
+
+  /*${menuVisible ? "-left-[0%]" : "-left-[100%]"}
+   */
+
   return (
-    <div class={"z-20 flex flex-col gap-0 w-full  md:overflow-y-hidden md:h-full h-screen overflow-y-scroll  min-w-[250px]"}>
-
-      <div class={"md:hidden block bg-[#032E15]"}>
-        <Header />
-      </div>
-
+    <div
+      onClick={() => showMenu.value = !showMenu.value}
+      class={`${showMenu.value ? "md:block fixed -left-[0%]" : "md:block fixed -left-[100%]"} 
+         bottom-0 z-200 flex flex-col gap-0 h-[93vh] md:w-[250px] w-full  bg-black/70 shadow shadow-gray-900 overflow-y-auto transition-all`}
+    >
 
       {
 
         menu.map((section, i) => (
-          <div class={"flex flex-col shadow shadow-gray-900"}>
+          <div class={` transition-all md:w-full w-[270px] flex flex-col shadow shadow-gray-900`}>
 
             <div class={"flex flex-row items-center gap-2 bg-green-950 text-[#C2E213] p-1"}>
               {

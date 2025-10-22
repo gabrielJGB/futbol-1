@@ -8,7 +8,7 @@ import TablesAndFixtures from './sections/TablesAndFixtures'
 import Teams from './sections/Teams'
 import History from './sections/History'
 
-import league from '../../../../LEAGUE_ARG1.json'
+import league from '../../../../LEAGUE_LIB.json'
 import games from '../../../../LEAGUE_GAMES.json'
 import { round } from "../signals";
 import Brackets from "./sections/Brackets";
@@ -75,7 +75,7 @@ const LeagueView = ({ leagueId }) => {
         {
             "id": "section-1",
             "name": "Estadísticas",
-            "component": (name, league, games) => (<Stats name={name} league={league} games={games} />)
+            "component": (name, league, games) => (<Stats league={league} />)
         },
         {
             "id": "section-3",
@@ -86,7 +86,7 @@ const LeagueView = ({ leagueId }) => {
 
 
     return (
-        <div class="flex flex-col gap-5  text-white min-h-screen  font-sans ">
+        <div class="relative col-start-2 flex w-full overflow-x-auto flex-col gap-3  text-white  font-sans md:px-10 px-1 pt-5 pb-20 ">
 
 
             {/* <div class="fixed bottom-0 left-0 w-full bg-black/85 backdrop-blur-sm border-b border-[#333] z-50">
@@ -115,7 +115,7 @@ const LeagueView = ({ leagueId }) => {
                     <section
                         // @ts-ignore
                         // ref={(el) => (sectionRefs.current[`section-${i}`] = el)}
-                        class={"scroll-mt-2 w-full"}
+                        class={"  "}
                         id={`section-${i}`}
                         key={i}
                     >

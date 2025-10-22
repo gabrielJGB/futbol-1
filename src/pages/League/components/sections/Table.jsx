@@ -30,8 +30,8 @@ const Table = ({ table }) => {
 
     return (
         <div>
-            <h2 class={"w-full py-[2px] bg-[#176115] text-sm font-semibold text-white text-center"}>{table.name}</h2>
-            <table class={"w-full shadow shadow-gray-900 bg-gray-500   border-separate border-spacing-[2px] rounded"} >
+            <h2 class={"w-full py-1 px-3 shadow shadow-gray-900 bg-[#176115]  font-semibold text-white text-start rounded-t"}>{table.name}</h2>
+            <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-sm">
                         <th class="text-center">#</th>
@@ -50,8 +50,8 @@ const Table = ({ table }) => {
 
                     {table.table.rows.map((row, i) => {
                         return (
-                            <tr class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}>
-                                <td style={{ background: ("destination_color" in row ? row.destination_color : "") }} class={"text-center w-[10px]"}>{i + 1}</td>
+                            <tr class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"} hover:bg-gray-700 hover:text-white`}>
+                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""),color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[10px] hover:text-white"}>{i + 1}</td>
 
                                 <td class="font-semibold  flex flex-row  items-center gap-1 p-[3px]">
                                     <div class={"w-[18px]"}>

@@ -22,13 +22,9 @@ export function Game({ id }) {
 
 
   return (
-    <div class={"z-10 relative grid md:grid-cols-[1fr_3fr] grid-cols-1 md:px-0  md:gap-20 "}>
+    <div class={"z-10 relative  md:px-20  pt-5 pb-20 col-start-2"}>
 
-      <div class={`z-20 bg-[rgba(0,0,0,0.9)] md:h-max md:static   md:-left-auto  fixed  w-full   top-0 ${showMenu.value ? "-left-[0%]" : "-left-[100%]"} transition-all`}>
-        <Menu />
-      </div>
-
-      <div class={"relative  w-full mb-20"}>
+      <div class={"z-200 relative  mb-20 w-screen md:w-full"}>
         <Videos videos={data.game.videos} />
         <GameHeader game={data.game} />
         <Tabs game={data.game} />

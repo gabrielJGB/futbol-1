@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import { Link } from 'preact-router';
+import SectionTitle from '../../../../components/SectionTitle';
 
 const abbreviatePosition = (pos) => {
   if (!pos) return '';
@@ -12,21 +13,28 @@ const abbreviatePosition = (pos) => {
 };
 
 
-const StatsTables = ({ name, games, league }) => {
+const StatsTables = ({  league }) => {
 
   const tables = league.players_statistics?.tables
 
   if (tables === undefined)
     return;
 
-console.log(league);
+  console.log(league);
 
   return (
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
-      {tables.map((table) => (
-        <Table key={table.name} table={table} />
-      ))}
-    </div>
+
+    <>
+      <SectionTitle title={"Estadísticas"} />
+
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+
+
+        {tables.map((table) => (
+          <Table key={table.name} table={table} />
+        ))}
+      </div>
+    </>
   );
 };
 
@@ -35,8 +43,8 @@ const Table = ({ table }) => {
   const visibleRows = showAll ? table.rows : table.rows.slice(0, 10);
 
   return (
-    <div class="bg-[#000000] text-gray-100 rounded-lg  overflow-hidden h-min shadow shadow-gray-900">
-      <div class="px-4 py-3 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
+    <div class="bg-[#000000] text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
+      <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
         <h2 class="text-xl font-bold">{table.name}</h2>
         <span class="text-sm text-gray-400">
           {table.rows.length} jugadores
@@ -49,17 +57,17 @@ const Table = ({ table }) => {
             <th class="">#</th>
             <th class="text-left px-4 py-1">Jugador</th>
             <th class="py-1 table-cell">Pos.</th>
-            
+
             {table.columns.map((col) => (
               <th key={col.key} class="text-center px-0 py-1">
-                {col.title.replace("Total Fouls Conceded","Barridas ganadas").replace("Tarjetas","")}
+                {col.title.replace("Total Fouls Conceded", "Barridas ganadas").replace("Tarjetas", "")}
               </th>
             ))}
           </tr>
         </thead>
 
         <tbody>
-          {visibleRows.map((row,i) => {
+          {visibleRows.map((row, i) => {
             const player = row.entity.object;
             const teamId = player.team_id || 'unknown';
             const pos = abbreviatePosition(player.position);
@@ -69,7 +77,7 @@ const Table = ({ table }) => {
                 key={row.num}
                 class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
               >
-                <td class="px-1 py-1 font-semibold  text-center">{row.num}</td>
+                <td class="px-1 py-1 font-semibold  text-start">{row.num}</td>
 
                 <td class="">
                   <Link

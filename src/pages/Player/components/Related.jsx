@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import SectionTitle from './SectionTitle'
+import SectionTitle from '../../../components/SectionTitle'
 import { Link } from 'preact-router/match'
 
 const Related = ({ title, player }) => {

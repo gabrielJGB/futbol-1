@@ -1,19 +1,153 @@
 import React from 'react'
+import { useState, useEffect, useRef } from "preact/hooks";
+import SectionTitle from '../../../../components/SectionTitle'
+import { fetcher } from '../../../../utils/fetcher';
+import useSWR from 'swr';
+import { Link } from 'preact-router/match';
 
-const History = ({name,league,games}) => {
+const abbreviatePosition = (pos) => {
+  if (!pos) return '';
+  pos = pos.toLowerCase();
+  if (pos.startsWith('del')) return 'DEL';
+  if (pos.startsWith('med')) return 'MED';
+  if (pos.startsWith('def')) return 'DEF';
+  if (pos.startsWith('arc') || pos.startsWith('por') || pos.startsWith('gol')) return 'ARQ';
+  return pos.slice(0, 3).toUpperCase();
+};
+
+
+const History = ({ name, league, games }) => {
+
+
+  const [historyTable, setHistoryTable] = useState(false)
+  const [rankingTable, setRankingTable] = useState(false)
+
+  const { isLoading, error } = useSWR(
+    league ? `https://api.promiedos.com.ar/league/history/${league.league.id}`
+      : null,
+    fetcher,
+    {
+      revalidateIfStale: true,
+      revalidateOnFocus: false,
+      onSuccess: (data) => {
+        console.log(data);
+
+        setHistoryTable("history" in data && data.history)
+        setRankingTable("ranking_tables" in data && data.ranking_tables)
+
+      }
+    }
+  );
+
+
+
+  if (isLoading)
+    return <div>Cagando...</div>
+
+
   return (
-        <div class={"flex flex-col gap-2"}>
-            <h2 class="text-[#C2E213] text-xl font-bold">{name}</h2>
+    <div class={"flex flex-col gap-2"}>
+      <SectionTitle title={"Historial"} />
 
+      <div class={"grid md:grid-cols-2 grid-cols-1 gap-6"}>
 
-            
-            
-            <div class="bg-[#1a1a1a] rounded-xl p-4 shadow-lg"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque quae itaque nesciunt necessitatibus reprehenderit dolore doloribus dignissimos, est dicta repellat. Deleniti deserunt optio enim unde recusandae repellat qui dignissimos. Asperiores.
-            Amet ipsa, nemo totam rem ducimus, minus eum a blanditiis quasi, adipisci explicabo vel voluptate unde porro neque atque minima non tenetur tempore quis id eaque ipsam veritatis. Praesentium, atque?
-            Dignissimos provident vel illo rem magni, aliquam delectus itaque maxime nihil quia ad mollitia dolores debitis fugit dolor velit voluptates aperiam sunt quos voluptatum. Esse rem quaerat dolorum tempore? Culpa?
-            Nisi totam veritatis dolorum quibusdam laborum perferendis voluptates repudiandae provident. Amet optio cum ut deserunt iusto doloremque fugit temporibus odit, doloribus, ratione quam. Nobis quo labore aspernatur quae provident molestias. </div>
-        </div>
+        
+          {historyTable && <Table table={historyTable} />}
+          {rankingTable && <Table table={rankingTable} />}
+        
+
+      </div>
+
+    </div>
   )
 }
+
+
+const Table = ({ table }) => {
+
+  if (table.length)
+    table = table[0]
+
+
+  const [showAll, setShowAll] = useState(false);
+  const visibleRows = showAll ? table.rows : table.rows.slice(0, table.rows.length > 10 ? 10 : 1);
+
+  return (
+    <div class="bg-[#000000] text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
+      <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
+        <h2 class="text-xl font-bold">{table.name.replace("Historia", "Campeones")}</h2>
+        <span class="text-sm text-gray-400">
+          {table.rows.length} 
+        </span>
+      </div>
+
+      <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+        <thead>
+          <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
+            {table.columns.map((col) => (
+              <th key={col.key} class="text-center px-0 py-1">
+                {col.title.replace("Torneo", "CAMPEÓN").replace("Campeón", "AÑO")}
+              </th>
+            ))}
+          </tr>
+        </thead>
+
+        <tbody>
+          {visibleRows.map((row, i) => {
+            const player = row.entity.object;
+            const teamId = player.id || 'unknown';
+            const pos = abbreviatePosition(player.position);
+
+            return (
+              <tr
+                key={row.num}
+                class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
+              >
+
+
+                <td class="">
+                  <Link
+                    // @ts-ignore
+                    href={`/team/${encodeURIComponent(teamId)}`}
+                    class="px-1 py-1 flex items-center text-sm  hover:underline"
+                  >
+                    <img
+                      src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
+                      alt="Escudo Equipo"
+                      class="h-6 w-6 mr-2  object-contain"
+                    />
+                    {player.name}
+                  </Link>
+                </td>
+
+
+
+                {row.values.map((val) => (
+                  <td
+                    key={val.key}
+                    class="px-1 py-1 text-center font-semibold "
+                  >
+                    {val.value}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+
+      {table.rows.length > 10 && (
+        <div class="p-2 flex justify-center border-t border-gray-800 bg-gray-850">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            class="text-sm text-white hover:text-yellow-300 transition cursor-pointer"
+          >
+            {showAll ? 'Ver menos ▲' : 'Ver más ▼'}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default History

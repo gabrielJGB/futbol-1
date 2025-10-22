@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionTitle from './SectionTitle';
+import SectionTitle from '../../../components/SectionTitle';
 import { useEffect, useRef } from 'preact/hooks';
 
 const Last5Games = ({ title, stats, events, eventsInfo, setTabs }) => {

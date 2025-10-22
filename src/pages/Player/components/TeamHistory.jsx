@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "preact/hooks";
-import SectionTitle from './SectionTitle'
+import SectionTitle from '../../../components/SectionTitle'
 
 const TeamHistory = ({ title, player ,setTabs}) => {
 
@@ -25,7 +25,7 @@ const TeamHistory = ({ title, player ,setTabs}) => {
     }, [])
 
     return (
-        <div ref={ref} class={"flex flex-col "}>
+        <div ref={ref} class={"flex flex-col overflow-x-auto"}>
             <SectionTitle title={title} />
 
             <div class={"overflow-x-auto"}>

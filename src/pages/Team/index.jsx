@@ -7,7 +7,7 @@ const Team = ({ id }) => {
 
 
   return (
-    <div class={"grid grid-cols-2 p-10 gap-20"}>
+    <div class={"relative grid grid-cols-2 p-10 gap-20"}>
       <div class={`bg-[rgba(0,0,0,0.9)]  md:static   md:-left-auto  fixed md:w-[250px] w-full   top-0 ${menuVisible ? "-left-[0%]" : "-left-[100%]"} transition-all`}>
         <Menu />
       </div>
