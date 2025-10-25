@@ -1,13 +1,18 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 
 *{
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: "Oswald", sans-serif;
 }
 
 :root {
-	background-color: #14402F;
 
+
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .react-calendar {
@@ -15,6 +20,20 @@
 	border: none;
 	border-radius: 5px;
 	padding: 5px
+}
+
+
+
+@theme {
+	--font-roboto: "Roboto", sans-serif; 
+	--color-background:#021209;
+	--color-borderc:#1D291C;
+  	--color-b2:#0E3E1D;
+	--color-b3:#032E15;
+	--color-b4:#015A1C;
+	--color-b5:#008000;
+	--color-primary:#C2E213;
+
 }
 
 @media (prefers-color-scheme: dark) {}

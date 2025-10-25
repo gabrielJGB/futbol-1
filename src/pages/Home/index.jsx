@@ -7,41 +7,41 @@ import { selectedDate, showMenu } from "../../signals/signals";
 import { useLocation } from "preact-iso";
 import { useHome } from "./useHome";
 import data from '../../../TODAY.json'
+import Loading from "../../components/Loading";
 
 
 export const Home = ({ date }) => {
 
-	const [menuVisible, setMenuVisible] = useState(false)
-	const [calendarVisible, setCalendarVisible] = useState(false)
+	
 	const { data, loading } = useHome(date)
 	// const loading = false
-	const { route } = useLocation()
-	const day = date.split("-")[0]
-	const month = parseInt(date.split("-")[1])-1
-	const year = date.split("-")[2]
-	selectedDate.value = new Date(year,month,day)
-
 	
+	const day = date.split("-")[0]
+	const month = parseInt(date.split("-")[1]) - 1
+	const year = date.split("-")[2]
+	selectedDate.value = new Date(year, month, day)
+
+
+	useEffect(() => {
+		if (window.innerWidth < 768)
+			showMenu.value = false
+	}, [])
+
+
 
 	return (
 		// 
-		<div class={"z-10 relative grid md:grid-cols-[2fr_1fr] grid-cols-1 col-start-2 gap-15 md:px-15 px-1 pt-5 pb-20 "}>
+		<div class={" grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
 
-			
-
-			<div class={"w-full"}>
+			<div class={"w-full md:mt-4 "}>
 				<DateSelector />
-				{
-					loading ?
-						<div class={"flex-1 w-full h-screen rounded-xs bg-[#002D29] shadow shadow-black"}></div>
-						:
-						// <div></div>
-						<LeagueList leagues={data.leagues} />
-				}
+				{loading ? <Loading /> : <LeagueList leagues={data.leagues} />}
 			</div>
 
+			<Calendar />
+
+{/* 
 			<div class={` w-[350px]`}>
-				<Calendar />
 
 				{
 					!loading && "calendar" in data &&
@@ -69,13 +69,9 @@ export const Home = ({ date }) => {
 
 					</div>
 				}
-			</div>
+			</div> */}
 
 
-			<div class={"z-30 flex flex-row justify-between w-full md:hidden fixed bottom-0"}>
-				<div></div>
-				<div class={"p-2 text-sm w-[110px] bg-[#008000] text-white text-center hover:bg-[#1da51d]  font-semibold rounded-tl-md shadow shadow-gray-800 cursor-pointer"} onClick={() => setCalendarVisible(!calendarVisible)}>Calendario</div>
-			</div>
 
 
 		</div>

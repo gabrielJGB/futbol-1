@@ -1,13 +1,13 @@
 .react-calendar {
 
   height: 350px;
-  background: #044418;
+  background-color: var(--color-b2) !important;
   color: white;
   box-shadow: 0 3px 3px 2px rgb(0 0 0 / 0.2);
   line-height: 1.125em;
   font-weight: bold !important;
   padding: 5px;
-  border-radius: 12px;
+  border-radius: 18px !important;
   opacity: 100%;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .react-calendar__navigation button :focus{
-  background-color: unset !important;
+  background-color: transparent !important;
 }
 
 .react-calendar__navigation button {

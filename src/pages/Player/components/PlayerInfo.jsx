@@ -16,12 +16,13 @@ const PlayerInfo = ({ player, setTabs,title }) => {
 
 
     return (
-        <div ref={ref} class="text-white rounded-2xl   mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
+        <div ref={ref} class="text-white rounded-2xl   md:mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
+
 
 
             <div class="flex-1 flex flex-col gap-3">
                 <div class="flex items-center  gap-2 justify-between border-b-2 border-[#C2E213] pb-2">
-                    <div class="md:text-[40px] text-3xl text-left  font-semibold">{player.athlete.fullName}</div>
+                    <div class="md:text-[40px] text-[32px] text-left  font-semibold">{player.athlete.fullName}</div>
                     <div class="text-5xl font-bold text-[#C2E213]">{player.athlete.displayJersey}</div>
                 </div>
 
@@ -52,6 +53,10 @@ const PlayerInfo = ({ player, setTabs,title }) => {
                                 <li>
                                     <span class="opacity-70 font-semibold text-xs">Peso:</span> {player.athlete.displayWeight}
                                 </li>
+                            }
+                            {
+                                player.athlete.age &&
+                                <li><span class="opacity-70 font-semibold text-xs">Edad:</span> {player.athlete.age}</li>
                             }
                             {
                                 player.athlete.displayDOB &&

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useState } from "preact/hooks";
 import Calendar from "react-calendar";
-import { selectedDate } from "../signals/signals";
+import { selectedDate, showCalendar } from "../signals/signals";
 import { useLocation } from "preact-iso";
 import "react-calendar/dist/Calendar.css";
 import "../calendar.css"
@@ -28,14 +28,20 @@ export default function Calendar_({ }) {
 
   return (
 
-    <div class={"shadow shadow-gray-900 rounded"}>
+    
+    <div class={`${showCalendar.value?"md:static -right-[0%]":"md:static -right-[100%]"} transition-all flex items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  bg-black/85 md:bg-transparent  md:h-max shadow-md shadow-black md:rounded-lg md:mt-5`}>
+
+      
       {
         typeof window !== "undefined" &&
         <Calendar
           className="calendar"
           locale='es-AR'
           tileClassName="text-white"
-          onChange={date => { handleDayClick(date) }}
+          onChange={date => {
+            showCalendar.value = false;
+             handleDayClick(date) 
+          }}
           value={selectedDate || new Date()}
         />
       }

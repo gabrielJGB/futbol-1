@@ -26,7 +26,7 @@ export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCoun
 
     return (
         <div
-            className="z-10 flex flex-col gap-[0px]  justify-center items-center  shadow shadow-gray-900 w-full border-[1px] border-gray-500 ">
+            className=" flex flex-col gap-[0px]  justify-center items-center  shadow shadow-gray-900 w-full border-[1px] border-gray-500 ">
 
 
             <Link href={`/league/${leagueId}`} className="bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">

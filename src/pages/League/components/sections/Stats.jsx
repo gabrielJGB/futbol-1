@@ -27,7 +27,7 @@ const StatsTables = ({  league }) => {
     <>
       <SectionTitle title={"Estadísticas"} />
 
-      <div class="grid md:grid-cols-2 grid-cols-1 gap-4">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
 
 
         {tables.map((table) => (
@@ -90,7 +90,9 @@ const Table = ({ table }) => {
                       alt="Escudo Equipo"
                       class="h-6 w-6 mr-2  object-contain"
                     />
+                    <div class={"w-max"}>
                     {player.name}
+                    </div>
                   </Link>
                 </td>
 

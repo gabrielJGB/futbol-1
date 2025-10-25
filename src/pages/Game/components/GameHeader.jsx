@@ -37,7 +37,7 @@ const GameHeader = ({ game }) => {
 
     return (
 
-        <div class={"flex flex-col  p-1 bg-[#024817] shadow shadow-gray-800 rounded-lg md:mx-0 mx-1 mb-2"}>
+        <div class={"flex flex-col  p-1 bg-[#024817] shadow shadow-gray-800 rounded-lg md:mx-0 mx-0 mb-4"}>
             <div class={"grid grid-cols-[2fr_1fr_2fr] "}>
 
                 <div class={"col-span-5 text-gray-100 font-semibold text-xs text-center flex items-center gap-1 flex-row justify-center   px-2"}>
@@ -98,17 +98,17 @@ const GameHeader = ({ game }) => {
             </div>
 
 
-            <div class={"col-span-5 flex flex-row items-center justify-center gap-x-3 flex-wrap text-xs mx-2 mt-3 font-semibold text-gray-300"}>
+            <div class={"col-span-5 flex flex-col  md:flex-row items-center justify-start md:justify-center gap-x-3 flex-wrap text-xs mx-2 mt-3 font-semibold text-gray-300"}>
                 <div class={"flex flex-row items-center gap-1"}>
                     <BiCalendar color='white' size={14} />
                     <div>{game.start_time.replaceAll("-", "/")}</div>
                 </div>
-                -
+                <span class={"md:block hidden"}>-</span>
                 <div class={"flex flex-row items-center gap-1"}>
                     <MdStadium color='white' size={14} />
                     <div>{game.game_info.find(item => item.name === "Estadio")?.value}</div>
                 </div>
-                -
+                <span class={"md:block hidden"}>-</span>
                 <div class={"flex flex-row items-center gap-1"}>
                     <GiWhistle color='white' size={14} />
                     {game.game_info.find(item => item.name === "Árbitro")?.value}

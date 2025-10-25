@@ -6,7 +6,8 @@ import { showMenu } from "../../signals/signals";
 import { useGame } from "./useGame";
 import GameHeader from "./components/GameHeader";
 import Videos from "./components/Videos";
-import data from '../../../GAME_IN.json' //PRE  IN   END
+// import data from '../../../GAME_IN.json' //PRE  IN   END
+import Loading from "../../components/Loading";
 
 export function Game({ id }) {
 
@@ -15,20 +16,22 @@ export function Game({ id }) {
   // const error = false
 
   if (loading)
-    return (<div>Cargando...</div>)
+    return (
+      <div class={"w-full mt-5 md:col-start-2"}>
+        <Loading />
+      </div>)
 
   if (error)
     return (<div>Ha ocurrido un error</div>)
 
 
   return (
-    <div class={"z-10 relative  md:px-20  pt-5 pb-20 col-start-2"}>
+    <div class={" relative  md:mx-20  pb-40 md:p-5 pt-1  md:w-auto w-full px-1 shadow-black shadow-lg  bg-background border-[1px] border-borderc  md:col-start-2"}>
 
-      <div class={"z-200 relative  mb-20 w-screen md:w-full"}>
-        <Videos videos={data.game.videos} />
-        <GameHeader game={data.game} />
-        <Tabs game={data.game} />
-      </div>
+      <Videos videos={data.game.videos} />
+      <GameHeader game={data.game} />
+      <Tabs game={data.game} />
+
 
     </div>
   )

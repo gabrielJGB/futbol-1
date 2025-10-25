@@ -17,7 +17,7 @@ const Last5Games = ({ title, stats, events, eventsInfo, setTabs }) => {
     const getResultColor = r => r === "G" ? "bg-green-400" : r === "P" ? "bg-red-400" : "bg-yellow-300";
 
     return (
-        <div ref={ref} class={"flex flex-col w-full"}>
+        <div ref={ref} class={"flex flex-col "}>
 
             <SectionTitle title={title} />
 

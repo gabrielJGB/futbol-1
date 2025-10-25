@@ -11,12 +11,16 @@ const DateSelector = () => {
   const date = selectedDate.value
   const dateObject = getDates(date)
  
-  return (
-    <div class={"flex-1 flex bg-green-950 md:mt-0 mt-2 mb-8 shadow rounded shadow-gray-900 flex-row items-center justify-between  "}>
+  const buttonClass = "text-gray-300 flex-1 active:bg-[#1D7739]  font-bold  min-w-[120px] text-center    border-b-2 border-transparent py-3 hover:text-white first:rounded-l-md last:rounded-r-md "
 
-      <Link class={"text-xs bg-[#5b9440] py-[11px] hover:bg-[#71af54] text-white font-bold  min-w-[120px] text-center text-shadow-xs text-shadow-black p-2 rounded-l-md"} href={`/${dateObject.previousDate.string}`}>{dateObject.previousDate.formated}</Link>
-      <div class={"font-semibold text-md text-center "}>{dateObject.selectedDate.formated}</div>
-      <Link class={"text-xs bg-[#5b9440] hover:bg-[#71af54] text-white font-bold  min-w-[120px] text-center text-shadow-xs text-shadow-black p-2 py-[11px] rounded-r-md"} href={`/${dateObject.nextDate.string}`}>{dateObject.nextDate.formated}</Link>
+  const dateClass = "font-semibold flex-1 border-b-2 border-[#C2E213] text-[#C2E213] py-3 text-shadow-xs text-shadow-black  text-center "
+
+  return (
+    <div class={"flex flex-row items-center bg-b2  py-0 justify-between  md:mb-8 shadow-black md:shadow-md md:rounded-lg w-full text-xs md:text-sm text-shadow-xs text-shadow-black md:static  sticky top-11 "}>
+
+      <Link class={buttonClass } href={`/${dateObject.previousDate.string}`}>{dateObject.previousDate.formated.toUpperCase()}</Link>
+      <div class={dateClass}>{dateObject.selectedDate.formated.toUpperCase()}</div>
+      <Link class={buttonClass } href={`/${dateObject.nextDate.string}`}>{dateObject.nextDate.formated.toUpperCase()}</Link>
 
     </div>
   )

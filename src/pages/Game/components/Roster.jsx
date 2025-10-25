@@ -12,7 +12,7 @@ const Roster = ({ roster, missingPlayers, teams }) => {
 
     <div class={"relative md:w-auto w-full "}>
 
-      <div className="relative md:w-auto w-[200vw] grid grid-cols-2  md:gap-4 gap-2 overflow-hidden mb-20">
+      <div className="relative md:w-auto w-[200vw] grid grid-cols-2  md:gap-4 gap-4 overflow-hidden mb-20">
         {
           roster.map((team, i) => (
             <div class={"flex flex-col w-full col-span-1 "}>

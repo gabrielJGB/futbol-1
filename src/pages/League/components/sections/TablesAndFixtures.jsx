@@ -12,8 +12,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
   const rounds = "games" in league && league.games.filters
   const tablesGroups = "tables_groups" in league && league.tables_groups
-
-
+  const current = round.value.key 
 
 
   return (
@@ -50,7 +49,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
           <div class={"flex flex-col gap-1 md:row-auto row-start-1"}>
 
-            <div class={"w-full grid grid-cols-5 gap-1 py-1"}>
+            <div class={"w-full grid md:grid-cols-5 grid-cols-4 gap-1 py-1"}>
 
               {
                 rounds &&
@@ -58,7 +57,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
                   <div
                     title={r.name}
                     onClick={() => { round.value = r }}
-                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213] border-transparent py-2 md:py-1 px-1 font-semibold text-start text-xs shadow shadow-gray-800  truncate `}>{r.name}</div>
+                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213] border-transparent py-2 md:py-[2px] px-1 font-semibold text-start md:text-xs text-sm shadow shadow-gray-800  truncate `}>{r.name}</div>
                 ))
               }
             </div>

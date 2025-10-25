@@ -37,7 +37,7 @@ const Team = ({ name, id, winner }) => (
 
 const Match = ({ match }) => (
 
-    <div class={`flex w-full  flex-row justify-between rounded cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 shadow-md overflow-hidden border-[1px] text-white bg-[#015A1C]/80 border-white/10 p-1 `}>
+    <div class={`flex w-full  flex-row justify-between rounded cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 shadow-black shadow-xs overflow-hidden border-[1px] text-white bg-[#015A1C]/80 border-white/10 p-1 `}>
 
         <div class={`flex flex-col flex-1 `}>
 
@@ -106,7 +106,7 @@ const Match = ({ match }) => (
 const Stage = ({ stage }) => (
 
 
-    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] w-[250px]  h-full  bg-black/20 p-1 pt-2 rounded-b`}>
+    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] w-[250px]  h-full  bg-[#0f271a] p-1 pt-2 rounded-b`}>
 
         {stage.name === "Final" && stage.groups.length == 2 && <div class={"mb-20"}></div>}
 
@@ -114,7 +114,7 @@ const Stage = ({ stage }) => (
 
             return (
                 <div class={`${index % 2 != 0 && index != stage.groups.length - 1 ? "mb-6" : ""} `}>
-                    {stage.name === "Final" && index === 1 && <div class={"bg-[#061811] w-full py-1 text-center font-semibold text-[11px] mb-1"}>TERCER PUESTO</div>}
+                    {stage.name === "Final" && index === 1 && <div class={"bg-[#004128] w-full py-1 text-center font-semibold text-[11px] mb-1"}>TERCER PUESTO</div>}
                     {
                         <div class={"flex flex-row items-center gap-1 "}>
                             {
@@ -195,7 +195,7 @@ const Brackets = ({ league }) => {
 
                 <div class={"grid sticky top-0 w-min z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}>
                     {data.stages.map(stage => (
-                        <div class={" w-[250px] backdrop-blur-sm bg-[#061610]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
+                        <div class={" w-[250px] backdrop-blur-sm bg-[#004128]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
                     ))}
                 </div>
 

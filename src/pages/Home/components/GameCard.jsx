@@ -36,7 +36,7 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
 
     return (
 
-        <div className={`z-10 flex flex-col gap-[1px] ${darkMode ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
+        <div className={` flex flex-col gap-[1px] ${darkMode ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
 
             {/* INFO PARTIDO */}
             <div className={`grid grid-cols-26 gap-[1px] ${darkMode ? "bg-gray-600" : "bg-gray-400"} text-whitetext-sm`}>

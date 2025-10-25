@@ -40,7 +40,7 @@ const LeagueList = ({ leagues }) => {
 
 
     return (
-        <div class={"flex flex-col gap-2 w-full "}>
+        <div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1  shadow-lg shadow-black bg-background border-[1px] border-borderc "}>
 
             <DailyStats stats={stats} />
             <FilterButtons gamesArr={gamesArr} />
@@ -50,7 +50,7 @@ const LeagueList = ({ leagues }) => {
             >Ordenar por hora de inicio</div>
             {/* <LeaguesLogos leagues={leagues} /> */}
 
-            <div class={"flex flex-col gap-8 w-full mt-6 mb-40"}>
+            <div class={"flex flex-col gap-8 w-full mt-6 mb-2"}>
                 {
                     sortByDate ?
 

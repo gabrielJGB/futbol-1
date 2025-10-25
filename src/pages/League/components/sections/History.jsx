@@ -51,10 +51,10 @@ const History = ({ name, league, games }) => {
 
       <div class={"grid md:grid-cols-2 grid-cols-1 gap-6"}>
 
-        
-          {historyTable && <Table table={historyTable} />}
-          {rankingTable && <Table table={rankingTable} />}
-        
+
+        {historyTable && <Table table={historyTable} />}
+        {rankingTable && <Table table={rankingTable} />}
+
 
       </div>
 
@@ -64,26 +64,33 @@ const History = ({ name, league, games }) => {
 
 
 const Table = ({ table }) => {
+  let isRankingTable = false
 
-  if (table.length)
+  if (table.length) {
+    isRankingTable = true
     table = table[0]
+  }
 
 
   const [showAll, setShowAll] = useState(false);
-  const visibleRows = showAll ? table.rows : table.rows.slice(0, table.rows.length > 10 ? 10 : 1);
+  const visibleRows = showAll ? table.rows : table.rows.slice(0, table.rows.length > 10 ? 10 : table.rows.length);
 
   return (
     <div class="bg-[#000000] text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
       <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
-        <h2 class="text-xl font-bold">{table.name.replace("Historia", "Campeones")}</h2>
+        <h2 class="text-xl font-bold">{table.name.replace("Historia", "Campeones").replace("Ligas","")}</h2>
         <span class="text-sm text-gray-400">
-          {table.rows.length} 
+          {table.rows.length}
         </span>
       </div>
 
       <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
         <thead>
+          
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
+            {
+              isRankingTable&&<th>Equipo</th>
+            }
             {table.columns.map((col) => (
               <th key={col.key} class="text-center px-0 py-1">
                 {col.title.replace("Torneo", "CAMPEÓN").replace("Campeón", "AÑO")}
@@ -114,9 +121,11 @@ const Table = ({ table }) => {
                     <img
                       src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
                       alt="Escudo Equipo"
-                      class="h-6 w-6 mr-2  object-contain"
+                      class="h-5 w-5 mr-2  object-contain"
                     />
-                    {player.name}
+                    <div class={"w-max whitespace-nowrap text-[13px] font-semibold"}>
+                      {player.name}
+                    </div>
                   </Link>
                 </td>
 
@@ -125,9 +134,9 @@ const Table = ({ table }) => {
                 {row.values.map((val) => (
                   <td
                     key={val.key}
-                    class="px-1 py-1 text-center font-semibold "
+                    class="px-1 py-1 text-center "
                   >
-                    {val.value}
+                    {val.value.replace(">", "")}
                   </td>
                 ))}
               </tr>

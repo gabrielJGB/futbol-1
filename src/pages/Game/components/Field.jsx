@@ -115,8 +115,9 @@ const Field = ({ teams, colors, ids }) => {
                     const x = p.pitch_location?.x ?? 50;
                     const y = p.pitch_location?.y ?? 50;
                     const invertedX = 100 - Number(x);
+                    const invertedY = 100 - Number(y);
                     const leftPercent = 50 + clamp(invertedX * 0.5, 5, 45); // 50 + (0..50) limitado -> 55..95
-                    const topPercent = clamp(y, 10, 90);
+                    const topPercent = clamp(invertedY, 10, 90);
                     return (
                         <div
                             key={`away-${p.jersey_num}-${i}`}

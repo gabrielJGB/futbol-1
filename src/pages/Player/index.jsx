@@ -18,13 +18,15 @@ import Related from "./components/Related";
 import Tabs from "./components/Tabs";
 
 const Player = ({ name }) => {
+    
     const [loading, setLoading] = useState(false)
     const [player, setPlayer] = useState(false)
     const [events, setEvents] = useState(false)
     const [eventsInfo, setEventsInfo] = useState(false)
     const [stats, setStats] = useState(false)
-
+    
     const [tabs, setTabs] = useState([])
+
     // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
     // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)
     // const [stats, setStats] = useState(player.gameLog.statistics[0])
@@ -79,15 +81,15 @@ const Player = ({ name }) => {
 
 
     return (
-        <div class={"relative  px-1 md:px-10 pt-5 pb-20 md:col-start-2 col-start-1 "}>
+        <div class={"bg-background shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2 flex overflow-x-auto flex-col gap-3  text-white  font-sans md:px-4 px-1 pt-5 pb-20 md:mx-12 "}>
 
             <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
             <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
             <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
-            <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
+             <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
             <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
             <News title={"Noticias"} player={player} setTabs={setTabs} />
-            <Related title={"Relacionado"} player={player} setTabs={setTabs} />
+            <Related title={"Relacionado"} player={player} setTabs={setTabs} /> 
 
             {/* <Tabs tabs={tabs} /> */}
         </div>
