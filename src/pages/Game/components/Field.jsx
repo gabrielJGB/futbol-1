@@ -47,15 +47,15 @@ const Field = ({ teams, colors, ids }) => {
 
 
 
-    // if (ids[0] === "igg") {
-    //     colors[0].color = "#1457A3"
-    //     colors[0].text_color = "#F9CF0B"
-    // }
+    if (ids[0] === "igg") {
+     
+        colors[0].text_color = "#ffff00"
+    }
 
-    // else if (ids[1] === "igg") {
-    //     colors[1].color = "#1457A3"
-    //     colors[1].text_color = "#F9CF0B"
-    // }
+    else if (ids[1] === "igg") {
+     
+        colors[1].text_color = "#ffff00"
+    }
 
 
     return (

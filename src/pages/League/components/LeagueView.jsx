@@ -25,6 +25,7 @@ const LeagueView = ({ leagueId }) => {
         leagueId ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
         fetcher, {
         revalidateOnFocus: false,
+        refreshInterval:30000,
     }
     );
 
@@ -37,6 +38,7 @@ const LeagueView = ({ leagueId }) => {
         fetcher, {
         revalidateOnMount: true,
         revalidateOnFocus: false,
+        refreshInterval:30000,
     }
     );
 

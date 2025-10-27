@@ -12,6 +12,8 @@ import useSWR from "swr";
 
 const Team = ({ id }) => {
 
+
+
   const { data: team, error, isLoading } = useSWR(
     id ? `https://corsproxy.io/?https://api.promiedos.com.ar/team/${id}` : null,
     fetcher, {
@@ -19,7 +21,7 @@ const Team = ({ id }) => {
   });
 
 
-  if (error) return <p>Error al cargar datos</p>;
+  if (error) return <div class={"w-full md:col-start-2 mt-5 "}>Error al cargar datos</div>;
 
   if (isLoading) return (
     <div class={"w-full md:col-start-2 mt-5 "}>
@@ -27,9 +29,6 @@ const Team = ({ id }) => {
     </div>
   )
 
-
-
-  console.log(team);
 
   const { competitor, main_league, team_info, games, squad, stats, stadium } = team;
 

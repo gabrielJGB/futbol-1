@@ -22,7 +22,7 @@ export const Stadium = ({ stadium }) => {
         }
 
         <iframe
-          src={`https://maps.google.com/maps?q=${lat},${lng}&z=17&output=embed&t=k`}
+          src={`https://maps.google.com/maps?q=${lat},${lng}&z=17&output=embed&t=k&hl=es`}
           width="100%"
           height="300"
           class="rounded-xl border-0 mt-3"

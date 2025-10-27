@@ -16,13 +16,13 @@ export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
                 <img
                     src={`https://api.promiedos.com.ar/images/team/${competitor.id}/1`}
                     alt={competitor.name}
-                    class="w-16 h-16 object-contain drop-shadow-lg"
+                    class="w-16 h-16 object-contain drop-shadow-xs drop-shadow-black"
                 />
                 <div>
                     <h1 class="text-3xl font-bold">{competitor.name}</h1>
                     {main_league && (
                         <p class="font-semibold flex items-center gap-1 opacity-80 text-sm mt-1">
-                            <img src={`https://api.promiedos.com.ar/images/league/${main_league.id}/1`} alt="Logo" className="h-5 drop-shadow-lg" />
+                            <img src={`https://api.promiedos.com.ar/images/league/${main_league.id}/1`} alt="Logo" className="h-5 drop-" />
                             {main_league.name}
                         </p>
                     )}

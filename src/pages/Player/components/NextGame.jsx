@@ -30,15 +30,15 @@ const NextGame = ({ title, player,setTabs }) => {
 
 
                     <div class={"flex flex-col justify-center items-center"}>
-                        <img src={competitors[0].logo} class={"w-20"} alt="Escudo equipo" />
-                        <div class={"font-semibold"}>{competitors[0].displayName}</div>
+                        <img src={competitors[0].logo} class={"w-15"} alt="Escudo equipo" />
+                        <div class={"font-semibold text-center"}>{competitors[0].displayName}</div>
                     </div>
 
                     <span class={"px-4"}>vs</span>
 
                     <div class={"flex flex-col justify-center items-center"}>
-                        <img src={competitors[1].logo} class={"w-20"} alt="Escudo equipo" />
-                        <div class={"font-semibold"}>{competitors[1].displayName}</div>
+                        <img src={competitors[1].logo} class={"w-15"} alt="Escudo equipo" />
+                        <div class={"font-semibold text-center"}>{competitors[1].displayName}</div>
                     </div>
 
 

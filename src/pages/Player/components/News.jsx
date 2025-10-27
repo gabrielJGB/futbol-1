@@ -1,14 +1,15 @@
 import { useEffect, useRef } from "preact/hooks";
 import SectionTitle from '../../../components/SectionTitle'
+import { Link } from "preact-router/match";
 
-const News = ({ title, player,setTabs }) => {
+const News = ({ title, player, setTabs }) => {
 
 
 
     const ref = useRef()
 
     useEffect(() => {
-        setTabs(prev => [...prev, {title,ref}])
+        setTabs(prev => [...prev, { title, ref }])
 
     }, [])
 
@@ -19,15 +20,18 @@ const News = ({ title, player,setTabs }) => {
             <div class={"flex md:flex-row flex-wrap flex-col gap-4"}>
                 {
                     player.news.map((article) => (
-                        <article class={"flex flex-col gap-1 md:w-[300px] hover:shadow hover:shadow-gray-900 md:hover:scale-105 bg-[#0c2c20] rounded-lg p-2 transition-all cursor-pointer"}>
+                        <Link
+                            // @ts-ignore
+                            href={`/article/${article.id}`}
+                            class={"flex flex-col gap-1 md:w-[300px] shadow shadow-black border-[1px] border-transparent hover:border-primary active:border-primary bg-[#0c2c20] rounded-lg p-2 transition-all cursor-pointer"}>
                             <div class={"font-extrabold text-2xl "}>{article.headline}</div>
                             {
                                 "images" in article &&
-                                <img src={article.images[0].url} class={"rounded w-[400px]"} alt={"Imagen"} />
+                                <img src={article.images[0].url} class={"mx-auto rounded w-[400px]"} alt={"Imagen"} />
                             }
                             <div class={"text-xs text-gray-200 font-semibold italic "}>{article.published.slice(0, 10).replaceAll("-", "/")}</div>
                             <div class={"text-xs text-gray-200"}>{article.description}</div>
-                        </article>
+                        </Link>
                     ))
                 }
             </div>
