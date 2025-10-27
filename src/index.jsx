@@ -50,7 +50,7 @@ export function App() {
  */
 	return (
 		<LocationProvider  >
-			<div class={"h-full  min-h-screen  bg-background col-start-2 row-span-5 row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:15px_15px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5  dark:[--pattern-fg:var(--color-white)]/10"}>
+			<div class={"h-full  min-h-screen  bg-zinc-950 col-start-2 row-span-5 row-start-1 border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_100%)] bg-[size:18px_18px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5  dark:[--pattern-fg:var(--color-white)]/40"}>
 				<Header />
 				<main class={` grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}>
 					<Menu />

@@ -22,11 +22,12 @@ html {
 	padding: 5px
 }
 
-
+body{
+	      
+}
 
 @theme {
-	--font-roboto: "Roboto", sans-serif; 
-	--color-background:#021209;
+	--color-background:#031a0d;
 	--color-borderc:#1D291C;
   	--color-b2:#0E3E1D;
 	--color-b3:#032E15;

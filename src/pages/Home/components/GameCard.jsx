@@ -71,7 +71,7 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
                     <img src={`https://api.promiedos.com.ar/images/team/${home.id}/1`} alt="Escudo Equipo" className="h-5 w-5 mr-2 object-contain" />
 
                     <div className='flex flex-row items-center  text-center  text-xs font-semibold'>
-                        <Link href={`/team/${id}`} class={"mr-[1px] hover:underline"}>{home.short_name}</Link>
+                        <Link href={`/team/${home.id}`} class={"mr-[1px] hover:underline"}>{home.short_name}</Link>
                         {
 
                             Array.from({ length: home.red_cards }).map((_, i) => (
@@ -92,7 +92,7 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
 
 
                     <div className=' flex flex-row items-center  text-center  text-xs font-semibold'>
-                        <Link href={`/team/${id}`} class={"mr-[1px] hover:underline"}>{away.short_name}</Link>
+                        <Link href={`/team/${away.id}`} class={"mr-[1px] hover:underline"}>{away.short_name}</Link>
                         {
 
                             Array.from({ length: away.red_cards }).map((_, i) => (

@@ -20,12 +20,13 @@ export default defineConfig({
 		VitePWA({
 			registerType: 'autoUpdate',
 			manifest: {
-				name: 'Fútbol 11',
+				
+				name: 'Fútbol 1',
 				short_name: 'Fútbol 11',
 				start_url: '/',
 				display: 'standalone',
-				background_color: '#ffffff',
-				theme_color: '#3f51b5',
+				background_color: '#0e3e1d',
+				theme_color: '#0e3e1d',
 				icons: [
 					{
 						src: '/ball_64x64.png',

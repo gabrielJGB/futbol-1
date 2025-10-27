@@ -201,7 +201,7 @@ const Brackets = ({ league }) => {
 
                 <div
                     style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}
-                    class=" relative  grid gap-1 h-[80vh] w-min"
+                    class=" relative  grid gap-1 h-[70vh] w-min"
                 >
 
                     {data.stages.map(stage => (

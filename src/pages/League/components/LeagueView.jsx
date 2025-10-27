@@ -28,6 +28,8 @@ const LeagueView = ({ leagueId }) => {
     }
     );
 
+    
+
 
     const { data: games, isLoading: gamesLoading, error: gamesError } = useSWR(
         // @ts-ignore
@@ -40,14 +42,15 @@ const LeagueView = ({ leagueId }) => {
 
 
     if (leagueError || gamesError) return <p>Error al cargar datos</p>;
-     if (!league) return (
-        <div class={"w-full col-start-2 mt-5 "}>
-            <Loading/>
+
+    if (!league) return (
+        <div class={"w-full md:col-start-2 mt-5 "}>
+            <Loading />
         </div>
     )
 
-    
-    
+
+
 
     useEffect(() => {
         if (league) {
@@ -93,7 +96,7 @@ const LeagueView = ({ leagueId }) => {
 
 
     return (
-        <div class="bg-background shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2 flex overflow-x-auto flex-col gap-3  text-white  font-sans md:px-4 px-1 pt-5 pb-20 md:mx-12">
+        <div class="bg-background shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2  overflow-x-auto   text-white  font-sans  pb-20 md:mx-12">
 
 
             {/* <div class="fixed bottom-0 left-0 w-full bg-black/85 backdrop-blur-sm border-b border-[#333] z-50">
@@ -116,21 +119,23 @@ const LeagueView = ({ leagueId }) => {
 
             <LeagueInfo league={league} />
 
-            {
-                sections.map((section, i) => (
+            <div class={"flex flex-col gap-3 md:px-6 px-1"}>
+                {
+                    sections.map((section, i) => (
 
-                    <section
-                        // @ts-ignore
-                        // ref={(el) => (sectionRefs.current[`section-${i}`] = el)}
-                        class={"  "}
-                        id={`section-${i}`}
-                        key={i}
-                    >
-                        {section.component(section.name, league, games)}
-                    </section>
-                ))
+                        <section
+                            // @ts-ignore
+                            // ref={(el) => (sectionRefs.current[`section-${i}`] = el)}
+                            class={"  "}
+                            id={`section-${i}`}
+                            key={i}
+                        >
+                            {section.component(section.name, league, games)}
+                        </section>
+                    ))
 
-            }
+                }
+            </div>
 
         </div>
     );

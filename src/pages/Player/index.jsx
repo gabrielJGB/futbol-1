@@ -16,6 +16,7 @@ import Last5Games from "./components/Last5Games";
 import News from "./components/News";
 import Related from "./components/Related";
 import Tabs from "./components/Tabs";
+import Loading from "../../components/Loading";
 
 const Player = ({ name }) => {
     
@@ -70,8 +71,11 @@ const Player = ({ name }) => {
         })
     }, [name])
 
-    if (loading)
-        return <div class={"text-center mt-10"}>Cargando...</div>
+    if (loading) return (
+        <div class={"w-full md:col-start-2 mt-5 "}>
+            <Loading />
+        </div>
+    )
 
     if (!player)
         return <div class={"text-center mt-10"}>Sin datos del jugador</div>

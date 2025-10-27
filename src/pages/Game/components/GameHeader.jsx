@@ -1,3 +1,4 @@
+import { Link } from 'preact-router'
 import React from 'react'
 import { BiCalendar } from 'react-icons/bi'
 import { GiWhistle } from 'react-icons/gi'
@@ -12,7 +13,7 @@ const GameHeader = ({ game }) => {
         return team.goals?.flatMap(x => ({ ...x, isHome: i === 0 }))
     }).flat().sort((a, b) => (a.time - b.time))
 
-    
+
 
     const getStatusText = () => {
         if (game.status.enum === 1)
@@ -50,11 +51,14 @@ const GameHeader = ({ game }) => {
                 </div>
 
 
-
-                <div class={"flex flex-col md:flex-row-reverse justify-center gap-1 items-center"}>
-                    <img src={`https://api.promiedos.com.ar/images/team/${home.id}/1`} alt="Escudo Equipo" className="h-12 w-12 object-contain" />
-                    <div class={"md:text-sm text-xs text-center font-semibold"}>{home.name}</div>
-                </div>
+                <Link
+                    // @ts-ignore
+                    href={`/team/${home.id}`}>
+                    <div class={"hover:underline flex flex-col md:flex-row-reverse justify-center gap-1 items-center"}>
+                        <img src={`https://api.promiedos.com.ar/images/team/${home.id}/1`} alt="Escudo Equipo" className="h-12 w-12 object-contain" />
+                        <div class={"md:text-sm text-xs text-center font-semibold"}>{home.name}</div>
+                    </div>
+                </Link>
 
                 <div class={"flex flex-col justify-start gap-1 "}>
                     <div class={"flex  flex-row items-center justify-center gap-1  text-3xl md:text-4xl "}>
@@ -69,10 +73,15 @@ const GameHeader = ({ game }) => {
                     </div>
                 </div>
 
-                <div class={"flex flex-col md:flex-row justify-center gap-1 items-center"}>
-                    <img src={`https://api.promiedos.com.ar/images/team/${away.id}/1`} alt="Escudo Equipo" className="h-12 w-12 object-contain" />
-                    <div class={"md:text-sm text-xs text-center font-semibold"}>{away.name}</div>
-                </div>
+                <Link
+                    // @ts-ignore
+                    href={`/team/${away.id}`}>
+                    <div class={"hover:underline flex flex-col md:flex-row justify-center gap-1 items-center"}>
+                        <img src={`https://api.promiedos.com.ar/images/team/${away.id}/1`} alt="Escudo Equipo" className="h-12 w-12 object-contain" />
+                        <div class={"md:text-sm text-xs text-center font-semibold"}>{away.name}</div>
+                    </div>
+                </Link>
+
             </div>
             <div class={"flex flex-col gap-[1px] mt-2"}>
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect, useState } from "preact/hooks";
-import Menu from '../../components/Menu'
 import LeagueView from './components/LeagueView';
 import { showMenu } from '../../signals/signals';
 

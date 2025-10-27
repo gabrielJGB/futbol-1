@@ -26,7 +26,7 @@ export function Game({ id }) {
 
 
   return (
-    <div class={" relative  md:mx-20  pb-40 md:p-5 pt-1  md:w-auto w-full px-1 shadow-black shadow-lg  bg-background border-[1px] border-borderc  md:col-start-2"}>
+    <div class={" relative  md:mx-20  pb-40 md:p-5 pt-1 min-h-screen  md:w-auto w-full px-1 shadow-black shadow-lg  bg-background border-[1px] border-borderc  md:col-start-2"}>
 
       <Videos videos={data.game.videos} />
       <GameHeader game={data.game} />

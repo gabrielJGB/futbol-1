@@ -7,16 +7,9 @@ const PlayerInfo = ({ player, setTabs,title }) => {
     if (!("athlete" in player))
         return;
 
-    const ref = useRef()
-
-    useEffect(() => {
-        setTabs(prev => [...prev, {title,ref}])
-
-    }, [])
-
 
     return (
-        <div ref={ref} class="text-white rounded-2xl   md:mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
+        <section id={title} class="text-white rounded-2xl   md:mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
 
 
 
@@ -31,7 +24,7 @@ const PlayerInfo = ({ player, setTabs,title }) => {
                     <div class={"flex flex-row "}>
                         {
                             "headshot" in player.athlete &&
-                            <img src={player.athlete.headshot.href} class={"w-50"} />
+                            <img src={player.athlete.headshot.href} class={"w-60"} />
                         }
                         <div class="flex flex-col gap-0 flex-wrap pl-6 text-sm md:text-base">
                             <li class="flex items-center gap-2">
@@ -114,7 +107,7 @@ const PlayerInfo = ({ player, setTabs,title }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

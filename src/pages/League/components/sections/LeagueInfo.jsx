@@ -6,12 +6,12 @@ const LeagueInfo = ({ league }) => {
     const leagueId = league.league.id
     const countryName = league.league
 
-
+// bg-gradient-to-r from-[#C2E213] to-[#C2E213]/70
 
     return (
         
 
-            <div class="border-[1px] border-[#C2E213] text-black bg-gradient-to-r from-[#C2E213] to-[#C2E213]/70 rounded-lg shadow-gray-800 shadow-lg flex flex-row items-center md:justfy-between justify-start gap-2 p-4 md:w-max">
+            <div class="w-full border-b-[1px] bg-b2/20 border-borderc  text-white  flex flex-row items-center md:justfy-between text-shadow-xs text-shadow-white justify-start gap-2 p-4 ">
                 <img src={`https://api.promiedos.com.ar/images/league/${leagueId}/1`} alt="Logo" className="h-15" />
                 <h2 class="text-right md:text-4xl text-3xl  font-bold ">{leagueName}</h2>
             </div>

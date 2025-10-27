@@ -57,7 +57,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
                   <div
                     title={r.name}
                     onClick={() => { round.value = r }}
-                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213] border-transparent py-2 md:py-[2px] px-1 font-semibold text-start md:text-xs text-sm shadow shadow-gray-800  truncate `}>{r.name}</div>
+                    class={`${r.key === round.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213] border-transparent py-1 md:py-[2px] px-1 font-semibold text-start md:text-xs text-xs shadow shadow-gray-800  truncate `}>{r.name}</div>
                 ))
               }
             </div>
