@@ -1,4 +1,5 @@
 import { Link } from 'preact-router'
+import { useEffect } from 'preact/hooks'
 import React from 'react'
 import { BiCalendar } from 'react-icons/bi'
 import { GiWhistle } from 'react-icons/gi'
@@ -22,6 +23,8 @@ const GameHeader = ({ game }) => {
             return game.game_time_status_to_display
         else if (game.status.enum === 3)
             return game.status.name
+        else
+            return ""
     }
 
     const getStatusColor = () => {
@@ -34,20 +37,25 @@ const GameHeader = ({ game }) => {
     }
 
 
+    useEffect(() => {
+
+        document.title =  (game.status.enum === 2 ?  game.game_time_status_to_display + ("scores" in game ? ` ${game.scores[0]}-${game.scores[1]} ` : "")  : "") + ` ${home.short_name} vs ${away.short_name}` + " - Fútbol 1"
+    }, [game])
 
 
     return (
 
-        <div class={"flex flex-col  p-1 bg-[#024817] shadow shadow-gray-800 rounded-lg md:mx-0 mx-0 mb-4"}>
+        <div class={"flex flex-col  md:p-1 md:mt-3 bg-b2  md:rounded-t-lg  mb-0"}>
             <div class={"grid grid-cols-[2fr_1fr_2fr] "}>
 
-                <div class={"col-span-5 text-gray-100 font-semibold text-xs text-center flex items-center gap-1 flex-row justify-center   px-2"}>
+                <div class={"col-span-5 text-gray-100 font-semibold  text-center flex items-center gap-1 flex-row justify-center   px-2"}>
                     <img src={`https://api.promiedos.com.ar/images/league/${game.league.id}/1`} class={"h-5"} alt="" />
-                    <div class={"text-lg"}>{game.league.name.toUpperCase()}</div>
+                    <div class={"text-[20px]"}>{game.league.name}</div>
+                    <div></div>
                 </div>
 
-                <div class={"col-span-5 text-gray-400 text-xs text-center flex felx-wrap flex-row justify-center mb-1 gap-2 px-2 "}>
-                    <div class={"font-semibold"}>{game.stage_round_name?.toUpperCase()}</div>
+                <div class={"col-span-5 text-gray-400  text-center flex felx-wrap flex-row justify-center mb-1 gap-2 px-2 "}>
+                    <div class={"font-semibold text-[12px]"}>{game.stage_round_name?.toUpperCase()}</div>
                 </div>
 
 

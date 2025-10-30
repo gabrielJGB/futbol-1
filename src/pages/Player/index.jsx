@@ -85,7 +85,7 @@ const Player = ({ name }) => {
 
 
     return (
-        <div class={"bg-background shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2 flex overflow-x-auto flex-col gap-3  text-white  font-sans md:px-4 px-1 pt-5 pb-20 md:mx-12 "}>
+        <div class={"bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2 flex overflow-x-auto flex-col gap-3  text-white  font-sans md:px-4 px-1 pt-5 pb-20 md:mx-12 "}>
 
             <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
             <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />

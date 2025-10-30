@@ -7,17 +7,17 @@ const Field = ({ teams, colors, ids }) => {
 
 
     const getPlayerNameColor = (p) => {
-        if("events" in p && "cards" in p.events && p.events.cards){
-            if(p.events.cards.red)
+        if ("events" in p && "cards" in p.events && p.events.cards) {
+            if (p.events.cards.red)
                 return "text-[#f20000]"
-            else if(p.events.cards.yellow)
+            else if (p.events.cards.yellow)
                 return "text-[#ffff19]"
             else
                 return "text-white"
 
-        }else
+        } else
             return "text-white"
-        
+
 
 
     }
@@ -48,21 +48,22 @@ const Field = ({ teams, colors, ids }) => {
 
 
     if (ids[0] === "igg") {
-     
-        colors[0].text_color = "#ffff00"
+        colors[0].color = "#1c3ea3"
+        colors[0].text_color = "#eac807"
     }
 
     else if (ids[1] === "igg") {
-     
-        colors[1].text_color = "#ffff00"
+        colors[1].color = "#1c3ea3"
+        colors[1].text_color = "#eac807"
     }
 
 
     return (
+        <div class={" w-full "}>
+            <div class={" bg-[url('/fieldbg.png')] bg-repeat md:w-full w-[200vw]  shadow-xs shadow-gray-950   md:h-[450px] h-[420px] relative rounded-lg"}>
 
-        <div class={"relative md:w-auto w-full h-[430px]"}>
-            <div className="relative md:w-auto w-[200vw] shadow bg-[#1b6918] shadow-gray-800 rounded h-[430px]   overflow-hidden"
-            >
+                {/* <div className="relative w-full shadow  shadow-gray-800 rounded h-full   overflow-hidden"
+            > */}
                 <div className="absolute left-0 top-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
                 <div className="absolute left-0 bottom-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
                 <div className="absolute left-0 top-1/3 w-1/14 border-b-4 border-gray-400 pointer-events-none"></div>
@@ -91,7 +92,7 @@ const Field = ({ teams, colors, ids }) => {
                     return (
                         <div
                             key={`local-${p.jersey_num}-${i}`}
-                            className="  absolute flex flex-col gap-1 items-center justify-center  text-white text-xs font-bold z-10"
+                            className="  absolute flex flex-col gap-1 items-center justify-center  text-white text-xs font-bold z-10 "
                             style={{
                                 left: `${leftPercent}%`,
                                 top: `${topPercent}%`,
@@ -99,13 +100,13 @@ const Field = ({ teams, colors, ids }) => {
                             }}
                             title={p.name}
                         >
-     
+
                             <div
                                 style={{ backgroundColor: colors[0].color, color: colors[0].text_color }}
-                                class={"flex border-[2px] border-gray-900 justify-center items-center rounded text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>{p.jersey_num}</div>
+                                class={"flex border-[2px] border-gray-900 justify-center items-center rounded-lg text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>{p.jersey_num}</div>
                             <div
                                 style={{ textShadow: "black 1px 1px 3px", }}
-                                class={`${getPlayerNameColor(p)} text-center text-[14px] w-[80px] px-[2px]`}>{p.player_short_name}{p.is_captain?"(C)":""}</div>
+                                class={`${getPlayerNameColor(p)} text-center text-[14px] w-[80px] px-[2px]`}>{p.player_short_name}{p.is_captain ? "(C)" : ""}</div>
                         </div>
                     );
                 })}
@@ -121,7 +122,7 @@ const Field = ({ teams, colors, ids }) => {
                     return (
                         <div
                             key={`away-${p.jersey_num}-${i}`}
-                            className=" absolute flex flex-col gap-1 items-center justify-center  text-white text-xs font-bold z-10"
+                            className=" absolute flex flex-col gap-1 items-center justify-center  text-white text-xs font-bold z-10 "
                             style={{
                                 left: `${leftPercent}%`,
                                 top: `${topPercent}%`,
@@ -131,15 +132,28 @@ const Field = ({ teams, colors, ids }) => {
                         >
                             <div
                                 style={{ backgroundColor: colors[1].color, color: colors[1].text_color }}
-                                class={"flex  border-[2px] border-gray-900 justify-center items-center rounded text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}>
-                                {p.jersey_num}</div>
+                                class={"z-0 relative flex  border-[2px] border-gray-900 justify-center items-center rounded-lg text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800"}
+
+                            >
+                                {
+                                    ids[0] === "igg" || ids[1] === "igg" &&
+                                    <div style="position: absolute"><div class="-z-10 bg-blue-800 h-[10px] w-[32px] rounded-t-[6px]"></div><div class="bg-[#eac807] h-[13px] w-[32px] "></div><div class="bg-blue-800 h-[10px] w-[32px] rounded-b-[6px]"></div></div>
+                                }
+
+                                <span class={`text-shadow-xs text-black z-20 ${ids[0] === "igg" || ids[1] === "igg" ?"text-black":""}`}>{p.jersey_num}</span>
+
+                            </div>
                             <div
                                 style={{ textShadow: "black 1px 1px 3px", }}
-                                class={`${getPlayerNameColor(p)} text-center text-[14px] w-[84px] px-[2px]`}>{p.player_short_name}{p.is_captain?"(C)":""}
-                                </div>
+                                class={`${getPlayerNameColor(p)}  text-center text-[14px] w-[87px] px-[0px]`}>{p.player_short_name}{p.is_captain ? " (C)" : ""}
+                            </div>
                         </div>
                     );
                 })}
+
+
+
+                {/* </div> */}
             </div>
         </div>
     )

@@ -42,7 +42,7 @@ export function App() {
  */
 	return (
 		<LocationProvider  >
-			<div class={"h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
+			<div class={"bg-[url('/bg.png')]  h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
 				<Header />
 				<main class={` grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}>
 					<Menu />

@@ -12,10 +12,10 @@ import Loading from "../../components/Loading";
 
 export const Home = ({ date }) => {
 
-	
+
 	const { data, loading } = useHome(date)
 	// const loading = false
-	
+
 	const day = date.split("-")[0]
 	const month = parseInt(date.split("-")[1]) - 1
 	const year = date.split("-")[2]
@@ -25,6 +25,9 @@ export const Home = ({ date }) => {
 	useEffect(() => {
 		if (window.innerWidth < 768)
 			showMenu.value = false
+
+		document.title = "Fútbol 1"
+		
 	}, [])
 
 
@@ -40,7 +43,7 @@ export const Home = ({ date }) => {
 
 			<Calendar />
 
-{/* 
+			{/* 
 			<div class={` w-[350px]`}>
 
 				{

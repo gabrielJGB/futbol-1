@@ -35,7 +35,7 @@ const Team = ({ id }) => {
 
 
   return (
-    <div class="md:col-start-2 flex flex-col gap-6 md:mx-10 pb-20 bg-background md:border-x-[1px] border-borderc md:px-4 px-1 ">
+    <div class="md:col-start-2 flex flex-col gap-6 md:mx-10 pb-20 bg-background/70 md:border-x-[1px] border-borderc md:px-4 px-1 ">
 
 
       {(competitor || main_league || team_info) && (

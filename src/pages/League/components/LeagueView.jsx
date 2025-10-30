@@ -25,11 +25,11 @@ const LeagueView = ({ leagueId }) => {
         leagueId ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
         fetcher, {
         revalidateOnFocus: false,
-        refreshInterval:30000,
+        refreshInterval: 30000,
     }
     );
 
-    
+
 
 
     const { data: games, isLoading: gamesLoading, error: gamesError } = useSWR(
@@ -38,7 +38,7 @@ const LeagueView = ({ leagueId }) => {
         fetcher, {
         revalidateOnMount: true,
         revalidateOnFocus: false,
-        refreshInterval:30000,
+        refreshInterval: 30000,
     }
     );
 
@@ -53,9 +53,11 @@ const LeagueView = ({ leagueId }) => {
 
 
 
-
     useEffect(() => {
         if (league) {
+
+            document.title = league.league.name + " - Fútbol 1"
+
             if (("games" in league)) {
                 // @ts-ignore
                 let x = league.games.filters.find(round => round.selected)
@@ -67,9 +69,13 @@ const LeagueView = ({ leagueId }) => {
                     round.value = x
                 }
             }
-
         }
     }, [league])
+
+
+
+    
+    
 
 
     const sections = [
@@ -98,7 +104,7 @@ const LeagueView = ({ leagueId }) => {
 
 
     return (
-        <div class="bg-background shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2  overflow-x-auto   text-white  font-sans  pb-20 md:mx-12">
+        <div class="bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2  overflow-x-auto   text-white  font-sans  pb-20 md:mx-12">
 
 
             {/* <div class="fixed bottom-0 left-0 w-full bg-black/85 backdrop-blur-sm border-b border-[#333] z-50">

@@ -8,7 +8,7 @@ const Lineups = ({ game }) => {
 
 
   return (
-    <div class={"flex flex-col gap-2 w-full overflow-x-auto md:overflow-visible"}>
+    <div class={"md:px-0 px-1 flex flex-col gap-2 w-full overflow-x-auto md:overflow-visible"}>
       {
         game.players.lineups?.support_visual_lineups &&
         <Field
@@ -19,7 +19,7 @@ const Lineups = ({ game }) => {
         />
       }
       {
-        "lineups" in game.players &&
+        
         <Roster
           missingPlayers={"missing_players" in game.players ? game.players.missing_players : false}
           roster={game.players.lineups?.teams}

@@ -12,7 +12,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
   const rounds = "games" in league && league.games.filters
   const tablesGroups = "tables_groups" in league && league.tables_groups
-  const current = round.value.key 
+  const current = round.value.key
 
 
   return (
@@ -47,9 +47,12 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
 
         {
 
-          <div class={"flex flex-col gap-1 md:row-auto row-start-1"}>
+          <div class={"flex flex-col gap-1 md:row-auto row-start-1 "}>
 
-            <div class={"w-full grid md:grid-cols-5 grid-cols-4 gap-1 py-1"}>
+            <div class={"font-semibold text-2xl w-full text-center mb-2"}>{round.value.
+              // @ts-ignore
+              name}</div>
+            <div class={"w-full grid md:grid-cols-5 grid-cols-4 gap-1 py-1 mb-2"}>
 
               {
                 rounds &&
@@ -62,9 +65,6 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
               }
             </div>
 
-            <div class={"font-semibold text-2xl w-full text-center"}>{round.value.
-              // @ts-ignore
-              name}</div>
 
             {
 

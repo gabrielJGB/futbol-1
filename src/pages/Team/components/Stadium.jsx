@@ -3,10 +3,13 @@ export const Stadium = ({ stadium }) => {
   if (!stadium) return null;
 
   const [lat, lng] = stadium.coordinates.split(",").map((c) => c.trim());
-  //🏟 
+
+  //🏟
+  
+  
 
   return (
-    <div class="bg-white dark:bg-gray-800 p-5 rounded-2xl shadow">
+    <div class="shadow shadow-black bg-gray-800 p-5 rounded-2xl ">
       <h3 class="text-2xl font-semibold mb-2 text-primary ">
         Estadio
       </h3>
@@ -24,8 +27,8 @@ export const Stadium = ({ stadium }) => {
         <iframe
           src={`https://maps.google.com/maps?q=${lat},${lng}&z=17&output=embed&t=k&hl=es`}
           width="100%"
-          height="300"
-          class="rounded-xl border-0 mt-3"
+          
+          class="rounded-xl border-0 mt-3 md:h-[500px] h-[300px]"
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

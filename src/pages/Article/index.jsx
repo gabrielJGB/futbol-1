@@ -2,6 +2,7 @@ import useSWR from 'swr'
 import { fetcher } from '../../utils/fetcher';
 import { Link } from 'preact-router/match';
 import Loading from '../../components/Loading';
+import { useEffect } from 'preact/hooks';
 
 
 const ArticlePage = ({ id }) => {
@@ -18,6 +19,11 @@ const ArticlePage = ({ id }) => {
         }
     );
 
+    useEffect(() => {
+
+        document.title = "Fútbol 1"
+
+    }, [])
 
 
     if (isLoading) return (
