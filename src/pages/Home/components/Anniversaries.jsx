@@ -3,11 +3,7 @@ import React from 'react'
 
 const Anniversaries = ({ data, loading }) => {
     if (loading) {
-        return (
-            <div className="w-[350px] p-6 bg-gradient-to-br from-indigo-50 to-pink-50 dark:from-gray-800 to-gray-900 rounded-2xl shadow-lg flex flex-col items-center justify-center text-gray-400 text-sm animate-pulse">
-                Cargando...
-            </div>
-        )
+        return ;
     }
 
     if (!("calendar" in data)) return null
