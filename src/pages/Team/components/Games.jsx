@@ -8,7 +8,7 @@ export const Games = ({ games }) => {
 
     const { next, last } = games;
 
-    console.log(games);
+    // console.log(games);
 
 
     const renderGameRow = (game, isResult = false) => {

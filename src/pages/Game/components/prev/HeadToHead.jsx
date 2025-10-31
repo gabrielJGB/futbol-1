@@ -5,7 +5,7 @@ const HeadToHead = ({ game }) => {
 
     const games = game.head_to_head.games
 
-    console.log(game);
+    // console.log(game);
 
 
     return (

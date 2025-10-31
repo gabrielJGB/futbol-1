@@ -6,7 +6,7 @@ import { showMenu } from "../../signals/signals";
 import { useGame } from "./useGame";
 import GameHeader from "./components/GameHeader";
 import Videos from "./components/Videos";
-import data from '../../../GAME_IN.json' //PRE  IN   END
+import data from '../../../GAME_END.json' //PRE  IN   END
 import Loading from "../../components/Loading";
 
 export function Game({ id }) {
@@ -22,7 +22,13 @@ export function Game({ id }) {
       </div>)
 
   if (error)
-    return (<div>Ha ocurrido un error</div>)
+    return (<div class={"text-center w-full mt-7"}>Ha ocurrido un error {":("}</div>)
+
+  useEffect(() => {
+    console.log(data);
+
+  }, [])
+
 
 
   return (

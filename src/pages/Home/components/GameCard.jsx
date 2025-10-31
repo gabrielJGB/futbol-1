@@ -3,7 +3,7 @@ import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import { useState } from 'preact/hooks';
 
-const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, startTime, homeScore, awayScore, status, statusDisplayText, homeScorers, awayScorers, roundName }) => {
+const GameCard = ({ i, id, winner, description, home, away, isCompleted, tvURL, startTime, homeScore, awayScore, status, statusDisplayText, homeScorers, awayScorers, roundName,showCountryFlags }) => {
 
     const [statusColor, setStatusColor] = useState("bg-green-800")
     const [statusDisplay, setStatusDisplay] = useState("-")
@@ -28,6 +28,7 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
         setStatusDisplay(status.symbol_name)
         setStatusColor("bg-gray-950")
     }
+
 
 
 
@@ -62,13 +63,19 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
                         tvURL != undefined && !isCompleted &&
                         <img src={`https://api.promiedos.com.ar/images/tvnetworks/${tvURL.id}`} class={"mx-auto mb-[2px] h-4"} title={tvURL.name} />
                     }
-                    <span title={status.name} className="text-xs text-shadow-xs text-center text-shadow-black">{statusDisplay.replace("Fin","Final")}</span>
+                    <span title={status.name} className="text-xs text-shadow-xs text-center text-shadow-black">{statusDisplay.replace("Fin", "Final")}</span>
 
                 </div>
 
                 {/* LOCAL*/}
                 <div className={`col-span-8 flex flex-col  ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
-                    <img src={`https://api.promiedos.com.ar/images/team/${home.id}/1`} alt="Escudo Equipo" className="h-5 w-5 mr-2 object-contain" />
+                    <div class={"z-0 relative"}>
+                        <img src={`https://api.promiedos.com.ar/images/team/${home.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black h-5 w-5 object-contain" />
+                        {
+                            showCountryFlags &&
+                            <img src={`https://api.promiedos.com.ar/images/country/${home.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3 drop-shadow-xs drop-shadow-black" />
+                        }
+                    </div>
 
                     <div className='flex flex-row items-center  text-center  text-xs font-semibold'>
                         <Link href={`/team/${home.id}`} class={"mr-[1px] hover:underline"}>{home.short_name}</Link>
@@ -82,13 +89,21 @@ const GameCard = ({ i, id, winner,description, home, away, isCompleted, tvURL, s
                 </div>
 
                 {/* GOLES */}
-                <span  className={` ${darkMode ? "bg-gray-900 text-white " : "bg-white text-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${winner === 1 &&"border-b-1 border-b-black"}`}>{homeScore}</span>
+                <span className={` ${darkMode ? "bg-gray-900 text-white " : "bg-white text-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${winner === 1 && "border-b-1 border-b-black"}`}>{homeScore}</span>
 
-                <span  className={` ${darkMode ? "bg-gray-900 text-white " : "bg-white text-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${winner === 2 &&"border-b-1 border-b-black"}`}>{awayScore}</span>
+                <span className={` ${darkMode ? "bg-gray-900 text-white " : "bg-white text-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${winner === 2 && "border-b-1 border-b-black"}`}>{awayScore}</span>
 
                 {/* VISITANTE*/}
                 <div className={`col-span-8 flex flex-col  ${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
-                    <img src={`https://api.promiedos.com.ar/images/team/${away.id}/1`} alt="Escudo Equipo" className="h-5 w-5 object-contain" />
+
+
+                    <div class={"z-0 relative"}>
+                        <img src={`https://api.promiedos.com.ar/images/team/${away.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black h-5 w-5 object-contain" />
+                        {
+                            showCountryFlags &&
+                            <img src={`https://api.promiedos.com.ar/images/country/${away.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3 drop-shadow-xs drop-shadow-black" />
+                        }
+                    </div>
 
 
                     <div className=' flex flex-row items-center  text-center  text-xs font-semibold'>

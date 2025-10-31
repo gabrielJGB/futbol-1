@@ -31,7 +31,7 @@ const Videos = ({ videos }) => {
 
     return (
 
-        <div class={"flex flex-col gap-5 mb-2 md:mx-0 mx-1"} >
+        <div class={"flex flex-col gap-5 mb-2 md:mx-0 mx-1 mt-3"} >
 
             {
 

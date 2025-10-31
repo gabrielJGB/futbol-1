@@ -20,7 +20,7 @@ const StatsTables = ({  league }) => {
   if (tables === undefined)
     return;
 
-  console.log(league);
+  // console.log(league);
 
   return (
 

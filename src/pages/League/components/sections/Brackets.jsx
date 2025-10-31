@@ -106,7 +106,7 @@ const Match = ({ match }) => (
 const Stage = ({ stage }) => (
 
 
-    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] w-[250px]  h-full  bg-[#0f271a] p-1 pt-2 rounded-b`}>
+    <div class={`relative flex flex-col ${stage.name === "Final" && stage.groups.length > 1 ? "justify-between" : "justify-around"} gap-[2px] md:w-[230px] w-[200px]  h-full  bg-[#0f271a] p-1 pt-2 rounded-b`}>
 
         {stage.name === "Final" && stage.groups.length == 2 && <div class={"mb-20"}></div>}
 
@@ -195,7 +195,7 @@ const Brackets = ({ league }) => {
 
                 <div class={"grid sticky top-0 w-min z-30 gap-1 "} style={{ gridTemplateColumns: `repeat(${cols},1fr)` }}>
                     {data.stages.map(stage => (
-                        <div class={" w-[250px] backdrop-blur-sm bg-[#004128]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
+                        <div class={"md:w-[230px] w-[200px] bg-[#004128]/85  text-xs font-semibold text-center py-2"}>{stage.name.toUpperCase()}</div>
                     ))}
                 </div>
 

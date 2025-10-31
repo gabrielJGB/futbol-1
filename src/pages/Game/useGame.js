@@ -15,7 +15,8 @@ export const useGame = (id) => {
             revalidateIfStale: true,
             revalidateOnFocus: false,
             refreshWhenHidden: true,
-            refreshInterval: 30000
+            refreshInterval: 30000,
+            
         }
     );
 

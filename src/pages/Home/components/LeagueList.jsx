@@ -90,10 +90,12 @@ const LeagueList = ({ leagues }) => {
                                         homeScorers={"goals" in game.teams[0] ? game.teams[0].goals : []}
                                         awayScorers={"goals" in game.teams[1] ? game.teams[1].goals : []}
                                         winner={game.winner}
+                                        showCountryFlags={game.league.show_country_flags}
                                         i={i}
 
 
                                     />
+                                    
                                 </div>
                             ))}
                         </div>
@@ -106,6 +108,7 @@ const LeagueList = ({ leagues }) => {
                                 leagueCountryURL={`https://api.promiedos.com.ar/images/country/${league.country_id}/1`}
                                 leagueURL={`https://api.promiedos.com.ar/images/league/${league.id}/1`}
                                 leagueId={league.id}
+                                showCountryFlags={league.show_country_flags}
                             />
                         ))
 

@@ -8,7 +8,7 @@ const Stats = ({ game }) => {
 
 
   return (
-    <div class={`flex flex-col gap-4 justify-center  mx-auto md:w-3/4 w-full`}>
+    <div class={`flex flex-col gap-4 justify-center md:px-0 px-1 mx-auto md:w-3/4 w-full`}>
       {
         stats.map((stat) => (
           <div class={"flex flex-col"}>

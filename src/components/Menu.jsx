@@ -36,7 +36,7 @@ const Menu = () => {
             <div class={"flex flex-col gap-[0px]  "}>
               {
                 section.items.map((item, j) => (
-                  <Link href={`/league/${item.id}`} class={` odd:bg-b2 even:bg-b3 transition-all text-sm text-white text-shadow-xs text-shadow-black px-2 md:py-1 py-2  hover:bg-[#077227]`}>{item.league}</Link>
+                  <Link href={`/league/${item.id}`} class={` odd:bg-b2 even:bg-b3 transition-all text-sm text-white text-shadow-xs text-shadow-black px-2 md:py-1 py-2  active:bg-[#077227] hover:bg-[#077227]`}>{item.league}</Link>
                 ))
               }
             </div>

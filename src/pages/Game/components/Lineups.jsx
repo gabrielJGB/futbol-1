@@ -1,6 +1,7 @@
 import React from 'react'
 import Field from './Field'
 import Roster from './Roster'
+import Field2 from './Field_2'
 
 const Lineups = ({ game }) => {
 
@@ -11,7 +12,7 @@ const Lineups = ({ game }) => {
     <div class={"md:px-0 px-1 flex flex-col gap-2 w-full overflow-x-auto md:overflow-visible"}>
       {
         game.players.lineups?.support_visual_lineups &&
-        <Field
+        <Field2
 
           teams={game.players.lineups?.teams}
           colors={game.teams.map(team => team.colors)}

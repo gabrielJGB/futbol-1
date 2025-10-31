@@ -6,7 +6,7 @@ import { Link } from "preact-router/match";
 import { selectedButton } from "../../../signals/signals";
 
 
-export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCountryURL, games }) {
+export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCountryURL, games,showCountryFlags }) {
 
  const getCondition = (g) => {
 
@@ -54,6 +54,7 @@ export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCoun
                     homeScorers={"goals" in game.teams[0] ? game.teams[0].goals : []}
                     awayScorers={"goals" in game.teams[1] ? game.teams[1].goals : []}
                     winner={game.winner}
+                    showCountryFlags={showCountryFlags}
                     i={i}
 
 

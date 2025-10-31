@@ -38,7 +38,7 @@ const Tabs = ({ game }) => {
 
 
 
-      <div className=" md:mx-0 mx-0 p-0 ">
+      <div className=" md:mx-0 mx-0 p-0 pb-40 ">
         {
           tabs.filter(t => t.show).map((tab) => (
             <div

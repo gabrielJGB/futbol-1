@@ -38,7 +38,7 @@ const Player = ({ name }) => {
         setLoading(true)
         const url = `https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
         fetcher(url).then((res) => {
-            console.log(res);
+            // console.log(res);
 
             if (res.totalFound > 0 && res.results[0].totalFound > 0 && res.results[0].type === "player") {
                 const player = res.results[0].contents[0]

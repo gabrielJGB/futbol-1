@@ -58,7 +58,7 @@ const Events = ({ game }) => {
   }
 
   return (
-    <div class={"flex flex-col-reverse gap-2"}>
+    <div class={"flex flex-col-reverse gap-2  md:px-0 px-1"}>
       {
         items.map((item) => (
           <div class={"grid gap-[1px] md:grid-cols-[5fr_1fr_5fr] grid-cols-[3fr_1fr_3fr]   "}>
