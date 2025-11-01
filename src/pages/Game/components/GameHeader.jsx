@@ -4,6 +4,8 @@ import React from 'react'
 import { BiCalendar } from 'react-icons/bi'
 import { GiWhistle } from 'react-icons/gi'
 import { MdStadium } from 'react-icons/md'
+import Countdown from './Countdown'
+
 
 const GameHeader = ({ game }) => {
 
@@ -38,6 +40,8 @@ const GameHeader = ({ game }) => {
 
 
     useEffect(() => {
+
+        // console.log( game.start_time,timeUntil(game.start_time))
 
         document.title = (game.status.enum === 2 ? game.game_time_status_to_display + ("scores" in game ? ` ${game.scores[0]}-${game.scores[1]} ` : "") : "") + ` ${home.short_name} vs ${away.short_name}` + " - Fútbol 1"
     }, [game])
@@ -143,6 +147,11 @@ const GameHeader = ({ game }) => {
                 }
             </div>
 
+            {
+                game.status.enum === 1 &&
+                <Countdown start={game.start_time} />
+            }
+
 
             <div class={"col-span-5 flex flex-col  md:flex-row items-center justify-start md:justify-center gap-x-3 flex-wrap text-xs mx-2 mt-3 font-semibold text-gray-300"}>
                 <div class={"flex flex-row items-center gap-1"}>
@@ -167,7 +176,10 @@ const GameHeader = ({ game }) => {
                     href={`https://www.google.com/search?q=Arbitro ${game.game_info?.find(item => item.name === "Árbitro")?.value}`}
                     target={"_blank"}
                     class={"flex flex-row items-center gap-1 hover:underline"}>
-                    <GiWhistle color='white' size={14} />
+                    {
+                        game.game_info?.find(item => item.name === "Árbitro") &&
+                        <GiWhistle color='white' size={14} />
+                    }
                     {game.game_info?.find(item => item.name === "Árbitro")?.value}
                 </a>
 

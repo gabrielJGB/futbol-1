@@ -8,12 +8,13 @@ import Events from "./Events";
 const Tabs = ({ game }) => {
 
   const tabs = [
-    { id: "lineups", show: "players" in game , label: "Formaciones", content: <Lineups game={game} /> },
+    { id: "lineups", show: "players" in game && "lineups" in game.players, label: "Formaciones", content: <Lineups game={game} /> },
     { id: "events", show: "events" in game, label: "Eventos", content: <Events game={game} /> },
     { id: "prev", show: true, label: "Previa", content: <Prev game={game} /> },
     { id: "stats", show: "statistics" in game, label: "Estadisticas", content: <Stats game={game} /> },
   ]
   const [active, setActive] = useState(tabs[0].id);
+console.log(game);
 
 
   return (
@@ -25,7 +26,7 @@ const Tabs = ({ game }) => {
           <button
             key={tab.id}
             onClick={() => setActive(tab.id)}
-            className={`flex-1 px-4 py-2  border-b-2 transition-all cursor-pointer  text-sm whitespace-nowrap
+            className={`flex-1 px-5 py-2   mx-auto   border-b-2 transition-all cursor-pointer  text-sm whitespace-nowrap
               ${active === tab.id
                 ? " border-[#C2E213]  text-[#C2E213] font-medium"
                 : "border-transparent text-gray-400 hover:text-[#e2ff3b]"
