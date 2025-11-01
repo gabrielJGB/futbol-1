@@ -72,7 +72,7 @@ const LeagueList = ({ leagues }) => {
                                             <img src={`https://api.promiedos.com.ar/images/country/${game.country_id}/1`} alt="Logo" className="h-5" />
                                         </Link>
                                     }
-
+    
                                     <GameCard
                                         key={i}
                                         id={game.id}
@@ -90,7 +90,7 @@ const LeagueList = ({ leagues }) => {
                                         homeScorers={"goals" in game.teams[0] ? game.teams[0].goals : []}
                                         awayScorers={"goals" in game.teams[1] ? game.teams[1].goals : []}
                                         winner={game.winner}
-                                        showCountryFlags={game.league.show_country_flags}
+                                        showCountryFlags={false}
                                         i={i}
 
 

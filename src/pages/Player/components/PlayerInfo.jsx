@@ -9,7 +9,7 @@ const PlayerInfo = ({ player, setTabs,title }) => {
 
 
     return (
-        <section id={title} class="text-white rounded-2xl   md:mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
+        <section id={title} class="text-white rounded-2xl w-full  md:mx-auto  grid md:grid-cols-[3fr_2fr] grid-cols-1  md:gap-20 gap-1 transition-all duration-300">
 
 
 

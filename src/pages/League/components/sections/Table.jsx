@@ -1,3 +1,4 @@
+import { Link } from 'preact-router/match'
 import React from 'react'
 
 
@@ -13,13 +14,13 @@ const getResultElement = (elem) => {
 }
 
 
-const getLiveColor = (status)=>{
+const getLiveColor = (status) => {
 
-    if(status === 3){
+    if (status === 3) {
         return "yellow"
-    }else if(status === 2){
+    } else if (status === 2) {
         return "red"
-    }else if(status === 1){
+    } else if (status === 1) {
         return "lime"
     }
 
@@ -50,18 +51,24 @@ const Table = ({ table }) => {
 
                     {table.table.rows.map((row, i) => {
                         return (
-                            <tr class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"} hover:bg-gray-700 hover:text-white`}>
-                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""),color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[10px] hover:text-white"}>{i + 1}</td>
+                            <tr class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"} hover:bg-[#90d78c] `}>
+                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[10px] hover:text-white"}>{i + 1}</td>
 
-                                <td class="font-semibold  flex flex-row  items-center gap-1 p-[3px]">
-                                    <div class={"w-[18px]"}>
-                                    <img src={`https://api.promiedos.com.ar/images/team/${row.entity.object.id}/1`} style={{height:17}} />
-                                    </div>
-                                    <div class={"text-xs"}>{row.entity.object.short_name}</div>
-                                    {
-                                        "live_data" in row &&
-                                        <div style={{background:getLiveColor(row.live_data.status)}} class={`rounded-full w-[10px]  ml-1 animate-bounce    h-[10px] border-[1px] border-gray-800`}></div>
-                                    }
+                                <td class="font-semibold   gap-1 p-[3px]">
+                                    <Link
+                                        // @ts-ignore
+                                        href={`/team/${row.entity.object.id}`}
+                                        class={"hover:underline flex flex-row  items-center  gap-0"}
+                                    >
+                                        <div class={"w-[18px]"}>
+                                            <img src={`https://api.promiedos.com.ar/images/team/${row.entity.object.id}/1`} style={{ height: 17 }} />
+                                        </div>
+                                        <div class={"text-xs"}>{row.entity.object.short_name}</div>
+                                        {
+                                            "live_data" in row &&
+                                            <div style={{ background: getLiveColor(row.live_data.status) }} class={`rounded-full w-[10px]  ml-1 animate-bounce     h-[10px] border-[1px] border-gray-800`}></div>
+                                        }
+                                    </Link>
                                 </td>
                                 {
                                     row.values.map((item, i) => {

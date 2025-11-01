@@ -78,7 +78,7 @@ const Table = ({ table }) => {
   return (
     <div class="bg-[#000000] text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
       <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
-        <h2 class="text-xl font-bold">{table.name.replace("Historia", "Campeones").replace("Ligas","")}</h2>
+        <h2 class="text-xl font-bold">{table.name.replace("Historia", "Campeones").replace("Ligas", "")}</h2>
         <span class="text-sm text-gray-400">
           {table.rows.length}
         </span>
@@ -86,10 +86,10 @@ const Table = ({ table }) => {
 
       <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
         <thead>
-          
+
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
             {
-              isRankingTable&&<th>Equipo</th>
+              isRankingTable && <th>Equipo</th>
             }
             {table.columns.map((col) => (
               <th key={col.key} class="text-center px-0 py-1">
@@ -131,12 +131,36 @@ const Table = ({ table }) => {
 
 
 
-                {row.values.map((val) => (
+                {row.values.map((val, i) => (
                   <td
                     key={val.key}
                     class="px-1 py-1 text-center "
                   >
-                    {val.value.replace(">", "")}
+                    {
+                      i === 1 && "game" in row && "scores" in row.game?
+                        <Link
+                          // @ts-ignore
+                          href={`/game/${row.game.id}`}
+                          class={""}
+                          >
+                          <div class={"flex flex-row justify-center gap-1"}>
+                            {
+                              row.game.teams.map((team, i) => (
+                                <div class={`flex ${i === 0 ? "flex-row" : "flex-row-reverse"} items-center  gap-[2px]`}>
+                                  <img title={team.name} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black h-4 w-4 object-contain" />
+                                  <div class={`${row.game.winner === (i + 1) ? "font-semibold" : ""}`}>{row.game.scores[i]}</div>
+                                  {i === 0 ? <span class={"ml-[3px]"}>{`-`}</span> : ""}
+
+                                </div>
+                              ))
+                            }
+
+
+                          </div>
+                        </Link>
+                        :
+                        val.value
+                    }
                   </td>
                 ))}
               </tr>

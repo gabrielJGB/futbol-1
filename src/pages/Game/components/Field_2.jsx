@@ -4,6 +4,7 @@ import goal from '../../../assets/goal.png'
 import arrowIn from '../../../assets/arrow-in.png'
 import arrowOut from '../../../assets/arrow-out.png'
 import { BiChevronLeft, BiChevronLeftCircle, BiChevronRight } from 'react-icons/bi';
+import { Link } from 'preact-router/match';
 
 const Field2 = ({ teams, colors, ids }) => {
 
@@ -17,17 +18,22 @@ const Field2 = ({ teams, colors, ids }) => {
 
 
         return (
-            <div class={" flex flex-row  items-center justify-center  text-white text-xs font-bold z-10 "}>
+            <div
+                class={" active:underline  flex flex-row  items-center justify-center  text-white text-xs font-bold z-10 "}>
 
-                <BiChevronRight color='lime' size={20} class={"drop-shadow-xs drop-shadow-black "} />
+                <BiChevronRight color='lime' size={20} class={"min-w-min drop-shadow-xs drop-shadow-black "} />
 
                 <div
                     style={{ backgroundColor: colors[i].color, color: colors[i].text_color }}
                     class={"flex border-[2px] mr-[2px] border-gray-900 justify-center items-center rounded-lg text-[10px] md:text-[12px] font-bold  py-[0px] w-[20px] h-min  shadow-xs shadow-gray-800"}>{player.jersey_num}</div>
 
-                <div
+
+                <Link
+                    // @ts-ignore
+                    href={`/player/${player.name}`}
+                    title={player.name}
                     style={{ textShadow: "black 1px 1px 3px", }}
-                    class={`${getPlayerNameColor(player)} flex flex-row items-center gap-1 max-w-[100px] text-center text-[11px]  px-[0px]`}>{player.player_short_name}{player.is_captain ? " (C)" : ""}
+                    class={`hover:underline active:underline ${getPlayerNameColor(player)} flex flex-row items-center gap-1 max-w-[100px] text-center text-[11px]  px-[0px]`}>{player.player_short_name}{player.is_captain ? " (C)" : ""}
 
 
                     {
@@ -35,13 +41,13 @@ const Field2 = ({ teams, colors, ids }) => {
                         <div class={"ml-[2px] flex flex-row items-center gap-[1px]"}>
                             {
                                 Array.from({ length: player.events.goals.goals }).map((_, i) => (
-                                    <img src={goal} class={"md:w-[9px] w-[6px] "} />
+                                    <img src={goal} class={"md:w-[9px] w-[9px] min-w-[9px]"} />
                                 ))
                             }
                         </div>
                     }
 
-                </div>
+                </Link>
 
             </div>
         )
@@ -137,7 +143,7 @@ const Field2 = ({ teams, colors, ids }) => {
                 {
                     [homeLines, awayLines].map((teamLines, i) => (
 
-                        <div class={`${i === 0 ? "col-start-1 flex-row" : "col-start-2 flex-row-reverse"} flex justify-around gap- h-full`}>
+                        <div class={`${i === 0 ? "col-start-1 flex-row" : "col-start-2 flex-row-reverse"} justify-around mx-auto flex w-full h-full`}>
                             {
                                 teamLines.map((line) => (
                                     <div class={`flex ${i === 0 ? "flex-col" : "flex-col-reverse"} justify-evenly items-center`}>
@@ -146,7 +152,6 @@ const Field2 = ({ teams, colors, ids }) => {
                                                 <div
 
                                                     className="flex flex-col  items-center justify-center  text-white text-xs font-bold z-10 "
-                                                    title={player.name}
                                                 >
 
                                                     {
@@ -176,18 +181,21 @@ const Field2 = ({ teams, colors, ids }) => {
 
                                                     </div>
 
-                                                    <div
+                                                    <Link
+                                                        // @ts-ignore
+                                                        href={`/player/${player.name}`}
+                                                        title={player.name}
                                                         style={{ textShadow: "black 1px 1px 3px", }}
-                                                        class={`${getPlayerNameColor(player, "substitution" in player)} flex flex-row items-center justify-center gap-0  text-center text-[14px] w-[87px] px-[0px]`}>
+                                                        class={`hover:underline active:underline ${getPlayerNameColor(player, "substitution" in player)} flex flex-row items-center justify-center gap-0  text-center text-[14px]  px-[0px]`}>
 
-                                                        {"substitution" in player && 
-                                                        <BiChevronLeft class={"min-w-min drop-shadow-xs drop-shadow-black "} color='red' size={20} />
+                                                        {"substitution" in player &&
+                                                            <BiChevronLeft class={"min-w-min drop-shadow-xs drop-shadow-black "} color='red' size={20} />
                                                         }{player.player_short_name}{player.is_captain ? " (C)" : ""}
                                                         {
                                                             "substitution" in player && <div class={"w-[10px]"}></div>
                                                         }
 
-                                                    </div>
+                                                    </Link>
 
 
                                                     {

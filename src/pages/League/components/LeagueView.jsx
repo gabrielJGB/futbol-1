@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { fetcher } from "../../../utils/fetcher";
 
 import LeagueInfo from './sections/LeagueInfo'
-import Stats from './sections/Stats'
+import PlayerStats from './sections/PlayerStats'
 import TablesAndFixtures from './sections/TablesAndFixtures'
 import Teams from './sections/Teams'
 import History from './sections/History'
@@ -13,6 +13,7 @@ import games from '../../../../LEAGUE_GAMES.json'
 import { round } from "../signals";
 import Brackets from "./sections/Brackets";
 import Loading from "../../../components/Loading";
+import TeamStats from "./sections/TeamStats";
 
 
 
@@ -92,8 +93,13 @@ const LeagueView = ({ leagueId }) => {
         },
         {
             "id": "section-1",
-            "name": "Estadísticas",
-            "component": (name, league, games) => (<Stats league={league} />)
+            "name": "Estadísticas de jugadores",
+            "component": (name, league, games) => (<PlayerStats league={league} />)
+        },
+        {
+            "id": "section-1",
+            "name": "Estadísticas de equipos",
+            "component": (name, league, games) => (<TeamStats id={leagueId}/>)
         },
         {
             "id": "section-3",

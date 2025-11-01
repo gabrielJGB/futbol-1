@@ -22,7 +22,7 @@ export default defineConfig({
 			manifest: {
 				
 				name: 'Fútbol 1',
-				short_name: 'Fútbol 11',
+				short_name: 'Fútbol 1',
 				start_url: '/',
 				display: 'standalone',
 				background_color: '#0e3e1d',

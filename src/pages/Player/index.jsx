@@ -35,6 +35,7 @@ const Player = ({ name }) => {
 
 
     useEffect(() => {
+        document.title = name + " - Fútbol 1"
         setLoading(true)
         const url = `https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
         fetcher(url).then((res) => {
@@ -77,7 +78,7 @@ const Player = ({ name }) => {
         </div>
     )
 
-    if (!player)
+    if (!player || player ===-1)
         return <div class={"text-center mt-10"}>Sin datos del jugador</div>
 
 

@@ -1,3 +1,6 @@
+import { useEffect } from "preact/hooks";
+
+
 export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
     if (!competitor) return null;
 
@@ -6,6 +9,12 @@ export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
 
     if (id === "igg")
         textColor = "yellow"
+
+
+    useEffect(() => {
+        document.title = competitor.name + " - Fútbol 1"
+    }, [])
+
 
     return (
         <div
@@ -33,7 +42,7 @@ export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
                     {
                         team_info.map((team) => (
                             <div>
-                                <span>{team.name.replace("Club de","Ciudad")}: {team.value}</span>
+                                <span>{team.name.replace("Club de", "Ciudad")}: {team.value}</span>
                             </div>
                         ))
                     }

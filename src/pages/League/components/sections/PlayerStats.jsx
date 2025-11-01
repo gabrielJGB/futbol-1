@@ -13,7 +13,7 @@ const abbreviatePosition = (pos) => {
 };
 
 
-const StatsTables = ({  league }) => {
+const PlayerStats = ({  league }) => {
 
   const tables = league.players_statistics?.tables
 
@@ -25,7 +25,7 @@ const StatsTables = ({  league }) => {
   return (
 
     <>
-      <SectionTitle title={"Estadísticas"} />
+      <SectionTitle title={"Estadísticas de jugadores"} />
 
       <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
 
@@ -47,7 +47,7 @@ const Table = ({ table }) => {
       <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
         <h2 class="text-xl font-bold">{table.name}</h2>
         <span class="text-sm text-gray-400">
-          {table.rows.length} jugadores
+          {table.rows.length} 
         </span>
       </div>
 
@@ -69,6 +69,7 @@ const Table = ({ table }) => {
         <tbody>
           {visibleRows.map((row, i) => {
             const player = row.entity.object;
+            const teamName = row.entity.object.name;
             const teamId = player.team_id || 'unknown';
             const pos = abbreviatePosition(player.position);
 
@@ -79,7 +80,7 @@ const Table = ({ table }) => {
               >
                 <td class="px-1 py-1 font-semibold  text-start">{row.num}</td>
 
-                <td class="">
+                <td class="" >
                   <Link
                     // @ts-ignore
                     href={`/player/${encodeURIComponent(player.name)}`}
@@ -88,7 +89,7 @@ const Table = ({ table }) => {
                     <img
                       src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
                       alt="Escudo Equipo"
-                      class="h-6 w-6 mr-2  object-contain"
+                      class="h-5 w-5 mr-2  object-contain drop-shadow-xs drop-shadow-black"
                     />
                     <div class={"w-max"}>
                     {player.name}
@@ -128,4 +129,4 @@ const Table = ({ table }) => {
   );
 };
 
-export default StatsTables;
+export default PlayerStats;

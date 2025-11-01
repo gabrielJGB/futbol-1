@@ -61,7 +61,7 @@ const GameHeader = ({ game }) => {
                         {/* <img src={`https://api.promiedos.com.ar/images/league/${game.league.id}/1`} class={"h-5"} alt="" /> */}
                     </Link>
                     <span class={"text-[11px] text-gray-400 font-semibold mb-2"}>
-                        {game.stage_round_name.toUpperCase()}
+                        {"stage_round_name" in game && game.stage_round_name.toUpperCase()}
                     </span>
                 </div>
 
@@ -98,7 +98,7 @@ const GameHeader = ({ game }) => {
                             {"scores" in game ? game.scores[1] : `-`}</div>
                     </div>
 
-                    <div class={`${getStatusColor()}  text-center rounded py-[0px] font-semibold text-[12px] md:text-[14px]`}>
+                    <div title={game.status.name} class={`${getStatusColor()}  text-center rounded py-[0px] font-semibold text-[12px] md:text-[14px]`}>
                         {getStatusText()}
                     </div>
 
@@ -150,15 +150,26 @@ const GameHeader = ({ game }) => {
                     <div>{game.start_time.replaceAll("-", "/")}</div>
                 </div>
                 <span class={"md:block hidden"}>-</span>
-                <div class={"flex flex-row items-center gap-1"}>
+
+                <a
+                    // @ts-ignore
+                    href={`https://www.google.com/search?q=${game.game_info?.find(item => item.name === "Estadio")?.value}`}
+                    target={"_blank"}
+                    class={"flex flex-row items-center gap-1 hover:underline"}>
                     <MdStadium color='white' size={14} />
-                    <div>{game.game_info.find(item => item.name === "Estadio")?.value}</div>
-                </div>
+                    <div>{game.game_info?.find(item => item.name === "Estadio")?.value}</div>
+                </a>
+
                 <span class={"md:block hidden"}>-</span>
-                <div class={"flex flex-row items-center gap-1"}>
+
+                <a
+                    // @ts-ignore
+                    href={`https://www.google.com/search?q=Arbitro ${game.game_info?.find(item => item.name === "Árbitro")?.value}`}
+                    target={"_blank"}
+                    class={"flex flex-row items-center gap-1 hover:underline"}>
                     <GiWhistle color='white' size={14} />
-                    {game.game_info.find(item => item.name === "Árbitro")?.value}
-                </div>
+                    {game.game_info?.find(item => item.name === "Árbitro")?.value}
+                </a>
 
             </div>
         </div>
