@@ -147,8 +147,8 @@ const Table = ({ table }) => {
                             {
                               row.game.teams.map((team, i) => (
                                 <div class={`flex ${i === 0 ? "flex-row" : "flex-row-reverse"} items-center  gap-[2px]`}>
-                                  <img title={team.name} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black h-4 w-4 object-contain" />
-                                  <div class={`${row.game.winner === (i + 1) ? "font-semibold" : ""}`}>{row.game.scores[i]}</div>
+                                  <img title={team.name} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className=" h-4 w-4 object-contain" />
+                                  
                                   {i === 0 ? <span class={"ml-[3px]"}>{`-`}</span> : ""}
 
                                 </div>
@@ -159,7 +159,7 @@ const Table = ({ table }) => {
                           </div>
                         </Link>
                         :
-                        val.value
+                        val.value.replace(">","")
                     }
                   </td>
                 ))}

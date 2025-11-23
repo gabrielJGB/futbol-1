@@ -13,10 +13,13 @@ const GameHeader = ({ game }) => {
     const away = game.teams[1]
 
     const goals = game.teams.map((team, i) => {
-        return team.goals?.flatMap(x => ({ ...x, isHome: i === 0 }))
+        return team.goals?.filter(g => g.time == g.time_to_display.slice(0, 2)).flatMap(x => ({ ...x, isHome: i === 0 }))
     }).flat().sort((a, b) => (a.time - b.time))
 
 
+    const penalties = game.teams.map((team, i) => {
+        return team.goals?.filter(g => g.time != g.time_to_display.slice(0, 2)).flatMap(x => ({ ...x, isHome: i === 0 }))
+    }).flat().sort((a, b) => (a.time - b.time))
 
     const getStatusText = () => {
         if (game.status.enum === 1)
@@ -124,6 +127,53 @@ const GameHeader = ({ game }) => {
                 </Link>
 
             </div>
+
+            {
+                game.penalties != undefined &&
+                <div class={"text-center w-full"}>
+
+                    {`(${game.penalties[0]}-${game.penalties[1]})`}
+
+                </div>
+            }
+
+
+
+       
+            <div class={"flex flex-col gap-[1px] mt-2"}>
+
+                {
+
+                    penalties.map((goal, i) => {
+
+
+                        return goal != undefined && (<div class={"gap-[1px] grid md:grid-cols-[6fr_1fr_6fr] grid-cols-[3fr_1fr_3fr]  p-0  md:text-xs text-xs text-center"}>
+
+                            <div class={`${goal.isHome ? "bg-gradient-to-l  from-[#032E15] " : ""}`}>
+                                {goal.isHome ? `${goal.player_name}` : ""}
+                            </div>
+                            <div class={`bg-[#032E15]  font-semibold`}>Pen {goal.time_to_display}</div>
+                            <div class={`${!goal.isHome ? "bg-gradient-to-r from-[#032E15] " : ""}`}>
+                                {!goal.isHome ? `${goal.player_name}` : ""}
+                            </div>
+
+                        </div>
+                        )
+                    })
+                }
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+       
             <div class={"flex flex-col gap-[1px] mt-2"}>
 
                 {

@@ -6,7 +6,7 @@ import { showMenu } from "../../signals/signals";
 import { useGame } from "./useGame";
 import GameHeader from "./components/GameHeader";
 import Videos from "./components/Videos";
-import data from '../../../GAME_PRE.json' //PRE  IN   END
+import data from '../../../GAME_PEN.json' //PRE  IN   END
 import Loading from "../../components/Loading";
 
 export function Game({ id }) {

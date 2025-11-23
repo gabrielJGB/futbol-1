@@ -11,7 +11,7 @@ import clank from '../../../assets/clank.png'
 
 const Events = ({ game }) => {
 
-  const items = game.events.flatMap(x => (x.rows)).map((k) => ({ 
+  const items = game.events.filter(e=>e.name != "Penales").flatMap(x => (x.rows)).map((k) => ({ 
     ...k, 
     id: parseInt(k.time.replace("+", "").replace("'", "")) 
   })).sort((a, b) => (a.id - b.id))
@@ -58,7 +58,7 @@ const Events = ({ game }) => {
   }
 
   return (
-    <div class={"flex flex-col-reverse gap-2  md:px-0 px-1"}>
+    <div class={"flex flex-col gap-2  md:px-0 px-1"}>
       {
         items.map((item) => (
           <div class={"grid gap-[1px] md:grid-cols-[5fr_1fr_5fr] grid-cols-[3fr_1fr_3fr]   "}>
