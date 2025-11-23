@@ -11,7 +11,8 @@ const Field2 = ({ teams, colors, ids }) => {
     const [homeLines, setHomeLines] = useState([])
     const [awayLines, setAwayLines] = useState([])
     const [showFlags, setShowFlags] = useState(false)
-    const [invertLines, setInvertLines] = useState(true)
+    const [invertLines, setInvertLines] = useState(false)
+    const [showJersey, setShowJersey] = useState(false)
     const bench = [teams[0].bench, teams[1].bench]
     const formations = [teams[0].formation, teams[1].formation]
 
@@ -24,22 +25,24 @@ const Field2 = ({ teams, colors, ids }) => {
                 class={" active:underline  flex flex-row  items-center justify-center  text-white text-xs font-bold z-10 "}>
 
                 <BiChevronRight color='lime' size={20} class={"min-w-min drop-shadow-xs drop-shadow-black "} />
+                {
+                    !showJersey &&
+                    <div
 
-                <div
-
-                    style={{
-                        backgroundColor: !showFlags ? colors[i].color : "",
-                        color: !showFlags ? colors[i].text_color : "",
-                        backgroundImage: showFlags ? `url('https://api.promiedos.com.ar/images/country/${player.country_id}/1')` : ""
-                    }}
+                        style={{
+                            backgroundColor: !showFlags ? colors[i].color : "",
+                            color: !showFlags ? colors[i].text_color : "",
+                            backgroundImage: showFlags ? `url('https://api.promiedos.com.ar/images/country/${player.country_id}/1')` : ""
+                        }}
 
 
 
 
-                    class={`${showFlags ? ` z-0 relative flex   justify-center items-center text-[16px] md:text-[18px] font-bold  bg-no-repeat w-[15px] h-[15px] drop-shadow-black drop-shadow-xs bg-contain` : "flex border-[2px] mr-[2px] border-gray-900 justify-center items-center rounded-lg text-[10px] md:text-[12px] font-bold  py-[0px] w-[20px] h-min  shadow-xs shadow-gray-800"} `}>
+                        class={`${showFlags ? ` z-0 relative flex   justify-center items-center text-[16px] md:text-[18px] font-bold  bg-no-repeat w-[15px] h-[15px] drop-shadow-black drop-shadow-xs bg-contain` : "flex border-[2px] mr-[2px] border-gray-900 justify-center items-center rounded-lg text-[10px] md:text-[12px] font-bold  py-[0px] w-[20px] h-min  shadow-xs shadow-gray-800"} ${showJersey?"bg-black  py-1 rounded":""}`}>
 
-                    {!showFlags ? player.jersey_num : ""}
-                </div>
+                        {!showFlags ? player.jersey_num : ""}
+                    </div>
+                }
 
 
                 <Link
@@ -129,6 +132,7 @@ const Field2 = ({ teams, colors, ids }) => {
         <div class={" w-full "}>
 
             <div class={"flex flex-ow items-center gap-3"}>
+
                 <label htmlFor="flags" class={"text-xs mb-1"}>
                     <input id={"flags"} name="flags" type="checkbox" checked={showFlags} onChange={() => setShowFlags(!showFlags)} />
                     <span class={"pl-1 "}>Banderas</span>
@@ -139,6 +143,12 @@ const Field2 = ({ teams, colors, ids }) => {
                     <input id={"invert"} name="flags" type="checkbox" checked={invertLines} onChange={() => setInvertLines(!invertLines)} />
                     <span class={"pl-1 "}>Invertir</span>
                 </label>
+
+                {/* <label htmlFor="jersey" class={"text-xs mb-1"}>
+                    <input id={"jersey"} name="flags" type="checkbox" checked={showJersey} onChange={() => setShowJersey(!showJersey)} />
+                    <span class={"pl-1 "}>Solo nombres</span>
+                </label> */}
+
             </div>
             <div class={"grid grid-cols-2 bg-[url('/fieldbg.png')] bg-repeat md:w-full w-[200vw]  shadow-xs shadow-gray-950   md:h-[450px] h-[420px] relative rounded-lg"}>
 
@@ -170,7 +180,7 @@ const Field2 = ({ teams, colors, ids }) => {
                 {
                     [homeLines, awayLines].map((teamLines, i) => (
 
-                        <div class={`${i === 0 ? (invertLines?"col-start-2 flex-row-reverse":"col-start-1 flex-row") : (invertLines?"col-start-1 flex-row":"col-start-2 flex-row-reverse")} row-start-1 justify-around mx-auto flex w-full h-full`}>
+                        <div class={`${i === 0 ? (invertLines ? "col-start-2 flex-row-reverse" : "col-start-1 flex-row") : (invertLines ? "col-start-1 flex-row" : "col-start-2 flex-row-reverse")} row-start-1 justify-around mx-auto flex w-full h-full`}>
                             {
                                 teamLines.map((line) => (
                                     <div class={`flex ${i === 0 ? (invertLines ? "flex-col-reverse" : "flex-col") : (invertLines ? "flex-col" : "flex-col-reverse")} justify-evenly items-center`}>
@@ -192,39 +202,45 @@ const Field2 = ({ teams, colors, ids }) => {
                                                         </div>
                                                     }
 
-                                                    <div
-                                                        style={{
-                                                            backgroundColor: !showFlags ? colors[i].color : "",
-                                                            color: !showFlags ? colors[i].text_color : "",
-                                                            backgroundImage: showFlags ? `url('https://api.promiedos.com.ar/images/country/${player.country_id}/1')` : ""
-                                                        }}
 
 
-                                                        class={`${showFlags ? ` z-0 relative flex   justify-center items-center text-[16px] md:text-[18px] font-bold  bg-no-repeat w-[38px] h-[38px] drop-shadow-black drop-shadow-xs bg-contain` : `z-0 relative flex  border-[2px] border-gray-900 justify-center items-center rounded-lg text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800`} `}
+                                                    {
+                                                        !showJersey &&
 
-                                                    >
-                                                        {
-                                                            ids[i] === "igg" && !showFlags &&
-                                                            <div style="position: absolute"><div class="-z-10 bg-blue-800 h-[8px] w-[32px] rounded-t-[6px]"></div><div class="bg-[#eac807] h-[15px] w-[32px] "></div><div class="bg-blue-800 h-[9px] w-[32px] rounded-b-[6px]"></div></div>
-                                                        }
+                                                        <div
+                                                            style={{
+                                                                backgroundColor: !showFlags ? colors[i].color : "",
+                                                                color: !showFlags ? colors[i].text_color : "",
+                                                                backgroundImage: showFlags ? `url('https://api.promiedos.com.ar/images/country/${player.country_id}/1')` : ""
+                                                            }}
 
-                                                        {
+
+                                                            class={`${showFlags ? ` z-0 relative flex   justify-center items-center text-[16px] md:text-[18px] font-bold  bg-no-repeat w-[38px] h-[38px] drop-shadow-black drop-shadow-xs bg-contain` : `z-0 relative flex  border-[2px] border-gray-900 justify-center items-center rounded-lg text-[16px] md:text-[18px] font-bold w-[36px] h-[36px] shadow-xs shadow-gray-800`} `}
+
+                                                        >
+                                                            {
+                                                                ids[i] === "igg" && !showFlags &&
+                                                                <div style="position: absolute"><div class="-z-10 bg-blue-800 h-[8px] w-[32px] rounded-t-[6px]"></div><div class="bg-[#eac807] h-[15px] w-[32px] "></div><div class="bg-blue-800 h-[9px] w-[32px] rounded-b-[6px]"></div></div>
+                                                            }
+
 
                                                             <span
                                                                 style={{ color: ids[i] === "igg" ? (showFlags ? "white" : "black") : (showFlags ? "white" : colors[i].text_color) }}
                                                                 class={`${showFlags ? "text-white text-shadow-lg" : "text-shadow-xs text-black"} text-shadow-[#00000085]  z-20`}>
                                                                 {player.jersey_num}
                                                             </span>
-                                                        }
 
-                                                    </div>
+
+                                                        </div>
+                                                    }
+
 
                                                     <Link
                                                         // @ts-ignore
                                                         href={`/player/${player.name}`}
                                                         title={player.name}
                                                         style={{ textShadow: "black 1px 1px 3px", }}
-                                                        class={`hover:underline active:underline ${getPlayerNameColor(player, "substitution" in player)} flex flex-row items-center justify-center gap-0  text-center text-[14px]  px-[0px]`}>
+                                                        class={`hover:underline active:underline ${getPlayerNameColor(player, "substitution" in player)} flex flex-row items-center justify-center gap-0  text-center text-[14px]   ${showJersey?"bg-black px-1 mx-1 py-1 rounded":""}`}>
 
                                                         {"substitution" in player &&
                                                             <BiChevronLeft class={"min-w-min drop-shadow-xs drop-shadow-black "} color='red' size={20} />
