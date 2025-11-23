@@ -14,14 +14,14 @@ const Tabs = ({ game }) => {
     { id: "stats", show: "statistics" in game, label: "Estadisticas", content: <Stats game={game} /> },
   ]
   const [active, setActive] = useState(tabs[0].id);
-console.log(game);
 
+  console.log(game);
 
   return (
     <div className="relative w-full">
 
 
-      <div className="flex overflow-x-auto md:overflow-visible bg-b2  md:mx-0 mx-0 mb-4">
+      <div className="flex overflow-x-auto md:overflow-visible bg-b2  md:mx-0 mx-0 mb-2">
         {tabs.filter(t => t.show).map((tab) => (
           <button
             key={tab.id}
