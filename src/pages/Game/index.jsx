@@ -11,6 +11,7 @@ import Loading from "../../components/Loading";
 
 export function Game({ id }) {
 
+  
   const { data, loading, error } = useGame(id)
   // const loading = false
   // const error = false

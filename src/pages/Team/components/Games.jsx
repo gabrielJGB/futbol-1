@@ -8,8 +8,6 @@ export const Games = ({ games }) => {
 
     const { next, last } = games;
 
-    // console.log(games);
-
 
     const renderGameRow = (game, isResult = false) => {
         const opponent = game.entity?.object?.short_name || 'S/D';
@@ -28,11 +26,11 @@ export const Games = ({ games }) => {
             resultSpecificContent = <td class={`px-4 py-1 font-mono text-center font-semibold ${bgColor}`}><Link href={`/game/${game.game?.id}`}>{result}</Link></td>;
         } else {
             const time = game.values?.find(v => v.key === 'time')?.value;
-            resultSpecificContent = <td class="px-4 py-1 font-mono text-gray-200 text-center"><Link href={`/game/${game.game?.id}`}>{time}</Link></td>;
+            resultSpecificContent = <td class="px-4 py-1 font-mono text-black text-center"><Link href={`/game/${game.game?.id}`}>{time}</Link></td>;
         }
 
         return (
-            <tr key={game.game?.id || opponent + date} class="odd:bg-gray-700/30 even:bg-gray-700/70 cursor-pointer transition-all not-last:border-b border-gray-800 hover:bg-gray-600">
+            <tr key={game.game?.id || opponent + date} class="text-black text-sm border-b border-[#333] even:bg-[#E7E7E7] odd:bg-[#D5D5D5] cursor-pointer transition-all not-last:border-b md:text-sm text-[13px]  hover:bg-gray-400">
                 <td class="px-4 py-0 text-center">
                     <Link href={`/game/${game.game?.id}`}>
                         {date}
@@ -45,7 +43,7 @@ export const Games = ({ games }) => {
                     </Link>
                 </td>
 
-                <td class="px-4 py-1">
+                <td class="px-4 py-0">
                     <Link class={"flex flex-row items-center gap-2"}  href={`/game/${game.game?.id}`}>
                         <img src={`https://api.promiedos.com.ar/images/team/${id}/1`} alt="Escudo Equipo" className="w-6 h-6 object-contain" />
                         <span>{opponent}</span>
@@ -66,10 +64,10 @@ export const Games = ({ games }) => {
                     <h3 class="text-2xl font-bold px-2 pb-2 text-primary">Últimos partidos</h3>
                     <div class="overflow-x-auto">
 
-                        <table class="w-full text-sm">
+                        <table class="w-full  bg-gray-500   border-separate border-spacing-[2px]">
                             <thead>
-                                <tr class="bg-gray-100 text-left text-gray-600 uppercase">
-                                    {last.columns.map(col => <th class="px-4 py-2" key={col.key}>{col.name}</th>)}
+                                <tr class="bg-black text-primary text-left text-sm ">
+                                    {last.columns.map(col => <th class="px-4 py-0" key={col.key}>{col.name}</th>)}
                                 </tr>
                             </thead>
                             <tbody>
@@ -87,10 +85,10 @@ export const Games = ({ games }) => {
                 <div class="bg-gray-800 p-2 rounded-lg shadow-lg h-min">
                     <h3 class="text-2xl font-bold px-2 pb-2 text-primary">Próximos partidos</h3>
                     <div class="overflow-x-auto">
-                        <table class="w-full text-sm">
+                        <table class="w-full  bg-gray-500   border-separate border-spacing-[2px] ">
                             <thead>
-                                <tr class="bg-gray-100 text-left text-gray-600 uppercase">
-                                    {next.columns.map(col => <th class="px-4 py-2" key={col.key}>{col.name}</th>)}
+                                <tr class="bg-black text-primary  text-left text-sm ">
+                                    {next.columns.map(col => <th class="px-4 py-0" key={col.key}>{col.name}</th>)}
                                 </tr>
                             </thead>
                             <tbody>

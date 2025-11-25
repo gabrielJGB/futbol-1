@@ -51,7 +51,7 @@ const Table = ({ table }) => {
 
                     {table.table.rows.map((row, i) => {
                         return (
-                            <tr class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}  `}>
+                            <tr class={`text-black text-sm border-b border-[#333] even:bg-[#E7E7E7] odd:bg-[#D5D5D5]`}>
                                 <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[10px] hover:text-white"}>{i + 1}</td>
 
                                 <td class="font-semibold   gap-1 p-[3px]">

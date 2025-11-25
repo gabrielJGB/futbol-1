@@ -4,6 +4,7 @@ import React from 'react'
 import { h } from 'preact';
 import { useRef, useLayoutEffect, useState } from 'preact/hooks';
 import SectionTitle from '../../../../components/SectionTitle';
+import { Link } from 'preact-router/match';
 
 // Componente para un equipo individual
 const Team = ({ name, id, winner }) => (
@@ -35,72 +36,87 @@ const Team = ({ name, id, winner }) => (
 );
 
 
-const Match = ({ match }) => (
+const Match = ({ match }) => {
 
-    <div class={`flex w-full  flex-row justify-between rounded cursor-pointer transition-all hover:border-[#00ff00]/70 relative my-0 shadow-black shadow-xs overflow-hidden border-[1px] text-white bg-[#015A1C]/80 border-white/10 p-1 `}>
+    const id1 = "id" in match.games[0] && match.games[0].id
 
-        <div class={`flex flex-col flex-1 `}>
+    const twoGames = match.games.length > 1
 
-            <Team
+    return (
+        <Link
+            // @ts-ignore
+            href={id1 && !twoGames ? `/game/${id1}` : null}
+            class={`flex w-full  flex-row justify-between rounded transition-all ${id1 && !twoGames ? "hover:border-[#00ff00]/70 cursor-pointer " : ""} relative my-0 shadow-black shadow-xs overflow-hidden border-[1px] text-white bg-[#015A1C]/80 border-white/10 pt-1 pl-1 `}
+        >
 
-                winner={match.winner === 1}
-                id={match.participants[0].id}
-                name={match.participants[0].short_name}
+            <div class={`flex flex-col flex-1 `}>
 
-            />
+                <Team
 
-            <hr class={"text-[#008000]/50"} />
+                    winner={match.winner === 1}
+                    id={match.participants[0].id}
+                    name={match.participants[0].short_name}
 
-            <Team
-                winner={match.winner === 2}
-                id={match.participants[1].id}
-                name={match.participants[1].short_name}
+                />
 
-            />
+                <hr class={"text-[#008000]/50"} />
 
-        </div>
-        <div class={"flex align-middle gap-1"}>
+                <Team
+                    winner={match.winner === 2}
+                    id={match.participants[1].id}
+                    name={match.participants[1].short_name}
 
-            {
-                "score" in match &&
-                <div class={"flex-1 flex flex-col items-center justify-center divide-y-[1px] border-[#008000]/50 "}>
+                />
 
-                    {
-                        match.score.map((item) => (
-                            <div class={`pt-1 border-l-[0px] border-[#008000]/50 border-r-[0px] flex-1 font-bold`}>{item}</div>
-                        ))
-                    }
+            </div>
+            <div class={"flex align-middle gap-1"}>
 
-                </div>
-            }
-            {
-                match.games?.length > 1 &&
-                <div class={`flex flex-col items-center justify-between gap-0 pl-1  ${match.games?.length > 1 && "border-l-[1px] border-[#008000]/50"}`}>
-                    {
-                        match.games.map((game, i) => {
-                            return "scores" in game &&
-                                <div class={"flex flex-col "}>
-                                    <div class={"flex flex-row gap-2"}>
-                                        <img style={{ height: 11 }} src={`https://api.promiedos.com.ar/images/team/${game.teams[0].id}/1`} />
-                                        <img style={{ height: 11 }} src={`https://api.promiedos.com.ar/images/team/${game.teams[1].id}/1`} />
-                                    </div>
-                                    <div class={"flex flex-row items-center justify-center gap-[2px]"}>
-                                        <div class={"text-xs"}>{game.scores[0]}</div>
-                                        <span>-</span>
-                                        <div class={"text-xs"}>{game.scores[1]}</div>
-                                    </div>
-                                </div>
-                        })
-                    }
+                {
+                    "score" in match &&
+                    <div class={"flex-1 flex flex-col items-center justify-center divide-y-[1px] border-[#008000]/50 "}>
+
+                        {
+                            match.score.map((item) => (
+                                <div class={`pt-1 border-l-[0px] border-[#008000]/50 border-r-[0px] flex-1 font-bold`}>{item}</div>
+                            ))
+                        }
+
+                    </div>
+                }
+                {
+                    match.games?.length > 1 &&
+                    <div class={`flex flex-col items-center justify-between gap-0 pl-1  ${match.games?.length > 1 && "border-l-[1px] border-[#008000]/50"}`}>
+                        {
+                            match.games.map((game, i) => {
+                                return "scores" in game &&
+                                    <Link
+                                    
+                                        // @ts-ignore
+                                        href={`/game/${game.id}`}
+                                        title={i===0?"Ida":"Vuelta"}
+                                        class={`flex flex-col hover:border-[#00ff00]/70 border px-[2px] border-transparent cursor-pointer `}
+                                    >
+                                        <div class={"flex flex-row gap-2"}>
+                                            <img style={{ height: 11 }} src={`https://api.promiedos.com.ar/images/team/${game.teams[0].id}/1`} />
+                                            <img style={{ height: 11 }} src={`https://api.promiedos.com.ar/images/team/${game.teams[1].id}/1`} />
+                                        </div>
+                                        <div class={"flex flex-row items-center h-max justify-center "}>
+                                            <div class={"text-xs"}>{game.scores[0]}</div>
+                                            <span>-</span>
+                                            <div class={"text-xs"}>{game.scores[1]}</div>
+                                        </div>
+                                    </Link>
+                            })
+                        }
 
 
-                </div>
-            }
+                    </div>
+                }
 
-        </div >
-    </div>
-
-);
+            </div >
+        </Link>
+    )
+};
 
 
 const Stage = ({ stage }) => (

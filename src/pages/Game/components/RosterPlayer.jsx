@@ -59,7 +59,13 @@ const getEvents = (player, isBench) => {
         <img src={goal} className="h-3 " />
     ))
 
+
+    let ownGoals = Array.from({ length: player.events?.goals?.own_goals }).map((_, i) => (
+        <img src={ownGoal} className="h-3 " />
+    ))
+
     arr.push(goals)
+    arr.push(ownGoals)
 
     if (player.events?.substitution?.has_substitution) {
         if (isBench)

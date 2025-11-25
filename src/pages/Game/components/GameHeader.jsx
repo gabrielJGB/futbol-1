@@ -13,12 +13,12 @@ const GameHeader = ({ game }) => {
     const away = game.teams[1]
 
     const goals = game.teams.map((team, i) => {
-        return team.goals?.filter(g => g.time == g.time_to_display.slice(0, 2)).flatMap(x => ({ ...x, isHome: i === 0 }))
+        return team.goals?.filter(g => g.time == g.time_to_display.split('\'')[0] ).flatMap(x => ({ ...x, isHome: i === 0 }))
     }).flat().sort((a, b) => (a.time - b.time))
 
 
     const penalties = game.teams.map((team, i) => {
-        return team.goals?.filter(g => g.time != g.time_to_display.slice(0, 2)).flatMap(x => ({ ...x, isHome: i === 0 }))
+        return team.goals?.filter(g => g.time != g.time_to_display.split('\'')[0] ).flatMap(x => ({ ...x, isHome: i === 0 }))
     }).flat().sort((a, b) => (a.time - b.time))
 
     const getStatusText = () => {
@@ -46,7 +46,13 @@ const GameHeader = ({ game }) => {
 
         // console.log( game.start_time,timeUntil(game.start_time))
 
-        document.title = (game.status.enum === 2 ? game.game_time_status_to_display + ("scores" in game ? ` ${game.scores[0]}-${game.scores[1]} ` : "") : "") + ` ${home.short_name} vs ${away.short_name}` + " - Fútbol 1"
+        document.title = (
+
+            game.status.enum === 2 ?
+
+                game.game_time_status_to_display + ("scores" in game ? ` ${game.scores[0]}-${game.scores[1]} ` : "")
+                :
+                "") + ` ${home.short_name} vs ${away.short_name}` + " - Fútbol 1"
     }, [game])
 
 
@@ -139,7 +145,7 @@ const GameHeader = ({ game }) => {
 
 
 
-       
+
             <div class={"flex flex-col gap-[1px] mt-2"}>
 
                 {
@@ -173,7 +179,7 @@ const GameHeader = ({ game }) => {
 
 
 
-       
+
             <div class={"flex flex-col gap-[1px] mt-2"}>
 
                 {

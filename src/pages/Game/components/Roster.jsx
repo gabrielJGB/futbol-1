@@ -1,7 +1,7 @@
 import React from 'react'
 import RosterPlayer from './RosterPlayer'
 
-const Roster = ({ roster, missingPlayers, teams }) => {
+const Roster = ({ roster, missingPlayers, teams,invertLines }) => {
 
 
   
@@ -16,7 +16,7 @@ const Roster = ({ roster, missingPlayers, teams }) => {
         {
           roster != undefined&&
           roster.map((team, i) => (
-            <div class={"flex flex-col w-full col-span-1 "}>
+            <div class={`flex flex-col w-full row-start-1 col-span-1 ${i===0?(invertLines?"col-start-2":"col-start-1"):(invertLines?"col-start-1":"col-start-2 ")} `}>
 
               <div style={{ backgroundColor: teams[i].colors.color, color: teams[i].colors.text_color }} class={`py-1 text-lg text-center font-semibold shadow shadow-gray-800`}>{teams[i].name}</div>
 
