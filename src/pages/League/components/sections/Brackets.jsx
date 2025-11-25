@@ -38,9 +38,9 @@ const Team = ({ name, id, winner }) => (
 
 const Match = ({ match }) => {
 
-    const id1 = "id" in match.games[0] && match.games[0].id
+    const id1 = "games" in match && "id" in match.games[0] && match.games[0].id
 
-    const twoGames = match.games.length > 1
+    const twoGames = "games" in match && match.games.length > 1
 
     return (
         <Link
@@ -77,7 +77,7 @@ const Match = ({ match }) => {
 
                         {
                             match.score.map((item) => (
-                                <div class={`pt-1 border-l-[0px] border-[#008000]/50 border-r-[0px] flex-1 font-bold`}>{item}</div>
+                                <div class={`pt-1 pr-1 border-l-[0px] border-[#008000]/50 border-r-[0px] flex-1 font-bold`}>{item}</div>
                             ))
                         }
 
