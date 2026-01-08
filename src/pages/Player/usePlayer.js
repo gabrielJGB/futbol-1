@@ -4,9 +4,9 @@ import { fetcher } from '../../utils/fetcher';
 
 export const usePlayer = (name) => {
 
-    // 2️⃣ Segundo fetch, solo si el primero tuvo éxito y cumple condición
-    // const shouldFetchPosts = user && user.id > 0; // o cualquier condición tuya
-    const url = `https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
+    
+    // const shouldFetchPosts = user && user.id > 0
+    const url = `https://corsproxy.io/?https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
 
     const res = useSWR(url,
         fetcher,

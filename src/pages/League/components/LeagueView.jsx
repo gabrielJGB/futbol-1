@@ -110,7 +110,7 @@ const LeagueView = ({ leagueId }) => {
 
 
     return (
-        <div class="bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2  overflow-x-auto   text-white  font-sans  pb-20 md:mx-12">
+        <div class="bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-1 md:col-start-2  overflow-x-auto   text-white  font-sans  pb-20 md:mx-12">
 
 
             {/* <div class="fixed bottom-0 left-0 w-full bg-black/85 backdrop-blur-sm border-b border-[#333] z-50">

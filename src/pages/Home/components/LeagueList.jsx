@@ -40,10 +40,13 @@ const LeagueList = ({ leagues }) => {
 
 
     return (
+
+        sortedGames.length > 0 &&
         <div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1  shadow-lg shadow-black bg-background border-[1px] border-borderc "}>
 
             <DailyStats stats={stats} />
             <FilterButtons gamesArr={gamesArr} />
+
             <div
                 class={`text-xs flex-1 text-center  py-2 rounded  cursor-pointer shadow shadow-gray-900 transition-colors hover:bg-[#2d330e] hover:text-white ${sortByDate ? "bg-[#C2E213] text-black" : "bg-gray-900 text-gray-400"}`}
                 onClick={() => setSortByDate(prev => !prev)}
@@ -72,7 +75,7 @@ const LeagueList = ({ leagues }) => {
                                             <img src={`https://api.promiedos.com.ar/images/country/${game.country_id}/1`} alt="Logo" className="h-5" />
                                         </Link>
                                     }
-    
+
                                     <GameCard
                                         key={i}
                                         id={game.id}
@@ -95,7 +98,7 @@ const LeagueList = ({ leagues }) => {
 
 
                                     />
-                                    
+
                                 </div>
                             ))}
                         </div>

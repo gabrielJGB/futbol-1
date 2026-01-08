@@ -14,7 +14,7 @@ import Anniversaries from "./components/Anniversaries";
 export const Home = ({ date }) => {
 
 
-	const { data, loading } = useHome(date)
+	const { data, loading, error } = useHome(date)
 	// const loading = false
 
 	const day = date.split("-")[0]
@@ -24,31 +24,57 @@ export const Home = ({ date }) => {
 
 
 	useEffect(() => {
+		document.title = "Fútbol 1"
 		if (window.innerWidth < 768)
 			showMenu.value = false
-
-		document.title = "Fútbol 1"
-
 	}, [])
 
 
 
+	// if (error)
+	// 	return (
+	// 		<div>
+	// 			Error: {error.message}
+	// 		</div>
+	// 	)
+
+
+	// if ( Object.keys(data).length === 0)
+	// 	return (
+	// 		<div class={"text-center w-full mt-10"}>
+	// 			Sin datos
+	// 		</div>
+	// 	)
+
+	// useEffect(() => {
+
+	// 	console.log(data)
+
+	// }, [data])
+
+
 	return (
-		// 
+
 		<div class={" grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
 
 			<div class={"w-full md:mt-4 col-start-1"}>
 				<DateSelector />
-				{loading ? <Loading /> : <LeagueList leagues={data.leagues} />}
+
+				{loading && <Loading />}
+
+				{
+					!loading && data != undefined && Object.keys(data).length != 0 &&
+					<LeagueList leagues={data.leagues} />
+				}
+
+				{
+					data != undefined && "leagues" in data && data.leagues.length === 0 &&
+					<div class={"text-center w-full mt-10 text-lg font-semibold"}>Sin partidos</div>
+				}
+
 			</div>
-
-
 			<Calendar />
 			<Anniversaries data={data} loading={loading} />
-
-
-
-
 		</div>
 	);
 }

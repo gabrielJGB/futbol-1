@@ -2,7 +2,6 @@
 import { useEffect, useState } from "preact/hooks";
 import { useLocation } from 'preact-iso'
 import React from 'react'
-import { usePlayer } from './usePlayer';
 import { fetcher } from '../../utils/fetcher';
 import player from '../../../PLAYER2.json'
 import { MdStadium } from 'react-icons/md'
@@ -25,8 +24,9 @@ const Player = ({ name }) => {
     const [events, setEvents] = useState(false)
     const [eventsInfo, setEventsInfo] = useState(false)
     const [stats, setStats] = useState(false)
-    
     const [tabs, setTabs] = useState([])
+
+    const URL_BASE = "https://corsproxy.io/?"
 
     // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
     // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)
@@ -37,7 +37,7 @@ const Player = ({ name }) => {
     useEffect(() => {
         document.title = name + " - Fútbol 1"
         setLoading(true)
-        const url = `https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
+        const url = `${URL_BASE}https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
         fetcher(url).then((res) => {
             // console.log(res);
 
@@ -45,9 +45,9 @@ const Player = ({ name }) => {
                 const player = res.results[0].contents[0]
                 const id = player.uid.split("a:")[1]
 
-                const url1 = `https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/bio?region=ar&lang=es`
-                const url2 = `https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}?region=ar&lang=es`
-                const url3 = `https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/overview?region=ar&lang=es`
+                const url1 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/bio?region=ar&lang=es`
+                const url2 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}?region=ar&lang=es`
+                const url3 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/overview?region=ar&lang=es`
 
                 fetcher(url1).then(res1 => {
                     fetcher(url2).then(res2 => {
