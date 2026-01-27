@@ -16,7 +16,7 @@ const abbreviatePosition = (pos) => {
 };
 
 
-const History = ({ name, league, games }) => {
+const History = ({ name, league, games,leagueId }) => {
 
 
   const [historyTable, setHistoryTable] = useState(false)
@@ -52,8 +52,8 @@ const History = ({ name, league, games }) => {
       <div class={"grid md:grid-cols-2 grid-cols-1 gap-6"}>
 
 
-        {historyTable && <Table table={historyTable} />}
-        {rankingTable && <Table table={rankingTable} />}
+        {historyTable && <Table table={historyTable} leagueId={leagueId}/>}
+        {rankingTable && <Table table={rankingTable} leagueId={leagueId}/>}
 
 
       </div>
@@ -63,7 +63,7 @@ const History = ({ name, league, games }) => {
 }
 
 
-const Table = ({ table }) => {
+const Table = ({ table,leagueId }) => {
   let isRankingTable = false
 
   if (table.length) {
@@ -104,6 +104,8 @@ const Table = ({ table }) => {
             const player = row.entity.object;
             const teamId = player.id || 'unknown';
             const pos = abbreviatePosition(player.position);
+            const tableId = row.trigger_type === 2 ? row.season_id : null
+            const leagueSeason = row.values[0].value.replaceAll("/","_")
 
             return (
               <tr
@@ -137,18 +139,18 @@ const Table = ({ table }) => {
                     class="px-1 py-1 text-center "
                   >
                     {
-                      i === 1 && "game" in row && "scores" in row.game?
+                      i === 1 && "game" in row && "scores" in row.game ?
                         <Link
                           // @ts-ignore
                           href={`/game/${row.game.id}`}
                           class={""}
-                          >
+                        >
                           <div class={"flex flex-row justify-center gap-1"}>
                             {
                               row.game.teams.map((team, i) => (
                                 <div class={`flex ${i === 0 ? "flex-row" : "flex-row-reverse"} items-center  gap-[2px]`}>
                                   <img title={team.name} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className=" h-4 w-4 object-contain" />
-                                  
+
                                   {i === 0 ? <span class={"ml-[3px]"}>{`-`}</span> : ""}
 
                                 </div>
@@ -159,7 +161,14 @@ const Table = ({ table }) => {
                           </div>
                         </Link>
                         :
-                        val.value.replace(">","")
+                        <Link
+                          // @ts-ignore
+                          href={tableId != null && `/table/${leagueId}-${tableId}-${leagueSeason}`}
+                          class={"hover:underline"}
+                        >
+
+                          {val.value.replace(">", "")}
+                        </Link>
                     }
                   </td>
                 ))}

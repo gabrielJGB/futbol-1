@@ -3,6 +3,7 @@ import { useLocation } from 'preact-iso';
 import { Link } from 'preact-router/match';
 import { showMenu, showCalendar } from '../signals/signals';
 import { CalendarDaysIcon } from 'lucide-preact';
+import fp_icon from '../../public/futbolplay_icon.png'
 
 export function Header() {
 	const { path } = useLocation();
@@ -22,16 +23,25 @@ export function Header() {
 					FUTBOL 1
 				</Link>
 
-				{
-					isHome &&
-					<div
-						class={"md:hidden active:bg-green-950 rounded p-2 cursor-pointer"}
-						onClick={() => { showCalendar.value = !showCalendar.value }}
-					>
-						<CalendarDaysIcon size={20} color={"#C2E213"} />
-					</div>
-				}
 
+				<div class={"flex items-center gap-1 "}>
+					
+						<a class={"mr-2 flex items-center gap-2 hover:underline "} target="_blank" href={"https://futbolplay.vercel.app"} alt="Futbol Play Videos">
+							<div class={"text-xs hidden md:block font-semibold"}>Fútbol Play</div>
+							<img src={fp_icon} class={" md:size-8 size-6 cursor-pointer "} alt="Futbol Play Icon" />
+						</a>
+					
+
+					{
+						isHome &&
+						<div
+							class={"md:hidden active:bg-green-950 rounded p-2 cursor-pointer"}
+							onClick={() => { showCalendar.value = !showCalendar.value }}
+						>
+							<CalendarDaysIcon size={20} color={"#C2E213"} />
+						</div>
+					}
+				</div>
 
 			</div>
 		</header>

@@ -9,6 +9,7 @@ import { useHome } from "./useHome";
 import data from '../../../TODAY.json'
 import Loading from "../../components/Loading";
 import Anniversaries from "./components/Anniversaries";
+import DateString from "./components/DateString";
 
 
 export const Home = ({ date }) => {
@@ -20,7 +21,8 @@ export const Home = ({ date }) => {
 	const day = date.split("-")[0]
 	const month = parseInt(date.split("-")[1]) - 1
 	const year = date.split("-")[2]
-	selectedDate.value = new Date(year, month, day)
+	const dateObj = new Date(year, month, day)
+	selectedDate.value = dateObj
 
 
 	useEffect(() => {
@@ -57,10 +59,15 @@ export const Home = ({ date }) => {
 
 		<div class={" grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
 
-			<div class={"w-full md:mt-4 col-start-1"}>
+			<div class={"w-full  md:mt-4 col-start-1"}>
 				<DateSelector />
 
 				{loading && <Loading />}
+
+				{
+					!loading &&
+					<DateString dateObj={dateObj}/>
+				}
 
 				{
 					!loading && data != undefined && Object.keys(data).length != 0 &&

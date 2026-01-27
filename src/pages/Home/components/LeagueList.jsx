@@ -42,7 +42,7 @@ const LeagueList = ({ leagues }) => {
     return (
 
         sortedGames.length > 0 &&
-        <div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1  shadow-lg shadow-black bg-background border-[1px] border-borderc "}>
+        <div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1   shadow-lg shadow-black md:bg-background md:border-[1px] border-borderc "}>
 
             <DailyStats stats={stats} />
             <FilterButtons gamesArr={gamesArr} />

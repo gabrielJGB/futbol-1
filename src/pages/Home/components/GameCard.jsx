@@ -30,11 +30,6 @@ const GameCard = ({ i, id, winner, description, home, away, isCompleted, tvURL, 
     }
 
 
-
-
-
-
-
     return (
 
         <div className={` flex flex-col gap-[1px] ${darkMode ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
@@ -60,7 +55,7 @@ const GameCard = ({ i, id, winner, description, home, away, isCompleted, tvURL, 
                 <div title={startTime} className={`col-span-3 ${statusColor}  flex flex-col items-center justify-center p-0 text-white font-bold`}>
 
                     {
-                        tvURL != undefined && !isCompleted &&
+                        tvURL != undefined && !isCompleted && tvURL.id != "hcgc" &&tvURL.id != "igif" &&
                         <img src={`https://api.promiedos.com.ar/images/tvnetworks/${tvURL.id}`} class={"mx-auto mb-[2px] h-4"} title={tvURL.name} />
                     }
                     <span title={status.name} className="text-xs text-shadow-xs text-center text-shadow-black">{statusDisplay.replace("Fin", "Final")}</span>

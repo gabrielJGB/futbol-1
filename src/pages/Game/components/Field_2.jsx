@@ -55,8 +55,6 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
                 </div>
 
 
-                { }
-
                 <Link
                     // @ts-ignore
                     href={`/player/${player.name}`}
@@ -129,7 +127,7 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
         }
 
 
-    }, [])
+    }, [window.location.href])
 
 
 
@@ -192,7 +190,7 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
                 {
                     formations.map((item, i) => (
                         <div class={`absolute flex gap-1 top-1 ${i === 0 ? (invertLines ? "right-1 flex-row-reverse" : "left-1 flex-row") : invertLines ? "left-1 flex-row" : "right-1 flex-row-reverse"} `}>
-                            <img src={`https://api.promiedos.com.ar/images/team/${ids[i]}/1`} alt="Escudo Equipo" class="drop-shadow-xs drop-shadow-black size-5 object-contain" />
+                            <img src={`https://api.promiedos.com.ar/images/team/${ids[i]}/1`} alt="Escudo Equipo" class="drop-shadow-xs drop-shadow-black size-6 object-contain" />
                             <div class={` font-semibold  text-shadow-xs text-shadow-black text-sm`}>{item}</div>
                         </div>
                     ))

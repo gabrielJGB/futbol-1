@@ -1,10 +1,10 @@
 import React from 'react'
 import RosterPlayer from './RosterPlayer'
 
-const Roster = ({ roster, missingPlayers, teams,invertLines }) => {
+const Roster = ({ roster, missingPlayers, teams, invertLines }) => {
 
 
-  
+
 
 
   return (
@@ -14,9 +14,9 @@ const Roster = ({ roster, missingPlayers, teams,invertLines }) => {
 
       <div className="relative md:w-auto w-[200vw] grid grid-cols-2  md:gap-4 gap-4 overflow-hidden mb-20">
         {
-          roster != undefined&&
+          roster != undefined &&
           roster.map((team, i) => (
-            <div class={`flex flex-col w-full row-start-1 col-span-1 ${i===0?(invertLines?"col-start-2":"col-start-1"):(invertLines?"col-start-1":"col-start-2 ")} `}>
+            <div class={`flex flex-col w-full row-start-1 col-span-1 ${i === 0 ? (invertLines ? "col-start-2" : "col-start-1") : (invertLines ? "col-start-1" : "col-start-2 ")} `}>
 
               <div style={{ backgroundColor: teams[i].colors.color, color: teams[i].colors.text_color }} class={`py-1 text-lg text-center font-semibold shadow shadow-gray-800`}>{teams[i].name}</div>
 
@@ -27,7 +27,7 @@ const Roster = ({ roster, missingPlayers, teams,invertLines }) => {
               <div class={"flex flex-col divide-y-[2px] divide-[#024817] shadow shadow-gray-800"}>
                 {
                   team.starting.map((player, i) => (
-                    <RosterPlayer player={player} isBench={false} missingReason={false}/>
+                    <RosterPlayer player={player} isBench={false} missingReason={false} />
                   ))
                 }
               </div>
@@ -47,19 +47,26 @@ const Roster = ({ roster, missingPlayers, teams,invertLines }) => {
                 }
               </div>
 
-
+              
               {
                 missingPlayers &&
                 <>
                   <div class={"bg-[#032E15] py-2 text-red-500 text-xs text-center font-semibold shadow shadow-gray-800"}>BAJAS</div>
 
-                  <div class={"flex flex-col divide-y-[2px] divide-[#024817] shadow shadow-gray-800"}>
-                    {
-                      missingPlayers[i].map((player, j) => (
-                        <RosterPlayer player={player} isBench={true} missingReason={player.missing_details?.reason}/>
-                      ))
-                    }
-                  </div>
+                  {
+                    <div class={"flex flex-col divide-y-[2px] divide-[#024817] shadow shadow-gray-800"}>
+                      {
+                        missingPlayers[i].length > 0 ?
+                          missingPlayers[i].map((player, j) => (
+                            <RosterPlayer player={player} isBench={true} missingReason={player.missing_details?.reason} />
+                          ))
+                          :
+                          <div class={"text-xs text-center bg-[#015A1C] py-2"}>
+                            Sin bajas
+                          </div>
+                      }
+                    </div>
+                  }
 
                 </>
               }

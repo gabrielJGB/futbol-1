@@ -15,7 +15,7 @@ const Tabs = ({ game }) => {
   ]
   const [active, setActive] = useState(tabs[0].id);
 
-  console.log(game);
+
 
   return (
     <div className="relative w-full">

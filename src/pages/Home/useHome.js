@@ -3,8 +3,8 @@ import { fetcher } from '../../utils/fetcher';
 
 
 
-
 export const useHome = (date) => {
+    
     
     
     const data = useSWR(

@@ -14,6 +14,7 @@ import Layout from './pages/Layout/index.jsx';
 import Menu from './components/Menu.jsx';
 import { showMenu } from './signals/signals.js';
 import ArticlePage from './pages/Article/index.jsx';
+import TablePage from './pages/Table/index.jsx';
 
 
 const RedirectToToday = () => {
@@ -52,6 +53,7 @@ export function App() {
 						<Route path="/" component={RedirectToToday} />
 						<Route path="/:date?" component={Home} />
 						<Route path="/game/:id" component={Game} />
+						<Route path="/table/:id" component={TablePage} />
 						<Route path="/league/:id" component={League} />
 						<Route path="/team/:id" component={Team} />
 						<Route path="/article/:id" component={ArticlePage} />

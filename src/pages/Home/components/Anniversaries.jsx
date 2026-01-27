@@ -6,17 +6,17 @@ const Anniversaries = ({ data, loading }) => {
         return;
     }
 
-    if (!("calendar" in data)) return null
+    if ( data === undefined || !("calendar" in data)) return <></>
 
     const { calendar } = data
 
     return (
-        <div className="mt-8 w-full bg-gradient-to-br  from-b2 to-background rounded-2xl shadow-xl border border-borderc  p-5 transition-all duration-300 ">
+        <div className="mt-8 w-full bg-background rounded shadow-sm border border-borderc  p-5 transition-all duration-300 ">
 
 
-            <div className="flex items-center mb-2">
+            <div className="flex items-center mb-2 w-full">
 
-                <h2 className="text-md font-semibold text-primary">
+                <h2 className="text-md text-center font-semibold text-primary">
                     {calendar.title.charAt(0).toUpperCase() + calendar.title.slice(1).toLowerCase()}
                 </h2>
             </div>

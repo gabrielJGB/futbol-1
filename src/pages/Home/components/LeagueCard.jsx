@@ -29,9 +29,9 @@ export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCoun
             className=" flex flex-col gap-[0px]  justify-center items-center  shadow shadow-gray-900 w-full border-[1px] border-gray-500 ">
 
 
-            <Link href={`/league/${leagueId}`} className="bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">
+            <Link href={`/league/${leagueId}`} className="hover:underline bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">
                 <img src={leagueURL} alt="Logo" className="h-6" />
-                <span className="text-white text-sm md:text-[18px] cursor-pointer font-bold uppercase hover:underline text-shadow-xs text-shadow-black ">{leagueName}</span>
+                <span className="text-white text-sm md:text-[15px] cursor-pointer font-bold uppercase  text-shadow-xs text-shadow-black ">{leagueName}</span>
                 <img src={leagueCountryURL} alt="Logo" className="h-6" />
             </Link>
 

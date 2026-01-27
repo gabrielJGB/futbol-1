@@ -5,6 +5,7 @@ import goal from '../../../assets/goal.png'
 import ownGoal from '../../../assets/own-goal.png'
 import arrowIn from '../../../assets/arrow-in.png'
 import arrowOut from '../../../assets/arrow-out.png'
+import injury from '../../../assets/injury.png'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import { Link } from 'preact-router/match'
 
@@ -37,6 +38,25 @@ const getPosColor = (position) => {
 
 }
 
+const getMissingImg = (missingReason) => {
+
+    missingReason = missingReason.toLowerCase()
+
+    if (missingReason === "tarjeta amarilla")
+        return <div class={"flex flex-wrap items-center gap-[1px]"} title="Acumulación de tarjetas">
+            <img src={yellow} className="h-3 " />
+            <img src={yellow} className="h-3 " />
+            <img src={yellow} className="h-3 " />
+            <img src={yellow} className="h-3 " />
+            <img src={yellow} className="h-3 " />
+        </div>
+    else if (missingReason === "tarjeta roja")
+        return <img src={red} className="h-3 " title="Tarjeta Roja" />
+    else if (missingReason === "lesionado")
+        return <img src={injury} className="h-4 " title="Lesionado"/>
+    if (missingReason === "en la seleccion")
+        return <div class={"text-sm"}>[En la seleccion]</div>
+}
 
 const getEvents = (player, isBench) => {
 
@@ -127,7 +147,9 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
                 {
                     missingReason &&
                     <div class={"pl-2 text-sm text-white text-shadow-xs text-shadow-gray-900"}>
-                        [{missingReason}]
+
+                        {getMissingImg(missingReason)}
+
                     </div>
                 }
 

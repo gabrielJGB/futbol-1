@@ -103,7 +103,7 @@ export const isSameDay = (date1, date2) => {
 
 
 export const parseDateString = (str) => {
-    // str = "26-09-2025 19:00"
+    // "26-09-2025 19:00"
     const [datePart, timePart] = str.split(" ");
     const [day, month, year] = datePart.split("-").map(Number);
     const [hours, minutes] = timePart.split(":").map(Number);
@@ -111,6 +111,20 @@ export const parseDateString = (str) => {
 
     return x.getTime()
 };
+
+
+export const formatFullDateString = (date) => {
+    const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+
+    const dayOfWeek = days[date.getDay()]
+    const day = String(date.getDate())
+    const month = months[date.getMonth()]
+    const year = date.getFullYear()
+
+    return `${dayOfWeek} ${day} de ${month} de ${year}`
+
+}
 
 
 // export const timeUntil = (dateString) => {

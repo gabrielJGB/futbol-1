@@ -1,4 +1,3 @@
-
 const req = {
   headers: {
     accept: "*/*",
@@ -20,8 +19,30 @@ const req = {
   "credentials": "omit"
 }
 
+
+
+const req1 = {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "es-419,es;q=0.5",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Brave\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "sec-gpc": "1",
+    "x-ver": "1.11.7.5",
+    "Referer": "https://futbol1.vercel.app/"
+  },
+  "body": null,
+  "method": "GET",
+  "cache":"no-store"
+}
+
 // @ts-ignore
-export const fetcher = (url) => fetch(url, req).then(res => {
+export const fetcher = (url) => fetch(`${url}`, req1).then(res => {
   if (!res.ok) throw new Error('Error al cargar');
   return res.json();
 });
