@@ -20,16 +20,17 @@ import TablePage from './pages/Table/index.jsx';
 const RedirectToToday = () => {
 	const { route } = useLocation()
 	useEffect(() => {
-		const today = new Date();
-		const formatted = today
-			.toLocaleDateString("es-AR", {
-				day: "2-digit",
-				month: "2-digit",
-				year: "numeric",
-			})
-			.replace(/\//g, "-");
+		// const today = new Date();
+		// const formatted = today
+		// 	.toLocaleDateString("es-AR", {
+		// 		day: "2-digit",
+		// 		month: "2-digit",
+		// 		year: "numeric",
+		// 	})
+		// 	.replace(/\//g, "-");
 
-		route(`/${formatted}`, true);
+		// route(`/${formatted}`, true);
+		route("/hoy",true)
 	}, []);
 
 	return null;

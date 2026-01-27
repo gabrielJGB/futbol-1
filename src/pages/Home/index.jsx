@@ -16,13 +16,16 @@ export const Home = ({ date }) => {
 
 
 	const { data, loading, error } = useHome(date)
-	// const loading = false
+	let dateObj = new Date()
 
-	const day = date.split("-")[0]
-	const month = parseInt(date.split("-")[1]) - 1
-	const year = date.split("-")[2]
-	const dateObj = new Date(year, month, day)
-	selectedDate.value = dateObj
+	if (date != "hoy") {
+
+		const day = date.split("-")[0]
+		const month = parseInt(date.split("-")[1]) - 1
+		const year = date.split("-")[2]
+		dateObj = new Date(year, month, day)
+		selectedDate.value = dateObj
+	}
 
 
 	useEffect(() => {
@@ -66,7 +69,7 @@ export const Home = ({ date }) => {
 
 				{
 					!loading &&
-					<DateString dateObj={dateObj}/>
+					<DateString dateObj={dateObj} />
 				}
 
 				{
