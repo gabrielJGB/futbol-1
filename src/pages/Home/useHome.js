@@ -4,21 +4,26 @@ import { fetcher } from '../../utils/fetcher';
 
 
 export const useHome = (date) => {
-    
-    
-    
+
+    const proxy = "https://corsproxy.io/?"
+    const refresh = date === "hoy"
+
+    if (date === "hoy")
+        date = "today"
+
+
     const data = useSWR(
-        date ? `https://corsproxy.io/?https://api.promiedos.com.ar/games/${date}`
+        date ? `${date != "today" ? proxy : ""}https://api.promiedos.com.ar/games/${date}`
             : null,
         fetcher,
         {
 
             revalidateIfStale: true,
             revalidateOnFocus: false,
-            refreshInterval: 30000
+            refreshInterval: refresh ? 20000 : null
         }
     );
-    
+
 
 
     return {
@@ -26,7 +31,7 @@ export const useHome = (date) => {
         loading: data.isLoading,
         error: data.error
     };
-    
+
 
 
 }

@@ -6,7 +6,7 @@ import { fetcher } from '../../utils/fetcher';
 
 export const useGame = (id) => {
 
-    const url = `https://corsproxy.io/?https://api.promiedos.com.ar/gamecenter/${id}`
+    const url = `https://api.promiedos.com.ar/gamecenter/${id}`
 
     const res = useSWR(url,
         fetcher,

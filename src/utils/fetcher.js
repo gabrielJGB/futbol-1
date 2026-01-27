@@ -41,8 +41,29 @@ const req1 = {
   "cache":"no-store"
 }
 
+
+const headers =  {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "es-419,es;q=0.6",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Brave\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "sec-gpc": "1",
+    "x-ver": "1.11.7.5",
+    "Referer": "https://www.promiedos.com.ar/"
+  },
+  "body": null,
+  "method": "GET",
+    "cache":"no-store"
+}
+
 // @ts-ignore
-export const fetcher = (url) => fetch(`${url}`, req1).then(res => {
+export const fetcher = (url) => fetch(`${url}`, headers).then(res => {
   if (!res.ok) throw new Error('Error al cargar');
   return res.json();
 });
