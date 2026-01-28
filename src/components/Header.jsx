@@ -8,7 +8,7 @@ import fp_icon from '../../public/futbolplay_icon.png'
 export function Header() {
 	const { path } = useLocation();
 	const isHome = path.match(/\/\d+-\d+-\d+/) != null || path === "/" || path === "hoy"
-	const width = window.innerWidth
+	
 
 	return (
 		<header class={"z-200 sticky top-0 p-1 bg-b2 border-borderc md:border-b-[1px]  h-[7vh]  flex flex-row gap-1 items-center   "}>
@@ -34,7 +34,7 @@ export function Header() {
 					
 
 					{
-						isHome && (innerWidth <768) &&
+						isHome  &&
 						<div
 							class={"md:hidden active:bg-green-950 rounded p-2 cursor-pointer"}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
