@@ -35,7 +35,7 @@ const LeagueView = ({ leagueId }) => {
 
     const { data: games, isLoading: gamesLoading, error: gamesError } = useSWR(
         // @ts-ignore
-        leagueId && round.value?.key ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/games/${leagueId}/${round.value.key}` : null,
+        leagueId && round.value?.key ? `https://api.promiedos.com.ar/league/games/${leagueId}/${round.value.key}` : null,
         fetcher, {
         revalidateOnMount: true,
         revalidateOnFocus: false,
