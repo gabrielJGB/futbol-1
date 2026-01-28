@@ -37,7 +37,6 @@ const ArticlePage = ({ id }) => {
 
 
     const article = data.headlines[0]
-    // const published = formatDateObject(article.published)
 
     const regex = /https:\/\/twitter\.com\/[^\/]+\/status\/\d+/g;
     let tweets = article.story.match(regex);

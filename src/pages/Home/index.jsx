@@ -24,8 +24,8 @@ export const Home = ({ date }) => {
 		const month = parseInt(date.split("-")[1]) - 1
 		const year = date.split("-")[2]
 		dateObj = new Date(year, month, day)
-		selectedDate.value = dateObj
 	}
+	selectedDate.value = dateObj
 
 
 	useEffect(() => {

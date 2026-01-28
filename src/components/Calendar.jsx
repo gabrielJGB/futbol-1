@@ -5,6 +5,7 @@ import { selectedDate, showCalendar } from "../signals/signals";
 import { useLocation } from "preact-iso";
 import "react-calendar/dist/Calendar.css";
 import "../calendar.css"
+import { isSameDay } from "../utils/time";
 
 
 
@@ -14,12 +15,17 @@ export default function Calendar_({ }) {
 
   const handleDayClick = (date) => {
     const dateObj = new Date(date)
-    const day = String(date.getDate()).padStart(2, "0")
-    const month = String(date.getMonth() + 1).padStart(2, "0")
-    const year = date.getFullYear()
-    const dateString = `${day}-${month}-${year}`
 
-    route(`/${dateString}`)
+    if (isSameDay(dateObj, new Date())) {
+      route("/hoy", true)
+    } else {
+
+      const day = String(date.getDate()).padStart(2, "0")
+      const month = String(date.getMonth() + 1).padStart(2, "0")
+      const year = date.getFullYear()
+      const dateString = `${day}-${month}-${year}`
+      route(`/${dateString}`)
+    }
 
   };
 
@@ -28,10 +34,10 @@ export default function Calendar_({ }) {
 
   return (
 
-    
-    <div class={`${showCalendar.value?"md:static -right-[0%]":"md:static -right-[100%]"} transition-all flex items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  bg-black/85 md:bg-transparent  md:h-max shadow-md shadow-black md:rounded-lg md:mt-5 backdrop-blur-xs`}>
 
-      
+    <div class={`${showCalendar.value ? "md:static -right-[0%]" : "md:static -right-[100%]"} transition-all flex items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  bg-black/85 md:bg-transparent  md:h-max shadow-md shadow-black md:rounded-lg md:mt-5 backdrop-blur-xs`}>
+
+
       {
         typeof window !== "undefined" &&
         <Calendar
@@ -40,7 +46,7 @@ export default function Calendar_({ }) {
           tileClassName="text-white"
           onChange={date => {
             showCalendar.value = false;
-             handleDayClick(date) 
+            handleDayClick(date)
           }}
           value={selectedDate || new Date()}
         />

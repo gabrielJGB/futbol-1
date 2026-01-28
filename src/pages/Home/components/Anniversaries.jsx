@@ -40,10 +40,10 @@ const Anniversaries = ({ data, loading }) => {
                                             {player.name}
                                         </span>
                                         <span className="text-xs text-gray-300">
-                                            ({player.team})
+                                            {player.team}
                                         </span>
                                     </div>
-                                    <span className="text-xs text-indigo-200 ml-auto">
+                                    <span className="text-sm text-indigo-200 ml-auto">
                                         {player.text.replace("hoy", "")}
                                     </span>
                                 </li>

@@ -6,23 +6,29 @@ export const getDates = (date) => {
 
     return {
         previousDate: {
-            formated: formatDateObject(previous),
-            string: getDateString(previous)
+            displayString: getDisplayDateString(previous),
+            URLString: getURLDateString(previous)
         },
         selectedDate: {
-            formated: formatDateObject(date),
-            string: getDateString(date)
+            displayString: getDisplayDateString(date),
+            URLString: getURLDateString(date)
         },
         nextDate: {
-            formated: formatDateObject(next),
-            string: getDateString(next)
+            displayString: getDisplayDateString(next),
+            URLString: getURLDateString(next)
         }
     }
 
 }
 
 
-export const getDateString = (date) => {
+export const getURLDateString = (date) => {
+
+    const isToday = isSameDay(date,new Date())
+
+    if(isToday)
+        return "hoy"
+        
 
     return `${String(date.getDate()).padStart(2, "0")}-${String(parseInt(date.getMonth()) + 1).padStart(2, "0")}-${String(date.getFullYear())}`
 
@@ -30,44 +36,7 @@ export const getDateString = (date) => {
 
 
 
-// export const getDates = (date) => {
-
-//     const year = parseInt(date.split("-")[0])
-//     const month = parseInt(date.split("-")[1]) - 1
-//     const day = parseInt(date.split("-")[0])
-
-//     const dateObj = new Date(year, month, day)
-
-//     const previous = new Date(dateObj.getTime() - 86400000)
-//     const next = new Date(dateObj.getTime() + 86400000)
-
-//     const previousDate = `${previous.getFullYear()}${String(previous.getMonth() + 1).padStart(2, "0")}${String(previous.getDate()).padStart(2, "0")}`
-
-//     const nextDate = `${next.getFullYear()}${String(next.getMonth() + 1).padStart(2, "0")}${String(next.getDate()).padStart(2, "0")}`
-
-
-
-//     return {
-//         previousDate: {
-//             formated: formatDateObject(previous),
-//             string: previousDate
-//         },
-//         selectedDate: {
-//             formated: formatDateObject(dateObj),
-//             string: date
-//         },
-//         nextDate: {
-//             formated: formatDateObject(next),
-//             string: nextDate
-//         }
-//     }
-
-
-
-// }
-
-
-export const formatDateObject = (date) => {
+export const getDisplayDateString = (date) => {
 
     const today = new Date();
     const tomorrow = new Date(today);
@@ -126,47 +95,3 @@ export const formatFullDateString = (date) => {
 
 }
 
-
-// export const timeUntil = (dateString) => {
-
-//     const [datePart, timePart] = dateString.split(" ");
-//     const [day, month, year] = datePart.split("-");
-//     const newDateStr = `${month}-${day}-${year} ${timePart}`;
-
-//     const targetDate = new Date(newDateStr);
-//     const now = new Date();
-//     let diff = targetDate - now;
-
-//     const isPast = diff < 0;
-//     diff = Math.abs(diff);
-
-//     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-//     let result = "";
-
-//     if (days > 0) {
-//         result += `${days} día${days > 1 ? 's' : ''}`;
-//     }
-
-//     if (hours > 0) {
-//         if (result) result += ", ";
-//         result += `${hours} hora${hours > 1 ? 's' : ''}`;
-//     }
-
-//     if (minutes > 0) {
-//         if (result) result += " y ";
-//         result += `${minutes} minuto${minutes > 1 ? 's' : ''}`;
-//     }
-
-//     if (!result) {
-//         result = "Menos de un minuto";
-//     }
-
-//     if (isPast) {
-//         return `${result}`;
-//     } else {
-//         return `${result}`;
-//     }
-// }
