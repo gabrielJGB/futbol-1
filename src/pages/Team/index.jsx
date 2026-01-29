@@ -15,7 +15,7 @@ const Team = ({ id }) => {
 
 
   const { data: team, error, isLoading } = useSWR(
-    id ? `https://corsproxy.io/?https://api.promiedos.com.ar/team/${id}` : null,
+    id ? `https://api.promiedos.com.ar/team/${id}` : null,
     fetcher, {
     revalidateOnFocus: false,
   });

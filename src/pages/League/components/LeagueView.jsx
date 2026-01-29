@@ -23,7 +23,7 @@ const LeagueView = ({ leagueId }) => {
 
 
     const { data: league, error: leagueError } = useSWR(
-        leagueId ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
+        leagueId ? `https://api.promiedos.com.ar/league/tables_and_fixtures/${leagueId}` : null,
         fetcher, {
         revalidateOnFocus: false,
         refreshInterval: 30000,
