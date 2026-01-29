@@ -11,9 +11,9 @@ export const useHome = (date) => {
     if (date === "hoy")
         date = "today"
 
-
+// date ? `${date != "today" ? proxy : ""}https://api.promiedos.com.ar/games/${date}`
     const data = useSWR(
-        date ? `${date != "today" ? proxy : ""}https://api.promiedos.com.ar/games/${date}`
+        date ? `https://api.promiedos.com.ar/games/${date}`
             : null,
         fetcher,
         {

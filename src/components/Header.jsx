@@ -7,7 +7,7 @@ import fp_icon from '../../public/futbolplay_icon.png'
 
 export function Header() {
 	const { path } = useLocation();
-	const isHome = path.match(/\/\d+-\d+-\d+/) != null || path === "/" || path === "hoy"
+	const isHome = path.match(/\/\d+-\d+-\d+/) != null || path === "/" || path === "/hoy"
 	
 
 	return (
@@ -20,7 +20,7 @@ export function Header() {
 			</div>
 
 			<div class={"flex flex-row justify-between w-full items-center"}>
-				<Link href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 text-[32px] md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51]"}>
+				<Link href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 text-3xl md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51]"}>
 					FUTBOL 1
 				</Link>
 
@@ -36,7 +36,7 @@ export function Header() {
 					{
 						isHome  &&
 						<div
-							class={"md:hidden active:bg-green-950 rounded p-2 cursor-pointer"}
+							class={"md:hidden block active:bg-green-950 rounded p-2 cursor-pointer"}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
 						>
 							<CalendarDaysIcon size={20} color={"#C2E213"} />
