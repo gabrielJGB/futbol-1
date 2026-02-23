@@ -56,6 +56,9 @@ const getMissingImg = (missingReason) => {
         return <img src={injury} className="h-4 " title="Lesionado"/>
     if (missingReason === "en la seleccion")
         return <div class={"text-sm"}>[En la seleccion]</div>
+
+    else if (missingReason === "motivo personal")
+        return <div class={"text-sm"}>[Motivo personal]</div>
 }
 
 const getEvents = (player, isBench) => {
