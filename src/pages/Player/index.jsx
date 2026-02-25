@@ -1,24 +1,27 @@
 // @ts-nocheck
+import React from 'react'
 import { useEffect, useState } from "preact/hooks";
 import { useLocation } from 'preact-iso'
-import React from 'react'
-import { fetcher } from '../../utils/fetcher';
-import player from '../../../PLAYER2.json'
+import { fetcher } from "@/utils/fetcher";
+import player from '@/data/dummy/PLAYER2.json'
 import { MdStadium } from 'react-icons/md'
 import { BiCalendar } from "react-icons/bi";
 import { MapPin } from "lucide-preact";
-import PlayerInfo from "./components/PlayerInfo";
-import NextGame from "./components/NextGame";
-import TeamHistory from "./components/TeamHistory";
-import Stats from "./components/Stats";
-import Last5Games from "./components/Last5Games";
-import News from "./components/News";
-import Related from "./components/Related";
-import Tabs from "./components/Tabs";
-import Loading from "../../components/Loading";
+import { Loading } from "@/components/common";
+import {
+    PlayerInfo,
+    NextGame,
+    TeamHistory,
+    Stats,
+    Last5Games,
+    News,
+    Related,
+    Tabs
+} from '@/components/player'
+
 
 const Player = ({ name }) => {
-    
+
     const [loading, setLoading] = useState(false)
     const [player, setPlayer] = useState(false)
     const [events, setEvents] = useState(false)
@@ -78,7 +81,7 @@ const Player = ({ name }) => {
         </div>
     )
 
-    if (!player || player ===-1)
+    if (!player || player === -1)
         return <div class={"text-center mt-10"}>Sin datos del jugador</div>
 
 
@@ -91,10 +94,10 @@ const Player = ({ name }) => {
             <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
             <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
             <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
-             <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
+            <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
             <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
             <News title={"Noticias"} player={player} setTabs={setTabs} />
-            <Related title={"Relacionado"} player={player} setTabs={setTabs} /> 
+            <Related title={"Relacionado"} player={player} setTabs={setTabs} />
 
             {/* <Tabs tabs={tabs} /> */}
         </div>

@@ -1,15 +1,22 @@
 import { useEffect, useState } from "preact/hooks";
-import Calendar from "../../components/Calendar";
-import Menu from "../../components/Menu";
-import LeagueList from "./components/LeagueList";
-import DateSelector from "../../components/DateSelector";
-import { selectedDate, showMenu } from "../../signals/signals";
-import { useLocation } from "preact-iso";
-import { useHome } from "./useHome";
-import data from '../../../TODAY.json'
-import Loading from "../../components/Loading";
-import Anniversaries from "./components/Anniversaries";
-import DateString from "./components/DateString";
+import { selectedDate, showMenu } from "../../signals/home";
+import { useHome } from "@/hooks/useHome";
+import data from '@/data/dummy/TODAY.json'
+
+import {
+	Calendar,
+	Menu,
+	DateSelector,
+	Header,
+	Loading,
+	SectionTitle
+} from '@/components/common'
+
+import {
+	Anniversaries,
+	DateString,
+	LeaguesContainer
+} from '@/components/home'
 
 
 export const Home = ({ date }) => {
@@ -34,28 +41,8 @@ export const Home = ({ date }) => {
 			showMenu.value = false
 	}, [])
 
-
-
 	// if (error)
-	// 	return (
-	// 		<div>
-	// 			Error: {error.message}
-	// 		</div>
-	// 	)
-
-
-	// if ( Object.keys(data).length === 0)
-	// 	return (
-	// 		<div class={"text-center w-full mt-10"}>
-	// 			Sin datos
-	// 		</div>
-	// 	)
-
-	// useEffect(() => {
-
-	// 	console.log(data)
-
-	// }, [data])
+	// 	return (<div class={"text-red-700 font-semibold text-center w-full"}>Ha ocurrido un error</div>)
 
 
 	return (
@@ -63,18 +50,24 @@ export const Home = ({ date }) => {
 		<div class={" grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
 
 			<div class={"w-full  md:mt-4 col-start-1"}>
+
+
 				<DateSelector />
 
 				{loading && <Loading />}
+
+
+
 
 				{
 					!loading &&
 					<DateString dateObj={dateObj} />
 				}
 
+				
 				{
 					!loading && data != undefined && Object.keys(data).length != 0 &&
-					<LeagueList leagues={data.leagues} />
+					<LeaguesContainer leagues={data.leagues} />
 				}
 
 				{
@@ -83,6 +76,7 @@ export const Home = ({ date }) => {
 				}
 
 			</div>
+
 			<Calendar />
 			<Anniversaries data={data} loading={loading} />
 		</div>

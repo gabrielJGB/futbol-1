@@ -1,8 +1,8 @@
 import useSWR from 'swr'
-import { fetcher } from '../../utils/fetcher';
 import { Link } from 'preact-router/match';
-import Loading from '../../components/Loading';
 import { useEffect } from 'preact/hooks';
+import { fetcher } from '@/utils/fetcher';
+import { Loading } from '@/components/common';
 
 
 const ArticlePage = ({ id }) => {

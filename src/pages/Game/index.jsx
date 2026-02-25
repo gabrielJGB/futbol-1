@@ -1,17 +1,27 @@
 // @ts-nocheck
 import { useEffect, useState } from "preact/hooks";
-import Menu from "../../components/Menu";
-import Tabs from "./components/Tabs";
-import { showMenu } from "../../signals/signals";
-import { useGame } from "./useGame";
-import GameHeader from "./components/GameHeader";
-import Videos from "./components/Videos";
-import data from '../../../GAME_PEN.json' //PRE  IN   END
-import Loading from "../../components/Loading";
+import { showMenu } from "@/signals/home";
+import { useGame } from "@/hooks/useGame";
+import data from '@/data/dummy/GAME_PEN.json'
+
+import {
+  Tabs,
+  GameHeader,
+  Videos
+} from "@/components/game";
+
+import {
+  Loading,
+  Menu
+} from "@/components/common";
+
+
+
+
 
 export function Game({ id }) {
 
-  
+
   const { data, loading, error } = useGame(id)
   // const loading = false
   // const error = false

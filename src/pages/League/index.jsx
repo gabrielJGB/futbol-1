@@ -1,7 +1,8 @@
 import React from 'react'
-import { useEffect, useState } from "preact/hooks";
-import LeagueView from './components/LeagueView';
-import { showMenu } from '../../signals/signals';
+import { useEffect } from "preact/hooks";
+import { showMenu } from '@/signals/home';
+import { LeagueView } from '@/components/league';
+
 
 const League = ({ id }) => {
 

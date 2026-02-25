@@ -2,10 +2,15 @@ import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
-
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, './src')
+		},
+	},
 	plugins: [
 		preact({
 			prerender: {
@@ -20,7 +25,7 @@ export default defineConfig({
 		VitePWA({
 			registerType: 'autoUpdate',
 			manifest: {
-				
+
 				name: 'Fútbol 1',
 				short_name: 'Fútbol 1',
 				start_url: '/',

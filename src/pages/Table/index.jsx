@@ -1,7 +1,7 @@
 import React from 'react'
 import useSWR from 'swr';
 import { fetcher } from '../../utils/fetcher';
-import Loading from "../../components/Loading";
+import { Loading } from '@/components/common';
 import { Link } from 'preact-router';
 
 const getResultElement = (elem) => {

@@ -1,14 +1,16 @@
-// Team.jsx
-import { TeamHeader } from "./components/TeamHeader";
-import { Games } from "./components/Games";
-import { Squad } from "./components/Squad";
-import { Stats } from "./components/Stats";
-import { Stadium } from "./components/Stadium";
-
-import team from '../../../TEAM_BARCA.json'
-import { fetcher } from "../../utils/fetcher";
-import Loading from "../../components/Loading";
 import useSWR from "swr";
+import { Loading } from "@/components/common";
+import { fetcher } from "@/utils/fetcher";
+import team from '@/data/dummy/TEAM_BARCA.json'
+
+import {
+  Games,
+  TeamHeader,
+  Squad,
+  Stats,
+  Stadium
+} from '@/components/team'
+
 
 const Team = ({ id }) => {
 
