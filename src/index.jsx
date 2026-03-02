@@ -40,7 +40,6 @@ export function App() {
 						<Route path="/player/:name" component={Player} />
 						<Route path="/article/:id" component={ArticlePage} />
 						<Route path="/table/:id" component={TablePage} />
-
 						<Route path="/testpage/:id" component={Testpage} />
 						<Route default component={NotFound} />
 
