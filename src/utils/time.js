@@ -24,17 +24,31 @@ export const getDates = (date) => {
 
 export const getURLDateString = (date) => {
 
-    const isToday = isSameDay(date,new Date())
+    const isToday = isSameDay(date, new Date())
 
-    if(isToday)
+    if (isToday)
         return "hoy"
-        
+
 
     return `${String(date.getDate()).padStart(2, "0")}-${String(parseInt(date.getMonth()) + 1).padStart(2, "0")}-${String(date.getFullYear())}`
 
 }
 
+export const getDateObject = (dateParam) => {
 
+    if (dateParam != "hoy") {
+
+        const day = dateParam.split("-")[0]
+        const month = parseInt(dateParam.split("-")[1]) - 1
+        const year = dateParam.split("-")[2]
+        return new Date(year, month, day)
+    } else {
+        return new Date()
+    }
+
+
+
+}
 
 export const getDisplayDateString = (date) => {
 
@@ -84,7 +98,7 @@ export const parseDateString = (str) => {
 
 export const formatFullDateString = (date) => {
     const days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-    const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
     const dayOfWeek = days[date.getDay()]
     const day = String(date.getDate())

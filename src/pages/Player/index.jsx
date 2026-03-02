@@ -29,7 +29,8 @@ const Player = ({ name }) => {
     const [stats, setStats] = useState(false)
     const [tabs, setTabs] = useState([])
 
-    const URL_BASE = "https://corsproxy.io/?"
+    const URL_BASE = ""
+
 
     // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
     // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)

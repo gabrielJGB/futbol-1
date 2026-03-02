@@ -4,7 +4,7 @@ import Header from "@/components/common/Header";
 import Loading from "@/components/common/Loading";
 import Menu from "@/components/common/Menu";
 import SectionTitle from "@/components/common/SectionTitle";
-
+import Error from "@/components/common/Error";
 
 
 
@@ -15,5 +15,6 @@ export {
     Loading,
     Menu,
     SectionTitle,
+    Error
 
 }

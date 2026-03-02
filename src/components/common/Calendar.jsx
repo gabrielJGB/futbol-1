@@ -6,12 +6,18 @@ import { selectedDate, showCalendar } from "@/signals/home";
 import { isSameDay } from "@/utils/time";
 import "react-calendar/dist/Calendar.css";
 import "../../calendar.css"
+import { Link } from "preact-router/match";
 
 
 
-export default function Calendar_({ }) {
+export default function Calendar_({ date }) {
 
   const { route } = useLocation()
+
+
+
+
+
 
   const handleDayClick = (date) => {
     const dateObj = new Date(date)
@@ -35,21 +41,35 @@ export default function Calendar_({ }) {
   return (
 
 
-    <div class={`${showCalendar.value ? "md:static -right-[0%]" : "md:static -right-[100%]"} transition-all flex items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  bg-black/85 md:bg-transparent  md:h-max shadow-md shadow-black md:rounded-lg md:mt-5 backdrop-blur-xs`}>
+    <div class={`${showCalendar.value ? "md:static -right-[0%]" : "md:static -right-[100%]"} transition-all flex  flex-col items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  md:bg-transparent  md:h-max  md:rounded-lg md:mt-5 backdrop-blur-xs`}>
 
+      <div class={"flex flex-col gap-1"}>
 
+        {
+          typeof window !== "undefined" &&
+          <Calendar
+            className="calendar"
+            locale='es-AR'
+            tileClassName="text-white"
+            onChange={date => {
+              showCalendar.value = false;
+              handleDayClick(date)
+            }}
+            value={selectedDate.value || new Date()}
+          />
+        }
+
+      </div>
       {
-        typeof window !== "undefined" &&
-        <Calendar
-          className="calendar"
-          locale='es-AR'
-          tileClassName="text-white"
-          onChange={date => {
-            showCalendar.value = false;
-            handleDayClick(date)
+        date != "hoy" &&
+        <div
+          class={"bg-transparent cursor-pointer text-sm text-center w- hover:underline"}
+          onClick={() => {
+            showCalendar.value = false
+            selectedDate.value = new Date()
+            route("/hoy")
           }}
-          value={selectedDate || new Date()}
-        />
+        >Volver a hoy</div>
       }
     </div>
   );

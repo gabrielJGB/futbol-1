@@ -17,23 +17,9 @@ const HeadToHead = ({ game }) => {
                     games.map((_game, i) => (
                         <GameCard
                             key={i}
-                            id={_game.id}
-                            status={_game.status}
-                            startTime={_game.start_time.split(" ")[1]}
-                            isCompleted={_game.status.symbol_name === "Fin"}
-                            statusDisplayText={_game.game_time_status_to_display}
-                            roundName={undefined}
-                            description={`${_game.league.name} - ${_game.start_time.split(" ")[0].replaceAll("-","/")}`}
-                            tvURL={"tv_networks" in _game ? _game.tv_networks[0] : undefined}
-                            homeScore={"scores" in _game ? _game.scores[0] : ""}
-                            awayScore={"scores" in _game ? _game.scores[1] : ""}
-                            home={_game.teams[0]}
-                            away={_game.teams[1]}
-                            homeScorers={"goals" in _game.teams[0] ? _game.teams[0].goals : []}
-                            awayScorers={"goals" in _game.teams[1] ? _game.teams[1].goals : []}
-                            winner={_game.winner}
-                            showCountryFlags={false}
-                            i={i}
+                            index={i}
+                            game={_game}
+                            showCountryFlags={true}
                         />
                     ))
                 }

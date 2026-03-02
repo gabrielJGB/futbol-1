@@ -26,7 +26,7 @@ export default function Header() {
 				</Link>
 
 
-				<div class={"flex items-center gap-1 "}>
+				<div class={"flex items-center gap-2 "}>
 
 					<a class={"mr-2 flex items-center gap-2 hover:underline "} target="_blank" href={"https://futbolplay.vercel.app"} >
 						<div class={"text-xs hidden md:block font-semibold"}>Fútbol Play</div>
@@ -37,10 +37,10 @@ export default function Header() {
 					{
 						isHome &&
 						<div
-							class={"md:hidden block active:bg-green-950 rounded p-2 cursor-pointer"}
+							class={`${showCalendar.value?"bg-green-950":""}  transition-all md:hidden block active:bg-green-950 rounded p-2 cursor-pointer`}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
 						>
-							<CalendarDaysIcon size={20} color={"#C2E213"} />
+							<CalendarDaysIcon size={22} color={"#C2E213"} />
 						</div>
 					}
 				</div>

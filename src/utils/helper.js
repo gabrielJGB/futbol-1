@@ -29,7 +29,7 @@ export const getDailyStats = (data) => {
     leagueGames.forEach((game) => {
       matches++;
 
-      // comprobamos scores: si existen y tienen al menos 2 valores válidos
+      
       const hasScores =
         Array.isArray(game.scores) &&
         game.scores.length >= 2 &&
@@ -46,10 +46,10 @@ export const getDailyStats = (data) => {
         goalsHome += homeScore;
         goalsAway += awayScore;
 
-        // over 2.5
+
         if (totalGoals > 2.5) matchesOver2_5++;
 
-        // partido más goleador
+
         if (totalGoals > topScoringGoals) {
           topScoringGoals = totalGoals;
           topScoringMatch = {
@@ -61,30 +61,30 @@ export const getDailyStats = (data) => {
           };
         }
 
-        // contar scorelines
+       
         const scoreline = `${homeScore}-${awayScore}`;
         scorelineCounts[scoreline] = (scorelineCounts[scoreline] || 0) + 1;
 
-        // goles por competición
+       
         goalsByCompetition[league.name] =
           (goalsByCompetition[league.name] || 0) + totalGoals;
       }
 
-      // resultados: solo si winner es un número conocido
+      
       if (typeof game.winner === "number") {
         if (game.winner === 1 && game.status.symbol_name === "Fin") homeWins++;
         else if (game.winner === 2 && game.status.symbol_name === "Fin") awayWins++;
         else if (game.winner === -1 && game.status.symbol_name === "Fin") draws++;
       }
 
-      // tarjetas rojas (seguro con valor por defecto)
+      
       (game.teams || []).forEach((t) => {
         redCards += Number(t.red_cards) || 0;
       });
     });
   });
 
-  // liga más goleadora
+  
   let topLeague = null;
   let topLeagueGoals = 0;
   for (const [leagueName, g] of Object.entries(goalsByCompetition)) {
@@ -94,7 +94,7 @@ export const getDailyStats = (data) => {
     }
   }
 
-  // scoreline más frecuente
+
   let mostFrequentScoreline = null;
   let mostFrequentCount = 0;
   for (const [s, c] of Object.entries(scorelineCounts)) {
@@ -106,8 +106,8 @@ export const getDailyStats = (data) => {
 
   return {
     competitions,
-    matches, // partidos totales del día (programados / listados)
-    matchesStarted, // partidos que ya tienen score
+    matches, 
+    matchesStarted, 
     homeWins,
     awayWins,
     draws,
@@ -129,19 +129,17 @@ export const getDailyStats = (data) => {
 };
 
 
-export const hasMatchesByStatus = (data, filter) => {
-  if (filter === -1) return true; // no filtra, devuelve tal cual
-
-  return (data.leagues || []).some((league) =>
-    (league.games || []).some((game) => game.status?.enum === filter)
+export const hasLeaguePlayingGames = (leagues) => {
+  return (leagues || []).some((league) =>
+    (league.games || []).some((game) => game.status?.enum === 2)
   );
 };
 
 
 
-export const getSortedArr = (leagues) => {
+export const getSortedGames = (leagues) => {
 
-  let games = leagues.map(l => ({ games: l.games.map((x) => ({ ...x, league_name: l.name, league_id: l.id, country_id: l.country_id })) })).map(g => (g.games)).flat()
+  let games = leagues.map(l => ({ games: l.games.map((x) => ({ ...x, league_name: l.name, league_id: l.id, country_id: l.country_id ,show_country_flags:l.show_country_flags})) })).map(g => (g.games)).flat()
   let sorted = games.map(x => ({ ...x, "start_time_num": parseDateString(x.start_time) })).sort((a, b) => { return a.start_time_num - b.start_time_num })
 
   sorted = sorted.map((game, i) => ({

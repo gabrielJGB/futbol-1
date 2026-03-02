@@ -1,6 +1,8 @@
 import { useEffect, useState } from "preact/hooks";
 import { selectedDate, showMenu } from "../../signals/home";
 import { useHome } from "@/hooks/useHome";
+import { getDateObject } from "@/utils/time";
+import { sortByDate } from "@/signals/home"
 import data from '@/data/dummy/TODAY.json'
 
 import {
@@ -9,30 +11,24 @@ import {
 	DateSelector,
 	Header,
 	Loading,
-	SectionTitle
+	SectionTitle,
+	Error
 } from '@/components/common'
 
 import {
-	Anniversaries,
+	CalendarEvents,
 	DateString,
-	LeaguesContainer
+	LeaguesContainer,
+	DailyStats,
+	FilterButtons,
+	SortedGames
 } from '@/components/home'
 
 
 export const Home = ({ date }) => {
 
-
-	const { data, loading, error } = useHome(date)
-	let dateObj = new Date()
-
-	if (date != "hoy") {
-
-		const day = date.split("-")[0]
-		const month = parseInt(date.split("-")[1]) - 1
-		const year = date.split("-")[2]
-		dateObj = new Date(year, month, day)
-	}
-	selectedDate.value = dateObj
+	const {  error } = useHome(date)
+	selectedDate.value = getDateObject(date)
 
 
 	useEffect(() => {
@@ -41,8 +37,16 @@ export const Home = ({ date }) => {
 			showMenu.value = false
 	}, [])
 
-	// if (error)
-	// 	return (<div class={"text-red-700 font-semibold text-center w-full"}>Ha ocurrido un error</div>)
+
+	// if (loading)
+	// 	return (
+	// 		<div class={"grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
+	// 			<Loading />
+	// 		</div>
+	// 	)
+
+	if (error)
+		return <Error />
 
 
 	return (
@@ -51,34 +55,21 @@ export const Home = ({ date }) => {
 
 			<div class={"w-full  md:mt-4 col-start-1"}>
 
-
 				<DateSelector />
 
-				{loading && <Loading />}
+				<div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1   md:shadow-lg shadow-black md:bg-background md:border-[1px] border-borderc "}>
 
+					<DateString />
+					<DailyStats date={date} />
+					<FilterButtons date={date}/>
+					<LeaguesContainer date={date}/>		
 
-
-
-				{
-					!loading &&
-					<DateString dateObj={dateObj} />
-				}
-
+				</div>
 				
-				{
-					!loading && data != undefined && Object.keys(data).length != 0 &&
-					<LeaguesContainer leagues={data.leagues} />
-				}
-
-				{
-					data != undefined && "leagues" in data && data.leagues.length === 0 &&
-					<div class={"text-center w-full mt-10 text-lg font-semibold"}>Sin partidos</div>
-				}
-
 			</div>
 
-			<Calendar />
-			<Anniversaries data={data} loading={loading} />
+			<Calendar date={date}/>
+			
 		</div>
 	);
 }

@@ -1,6 +1,42 @@
-import React from 'react'
-import { useEffect, useState } from 'preact/hooks';
-import { selectedButton } from '@/signals/home';
+import { showOnlyLive, sortByDate } from '@/signals/home';
+import Button from '@mui/material/Button';
+import { useEffect } from 'preact/hooks';
+
+const FilterButtons = ({ date }) => {
+
+
+    useEffect(() => {
+        console.log(date)
+    }, [])
+
+
+    return (
+        <div class="text-xs flex justify-center flex-row gap-2 ">
+            {
+                date === "hoy" &&
+                <Button
+                    color={"error"}
+                    variant={showOnlyLive.value ? "contained" : "outlined"}
+                    style={{ fontSize: 11 ,fontWeight:"bold"}}
+                    onClick={() => showOnlyLive.value = !showOnlyLive.value}
+                >En juego</Button>
+            }
+
+            <Button
+                color={"warning"}
+                variant={sortByDate.value ? "contained" : "outlined"}
+                style={{ fontSize: 11,fontWeight:"bold" }}
+                onClick={() => sortByDate.value = !sortByDate.value}
+            >Ordenar por horario</Button>
+
+
+        </div>
+    );
+};
+
+export default FilterButtons
+
+
 
 const countMatches = (arr) => {
     const result = { programado: 0, jugando: 0, finalizado: 0 };
@@ -13,39 +49,3 @@ const countMatches = (arr) => {
 
     return [result.programado, result.jugando, result.finalizado]
 };
-
-
-const FilterButtons = ({ gamesArr }) => {
-    const stats = countMatches(gamesArr)
-    const [selected, setSelected] = useState(-1);
-
-
-    const colors = [
-        { active: "bg-[#06812b] text-white", inactive: "bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white" }, // Programados
-        { active: "bg-[#b30c17] text-white", inactive: "bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white" }, // Jugando
-        { active: "bg-[#000000] text-white", inactive: "bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white" }, // Finalizados
-    ];
-
-
-    useEffect(() => {
-        selectedButton.value = selected
-    }, [selected])
-
-
-    return (
-        <div class="text-xs flex flex-row gap-2">
-            {["Programados", "Jugando", "Finalizados"].map((title, i) => (
-                <div
-                    key={i}
-                    onClick={() => { setSelected((prev) => { return prev === i ? -1 : i }) }}
-                    className={`flex-1 text-center py-2 rounded cursor-pointer shadow shadow-gray-900 transition-colors
-            ${selected === i ? colors[i].active : colors[i].inactive}`}
-                >
-                    {title} ({stats[i]})
-                </div>
-            ))}
-        </div>
-    );
-};
-
-export default FilterButtons

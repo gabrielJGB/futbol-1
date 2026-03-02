@@ -1,20 +1,28 @@
+import { useHome } from '@/hooks/useHome'
 import React from 'react'
 
 
-const Anniversaries = ({ data, loading }) => {
-    if (loading) {
-        return;
-    }
+const CalendarEvents = ({ date }) => {
 
-    if ( data === undefined || !("calendar" in data)) return <></>
+    const { data } = useHome(date)
+    const calendar = data.calendar
 
-    const { calendar } = data
+    if(calendar === undefined)
+        return <></>
+
+    // if (loading) {
+    //     return;
+    // }
+
+    // if ( data === undefined || !("calendar" in data)) return <></>
+
+    // const { calendar } = data
 
     return (
-        <div className="mt-8 w-full bg-background rounded shadow-sm border border-borderc  p-5 transition-all duration-300 ">
+        <div className="mt-8 w-full bg-background rounded shadow-sm p-2 transition-all duration-300 ">
 
 
-            <div className="flex items-center mb-2 w-full">
+            <div className="hidden  items-center mb-2 w-full">
 
                 <h2 className="text-md text-center font-semibold text-primary">
                     {calendar.title.charAt(0).toUpperCase() + calendar.title.slice(1).toLowerCase()}
@@ -39,7 +47,7 @@ const Anniversaries = ({ data, loading }) => {
                                         <span className="font-semibold  text-white">
                                             {player.name}
                                         </span>
-                                        <span className="text-xs text-gray-300">
+                                        <span className="text-xs text-gray-400">
                                             {player.team}
                                         </span>
                                     </div>
@@ -52,14 +60,14 @@ const Anniversaries = ({ data, loading }) => {
                     </div>
                 )}
 
-                {calendar.clubs?.length > 0 && (
+                {"clubs" in calendar && calendar.clubs?.length > 0 && (
                     <div>
                         <h3 className="text-sm font-medium text-indigo-400 mb-1 flex items-center gap-1">
 
                             Clubes
                         </h3>
                         <ul className="space-y-2">
-                            {calendar.clubs.map((club, i) => (
+                            {calendar.clubs?.map((club, i) => (
                                 <li
                                     key={i}
                                     className="flex items-center gap-2 text-sm text-gray-300 bg-gray-800/60 backdrop-blur-md px-3 py-1 rounded-lg border border-gray-700 transition"
@@ -80,4 +88,4 @@ const Anniversaries = ({ data, loading }) => {
     )
 }
 
-export default Anniversaries
+export default CalendarEvents

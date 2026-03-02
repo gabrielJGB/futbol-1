@@ -1,65 +1,63 @@
 // @ts-nocheck
-
 import { h } from "preact";
-import GameCard from "./GameCard";
 import { Link } from "preact-router/match";
-import { selectedButton } from "@/signals/home";
+import GameCard from "@/components/home/GameCard";
+import {showOnlyLive } from "@/signals/home";
 
 
-export default function LeagueCard({ leagueId, leagueName, leagueURL, leagueCountryURL, games,showCountryFlags }) {
+export default function LeagueCard({ league }) {
 
- const getCondition = (g) => {
+    const { id: leagueId, games, show_country_flags: showCountryFlags, country_id, name: leagueName } = league
+    const countryFlagURL = `https://api.promiedos.com.ar/images/country/${country_id}/1`
+    const leagueLogoURL = `https://api.promiedos.com.ar/images/league/${leagueId}/1`
+    const hasActiveGame = checkForActiveGame(league.games)
 
-
-
-        if (selectedButton.value === -1)
-            return true 
-        else if (selectedButton.value === 0)
-            return g.status.enum === 1
-
-        else if (selectedButton.value === 1)
-            return  (g.status.enum == 2)
-
-        else if (selectedButton.value === 2)
-            return  g.status.enum === 3
-    }
+    if(showOnlyLive.value && !hasActiveGame)
+        return <></>
 
     return (
         <div
             className=" flex flex-col gap-[0px]  justify-center items-center  shadow shadow-gray-900 w-full border-[1px] border-gray-500 ">
 
+            <Link href={`/league/${leagueId}`} className=" hover:bg-[#024640] bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">
 
-            <Link href={`/league/${leagueId}`} className="hover:underline bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">
-                <img src={leagueURL} alt="Logo" className="h-6" />
+                <img src={leagueLogoURL} alt="Logo" className="h-6" />
                 <span className="text-white text-sm md:text-[15px] cursor-pointer font-bold uppercase  text-shadow-xs text-shadow-black ">{leagueName}</span>
-                <img src={leagueCountryURL} alt="Logo" className="h-6" />
+                <img src={countryFlagURL} alt="Logo" className="h-6" />
+
             </Link>
 
+            {
+                games.map((game, i) => (
+                    <GameCard
+                        key={i}
+                        index={i}
+                        game={game}
+                        showCountryFlags={showCountryFlags}
+                    />
+                ))
+            }
 
-            {games.filter(x => getCondition(x)).map((game, i) => (
-                <GameCard
-                    key={i}
-                    id={game.id}
-                    status={game.status}
-                    startTime={game.start_time.split(" ")[1]}
-                    isCompleted={game.status.symbol_name === "Fin"}
-                    statusDisplayText={game.game_time_status_to_display}
-                    roundName={game.stage_round_name}
-                    description={game.description}
-                    tvURL={"tv_networks" in game ? game.tv_networks[0] : undefined}
-                    homeScore={"scores" in game ? game.scores[0] : ""}
-                    awayScore={"scores" in game ? game.scores[1] : ""}
-                    home={game.teams[0]}
-                    away={game.teams[1]}
-                    homeScorers={"goals" in game.teams[0] ? game.teams[0].goals : []}
-                    awayScorers={"goals" in game.teams[1] ? game.teams[1].goals : []}
-                    winner={game.winner}
-                    showCountryFlags={showCountryFlags}
-                    i={i}
-
-
-                />
-            ))}
         </div>
     );
+}
+
+
+
+export const checkForActiveGame = (objeto) => {
+
+    if (objeto.hasOwnProperty("enum") && objeto["enum"] === 2) {
+        return true;
+    }
+
+    for (let propiedad in objeto) {
+        if (objeto[propiedad] !== null && typeof objeto[propiedad] === "object") {
+            let resultado = checkForActiveGame(objeto[propiedad], "enum");
+            if (resultado) {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }

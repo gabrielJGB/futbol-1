@@ -11,6 +11,7 @@ import Player from './pages/Player/index.jsx';
 import ArticlePage from './pages/Article/index.jsx';
 import TablePage from './pages/Table/index.jsx';
 import { Menu,Header } from '@/components/common'
+import Testpage from '@/pages/TestPage';
 
 
 const RedirectToToday = () => {
@@ -23,10 +24,6 @@ const RedirectToToday = () => {
 
 export function App() {
 
-
-	/**
-	 * bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_100%)] bg-[size:18px_18px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5  dark:[--pattern-fg:var(--color-white)]/40
-	 */
 	return (
 		<LocationProvider  >
 			<div class={"bg-[url('/bg.png')]  h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
@@ -43,6 +40,8 @@ export function App() {
 						<Route path="/player/:name" component={Player} />
 						<Route path="/article/:id" component={ArticlePage} />
 						<Route path="/table/:id" component={TablePage} />
+
+						<Route path="/testpage/:id" component={Testpage} />
 						<Route default component={NotFound} />
 
 					</Router>

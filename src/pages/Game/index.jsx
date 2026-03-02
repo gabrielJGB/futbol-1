@@ -3,7 +3,6 @@ import { useEffect, useState } from "preact/hooks";
 import { showMenu } from "@/signals/home";
 import { useGame } from "@/hooks/useGame";
 import data from '@/data/dummy/GAME_PEN.json'
-
 import {
   Tabs,
   GameHeader,
@@ -14,8 +13,6 @@ import {
   Loading,
   Menu
 } from "@/components/common";
-
-
 
 
 
