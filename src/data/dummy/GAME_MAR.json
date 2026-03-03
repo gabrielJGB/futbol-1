@@ -1,0 +1,2078 @@
+{
+    "TTL": 600,
+    "cache_time": 15,
+    "game": {
+        "id": "eefcgdf",
+        "league": {
+            "name": "Premier League",
+            "id": "h",
+            "url_name": "premier-league",
+            "country_id": "b",
+            "show_country_flags": false,
+            "allow_open": true,
+            "country_name": "Inglaterra",
+            "is_international": false
+        },
+        "stage_round_name": "Fecha 28",
+        "winner": 1,
+        "teams": [
+            {
+                "name": "Manchester United",
+                "short_name": "Man Utd",
+                "url_name": "manchester-united",
+                "id": "baf",
+                "country_id": "b",
+                "allow_open": true,
+                "colors": {
+                    "color": "#EA0000",
+                    "text_color": "#FFFFFF"
+                },
+                "red_cards": 0,
+                "goals": [
+                    {
+                        "player_name": "Bruno Fernandes",
+                        "player_sname": "Fernandes",
+                        "time": 57,
+                        "time_to_display": "57'",
+                        "goal_type": "Pen"
+                    },
+                    {
+                        "player_name": "Benjamin Šeško",
+                        "player_sname": "Šeško",
+                        "time": 65,
+                        "time_to_display": "65'"
+                    }
+                ]
+            },
+            {
+                "name": "Crystal Palace",
+                "short_name": "Palace",
+                "url_name": "crystal-palace",
+                "id": "ba",
+                "country_id": "b",
+                "allow_open": true,
+                "colors": {
+                    "color": "#1017DA",
+                    "text_color": "#FFFFFF"
+                },
+                "red_cards": 1,
+                "goals": [
+                    {
+                        "player_name": "Maxence Lacroix",
+                        "player_sname": "Lacroix",
+                        "time": 4,
+                        "time_to_display": "4'"
+                    }
+                ]
+            }
+        ],
+        "url_name": "manchester-united-vs-crystal-palace",
+        "scores": [
+            2,
+            1
+        ],
+        "status": {
+            "enum": 3,
+            "name": "Finalizado",
+            "short_name": "Final",
+            "symbol_name": "Fin"
+        },
+        "start_time": "01-03-2026 11:00",
+        "game_time": 101,
+        "game_time_to_display": "",
+        "game_time_status_to_display": "Final",
+        "players": {
+            "lineups": {
+                "support_visual_lineups": true,
+                "teams": [
+                    {
+                        "status": "Confirmado",
+                        "formation": "4-2-3-1",
+                        "team_num": 1,
+                        "starting": [
+                            {
+                                "jersey_num": 31,
+                                "name": "Senne Lammens",
+                                "player_short_name": "Lammens",
+                                "position": "Arquero",
+                                "formation_position": "Arquero",
+                                "country_id": "bg",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 0,
+                                    "y": 50
+                                },
+                                "age": 23,
+                                "height": "1.93"
+                            },
+                            {
+                                "jersey_num": 23,
+                                "name": "Luke Shaw",
+                                "player_short_name": "Shaw",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Izquierdo",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 0
+                                },
+                                "substitution": {
+                                    "time": 24,
+                                    "player": 3,
+                                    "type": 2
+                                },
+                                "age": 30,
+                                "height": "1.78",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 24
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 5,
+                                "name": "Harry Maguire",
+                                "player_short_name": "Maguire",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 33
+                                },
+                                "substitution": {
+                                    "time": 85,
+                                    "player": 26,
+                                    "type": 2
+                                },
+                                "age": 32,
+                                "height": "1.94",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 85
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 15,
+                                "name": "Leny Yoro",
+                                "player_short_name": "Yoro",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "f",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 66
+                                },
+                                "age": 20,
+                                "height": "1.90"
+                            },
+                            {
+                                "jersey_num": 2,
+                                "name": "Diogo Dalot",
+                                "player_short_name": "Dalot",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Derecho",
+                                "country_id": "bb",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 100
+                                },
+                                "age": 26,
+                                "height": "1.83",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": true,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": false,
+                                        "time": -1
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 37,
+                                "name": "Kobbie Mainoo",
+                                "player_short_name": "Mainoo",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Central",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 20
+                                },
+                                "age": 20,
+                                "height": "1.80"
+                            },
+                            {
+                                "jersey_num": 18,
+                                "name": "Casemiro",
+                                "player_short_name": "Casemiro",
+                                "position": "Mediocampista",
+                                "formation_position": "Centrocampista defensivo",
+                                "country_id": "cb",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 80
+                                },
+                                "age": 34,
+                                "height": "1.85"
+                            },
+                            {
+                                "jersey_num": 10,
+                                "name": "Matheus Cunha",
+                                "player_short_name": "Cunha",
+                                "position": "Delantero",
+                                "formation_position": "Segundo Delantero",
+                                "country_id": "cb",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 75,
+                                    "y": 0
+                                },
+                                "age": 26,
+                                "height": "1.83"
+                            },
+                            {
+                                "jersey_num": 8,
+                                "name": "Bruno Fernandes",
+                                "player_short_name": "Fernandes",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Ofensivo",
+                                "country_id": "bb",
+                                "is_captain": true,
+                                "pitch_location": {
+                                    "x": 75,
+                                    "y": 50
+                                },
+                                "age": 31,
+                                "height": "1.79",
+                                "events": {
+                                    "goals": {
+                                        "goals": 1,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": false,
+                                        "time": -1
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 19,
+                                "name": "Bryan Mbeumo",
+                                "player_short_name": "Mbeumo",
+                                "position": "Delantero",
+                                "formation_position": "Delantero Derecho",
+                                "country_id": "hd",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 75,
+                                    "y": 100
+                                },
+                                "substitution": {
+                                    "time": 86,
+                                    "player": 11,
+                                    "type": 2
+                                },
+                                "age": 26,
+                                "height": "1.71",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 86
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 30,
+                                "name": "Benjamin Šeško",
+                                "player_short_name": "Šeško",
+                                "position": "Delantero",
+                                "formation_position": "Centro Delantero",
+                                "country_id": "eg",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 100,
+                                    "y": 50
+                                },
+                                "substitution": {
+                                    "time": 75,
+                                    "player": 16,
+                                    "type": 2
+                                },
+                                "age": 22,
+                                "height": "1.94",
+                                "events": {
+                                    "goals": {
+                                        "goals": 1,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 75
+                                    }
+                                }
+                            }
+                        ],
+                        "bench": [
+                            {
+                                "jersey_num": 16,
+                                "name": "Amad Diallo",
+                                "player_short_name": "Diallo",
+                                "position": "Delantero",
+                                "formation_position": "Delantero Derecho",
+                                "country_id": "he",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 75,
+                                    "player": 30,
+                                    "type": 1
+                                },
+                                "age": 23,
+                                "height": "1.73",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 75
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 26,
+                                "name": "Ayden Heaven",
+                                "player_short_name": "A. Heaven",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 85,
+                                    "player": 5,
+                                    "type": 1
+                                },
+                                "age": 19,
+                                "height": "1.89",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": true,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 85
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 3,
+                                "name": "Noussair Mazraoui",
+                                "player_short_name": "Mazraoui",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Derecho",
+                                "country_id": "bch",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 24,
+                                    "player": 23,
+                                    "type": 1
+                                },
+                                "age": 28,
+                                "height": "1.83",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 24
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 11,
+                                "name": "Joshua Zirkzee",
+                                "player_short_name": "Zirkzee",
+                                "position": "Delantero",
+                                "formation_position": "Centro Delantero",
+                                "country_id": "h",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 86,
+                                    "player": 19,
+                                    "type": 1
+                                },
+                                "age": 24,
+                                "height": "1.93",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 86
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 1,
+                                "name": "Altay Bayindir",
+                                "player_short_name": "Bayindir",
+                                "position": "Arquero",
+                                "formation_position": "Arquero",
+                                "country_id": "bc",
+                                "is_captain": false,
+                                "age": 27,
+                                "height": "1.98"
+                            },
+                            {
+                                "jersey_num": 39,
+                                "name": "Tyler Fletcher",
+                                "player_short_name": "Fletcher",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Central",
+                                "country_id": "i",
+                                "is_captain": false,
+                                "age": 18
+                            },
+                            {
+                                "jersey_num": 12,
+                                "name": "Tyrell Malacia",
+                                "player_short_name": "Malacia",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Izquierdo",
+                                "country_id": "h",
+                                "is_captain": false,
+                                "age": 26,
+                                "height": "1.69"
+                            },
+                            {
+                                "jersey_num": 48,
+                                "name": "Jack Moorhouse",
+                                "player_short_name": "J. Moorhouse",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Central",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "age": 20,
+                                "height": "1.84"
+                            },
+                            {
+                                "jersey_num": 25,
+                                "name": "Manuel Ugarte",
+                                "player_short_name": "Ugarte",
+                                "position": "Mediocampista",
+                                "formation_position": "Centrocampista defensivo",
+                                "country_id": "bbb",
+                                "is_captain": false,
+                                "age": 24,
+                                "height": "1.82"
+                            }
+                        ],
+                        "staff": [
+                            {
+                                "jersey_num": -1,
+                                "name": "Michael Carrick",
+                                "player_short_name": "Carrick",
+                                "position": "Dirección",
+                                "formation_position": "Entrenador",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "age": 44
+                            }
+                        ]
+                    },
+                    {
+                        "status": "Confirmado",
+                        "formation": "3-4-2-1",
+                        "team_num": 2,
+                        "starting": [
+                            {
+                                "jersey_num": 1,
+                                "name": "Dean Henderson",
+                                "player_short_name": "Henderson",
+                                "position": "Arquero",
+                                "formation_position": "Arquero",
+                                "country_id": "b",
+                                "is_captain": true,
+                                "pitch_location": {
+                                    "x": 0,
+                                    "y": 50
+                                },
+                                "age": 28,
+                                "height": "1.88",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": true,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": false,
+                                        "time": -1
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 23,
+                                "name": "Jaydee Canvot",
+                                "player_short_name": "Canvot",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "f",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 25
+                                },
+                                "age": 19,
+                                "height": "1.88"
+                            },
+                            {
+                                "jersey_num": 5,
+                                "name": "Maxence Lacroix",
+                                "player_short_name": "Lacroix",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "f",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 50
+                                },
+                                "age": 25,
+                                "height": "1.90",
+                                "events": {
+                                    "goals": {
+                                        "goals": 1,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": true,
+                                        "red_type": 1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": false,
+                                        "time": -1
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 26,
+                                "name": "Chris Richards",
+                                "player_short_name": "Richards",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "bi",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 25,
+                                    "y": 75
+                                },
+                                "age": 25,
+                                "height": "1.88"
+                            },
+                            {
+                                "jersey_num": 3,
+                                "name": "Tyrick Mitchell",
+                                "player_short_name": "Mitchell",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Izquierdo",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 0
+                                },
+                                "age": 26,
+                                "height": "1.81"
+                            },
+                            {
+                                "jersey_num": 18,
+                                "name": "Daichi Kamada",
+                                "player_short_name": "Kamada",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Ofensivo",
+                                "country_id": "de",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 33
+                                },
+                                "substitution": {
+                                    "time": 85,
+                                    "player": 10,
+                                    "type": 2
+                                },
+                                "age": 29,
+                                "height": "1.84",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": true,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 85
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 20,
+                                "name": "Adam Wharton",
+                                "player_short_name": "Wharton",
+                                "position": "Mediocampista",
+                                "formation_position": "Centrocampista defensivo",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 66
+                                },
+                                "substitution": {
+                                    "time": 68,
+                                    "player": 19,
+                                    "type": 2
+                                },
+                                "age": 22,
+                                "height": "1.82",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 68
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 2,
+                                "name": "Daniel Muñoz",
+                                "player_short_name": "Muñoz",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Derecho",
+                                "country_id": "baj",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 50,
+                                    "y": 100
+                                },
+                                "age": 29,
+                                "height": "1.81"
+                            },
+                            {
+                                "jersey_num": 11,
+                                "name": "Brennan Johnson",
+                                "player_short_name": "B. Johnson",
+                                "position": "Delantero",
+                                "formation_position": "Delantero Derecho",
+                                "country_id": "baa",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 75,
+                                    "y": 20
+                                },
+                                "substitution": {
+                                    "time": 58,
+                                    "player": 29,
+                                    "type": 2
+                                },
+                                "age": 24,
+                                "height": "1.86",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 58
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 7,
+                                "name": "Ismaila Sarr",
+                                "player_short_name": "Sarr",
+                                "position": "Delantero",
+                                "formation_position": "Delantero Derecho",
+                                "country_id": "bdd",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 75,
+                                    "y": 80
+                                },
+                                "age": 28,
+                                "height": "1.85"
+                            },
+                            {
+                                "jersey_num": 22,
+                                "name": "Jørgen Strand Larsen",
+                                "player_short_name": "Larsen",
+                                "position": "Delantero",
+                                "formation_position": "Centro Delantero",
+                                "country_id": "ch",
+                                "is_captain": false,
+                                "pitch_location": {
+                                    "x": 100,
+                                    "y": 50
+                                },
+                                "substitution": {
+                                    "time": 58,
+                                    "player": 34,
+                                    "type": 2
+                                },
+                                "age": 26,
+                                "height": "1.93",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 58
+                                    }
+                                }
+                            }
+                        ],
+                        "bench": [
+                            {
+                                "jersey_num": 19,
+                                "name": "Will Hughes",
+                                "player_short_name": "Hughes",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Central",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 68,
+                                    "player": 20,
+                                    "type": 1
+                                },
+                                "age": 30,
+                                "height": "1.85",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 68
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 10,
+                                "name": "Yeremy Pino",
+                                "player_short_name": "Pino",
+                                "position": "Delantero",
+                                "formation_position": "Delantero Derecho",
+                                "country_id": "c",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 85,
+                                    "player": 18,
+                                    "type": 1
+                                },
+                                "age": 23,
+                                "height": "1.72",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 85
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 34,
+                                "name": "Chadi Riad",
+                                "player_short_name": "C. Riad",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Central",
+                                "country_id": "bch",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 58,
+                                    "player": 22,
+                                    "type": 1
+                                },
+                                "age": 22,
+                                "height": "1.87",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 58
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 29,
+                                "name": "Evann Guessand",
+                                "player_short_name": "Guessand",
+                                "position": "Delantero",
+                                "formation_position": "Centro Delantero",
+                                "country_id": "he",
+                                "is_captain": false,
+                                "substitution": {
+                                    "time": 58,
+                                    "player": 11,
+                                    "type": 1
+                                },
+                                "age": 24,
+                                "height": "1.88",
+                                "events": {
+                                    "goals": {
+                                        "goals": 0,
+                                        "own_goals": 0
+                                    },
+                                    "cards": {
+                                        "yellow": false,
+                                        "red": false,
+                                        "red_type": -1
+                                    },
+                                    "substitution": {
+                                        "has_substitution": true,
+                                        "time": 58
+                                    }
+                                }
+                            },
+                            {
+                                "jersey_num": 44,
+                                "name": "Walter Benitez",
+                                "player_short_name": "Benitez",
+                                "position": "Arquero",
+                                "formation_position": "Arquero",
+                                "country_id": "ba",
+                                "is_captain": false,
+                                "age": 33,
+                                "height": "1.91"
+                            },
+                            {
+                                "jersey_num": 17,
+                                "name": "Nathaniel Clyne",
+                                "player_short_name": "Clyne",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Derecho",
+                                "country_id": "b",
+                                "is_captain": false,
+                                "age": 34,
+                                "height": "1.75"
+                            },
+                            {
+                                "jersey_num": 55,
+                                "name": "Justin Devenny",
+                                "player_short_name": "Justin Devenny",
+                                "position": "Mediocampista",
+                                "formation_position": "Mediocampista Ofensivo",
+                                "country_id": "jj",
+                                "is_captain": false,
+                                "age": 22,
+                                "height": "1.84"
+                            },
+                            {
+                                "jersey_num": 24,
+                                "name": "Borna Sosa",
+                                "player_short_name": "Sosa",
+                                "position": "Defensor",
+                                "formation_position": "Defensa Lateral Izquierdo",
+                                "country_id": "di",
+                                "is_captain": false,
+                                "age": 28,
+                                "height": "1.87"
+                            },
+                            {
+                                "jersey_num": 12,
+                                "name": "Christantus Uche",
+                                "player_short_name": "Uche",
+                                "position": "Delantero",
+                                "formation_position": "Centro Delantero",
+                                "country_id": "id",
+                                "is_captain": false,
+                                "age": 22,
+                                "height": "1.90"
+                            }
+                        ],
+                        "staff": [
+                            {
+                                "jersey_num": -1,
+                                "name": "Oliver Glasner",
+                                "player_short_name": "O. Glasner",
+                                "position": "Dirección",
+                                "formation_position": "Entrenador",
+                                "country_id": "ca",
+                                "is_captain": false,
+                                "age": 51,
+                                "height": "1.81"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "missing_players": [
+                [
+                    {
+                        "jersey_num": 13,
+                        "name": "Patrick Dorgu",
+                        "player_short_name": "P. Dorgu",
+                        "position": "Defensor",
+                        "formation_position": "Defensa Lateral Izquierdo",
+                        "country_id": "cd",
+                        "is_captain": false,
+                        "age": 21,
+                        "height": "1.85",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 7,
+                        "name": "Mason Mount",
+                        "player_short_name": "Mount",
+                        "position": "Mediocampista",
+                        "formation_position": "Mediocampista Ofensivo",
+                        "country_id": "b",
+                        "is_captain": false,
+                        "age": 27,
+                        "height": "1.81",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 6,
+                        "name": "Lisandro Martínez",
+                        "player_short_name": "Martínez",
+                        "position": "Defensor",
+                        "formation_position": "Defensa Central",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 28,
+                        "height": "1.75",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 1,
+                            "will_play": "En duda"
+                        }
+                    },
+                    {
+                        "jersey_num": 4,
+                        "name": "Matthijs de Ligt",
+                        "player_short_name": "de Ligt",
+                        "position": "Defensor",
+                        "formation_position": "Defensa Central",
+                        "country_id": "h",
+                        "is_captain": false,
+                        "age": 26,
+                        "height": "1.89",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    }
+                ],
+                [
+                    {
+                        "jersey_num": 14,
+                        "name": "Jean Philippe Mateta",
+                        "player_short_name": "Mateta",
+                        "position": "Delantero",
+                        "formation_position": "Centro Delantero",
+                        "country_id": "f",
+                        "is_captain": false,
+                        "age": 28,
+                        "height": "1.92",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 8,
+                        "name": "Jefferson Lerma",
+                        "player_short_name": "Lerma",
+                        "position": "Mediocampista",
+                        "formation_position": "Centrocampista defensivo",
+                        "country_id": "baj",
+                        "is_captain": false,
+                        "age": 31,
+                        "height": "1.79",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 9,
+                        "name": "Eddie Nketiah",
+                        "player_short_name": "Nketiah",
+                        "position": "Delantero",
+                        "formation_position": "Centro Delantero",
+                        "country_id": "b",
+                        "is_captain": false,
+                        "age": 26,
+                        "height": "1.75",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 28,
+                        "name": "Cheick Doucoure",
+                        "player_short_name": "Doucoure",
+                        "position": "Mediocampista",
+                        "formation_position": "Centrocampista defensivo",
+                        "country_id": "bci",
+                        "is_captain": false,
+                        "age": 26,
+                        "height": "1.80",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    }
+                ]
+            ]
+        },
+        "prediction": {
+            "pixels": {
+                "impression": [],
+                "click": []
+            },
+            "options": [
+                {
+                    "name": "1",
+                    "votes": 26800,
+                    "percentage": 84,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefcgdf&vote=1"
+                },
+                {
+                    "name": "X",
+                    "votes": 2712,
+                    "percentage": 9,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefcgdf&vote=x"
+                },
+                {
+                    "name": "2",
+                    "votes": 2366,
+                    "percentage": 7,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefcgdf&vote=2"
+                }
+            ],
+            "total_votes": 31878,
+            "odds": [
+                {
+                    "name": "1",
+                    "value": 1.5,
+                    "trend": 0
+                },
+                {
+                    "name": "X",
+                    "value": 4.33,
+                    "trend": 0
+                },
+                {
+                    "name": "2",
+                    "value": 6,
+                    "trend": 0
+                }
+            ]
+        },
+        "game_info": [
+            {
+                "name": "Estadio",
+                "value": "Old Trafford"
+            },
+            {
+                "name": "Capacidad",
+                "value": "74310"
+            },
+            {
+                "name": "Árbitro",
+                "value": "Chris Kavanagh"
+            },
+            {
+                "name": "Arg TV",
+                "value": "ESPN, Disney+ Premium"
+            }
+        ],
+        "events": [
+            {
+                "name": "Entretiempo",
+                "show_stage_title": true,
+                "is_penalties_stage": false,
+                "scores": [
+                    0,
+                    1
+                ],
+                "rows": [
+                    {
+                        "time": "4'",
+                        "events": [
+                            {
+                                "type": 1,
+                                "time": "4'",
+                                "team": 2,
+                                "texts": [
+                                    "Maxence Lacroix",
+                                    "Brennan Johnson"
+                                ],
+                                "player_jersey_num": 5
+                            }
+                        ]
+                    },
+                    {
+                        "time": "6'",
+                        "events": [
+                            {
+                                "type": 4,
+                                "time": "6'",
+                                "team": 2,
+                                "texts": [
+                                    "Daichi Kamada"
+                                ],
+                                "player_jersey_num": 18
+                            }
+                        ]
+                    },
+                    {
+                        "time": "24'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "24'",
+                                "team": 1,
+                                "texts": [
+                                    "Noussair Mazraoui",
+                                    "Luke Shaw"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "36'",
+                        "events": [
+                            {
+                                "type": 4,
+                                "time": "36'",
+                                "team": 1,
+                                "texts": [
+                                    "Diogo Dalot"
+                                ],
+                                "player_jersey_num": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Fin de los 90 minutos",
+                "show_stage_title": true,
+                "is_penalties_stage": false,
+                "scores": [
+                    2,
+                    1
+                ],
+                "rows": [
+                    {
+                        "time": "49'",
+                        "events": [
+                            {
+                                "type": 4,
+                                "time": "49'",
+                                "team": 2,
+                                "texts": [
+                                    "Dean Henderson"
+                                ],
+                                "player_jersey_num": 1
+                            }
+                        ]
+                    },
+                    {
+                        "time": "56'",
+                        "events": [
+                            {
+                                "type": 5,
+                                "time": "56'",
+                                "team": 2,
+                                "texts": [
+                                    "Maxence Lacroix"
+                                ],
+                                "player_jersey_num": 5
+                            }
+                        ]
+                    },
+                    {
+                        "time": "57'",
+                        "events": [
+                            {
+                                "type": 3,
+                                "time": "57'",
+                                "team": 1,
+                                "texts": [
+                                    "Bruno Fernandes"
+                                ],
+                                "player_jersey_num": 8
+                            }
+                        ]
+                    },
+                    {
+                        "time": "58'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "58'",
+                                "team": 2,
+                                "texts": [
+                                    "Evann Guessand",
+                                    "Brennan Johnson"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "58'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "58'",
+                                "team": 2,
+                                "texts": [
+                                    "Chadi Riad",
+                                    "Jørgen Strand Larsen"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "65'",
+                        "events": [
+                            {
+                                "type": 1,
+                                "time": "65'",
+                                "team": 1,
+                                "texts": [
+                                    "Benjamin Šeško",
+                                    "Bruno Fernandes"
+                                ],
+                                "player_jersey_num": 30
+                            }
+                        ]
+                    },
+                    {
+                        "time": "68'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "68'",
+                                "team": 2,
+                                "texts": [
+                                    "Will Hughes",
+                                    "Adam Wharton"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "75'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "75'",
+                                "team": 1,
+                                "texts": [
+                                    "Amad Diallo",
+                                    "Benjamin Šeško"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "85'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "85'",
+                                "team": 1,
+                                "texts": [
+                                    "Ayden Heaven",
+                                    "Harry Maguire"
+                                ]
+                            },
+                            {
+                                "type": 15,
+                                "time": "85'",
+                                "team": 2,
+                                "texts": [
+                                    "Yeremy Pino",
+                                    "Daichi Kamada"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "86'",
+                        "events": [
+                            {
+                                "type": 15,
+                                "time": "86'",
+                                "team": 1,
+                                "texts": [
+                                    "Joshua Zirkzee",
+                                    "Bryan Mbeumo"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "time": "89'",
+                        "events": [
+                            {
+                                "type": 4,
+                                "time": "89'",
+                                "team": 1,
+                                "texts": [
+                                    "Ayden Heaven"
+                                ],
+                                "player_jersey_num": 26
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "statistics": [
+            {
+                "name": "Total Remates",
+                "values": [
+                    "20",
+                    "8"
+                ],
+                "percentages": [
+                    0.71,
+                    0.29
+                ]
+            },
+            {
+                "name": "Remates al arco",
+                "values": [
+                    "11",
+                    "3"
+                ],
+                "percentages": [
+                    0.79,
+                    0.21
+                ]
+            },
+            {
+                "name": "Posesión",
+                "values": [
+                    "61%",
+                    "39%"
+                ],
+                "percentages": [
+                    0.61,
+                    0.39
+                ]
+            },
+            {
+                "name": "Saques de falta",
+                "values": [
+                    "12",
+                    "13"
+                ],
+                "percentages": [
+                    0.48,
+                    0.52
+                ]
+            },
+            {
+                "name": "Saques de Esquina",
+                "values": [
+                    "7",
+                    "1"
+                ],
+                "percentages": [
+                    0.88,
+                    0.12
+                ]
+            },
+            {
+                "name": "Fueras de Juego",
+                "values": [
+                    "1",
+                    "2"
+                ],
+                "percentages": [
+                    0.33,
+                    0.67
+                ]
+            },
+            {
+                "name": "Faltas",
+                "values": [
+                    "13",
+                    "12"
+                ],
+                "percentages": [
+                    0.52,
+                    0.48
+                ]
+            },
+            {
+                "name": "Tarjetas Amarillas",
+                "values": [
+                    "2",
+                    "2"
+                ],
+                "percentages": [
+                    0.5,
+                    0.5
+                ]
+            },
+            {
+                "name": "Tarjetas Rojas",
+                "values": [
+                    "0",
+                    "1"
+                ],
+                "percentages": [
+                    0,
+                    1
+                ]
+            }
+        ],
+        "head_to_head": {
+            "home_wins": 2,
+            "away_wins": 2,
+            "draws": 1,
+            "games": [
+                {
+                    "id": "eefcgdf",
+                    "league": {
+                        "name": "Premier League",
+                        "id": "h",
+                        "url_name": "premier-league",
+                        "country_id": "b",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Inglaterra",
+                        "is_international": false
+                    },
+                    "winner": 1,
+                    "teams": [
+                        {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "manchester-united-vs-crystal-palace",
+                    "scores": [
+                        2,
+                        1
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "01-03-2026 11:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 1.5,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 4.33,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 6,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "eefched",
+                    "league": {
+                        "name": "Premier League",
+                        "id": "h",
+                        "url_name": "premier-league",
+                        "country_id": "b",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Inglaterra",
+                        "is_international": false
+                    },
+                    "winner": 2,
+                    "teams": [
+                        {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "crystal-palace-vs-manchester-united",
+                    "scores": [
+                        1,
+                        2
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "30-11-2025 09:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 2.1,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.7,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 3.3,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "ebehcfg",
+                    "league": {
+                        "name": "Premier League",
+                        "id": "h",
+                        "url_name": "premier-league",
+                        "country_id": "b",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Inglaterra",
+                        "is_international": false
+                    },
+                    "winner": 2,
+                    "teams": [
+                        {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "manchester-united-vs-crystal-palace",
+                    "scores": [
+                        0,
+                        2
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "02-02-2025 11:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 1.75,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.6,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 4.75,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "ebehagc",
+                    "league": {
+                        "name": "Premier League",
+                        "id": "h",
+                        "url_name": "premier-league",
+                        "country_id": "b",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Inglaterra",
+                        "is_international": false
+                    },
+                    "winner": -1,
+                    "teams": [
+                        {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "crystal-palace-vs-manchester-united",
+                    "scores": [
+                        0,
+                        0
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "21-09-2024 13:30",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 2.88,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.5,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 2.38,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "dicfibb",
+                    "league": {
+                        "name": "Premier League",
+                        "id": "h",
+                        "url_name": "premier-league",
+                        "country_id": "b",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Inglaterra",
+                        "is_international": false
+                    },
+                    "winner": 1,
+                    "teams": [
+                        {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "crystal-palace-vs-manchester-united",
+                    "scores": [
+                        4,
+                        0
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "06-05-2024 16:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 1.95,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.75,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 3.6,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "recent_form": {
+            "home": [
+                1,
+                1,
+                2,
+                1,
+                1
+            ],
+            "away": [
+                0,
+                1,
+                1,
+                2,
+                0
+            ]
+        },
+        "standings": {
+            "title": "Posiciones",
+            "columns": [
+                {
+                    "key": "points",
+                    "display_name": "PTS",
+                    "is_bold": true
+                },
+                {
+                    "key": "games_played",
+                    "display_name": "J"
+                },
+                {
+                    "key": "ratio",
+                    "display_name": "+/-"
+                }
+            ],
+            "rows": [
+                {
+                    "num": 3,
+                    "entity": {
+                        "type": 1,
+                        "object": {
+                            "name": "Manchester United",
+                            "short_name": "Man Utd",
+                            "url_name": "manchester-united",
+                            "id": "baf",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#EA0000",
+                                "text_color": "#FFFFFF"
+                            }
+                        }
+                    },
+                    "values": [
+                        {
+                            "key": "points",
+                            "value": "51"
+                        },
+                        {
+                            "key": "games_played",
+                            "value": "28"
+                        },
+                        {
+                            "key": "ratio",
+                            "value": "12"
+                        }
+                    ]
+                },
+                {
+                    "num": 14,
+                    "entity": {
+                        "type": 1,
+                        "object": {
+                            "name": "Crystal Palace",
+                            "short_name": "Palace",
+                            "url_name": "crystal-palace",
+                            "id": "ba",
+                            "country_id": "b",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#1017DA",
+                                "text_color": "#FFFFFF"
+                            }
+                        }
+                    },
+                    "values": [
+                        {
+                            "key": "points",
+                            "value": "35"
+                        },
+                        {
+                            "key": "games_played",
+                            "value": "28"
+                        },
+                        {
+                            "key": "ratio",
+                            "value": "-4"
+                        }
+                    ]
+                }
+            ]
+        },
+        "videos": [
+            {
+                "source": "youtube",
+                "url": "https://www.youtube.com/watch?v=8w24_xsnz9o",
+                "video_id": "8w24_xsnz9o",
+                "thumbnail_url": "https://img.youtube.com/vi/8w24_xsnz9o/maxresdefault.jpg",
+                "embedding_allowed": false
+            }
+        ]
+    }
+}

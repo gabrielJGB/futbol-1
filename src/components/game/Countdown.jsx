@@ -1,31 +1,10 @@
-// CountdownDisplay.jsx
-// Componente que muestra una cuenta regresiva tipo cartel LED digital (verde sobre fondo negro)
-// Recibe una prop `start` con formato "DD-MM-YYYY HH:mm"
-// Uso: <CountdownDisplay start="05-11-2025 21:10" />
-
 import React, { useEffect, useState } from "react";
 
-const parseDateDMY = (str) => {
-    if (!str) return null;
-    const [datePart, timePart] = str.split(" ");
-    if (!datePart || !timePart) return null;
-    const [d, m, y] = datePart.split("-").map(Number);
-    const [hh, mm] = timePart.split(":").map(Number);
-    if ([d, m, y, hh, mm].some((v) => Number.isNaN(v))) return null;
-    return new Date(y, m - 1, d, hh, mm);
-};
+export default function Countdown({ start,showCountdown }) {
 
-const getRemaining = (ms) => {
-    if (ms <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-    const totalSeconds = Math.floor(ms / 1000);
-    const days = Math.floor(totalSeconds / (24 * 3600));
-    const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-    return { days, hours, minutes, seconds };
-};
+    if(!showCountdown)
+        return <></>
 
-export default function Countdown({ start }) {
     const targetDate = parseDateDMY(start);
     const [now, setNow] = useState(() => new Date());
 
@@ -83,3 +62,27 @@ export default function Countdown({ start }) {
         </div>
     );
 }
+
+
+
+
+
+const parseDateDMY = (str) => {
+    if (!str) return null;
+    const [datePart, timePart] = str.split(" ");
+    if (!datePart || !timePart) return null;
+    const [d, m, y] = datePart.split("-").map(Number);
+    const [hh, mm] = timePart.split(":").map(Number);
+    if ([d, m, y, hh, mm].some((v) => Number.isNaN(v))) return null;
+    return new Date(y, m - 1, d, hh, mm);
+};
+
+const getRemaining = (ms) => {
+    if (ms <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    const totalSeconds = Math.floor(ms / 1000);
+    const days = Math.floor(totalSeconds / (24 * 3600));
+    const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return { days, hours, minutes, seconds };
+};

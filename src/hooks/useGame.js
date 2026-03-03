@@ -1,9 +1,6 @@
 import useSWR from 'swr';
 import { fetcher } from '@/utils/fetcher';
 
-
-
-
 export const useGame = (id) => {
 
     const url = `https://api.promiedos.com.ar/gamecenter/${id}`
@@ -20,15 +17,24 @@ export const useGame = (id) => {
         }
     );
 
-
-    
-
     return {
         data:res.data,
         loading: res.isLoading,
         error: res.error
     };
-
-
-
 }
+
+
+
+// import data from '@/data/dummy/GAME_PEN.json'
+// export const useGame = (id) => {
+
+//     console.log(data);
+    
+
+//     return {
+//         data,
+//         isLoading: false,
+//         error: false
+//     }
+// }
