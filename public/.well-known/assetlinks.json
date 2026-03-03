@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.futbol1.twa",
+        "sha256_cert_fingerprints": ["35:EA:DA:77:3D:97:9C:E4:6F:B2:F8:41:50:6F:F3:52:73:4E:F7:80:63:9C:6B:62:B3:06:20:0E:A0:1A:FD:CA"]
+      }
+    }]
