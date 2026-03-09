@@ -1,12 +1,18 @@
 import React from 'react'
 import { useEffect, useRef, useState } from "preact/hooks";
+import { useGame } from '@/hooks/useGame';
 
-const Videos = ({ videos }) => {
+const Videos = ({ id }) => {
+
+    const { data } = useGame(id)
+    const { game } = data
+    const {videos} = game
+
     const [videoUrl, setVideoUrl] = useState(null)
     const [loading, setLoading] = useState(true)
     const ref = useRef()
 
-    if (videos === undefined || videos.length ===0)
+    if (videos === undefined || videos.length === 0)
         return <></>
 
 
@@ -31,14 +37,14 @@ const Videos = ({ videos }) => {
 
     return (
 
-        <div class={"flex flex-col gap-5 mb-2 md:mx-0 mx-1 mt-3"} >
+        <div class={"flex flex-col gap-3 mb-2 md:mx-0 mx-1 "} >
 
             {
 
                 videos.map((video, i) => (
-                    <div key={i}  className="aspect-video shadow-sm shadow-gray-800">
+                    <div key={i} className="aspect-video shadow-sm shadow-gray-800">
                         <iframe
-                            
+
                             className="w-full h-full"
                             src={video.url.replace("watch?v=", "embed/")}
                             title="YouTube video"

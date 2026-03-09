@@ -2,7 +2,7 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
 import GameCard from "@/components/home/GameCard";
-import {showOnlyLive } from "@/signals/home";
+import { showOnlyLive } from "@/signals/home";
 
 
 export default function LeagueCard({ league }) {
@@ -12,26 +12,31 @@ export default function LeagueCard({ league }) {
     const leagueLogoURL = `https://api.promiedos.com.ar/images/league/${leagueId}/1`
     const hasActiveGame = checkForActiveGame(league.games)
 
-    if(showOnlyLive.value && !hasActiveGame)
+    if (showOnlyLive.value && !hasActiveGame)
         return <></>
 
     return (
         <div
-            className=" flex flex-col gap-[0px]  justify-center items-center  shadow shadow-gray-900 w-full border-[1px] border-gray-500 ">
+            style={{ willChange:"transform",transform:"translateZ(0)" }}
+            className=" flex flex-col gap-[0px] justify-center items-center  w-full border-[1px] border-gray-500 ">
 
-            <Link href={`/league/${leagueId}`} className=" hover:bg-[#024640] bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500   flex items-center justify-between w-full">
+            <Link href={`/league/${leagueId}`} className=" hover:bg-[#024640] bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500 flex items-center justify-between w-full">
 
-                <img src={leagueLogoURL} alt="Logo" className="h-6" />
-                <span className="text-white text-sm md:text-[15px] cursor-pointer font-bold uppercase  text-shadow-xs text-shadow-black ">{leagueName}</span>
-                <img src={countryFlagURL} alt="Logo" className="h-6" />
+                <img src={leagueLogoURL} style={{ height: 24, width: 24 }} alt="Logo" loading={"lazy"} />
+
+                <span className="text-white text-sm md:text-[15px] cursor-pointer font-bold uppercase">
+                    {leagueName}
+                </span>
+
+                <img src={countryFlagURL} style={{ height: 24, width: 24 }} alt="Logo" loading={"lazy"} />
 
             </Link>
 
             {
                 games.map((game, i) => (
                     <GameCard
-                        key={i}
                         index={i}
+                        key={game.id}
                         game={game}
                         showCountryFlags={showCountryFlags}
                     />

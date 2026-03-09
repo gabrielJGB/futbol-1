@@ -57,7 +57,7 @@ export const Home = ({ date }) => {
 
 				<DateSelector />
 
-				<div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1   md:shadow-lg shadow-black md:bg-background md:border-[1px] border-borderc "}>
+				<div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1 md:bg-background md:border-[1px] border-borderc "}>
 
 					<DateString />
 					<DailyStats date={date} />

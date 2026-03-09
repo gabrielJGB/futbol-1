@@ -13,9 +13,11 @@ export const useGame = (id) => {
             revalidateOnFocus: false,
             refreshWhenHidden: true,
             refreshInterval: 30000,
-            
         }
     );
+
+
+
 
     return {
         data:res.data,
@@ -26,14 +28,12 @@ export const useGame = (id) => {
 
 
 
-// import data from '@/data/dummy/GAME_PEN.json'
+// import data from '@/data/dummy/GAME_END.json'
 // export const useGame = (id) => {
 
-//     console.log(data);
-    
 
 //     return {
-//         data,
+//         data:data,
 //         isLoading: false,
 //         error: false
 //     }

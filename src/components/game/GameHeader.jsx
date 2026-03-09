@@ -5,13 +5,18 @@ import { BiCalendar } from 'react-icons/bi';
 import { GiWhistle } from 'react-icons/gi';
 import { MdStadium } from 'react-icons/md';
 import { Countdown } from '@/components/game/';
+import { useGame } from '@/hooks/useGame';
 
-const GameHeader = ({ game }) => {
+const GameHeader = ({ id }) => {
+
+    const { data } = useGame(id)
+    const { game } = data
 
     const home = game.teams[0]
     const away = game.teams[1]
 
     const goals = game.teams.map((team, i) => {
+        // @ts-ignore
         return team.goals?.filter(g => g.time == g.time_to_display.split('\'')[0]).flatMap(x => ({ ...x, isHome: i === 0 }))
     }).flat().sort((a, b) => (a.time - b.time))
 
@@ -28,7 +33,7 @@ const GameHeader = ({ game }) => {
 
     return (
 
-        <div class={"flex flex-col  md:p-1 md:mt-3 bg-b2  md:rounded-t-lg  mb-0"}>
+        <div class={"flex flex-col  md:p-1 bg-b2    pb-1"}>
 
             <div class={"grid grid-cols-[2fr_1fr_2fr] "}>
 
@@ -40,7 +45,7 @@ const GameHeader = ({ game }) => {
             </div>
 
             <Scorers goals={goals} />
-            <Penalties penalties={game.events.find(e => e.name === "Penales")} />
+            <Penalties penalties={"events" in game && game.events.find(e => e.name === "Penales")} />
             <Countdown showCountdown={game.status.enum === 1} start={game.start_time} />
             <GameInfo game={game} />
 
@@ -172,7 +177,7 @@ const GameInfo = ({ game }) => {
 
 const Penalties = ({ penalties }) => {
 
-    if (penalties === undefined)
+    if (!penalties)
         return <></>
 
     return (
@@ -181,14 +186,26 @@ const Penalties = ({ penalties }) => {
             {
                 penalties.rows.map((pen, i) => (
                     <div class={"gap-[1px] grid md:grid-cols-[6fr_1fr_6fr] grid-cols-[3fr_1fr_3fr] "}>
-                        
+
 
                         {
                             pen.events.map((event, j) => (
-                                <div class={`${event.team === 1?"order-1 bg-gradient-to-l":"order-3 bg-gradient-to-r"} bg-[#032E15]  flex flex-row items-center justify-center`}>
-                                    <div class={`${event.type===17?"text-[#ff0000]":"text-[#00e800]"} font-semibold text-center text-xs`}>
-                                        {event.texts[0]}
-                                    </div>
+                                <div class={`${event.team === 1 ? "order-1 bg-gradient-to-l" : "order-3 bg-gradient-to-r"} bg-[#032E15]  flex flex-row items-center justify-center`}>
+                                    {
+                                        event.texts.length != 0 ?
+                                            <div class={`${event.type === 17 ? "text-[#ff0000]" : "text-[#00e800]"} font-semibold text-center text-xs`}>
+                                                {event.texts[0]}
+                                            </div>
+
+                                            :
+                                            <div class={`${event.type === 17 ? "text-[#ff0000]" : "text-[#00e800]"} font-semibold text-center text-xs`}>
+                                                {
+                                                    event.type === 17 ?"x":"o"
+                                                }
+                                                
+                                            </div>
+
+                                    }
                                 </div>
                             ))
                         }
@@ -219,11 +236,11 @@ const Scorers = ({ goals }) => {
 
                     return goal != undefined && (goal.time_to_display.includes("'")) && (<div class={"gap-[1px] grid md:grid-cols-[6fr_1fr_6fr] grid-cols-[3fr_1fr_3fr]  p-0   text-xs font-semibold text-center"}>
 
-                        <div class={`${goal.isHome ? "bg-[#032E15] " : ""}`}>
+                        <div class={`${goal.isHome ? "bg-b3 " : ""}`}>
                             {goal.isHome ? `${goal.player_name}${"goal_type" in goal ? ` (${goal.goal_type})` : ""}` : ""}
                         </div>
-                        <div class={`bg-[#032E15]  font-semibold`}>{goal.time_to_display}</div>
-                        <div class={`${!goal.isHome ? "bg-gradient-to-r bg-[#032E15] " : ""}`}>
+                        <div class={`bg-b3  font-semibold`}>{goal.time_to_display}</div>
+                        <div class={`${!goal.isHome ? "bg-gradient-to-r bg-b3 " : ""}`}>
                             {!goal.isHome ? `${goal.player_name}${"goal_type" in goal ? ` (${goal.goal_type})` : ""}` : ""}
                         </div>
 

@@ -1,5 +1,5 @@
 import Countdown from "@/components/game/Countdown";
-import Events from "@/components/game/Events";
+import Events from "@/components/game/OLDEvents";
 import Field2 from "@/components/game/Field_2";
 import GameHeader from "@/components/game/GameHeader";
 import Lineups from "@/components/game/Lineups";

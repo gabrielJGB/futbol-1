@@ -2,33 +2,25 @@ import React from 'react'
 import { useEffect, useState } from "preact/hooks";
 import Roster from '@/components/game/Roster';
 import Field2 from '@/components/game/Field_2';
+import FieldContainer from '@/components/game/lineups/FieldContainer';
+import Rosters from '@/components/game/lineups/Rosters';
+import { useGame } from '@/hooks/useGame';
+import PosessionBar from '@/components/game/lineups/PosessionBar';
 
-const Lineups = ({ game }) => {
+const Lineups = ({ id }) => {
 
-  const [invertLines, setInvertLines] = useState(false)
-  const lineups = game.players.lineups?.teams
+  const { data } = useGame(id)
+  const game = data.game
+  const lineups = game.players.lineups
+  const posession = "statistics" in game && game.statistics.find(stat => stat.name === "Posesión")
+
 
   return (
-    <div class={"md:px-0 px-1 flex flex-col gap-2 w-full overflow-x-auto md:overflow-visible"}>
-      {
-        game.players.lineups?.support_visual_lineups &&
-        <Field2
-          invertLines={invertLines}
-          setInvertLines={setInvertLines}
-          teams={lineups}
-          colors={game.teams.map(team => team.colors)}
-          ids={game.teams.map(team => team.id)}
-        />
-      }
-      {
+    <div class={"w-full pb-40 md:px-0 px-1 flex flex-col gap-2 overflow-x-auto md:overflow-visible"}>
 
-        <Roster
-          missingPlayers={"missing_players" in game.players ? game.players.missing_players : false}
-          roster={lineups}
-          teams={game.teams}
-          invertLines={invertLines}
-        />
-      }
+      {lineups.support_visual_lineups && <FieldContainer id={id} />}
+      <PosessionBar posession={posession} colors={game.teams.map(x=>x.colors)} />
+      <Rosters id={id} />
 
     </div>
   )

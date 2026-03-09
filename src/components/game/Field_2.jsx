@@ -102,31 +102,40 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
     }
 
 
-    useEffect(() => {
-
-        if (teams) {
-            let home = teams[0]
-            let away = teams[1]
-
-            let homeStarting = home.starting
-            let homeFormation = home.formation?.split("-").map(x => parseInt(x))
-            homeFormation.unshift(1)
-            setHomeLines(homeFormation.map((playerLength, i) => {
-                return homeStarting.splice(0, playerLength)
-            }))
 
 
-            let awayStarting = away.starting
-            let awayFormation = away.formation?.split("-").map(x => parseInt(x))
+    if (teams) {
+        let home = teams[0]
+        let away = teams[1]
 
-            awayFormation.unshift(1)
-            setAwayLines(awayFormation.map((playerLength, i) => {
-                return awayStarting.splice(0, playerLength)
-            }))
-        }
+        let homeStarting = home.starting
+        let awayStarting = away.starting
 
 
-    }, [window.location.href])
+
+
+        let homeFormation = home.formation?.split("-").map(x => parseInt(x))
+        homeFormation.unshift(1)
+        const h = homeFormation.map((playerLength, i) => {
+            return homeStarting.splice(0, playerLength)
+        })
+
+        setHomeLines(h)
+
+
+        let awayFormation = away.formation?.split("-").map(x => parseInt(x))
+        awayFormation.unshift(1)
+        const a = awayFormation.map((playerLength, i) => {
+            return awayStarting.splice(0, playerLength)
+        })
+
+        setAwayLines(a)
+
+
+    }
+
+
+
 
 
 
@@ -146,54 +155,24 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
     return (
         <div class={" w-full "}>
 
-            <div class={"flex flex-ow items-center gap-3 select-none"}>
+            <FieldOptions
+                setShowFlags={setShowFlags}
+                showFlags={showFlags}
+                setInvertLines={setInvertLines}
+                invertLines={invertLines}
+                setShowNumber={setShowNumber}
+                showNumber={showNumber}
+            />
 
-                <label htmlFor="flags" class={"text-xs mb-1"}>
-                    <input id={"flags"} name="flags" type="checkbox" checked={showFlags} onChange={() => setShowFlags(!showFlags)} />
-                    <span class={"pl-1 "}>Banderas</span>
-                </label>
-
-
-                <label htmlFor="invert" class={"text-xs mb-1"}>
-                    <input id={"invert"} name="flags" type="checkbox" checked={invertLines} onChange={() => setInvertLines(!invertLines)} />
-                    <span class={"pl-1 "}>Invertir</span>
-                </label>
-
-                <label htmlFor="jersey" class={"text-xs mb-1"}>
-                    <input id={"jersey"} name="flags" type="checkbox" checked={showNumber} onChange={() => setShowNumber(!showNumber)} />
-                    <span class={"pl-1 "}>Numeros</span>
-                </label>
-
-            </div>
             <div class={"grid grid-cols-2 bg-[url('/fieldbg.png')] bg-repeat md:w-full w-[200vw]  shadow-xs shadow-gray-950   md:h-[450px] h-[420px] relative rounded-lg"}>
 
-                {/* <div className="relative w-full shadow  shadow-gray-800 rounded h-full   overflow-hidden"
-            > */}
-                <div className="absolute left-0 top-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-0 bottom-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-0 top-1/3 w-1/14 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-0 bottom-1/3 w-1/14 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-1/14 top-1/3 h-4/12 border-l-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-1/6 top-1/6 h-4/6 border-l-4  border-gray-400 pointer-events-none "></div>
-                <div className="absolute right-1/6 top-1/6 h-4/6 border-l-4  border-gray-400 pointer-events-none"></div>
-                <div className="absolute inset-0 border-4 rounded border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-1/2 top-0 h-full border-l-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 border-4 border-gray-400 rounded-full pointer-events-none"></div>
-                <div className="absolute right-0 top-1/3 w-1/14 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute right-0 bottom-1/3 w-1/14 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute right-1/14 top-1/3 h-4/12 border-l-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute right-0 top-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
-                <div className="absolute right-0 bottom-1/6 w-1/6 border-b-4 border-gray-400 pointer-events-none"></div>
+                {/* <FieldLinesDrawing /> */}
 
-
-                {
-                    formations.map((item, i) => (
-                        <div class={`absolute flex gap-1 top-1 ${i === 0 ? (invertLines ? "right-1 flex-row-reverse" : "left-1 flex-row") : invertLines ? "left-1 flex-row" : "right-1 flex-row-reverse"} `}>
-                            <img src={`https://api.promiedos.com.ar/images/team/${ids[i]}/1`} alt="Escudo Equipo" class="drop-shadow-xs drop-shadow-black size-6 object-contain" />
-                            <div class={` font-semibold  text-shadow-xs text-shadow-black text-sm`}>{item}</div>
-                        </div>
-                    ))
-                }
+                <FormationString
+                    ids={ids}
+                    formations={formations}
+                    invertLines={invertLines}
+                />
 
                 {
                     [homeLines, awayLines].map((teamLines, i) => (
@@ -305,3 +284,45 @@ const Field2 = ({ teams, colors, ids, invertLines, setInvertLines }) => {
 }
 
 export default Field2
+
+
+
+
+
+
+
+const FieldOptions = ({ showFlags, invertLines, showNumber, setShowFlags, setShowNumber, setInvertLines }) => (
+    <div class={"flex flex-row items-center gap-3 select-none"}>
+
+        <label htmlFor="flags" class={"text-xs mb-1"}>
+            <input id={"flags"} name="flags" type="checkbox" checked={showFlags} onChange={() => setShowFlags(!showFlags)} />
+            <span class={"pl-1 "}>Banderas</span>
+        </label>
+
+
+        <label htmlFor="invert" class={"text-xs mb-1"}>
+            <input id={"invert"} name="flags" type="checkbox" checked={invertLines} onChange={() => setInvertLines(!invertLines)} />
+            <span class={"pl-1 "}>Invertir</span>
+        </label>
+
+        <label htmlFor="jersey" class={"text-xs mb-1"}>
+            <input id={"jersey"} name="flags" type="checkbox" checked={showNumber} onChange={() => setShowNumber(!showNumber)} />
+            <span class={"pl-1 "}>Numeros</span>
+        </label>
+
+    </div>
+)
+
+
+const FormationString = ({ formations, invertLines, ids }) => (
+    <>
+        {
+            formations.map((item, i) => (
+                <div class={`absolute flex gap-1 top-1 ${i === 0 ? (invertLines ? "right-1 flex-row-reverse" : "left-1 flex-row") : invertLines ? "left-1 flex-row" : "right-1 flex-row-reverse"} `}>
+                    <img src={`https://api.promiedos.com.ar/images/team/${ids[i]}/1`} alt="Escudo Equipo" class="drop-shadow-xs drop-shadow-black size-6 object-contain" />
+                    <div class={` font-semibold  text-shadow-xs text-shadow-black text-sm`}>{item}</div>
+                </div>
+            ))
+        }
+    </>
+)

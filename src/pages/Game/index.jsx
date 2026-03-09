@@ -6,22 +6,25 @@ import data from '@/data/dummy/GAME_PEN.json'
 import {
   Tabs,
   GameHeader,
-  Videos
+  Videos,
+  Lineups,
+  Events,
+  Prev,
+  Stats
 } from "@/components/game";
 
 import {
   Loading,
   Menu
 } from "@/components/common";
-
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomTabs from "@/components/game/BottomTabs";
+import TabsContainer from "@/components/game/TabsContainer";
 
 
 export function Game({ id }) {
 
-
   const { data, loading, error } = useGame(id)
-  // const loading = false
-  // const error = false
 
   if (loading)
     return (
@@ -30,18 +33,25 @@ export function Game({ id }) {
       </div>)
 
   if (error)
-    return (<div class={"text-center w-full mt-7"}>Ha ocurrido un error {":("}</div>)
+    return (<div class={"text-center text-red-600 font-semibold w-full mt-7"}>Ha ocurrido un error {":("}</div>)
+
+
+  
 
 
   return (
-    <div class={" relative  md:mx-20  pb-40 md:p-5 md:pt-1 min-h-screen  md:w-auto w-full px-0 shadow-black shadow-lg  bg-background/70 border-x-[1px] border-borderc  md:col-start-2"}>
+    <div class={" relative  md:mx-20  md:p-0  min-h-screen  md:w-auto w-full px-0 shadow-black shadow-lg  bg-background/70 border-x-[1px] border-borderc  md:col-start-2"}>
 
-      <Videos videos={data.game.videos} />
-      <GameHeader game={data.game} />
-      <Tabs game={data.game} />
+      {/* <Tabs game={data.game} /> */}
 
+      <Videos id={id} />
+      <GameHeader id={id} />
+      <TabsContainer id={id} />
 
     </div>
   )
 }
+
+
+
 

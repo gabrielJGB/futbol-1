@@ -5,8 +5,12 @@ import { MdAddBox } from 'react-icons/md';
 import { darkMode } from '@/signals/common';
 import { showOnlyLive } from '@/signals/home';
 import { gameMapper } from '@/utils/gameMapper';
+import { memo } from 'preact/compat';
 
-const GameCard = ({ index, game, showCountryFlags }) => {
+
+
+// @ts-ignore
+const GameCard = memo(({ index, game, showCountryFlags }) => {
 
     const gameMap = gameMapper(game)
     const {
@@ -29,12 +33,10 @@ const GameCard = ({ index, game, showCountryFlags }) => {
         winner,
     } = gameMap
 
-
-
-
     return (
 
-        <div className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
+        <div
+            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
 
             <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} text-white text-sm`}>
 
@@ -87,10 +89,13 @@ const GameCard = ({ index, game, showCountryFlags }) => {
 
 
         </div>
-    );
-};
+    )
+})
 
 export default GameCard;
+
+
+
 
 
 
@@ -122,7 +127,7 @@ const GameStatus = ({ startTime, statusColor, statusText, TVLogoURL, TVName, isC
                 TVLogoURL && !isCompleted &&
                 <img src={TVLogoURL} class={"mx-auto mb-[2px] h-4"} title={TVName} />
             }
-            <span className="text-xs text-shadow-xs text-center text-shadow-black">{statusText}</span>
+            <span className="text-xs text-center">{statusText}</span>
 
         </div>
     )
@@ -140,12 +145,15 @@ const Team = ({ team, showCountryFlags }) => {
             href={`/team/${team.id}`} class={"col-span-8"}
         >
             <div className={`h-full flex flex-col border-transparent hover:bg-gray-300 ${darkMode.value ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
+
+
                 <div class={"z-0 relative"}>
-                    {/* team.id => home.id || away.id */}
-                    <img src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black h-5 w-5 object-contain " />
+                    <img loading={"lazy"} style={{ height: 20, width: 20 }} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black  object-contain " />
+                    {/* drop-shadow-xs drop-shadow-black */}
+
                     {
                         showCountryFlags &&
-                        <img src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3 drop-shadow-xs drop-shadow-black" />
+                        <img loading={"lazy"} style={{ height: 12, width: 12 }} src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3" />
                     }
                 </div>
 
@@ -179,7 +187,7 @@ const InfoButton = ({ id }) => {
         <Link
             // @ts-ignore
             href={`/game/${id}`} className=" col-span-3  bg-[#008000] hover:bg-[#18ac18] cursor-pointer text-white   font-bold flex items-center justify-center">
-            <MdAddBox color="white" size={20}/>
+            <MdAddBox color="white" size={20} />
         </Link>
     )
 }

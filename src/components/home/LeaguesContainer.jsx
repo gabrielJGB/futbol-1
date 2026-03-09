@@ -43,7 +43,7 @@ const LeaguesContainer = ({ date }) => {
             {
                 !sortByDate.value ?
                     leagues
-                        .map((league, i) => (<LeagueCard key={i} league={league} />))
+                        .map((league, i) => (<LeagueCard key={league.id} league={league} />))
                     :
                     <SortedGames leagues={leagues} />
             }
