@@ -10,7 +10,7 @@ const PosessionBar = ({ posession, colors }) => {
     return (
         <div title="Posesión de la pelota" class={`cursor-help md:w-auto w-[200vw] flex ${invertLines.value?"flex-row-reverse":"flex-row"} gap-[1px] h-[15px] bg-transparent`}>
             {
-                posession.values.map((value, i) => (
+                posession.values?.map((value, i) => (
 
                     <div
                         style={{  width: value, backgroundColor: colors[i].color, color: colors[i].text_color }}

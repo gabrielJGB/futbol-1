@@ -5,11 +5,6 @@ import { useEffect } from 'preact/hooks';
 const FilterButtons = ({ date }) => {
 
 
-    useEffect(() => {
-        console.log(date)
-    }, [])
-
-
     return (
         <div class="text-xs flex justify-center flex-row gap-2 ">
             {

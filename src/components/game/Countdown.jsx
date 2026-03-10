@@ -21,6 +21,7 @@ export default function Countdown({ start,showCountdown }) {
         );
     }
 
+    // @ts-ignore
     const diff = targetDate - now;
     const { days, hours, minutes, seconds } = getRemaining(diff);
     const started = diff <= 0;
@@ -28,32 +29,34 @@ export default function Countdown({ start,showCountdown }) {
 
     if (started) return;
 
+    //shadow-[0_0_25px_#0f0_inset]
     return (
-        <div className="max-w-md mx-auto  rounded-2xl py-2 px-3 border-4 border-gray-800 shadow-[0_0_25px_#0f0_inset] flex flex-col items-center font-mono ">
-            <div className="mt-0 mb-1 text-xs text-gray-100 tracking-wide">
+        <div className="max-w-md mx-auto  rounded-2xl py-2 px-3   flex flex-col items-center font-mono ">
+
+            <div className="mt-0 mb-1 text-xs text-gray-100 tracking-widest">
                 Empieza en
             </div>
 
-            <div className="text-primary  flex gap-4 justify-around w-full text-4xl sm:text-5xl md:text-6xl font-bold">
+            <div className="text-primary text-shadow-black text-shadow-xs flex gap-3 justify-around w-full text-4xl sm:text-5xl md:text-6xl ">
 
-                <div class={"flex flex-col items-center justify-center"}>
-                    <span class={"text-5xl"}>{String(days).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[77px] bg-black/80 rounded"}>
+                    <span class={"text-7xl font-digital"}>{String(days).padStart(2, "0")}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Días</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center"}>
-                    <span class={"text-5xl"}>{String(hours).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[77px] bg-black/80 rounded"}>
+                    <span class={"text-7xl font-digital"}>{String(hours).padStart(2, "0")}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Horas</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center"}>
-                    <span class={"text-5xl"}>{String(minutes).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[77px] bg-black/80 rounded"}>
+                    <span class={"text-7xl font-digital"}>{String(minutes).padStart(2, "0")}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Min</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center"}>
-                    <span class={"text-5xl"}>{String(seconds).padStart(2, "0")}</span>
-                    <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Seg</span>
+                <div class={"flex flex-col items-center justify-center w-[77px] bg-black/80 rounded"}>
+                    <span class={"text-7xl font-digital "}>{String(seconds).padStart(2, "0")}</span>
+                    <span class={"text-sm mb-2  text-white tracking-wider uppercase"}>Seg</span>
                 </div>
             </div>
 

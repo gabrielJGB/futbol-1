@@ -5,8 +5,8 @@ import { useGame } from '@/hooks/useGame';
 const Videos = ({ id }) => {
 
     const { data } = useGame(id)
-    const { game } = data
-    const {videos} = game
+    const  game  = data.game
+    const videos = game.videos
 
     const [videoUrl, setVideoUrl] = useState(null)
     const [loading, setLoading] = useState(true)

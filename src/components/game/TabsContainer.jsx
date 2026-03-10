@@ -6,7 +6,7 @@ import {
     Lineups,
     Prev,
     Stats,
-    
+
 } from "@/components/game";
 import BottomTabs from '@/components/game/BottomTabs';
 import Events from '@/components/game/Events';
@@ -14,6 +14,7 @@ import { GiHamburger, GiSoccerField } from 'react-icons/gi';
 import { BiHistory, BiStats } from 'react-icons/bi';
 import { MdGraphicEq, MdMenu } from 'react-icons/md';
 import { BarChart, BarChart2, BarChart4, BarChartIcon, LucideBarChart2 } from 'lucide-preact';
+
 
 const TabsContainer = ({ id }) => {
 
@@ -23,11 +24,14 @@ const TabsContainer = ({ id }) => {
     const selected = tabs[i]
 
 
+
     return (
         <div class={"relative flex flex-col md:flex-col-reverse"}>
-            <div class={"md:mx-3 md:h-auto"}>
+
+            <div class={"md:mx-3 md:h-auto min-h-screen"}>
                 {selected.component(id)}
             </div>
+
             <div class={"md:relative sticky bottom-0"}>
                 <BottomTabs tabs={tabs} />
             </div>
@@ -42,11 +46,11 @@ export default TabsContainer
 const getTabsArray = (game) => {
     const tabs = []
 
-    if (game.players != undefined) {
+    if (game.players != undefined && game.players.lineups != undefined) {
         tabs.push({
             name: "lineups",
             label: "Formaciones",
-            icon:()=>(<GiSoccerField size={25}/>),
+            icon: () => (<GiSoccerField size={25} />),
             component: (id) => (<Lineups id={id} />)
         })
     }
@@ -55,15 +59,15 @@ const getTabsArray = (game) => {
         tabs.push({
             name: "events",
             label: "Eventos",
-            icon:()=>(<MdMenu size={25}/>),
-            component: (id) => (<Events id={id}/>)
+            icon: () => (<MdMenu size={25} />),
+            component: (id) => (<Events id={id} />)
         })
     }
 
     tabs.push({
         name: "prev",
         label: "Previa",
-        icon:()=>(<BiHistory size={25}/>),
+        icon: () => (<BiHistory size={25} />),
         component: (id) => (<Prev id={id} />)
     })
 
@@ -71,8 +75,8 @@ const getTabsArray = (game) => {
         tabs.push({
             name: "stats",
             label: "Estadísticas",
-            icon:()=>(<BarChartIcon  size={25}/>),
-            component: (id) => (<Stats id={id}/>)
+            icon: () => (<BarChartIcon size={25} />),
+            component: (id) => (<Stats id={id} />)
         })
     }
 

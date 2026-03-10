@@ -7,7 +7,7 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
 	server:{
-		allowedHosts:["3852-2803-2c0-f347-2100-4c5c-6c87-7720-d862.ngrok-free.app"]
+		allowedHosts:["41da-2803-2c0-f347-2100-4c5c-6c87-7720-d862.ngrok-free.app"]
 	},
 	resolve: {
 		alias: {

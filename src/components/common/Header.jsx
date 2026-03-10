@@ -10,7 +10,7 @@ export default function Header() {
 
 
 	return (
-		<header class={"z-200 sticky top-0 p-1 bg-b2 border-borderc md:border-b-[1px]  h-[7vh]  flex flex-row gap-1 items-center   "}>
+		<header class={"z-200 sticky top-0 p-1 bg-b2 border-borderc md:border-b-[1px]  h-[50px]  flex flex-row gap-1 items-center   "}>
 
 			<div
 				class={"md:hidden block px-3 py-1 mr-2 text-2xl text-[#C2E213] text-center active:bg-[#C2E213] active:text-green-900 hover:bg-[#C2E213] hover:text-green-900  font-semibold rounded  cursor-pointer"}
@@ -37,7 +37,7 @@ export default function Header() {
 					{
 						isHome &&
 						<div
-							class={`${showCalendar.value?"bg-green-950":""}  transition-all md:hidden block active:bg-green-950 rounded p-2 cursor-pointer`}
+							class={`${showCalendar.value?"bg-green-950 shadow-[0_0_5px_#000_inset]":""}  transition-all md:hidden block active:bg-green-950 rounded p-2 cursor-pointer `}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
 						>
 							<CalendarDaysIcon size={22} color={"#C2E213"} />

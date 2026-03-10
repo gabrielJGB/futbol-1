@@ -20,11 +20,11 @@ export const usePlayer = (name) => {
     
     
 
-    if(res.data.totalFound>0 && res.data.results[0].totalFound>0 && res.data.results[0].contents[0].displayName === name)
-        console.log("FOUND");
+    // if(res.data.totalFound>0 && res.data.results[0].totalFound>0 && res.data.results[0].contents[0].displayName === name)
+    //     console.log("FOUND");
 
-    else
-        console.log("NOT FOUND");
+    // else
+    //     console.log("NOT FOUND");
 
 
     return {

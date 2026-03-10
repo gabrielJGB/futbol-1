@@ -63,7 +63,7 @@ export default function Calendar_({ date }) {
       {
         date != "hoy" &&
         <div
-          class={"bg-transparent cursor-pointer text-sm text-center w- hover:underline"}
+          class={"bg-transparent text-shadow-xs text-shadow-black cursor-pointer text-sm text-center w- hover:underline"}
           onClick={() => {
             showCalendar.value = false
             selectedDate.value = new Date()

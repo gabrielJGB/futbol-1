@@ -114,7 +114,7 @@ const TeamStats = ({ id }) => {
             <Loading />
         </div>
     )
-    console.log(data);
+    
 
     const { stats } = data
 

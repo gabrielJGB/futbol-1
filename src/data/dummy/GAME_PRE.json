@@ -1,153 +1,315 @@
 {
     "TTL": 600,
-    "cache_time": 10800,
+    "cache_time": 15,
     "game": {
-        "id": "eefchdf",
+        "id": "egdbghf",
         "league": {
-            "name": "Premier League",
-            "id": "h",
-            "url_name": "premier-league",
-            "country_id": "b",
+            "name": "Liga Profesional Argentina",
+            "id": "hc",
+            "url_name": "liga-profesional",
+            "country_id": "ba",
             "show_country_flags": false,
             "allow_open": true,
-            "country_name": "Inglaterra",
+            "country_name": "Argentina",
             "is_international": false
         },
-        "stage_round_name": "Fecha 14",
+        "stage_round_name": "Apertura, Fecha 10",
         "winner": -1,
         "teams": [
             {
-                "name": "Manchester United",
-                "short_name": "Man Utd",
-                "url_name": "manchester-united",
-                "id": "baf",
-                "country_id": "b",
+                "name": "Sarmiento Junín",
+                "short_name": "Sarmiento",
+                "url_name": "sarmiento-junin",
+                "id": "hbbh",
+                "country_id": "ba",
                 "allow_open": true,
                 "colors": {
-                    "color": "#EA0000",
-                    "text_color": "#FFFFFF"
+                    "color": "#4AA575",
+                    "text_color": "#000000"
                 },
                 "red_cards": 0
             },
             {
-                "name": "West Ham United",
-                "short_name": "West Ham",
-                "url_name": "west-ham-united",
-                "id": "bbd",
-                "country_id": "b",
+                "name": "Racing Club",
+                "short_name": "Racing",
+                "url_name": "racing-club",
+                "id": "ihg",
+                "country_id": "ba",
                 "allow_open": true,
                 "colors": {
-                    "color": "#74112E",
-                    "text_color": "#FFFFFF"
+                    "color": "#FFFFFF",
+                    "text_color": "#000000"
                 },
                 "red_cards": 0
             }
         ],
-        "url_name": "manchester-united-vs-west-ham-united",
+        "url_name": "sarmiento-junin-vs-racing-club",
         "status": {
             "enum": 1,
             "name": "Prog.",
             "short_name": "Prog.",
             "symbol_name": "Prog."
         },
-        "start_time": "04-12-2025 17:00",
+        "start_time": "10-03-2026 22:00",
         "game_time": -1,
         "game_time_to_display": "",
         "game_time_status_to_display": "Prog.",
+        "players": {
+            "missing_players": [
+                [
+                    {
+                        "jersey_num": 22,
+                        "name": "Gastón González",
+                        "player_short_name": "Gonzalez",
+                        "position": "Delantero",
+                        "formation_position": "Delantero Izquierdo",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 24,
+                        "height": "1.83",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 39,
+                        "name": "Joel Godoy",
+                        "player_short_name": "Godoy",
+                        "position": "Defensor",
+                        "formation_position": "Defensa Central",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 21,
+                        "height": "1.85",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 7,
+                        "name": "Pablo Magnin",
+                        "player_short_name": "Magnin",
+                        "position": "Delantero",
+                        "formation_position": "Centro Delantero",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 35,
+                        "height": "1.77",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    }
+                ],
+                [
+                    {
+                        "jersey_num": 9,
+                        "name": "Adrian Martinez",
+                        "player_short_name": "Adrian Martinez",
+                        "position": "Delantero",
+                        "formation_position": "Centro Delantero",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 33,
+                        "height": "1.81",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 0,
+                        "name": "Baltasar Rodríguez",
+                        "player_short_name": "Rodríguez",
+                        "position": "Mediocampista",
+                        "formation_position": "Mediocampista Central",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 22,
+                        "height": "1.73",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 21,
+                        "name": "Valentín Carboni",
+                        "player_short_name": "Carboni",
+                        "position": "Mediocampista",
+                        "formation_position": "Mediocampista Ofensivo",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 21,
+                        "height": "1.85",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 6,
+                        "name": "Marcos Rojo",
+                        "player_short_name": "Rojo",
+                        "position": "Defensor",
+                        "formation_position": "Defensa Central",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 35,
+                        "height": "1.84",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    },
+                    {
+                        "jersey_num": 22,
+                        "name": "Elias Torres",
+                        "player_short_name": "Torres",
+                        "position": "Delantero",
+                        "formation_position": "Centro Delantero",
+                        "country_id": "ba",
+                        "is_captain": false,
+                        "age": 25,
+                        "height": "1.86",
+                        "missing_details": {
+                            "type": 1,
+                            "reason": "Lesionado",
+                            "will_play_status": 2,
+                            "will_play": "No jugarán"
+                        }
+                    }
+                ]
+            ]
+        },
         "prediction": {
             "pixels": {
-                "impression": [
-                    "https://api-ads-v3.betforce.io/api/v1/px/1212/1697",
-                    "https://tracking.adsage.io/pixel.png?ad_source=native&placement=gc_prediction_card&country_id=AR&region_id=B&bmid=47&ad_type=native&action=impression"
-                ],
-                "click": [
-                    "https://tracking.adsage.io/pixel.png?ad_source=native&placement=gc_prediction_card&country_id=AR&region_id=B&bmid=47&ad_type=native&action=click"
-                ]
+                "impression": [],
+                "click": []
             },
-            "bookie_id": "eh",
-            "cta_link": "https://promos.betano.bet.ar/betano-torneo-apertura-promiedos/index.html?cod=PROMIEDOS&pid=incomeaccess_int-62791&af_sub1=a_62791b_3949c_&af_ad_id=15975&btag=a_62791b_3949c_&utm_medium=15975&utm_source=62791&utm_campaign=3949&siteid=62791",
             "options": [
                 {
                     "name": "1",
-                    "votes": 359,
-                    "percentage": 83,
-                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefchdf&vote=1"
+                    "votes": 57,
+                    "percentage": 11,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=egdbghf&vote=1"
                 },
                 {
                     "name": "X",
-                    "votes": 28,
-                    "percentage": 6,
-                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefchdf&vote=x"
+                    "votes": 62,
+                    "percentage": 12,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=egdbghf&vote=x"
                 },
                 {
                     "name": "2",
-                    "votes": 46,
-                    "percentage": 11,
-                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=eefchdf&vote=2"
+                    "votes": 396,
+                    "percentage": 77,
+                    "vote_url": "https://api.promiedos.com.ar/gamecenter/vote/?gameid=egdbghf&vote=2"
                 }
             ],
-            "total_votes": 433
+            "total_votes": 515,
+            "odds": [
+                {
+                    "name": "1",
+                    "value": 3.8,
+                    "trend": 1
+                },
+                {
+                    "name": "X",
+                    "value": 3.2,
+                    "trend": 1
+                },
+                {
+                    "name": "2",
+                    "value": 2.05,
+                    "trend": 2
+                }
+            ]
         },
         "game_info": [
             {
                 "name": "Estadio",
-                "value": "Old Trafford"
+                "value": "Estadio Eva Perón de Junín"
             },
             {
                 "name": "Capacidad",
-                "value": "74310"
+                "value": "22000"
+            },
+            {
+                "name": "Árbitro",
+                "value": "Nazareno Arasa"
+            },
+            {
+                "name": "Arg TV",
+                "value": "ESPN Premium"
             }
         ],
         "head_to_head": {
             "home_wins": 2,
-            "away_wins": 3,
-            "draws": 0,
+            "away_wins": 1,
+            "draws": 2,
             "games": [
                 {
-                    "id": "efaejfb",
+                    "id": "ebccfih",
                     "league": {
-                        "name": "Premier League Summer Series",
-                        "id": "ihif",
-                        "url_name": "premier-league-summer-series",
-                        "country_id": "fe",
+                        "name": "Liga Profesional Argentina",
+                        "id": "hc",
+                        "url_name": "liga-profesional",
+                        "country_id": "ba",
                         "show_country_flags": false,
-                        "allow_open": false,
-                        "country_name": "Internacional",
-                        "is_international": true
+                        "allow_open": true,
+                        "country_name": "Argentina",
+                        "is_international": false
                     },
                     "winner": 1,
                     "teams": [
                         {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
+                                "color": "#4AA575",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         },
                         {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         }
                     ],
-                    "url_name": "manchester-united-vs-west-ham-united",
+                    "url_name": "sarmiento-junin-vs-racing-club",
                     "scores": [
-                        2,
-                        1
+                        1,
+                        0
                     ],
                     "status": {
                         "enum": 3,
@@ -155,146 +317,72 @@
                         "short_name": "Final",
                         "symbol_name": "Fin"
                     },
-                    "start_time": "26-07-2025 20:00",
+                    "start_time": "24-07-2024 17:15",
                     "game_time_status_to_display": "Final",
                     "main_odds": {
                         "options": [
                             {
                                 "name": "1",
-                                "value": 1.9,
+                                "value": 5,
                                 "trend": 0
                             },
                             {
                                 "name": "X",
-                                "value": 3.7,
+                                "value": 3.2,
                                 "trend": 0
                             },
                             {
                                 "name": "2",
-                                "value": 3.7,
+                                "value": 1.85,
                                 "trend": 0
                             }
                         ]
                     }
                 },
                 {
-                    "id": "ebehdhe",
+                    "id": "eadchgg",
                     "league": {
-                        "name": "Premier League",
-                        "id": "h",
-                        "url_name": "premier-league",
-                        "country_id": "b",
+                        "name": "Copa de la Liga Profesional",
+                        "id": "hcbe",
+                        "url_name": "copa-de-la-liga-profesional",
+                        "country_id": "ba",
                         "show_country_flags": false,
                         "allow_open": true,
-                        "country_name": "Inglaterra",
+                        "country_name": "Argentina",
                         "is_international": false
                     },
                     "winner": 2,
                     "teams": [
                         {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         },
                         {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
+                                "color": "#4AA575",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         }
                     ],
-                    "url_name": "manchester-united-vs-west-ham-united",
+                    "url_name": "racing-club-vs-sarmiento-junin",
                     "scores": [
                         0,
-                        2
-                    ],
-                    "status": {
-                        "enum": 3,
-                        "name": "Finalizado",
-                        "short_name": "Final",
-                        "symbol_name": "Fin"
-                    },
-                    "start_time": "11-05-2025 10:15",
-                    "game_time_status_to_display": "Final",
-                    "main_odds": {
-                        "options": [
-                            {
-                                "name": "1",
-                                "value": 2,
-                                "trend": 0
-                            },
-                            {
-                                "name": "X",
-                                "value": 3.7,
-                                "trend": 0
-                            },
-                            {
-                                "name": "2",
-                                "value": 3.6,
-                                "trend": 0
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "ebehbaj",
-                    "league": {
-                        "name": "Premier League",
-                        "id": "h",
-                        "url_name": "premier-league",
-                        "country_id": "b",
-                        "show_country_flags": false,
-                        "allow_open": true,
-                        "country_name": "Inglaterra",
-                        "is_international": false
-                    },
-                    "winner": 1,
-                    "teams": [
-                        {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
-                            "allow_open": true,
-                            "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
-                            },
-                            "red_cards": 0
-                        },
-                        {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
-                            "allow_open": true,
-                            "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
-                            },
-                            "red_cards": 0
-                        }
-                    ],
-                    "url_name": "west-ham-united-vs-manchester-united",
-                    "scores": [
-                        2,
                         1
                     ],
                     "status": {
@@ -303,72 +391,146 @@
                         "short_name": "Final",
                         "symbol_name": "Fin"
                     },
-                    "start_time": "27-10-2024 11:00",
+                    "start_time": "05-03-2024 20:00",
                     "game_time_status_to_display": "Final",
                     "main_odds": {
                         "options": [
                             {
                                 "name": "1",
-                                "value": 3.3,
+                                "value": 1.36,
                                 "trend": 0
                             },
                             {
                                 "name": "X",
-                                "value": 3.75,
+                                "value": 4.75,
                                 "trend": 0
                             },
                             {
                                 "name": "2",
-                                "value": 2.1,
+                                "value": 9,
                                 "trend": 0
                             }
                         ]
                     }
                 },
                 {
-                    "id": "dicfgid",
+                    "id": "dihhedh",
                     "league": {
-                        "name": "Premier League",
-                        "id": "h",
-                        "url_name": "premier-league",
-                        "country_id": "b",
+                        "name": "Copa de la Liga Profesional",
+                        "id": "hcbe",
+                        "url_name": "copa-de-la-liga-profesional",
+                        "country_id": "ba",
                         "show_country_flags": false,
                         "allow_open": true,
-                        "country_name": "Inglaterra",
+                        "country_name": "Argentina",
+                        "is_international": false
+                    },
+                    "winner": -1,
+                    "teams": [
+                        {
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#4AA575",
+                                "text_color": "#000000"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "sarmiento-junin-vs-racing-club",
+                    "scores": [
+                        1,
+                        1
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "19-10-2023 21:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 4,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.5,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 1.95,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "dgicbaj",
+                    "league": {
+                        "name": "Liga Profesional Argentina",
+                        "id": "hc",
+                        "url_name": "liga-profesional",
+                        "country_id": "ba",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Argentina",
                         "is_international": false
                     },
                     "winner": 1,
                     "teams": [
                         {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         },
                         {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
+                                "color": "#4AA575",
+                                "text_color": "#000000"
                             },
                             "red_cards": 0
                         }
                     ],
-                    "url_name": "manchester-united-vs-west-ham-united",
+                    "url_name": "racing-club-vs-sarmiento-junin",
                     "scores": [
-                        3,
+                        1,
                         0
                     ],
                     "status": {
@@ -377,87 +539,13 @@
                         "short_name": "Final",
                         "symbol_name": "Fin"
                     },
-                    "start_time": "04-02-2024 11:00",
+                    "start_time": "12-03-2023 17:00",
                     "game_time_status_to_display": "Final",
                     "main_odds": {
                         "options": [
                             {
                                 "name": "1",
-                                "value": 1.55,
-                                "trend": 0
-                            },
-                            {
-                                "name": "X",
-                                "value": 4.33,
-                                "trend": 0
-                            },
-                            {
-                                "name": "2",
-                                "value": 5.5,
-                                "trend": 0
-                            }
-                        ]
-                    }
-                },
-                {
-                    "id": "dicfgde",
-                    "league": {
-                        "name": "Premier League",
-                        "id": "h",
-                        "url_name": "premier-league",
-                        "country_id": "b",
-                        "show_country_flags": false,
-                        "allow_open": true,
-                        "country_name": "Inglaterra",
-                        "is_international": false
-                    },
-                    "winner": 1,
-                    "teams": [
-                        {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
-                            "allow_open": true,
-                            "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
-                            },
-                            "red_cards": 0
-                        },
-                        {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
-                            "allow_open": true,
-                            "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
-                            },
-                            "red_cards": 0
-                        }
-                    ],
-                    "url_name": "west-ham-united-vs-manchester-united",
-                    "scores": [
-                        2,
-                        0
-                    ],
-                    "status": {
-                        "enum": 3,
-                        "name": "Finalizado",
-                        "short_name": "Final",
-                        "symbol_name": "Fin"
-                    },
-                    "start_time": "23-12-2023 09:30",
-                    "game_time_status_to_display": "Final",
-                    "main_odds": {
-                        "options": [
-                            {
-                                "name": "1",
-                                "value": 2.1,
+                                "value": 1.7,
                                 "trend": 0
                             },
                             {
@@ -467,7 +555,81 @@
                             },
                             {
                                 "name": "2",
-                                "value": 3.25,
+                                "value": 5,
+                                "trend": 0
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "dffjied",
+                    "league": {
+                        "name": "Liga Profesional Argentina",
+                        "id": "hc",
+                        "url_name": "liga-profesional",
+                        "country_id": "ba",
+                        "show_country_flags": false,
+                        "allow_open": true,
+                        "country_name": "Argentina",
+                        "is_international": false
+                    },
+                    "winner": -1,
+                    "teams": [
+                        {
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#4AA575",
+                                "text_color": "#000000"
+                            },
+                            "red_cards": 0
+                        },
+                        {
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
+                            "allow_open": true,
+                            "colors": {
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
+                            },
+                            "red_cards": 0
+                        }
+                    ],
+                    "url_name": "sarmiento-junin-vs-racing-club",
+                    "scores": [
+                        1,
+                        1
+                    ],
+                    "status": {
+                        "enum": 3,
+                        "name": "Finalizado",
+                        "short_name": "Final",
+                        "symbol_name": "Fin"
+                    },
+                    "start_time": "03-07-2022 18:00",
+                    "game_time_status_to_display": "Final",
+                    "main_odds": {
+                        "options": [
+                            {
+                                "name": "1",
+                                "value": 3.8,
+                                "trend": 0
+                            },
+                            {
+                                "name": "X",
+                                "value": 3.3,
+                                "trend": 0
+                            },
+                            {
+                                "name": "2",
+                                "value": 2.1,
                                 "trend": 0
                             }
                         ]
@@ -478,17 +640,17 @@
         "recent_form": {
             "home": [
                 1,
-                1,
-                1,
+                0,
+                0,
                 0,
                 1
             ],
             "away": [
-                0,
-                0,
-                0,
+                1,
                 2,
-                0
+                2,
+                1,
+                1
             ]
         },
         "standings": {
@@ -514,62 +676,62 @@
                     "entity": {
                         "type": 1,
                         "object": {
-                            "name": "Manchester United",
-                            "short_name": "Man Utd",
-                            "url_name": "manchester-united",
-                            "id": "baf",
-                            "country_id": "b",
+                            "name": "Racing Club",
+                            "short_name": "Racing",
+                            "url_name": "racing-club",
+                            "id": "ihg",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#EA0000",
-                                "text_color": "#FFFFFF"
+                                "color": "#FFFFFF",
+                                "text_color": "#000000"
                             }
                         }
                     },
                     "values": [
                         {
                             "key": "points",
-                            "value": "16"
+                            "value": "11"
                         },
                         {
                             "key": "games_played",
-                            "value": "9"
+                            "value": "8"
                         },
                         {
                             "key": "ratio",
-                            "value": "1"
+                            "value": "2"
                         }
                     ]
                 },
                 {
-                    "num": 19,
+                    "num": 12,
                     "entity": {
                         "type": 1,
                         "object": {
-                            "name": "West Ham United",
-                            "short_name": "West Ham",
-                            "url_name": "west-ham-united",
-                            "id": "bbd",
-                            "country_id": "b",
+                            "name": "Sarmiento Junín",
+                            "short_name": "Sarmiento",
+                            "url_name": "sarmiento-junin",
+                            "id": "hbbh",
+                            "country_id": "ba",
                             "allow_open": true,
                             "colors": {
-                                "color": "#74112E",
-                                "text_color": "#FFFFFF"
+                                "color": "#4AA575",
+                                "text_color": "#000000"
                             }
                         }
                     },
                     "values": [
                         {
                             "key": "points",
-                            "value": "4"
-                        },
-                        {
-                            "key": "games_played",
                             "value": "9"
                         },
                         {
+                            "key": "games_played",
+                            "value": "8"
+                        },
+                        {
                             "key": "ratio",
-                            "value": "-13"
+                            "value": "-3"
                         }
                     ]
                 }

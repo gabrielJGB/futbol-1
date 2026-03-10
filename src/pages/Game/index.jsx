@@ -40,7 +40,7 @@ export function Game({ id }) {
 
 
   return (
-    <div class={" relative  md:mx-20  md:p-0  min-h-screen  md:w-auto w-full px-0 shadow-black shadow-lg  bg-background/70 border-x-[1px] border-borderc  md:col-start-2"}>
+    <div class={" relative  md:mx-20 md:rounded-t md:p-0  min-h-screen md:mt-2 md:w-auto w-full px-0 shadow-black shadow-lg  bg-background/70 border-x-[1px] border-borderc  md:col-start-2"}>
 
       {/* <Tabs game={data.game} /> */}
 

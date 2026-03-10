@@ -36,7 +36,7 @@ const GameCard = memo(({ index, game, showCountryFlags }) => {
     return (
 
         <div
-            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden  `}>
+            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden `}>
 
             <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} text-white text-sm`}>
 
@@ -144,7 +144,7 @@ const Team = ({ team, showCountryFlags }) => {
             // @ts-ignore
             href={`/team/${team.id}`} class={"col-span-8"}
         >
-            <div className={`h-full flex flex-col border-transparent hover:bg-gray-300 ${darkMode.value ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
+            <div className={`h-full flex flex-col border-transparent hover:bg-gray-300 active:bg-gray-300 ${darkMode.value ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
 
 
                 <div class={"z-0 relative"}>
@@ -186,7 +186,7 @@ const InfoButton = ({ id }) => {
     return (
         <Link
             // @ts-ignore
-            href={`/game/${id}`} className=" col-span-3  bg-[#008000] hover:bg-[#18ac18] cursor-pointer text-white   font-bold flex items-center justify-center">
+            href={`/game/${id}`} className=" col-span-3  bg-[#008000] hover:bg-[#18ac18] active:bg-[#18ac18] cursor-pointer text-white   font-bold flex items-center justify-center">
             <MdAddBox color="white" size={20} />
         </Link>
     )

@@ -1,10 +1,10 @@
 import red from '@/assets/red.png'
 import yellow from '@/assets/yellow.png'
+import injury from '@/assets/injury.png'
 import goal from '@/assets/goal.png'
 import ownGoal from '@/assets/own-goal.png'
 import arrowIn from '@/assets/arrow-in.png'
 import arrowOut from '@/assets/arrow-out.png'
-import injury from '@/assets/injury.png'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import { Link } from 'preact-router/match'
 

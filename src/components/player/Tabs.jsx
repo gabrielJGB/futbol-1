@@ -9,7 +9,6 @@ const Tabs = ({ tabs }) => {
                     tabs?.map((tab, i) => (
                         <div
                             onClick={()=>{ 
-                                console.log(tab)
                                 scrollToSection(tab.ref) }}
                             class={"text-white truncate hover:text-[#C2E213] cursor-pointer px-1 py-4 text-center "}>
                             {tab.title}

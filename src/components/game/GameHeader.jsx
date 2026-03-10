@@ -33,7 +33,7 @@ const GameHeader = ({ id }) => {
 
     return (
 
-        <div class={"flex flex-col  md:p-1 bg-b2    pb-1"}>
+        <div class={"flex flex-col  md:p-1 bg-b2 md:rounded-t-md   pb-1"}>
 
             <div class={"grid grid-cols-[2fr_1fr_2fr] "}>
 
@@ -257,7 +257,7 @@ const getStatusText = (game) => {
     if (game.status.enum === 1)
         return game.start_time.split(" ")[1]
     else if (game.status.enum === 2)
-        return game.game_time_status_to_display
+        return game.game_time_status_to_display.replace("Pen","Penales")
     else if (game.status.enum === 3)
         return game.status.name
     else

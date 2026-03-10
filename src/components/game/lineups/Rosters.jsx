@@ -7,7 +7,7 @@ const Rosters = ({ id }) => {
     const { data } = useGame(id)
     const { game } = data
 
-    console.log(game)
+    
 
     const teams = [
         {

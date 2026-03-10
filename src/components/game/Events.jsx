@@ -8,6 +8,7 @@ import card from '@/assets/card.png'
 import ownGoal from '@/assets/own-goal.png'
 import penaltyMissed from '@/assets/penaltyMissed.png'
 import clank from '@/assets/clank.png'
+import Fade from '@mui/material/Fade'
 
 const Events = ({ id }) => {
 
@@ -16,46 +17,52 @@ const Events = ({ id }) => {
     const game = data.game
     const stages = game.events.filter(e => e.name != "Penales")
 
-    
+
 
 
     return (
-        <div class={"min-h-screen flex flex-col-reverse gap-2 p-2 mb-40"}>
+        <Fade in={true} timeout={300} >
+            <div class={"md:mx-40  flex flex-col-reverse gap-2 p-2 mb-40"}>
 
-            <div class={"w-full text-center font-semibold"}>Inicio del partido</div>
+                <div class={"w-full text-center font-semibold"}>Inicio del partido</div>
 
-            {
-                stages.map((stage, i) => (
-                    <div class={"flex flex-col-reverse"}>
-                        <div class={"flex flex-col-reverse gap-2 "}>
-                            {
-                                stage.rows.map((row, j) => (
-                                    <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b3 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
+                {
+                    stages.map((stage, i) => {
 
-                                        <div class={"text-[20px] font-semibold text-primary"}>{row.time}</div>
-                                        <Event event={row.events[0]} />
+                        if (!stage.show_stage_title)
+                            return <></>
 
-                                    </div>
-                                ))
-                            }
+                        return <div class={"flex flex-col-reverse"}>
+                            <div class={"flex flex-col-reverse gap-2 "}>
+                                {
+                                    stage.rows.map((row, j) => (
+                                        <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b3 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
+
+                                            <div class={"text-[20px] font-semibold text-primary"}>{row.time}</div>
+                                            <Event event={row.events[0]} />
+
+                                        </div>
+                                    ))
+                                }
+                            </div>
+
+                            <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2"}>
+
+                                <div>{stage.name.replace("Fin", "Final")}</div>
+                                {
+                                    "scores" in stage &&
+                                    <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
+                                }
+
+
+                            </div>
+
                         </div>
+                    })
+                }
 
-                        <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2"}>
-                            
-                            <div>{stage.name.replace("Fin", "Final")}</div>
-                            {
-                                "scores" in stage &&
-                                <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
-                            }
-
-                            
-                        </div>
-
-                    </div>
-                ))
-            }
-
-        </div>
+            </div>
+        </Fade>
     )
 }
 
@@ -74,7 +81,7 @@ const Event = ({ event }) => {
 
                     <div class={"flex flex-row items-center gap-2"}>
                         {getIcon(type, i)}
-                        <div class={"text-sm"}>{text}</div>
+                        <div class={"md:text-[13px] text-xs"}>{text}</div>
                     </div>
 
 

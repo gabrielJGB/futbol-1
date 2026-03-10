@@ -1,16 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
 @import "tailwindcss";
 
-*{
-	font-family: Roboto, system-ui, -apple-system, sans-serif;
+@font-face {
+  font-family: 'SevenSegment';
+  
+  src: url('assets/fonts/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+	
+	/* font-family: "Rubik", sans-serif; */
+	
+	font-optical-sizing: auto;
+	
 }
 
 :root {
 
-  --plyr-color-main:red !important;
+	--plyr-color-main: red !important;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .react-calendar {
@@ -20,18 +35,19 @@ html {
 	padding: 5px
 }
 
-body{
-	      
+body {
+	font-family: Roboto, system-ui, -apple-system, sans-serif;
 }
 
 @theme {
-	--color-background:#031a0d;
-	--color-borderc:#1D291C;
-  	--color-b2:#0E3E1D;
-	--color-b3:#032E15;
-	--color-b4:#015A1C;
-	--color-b5:#008000;
-	--color-primary:#C2E213;
+	--color-background: #031a0d;
+	--color-borderc: #1D291C;
+	--color-b2: #0E3E1D;
+	--color-b3: #032E15;
+	--color-b4: #015A1C;
+	--color-b5: #008000;
+	--color-primary: #C2E213;
+	--font-digital: "SevenSegment", monospace;
 }
 
 

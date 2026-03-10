@@ -16,9 +16,6 @@ export const useGame = (id) => {
         }
     );
 
-
-
-
     return {
         data:res.data,
         loading: res.isLoading,
@@ -28,7 +25,7 @@ export const useGame = (id) => {
 
 
 
-// import data from '@/data/dummy/GAME_END.json'
+// import data from '@/data/dummy/GAME_IN.json'
 // export const useGame = (id) => {
 
 
