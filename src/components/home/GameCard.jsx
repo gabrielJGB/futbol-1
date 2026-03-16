@@ -10,7 +10,10 @@ import { memo } from 'preact/compat';
 
 
 // @ts-ignore
-const GameCard = memo(({ index, game, showCountryFlags }) => {
+const GameCard = ({ index, game, showCountryFlags }) => {
+
+    
+    
 
     const gameMap = gameMapper(game)
     const {
@@ -90,7 +93,7 @@ const GameCard = memo(({ index, game, showCountryFlags }) => {
 
         </div>
     )
-})
+}
 
 export default GameCard;
 

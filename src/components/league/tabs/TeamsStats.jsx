@@ -10,53 +10,6 @@ import {
 } from '@/components/common';
 
 
-const TeamStats = ({ id }) => {
-
-
-    const { data, error, isLoading } = useSWR(
-        id ? `https://corsproxy.io/?https://api.promiedos.com.ar/league/teams_and_statistics/${id}` : null,
-        fetcher, {
-        revalidateOnFocus: false,
-    });
-
-
-    
-    if (isLoading) return (
-        <div class={"w-full md:col-start-2 mt-5 "}>
-            <Loading />
-        </div>
-    )
-    
-    if (error) return <div class={"w-full md:col-start-2 mt-5 "}>Error al cargar datos</div>;
-
-    const { stats } = data
-
-
-    console.log(stats);
-    
-
-    if (stats === undefined) return;
-
-
-    return (
-
-        <>
-            <SectionTitle title={"Estadisticas de equipo"} />
-            <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
-                {
-                    stats.tables.map(table => (
-
-                        <Table table={table} />
-                    ))
-                }
-
-            </div>
-        </>
-    )
-}
-
-
-
 const Table = ({ table }) => {
     const [showAll, setShowAll] = useState(false);
     const visibleRows = showAll ? table.rows : table.rows.slice(0, 10);
@@ -144,5 +97,48 @@ const Table = ({ table }) => {
     );
 };
 
+const TeamStats = ({ id }) => {
+
+
+    const { data, error, isLoading } = useSWR(
+        id ? `https://api.promiedos.com.ar/league/teams_and_statistics/${id}` : null,
+        fetcher, {
+        revalidateOnFocus: false,
+    });
+
+
+    
+    if (isLoading) return (
+      <div class={"w-full md:col-start-2 mt-5 "}>
+            <Loading />
+        </div>
+    )
+    
+    if (error) return <div class={"w-full md:col-start-2 mt-5 "}>Error al cargar datos</div>;
+
+    const { stats } = data
+
+    console.log(stats);
+    
+
+    if (stats === undefined) return;
+
+
+    return (
+
+        <>
+            
+            <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+                {
+                    stats.tables.map(table => (
+
+                        <Table table={table} />
+                    ))
+                }
+
+            </div>
+        </>
+    )
+}
 
 export default TeamStats

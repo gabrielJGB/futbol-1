@@ -5,8 +5,9 @@ import { h } from 'preact';
 import { useRef, useLayoutEffect, useState } from 'preact/hooks';
 import { SectionTitle } from '@/components/common';
 import { Link } from 'preact-router/match';
+import { useLeague } from '@/hooks/useLeague';
 
-// Componente para un equipo individual
+
 const Team = ({ name, id, winner }) => (
 
     <div class="flex flex-row flex-1 justify-start gap-1 items-center w-full">
@@ -17,19 +18,6 @@ const Team = ({ name, id, winner }) => (
             </div>
         }
         <span class={` ${winner ? "font-semibold" : ""} text-xs py-2`}>{name} </span>
-
-        {/* 
-        <div class={"flex flex-row "}>
-            {
-                score?.map((item, i) => (
-                    <span class={`border-l-[1px] flex-1 px-1 border-[#008000]/50 `}>{item !== undefined ? item : ''}</span>
-                ))
-            }
-            {
-                <span class={`border-l-[1px] flex-1 px-1 border-[#008000]/50 font-bold`}>{globalScore}</span>
-            }
-        </div> */}
-
 
 
     </div>
@@ -174,10 +162,9 @@ const getTeams = (stages) => {
     return [{ team: team_2, pos: 2 }, { team: team_1, pos: 1 }, { team: team_3, pos: 3 }]
 }
 
-const Brackets = ({ league }) => {
+const Brackets = ({ id }) => {
 
-    if (!("brackets" in league && league.brackets))
-        return
+    const {league} = useLeague(id)
 
     const data = league.brackets
     const cols = data.stages.length

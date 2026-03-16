@@ -36,7 +36,7 @@ export default function BottomTabs({ tabs }) {
                             icon={tab.icon()}
                             sx={{
 
-                                color: 'gray',
+                                color: '#e5e5e5',
                                 '&.Mui-selected': { color: '#C2E213' }
                             }}
                         />

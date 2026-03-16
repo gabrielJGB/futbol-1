@@ -1,0 +1,665 @@
+{
+    "TTL": 300,
+    "games": [
+        {
+            "id": "egdddbi",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Estudiantes RC",
+                    "short_name": "Estudiantes RC",
+                    "url_name": "estudiantes-rio-cuarto",
+                    "id": "bheaf",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#77B8F2",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Sarmiento Junín",
+                    "short_name": "Sarmiento",
+                    "url_name": "sarmiento-junin",
+                    "id": "hbbh",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#4AA575",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "estudiantes-rio-cuarto-vs-sarmiento-junin",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddbj",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Belgrano",
+                    "short_name": "Belgrano",
+                    "url_name": "belgrano",
+                    "id": "fhid",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#358FC8",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Huracán",
+                    "short_name": "Huracán",
+                    "url_name": "huracan",
+                    "id": "iie",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "belgrano-vs-huracan",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddca",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Racing Club",
+                    "short_name": "Racing",
+                    "url_name": "racing-club",
+                    "id": "ihg",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Atlético Tucumán",
+                    "short_name": "Atl. Tucumán",
+                    "url_name": "atletico-tucuman",
+                    "id": "gbfc",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "racing-club-vs-atletico-tucuman",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcb",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "River Plate",
+                    "short_name": "River",
+                    "url_name": "river-plate",
+                    "id": "igi",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Independiente Rivadavia",
+                    "short_name": "Ind. Rivadavia",
+                    "url_name": "independiente-rivadavia",
+                    "id": "hcch",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#14163F",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "river-plate-vs-independiente-rivadavia",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcc",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Aldosivi",
+                    "short_name": "Aldosivi",
+                    "url_name": "aldosivi",
+                    "id": "hccd",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#133632",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Banfield",
+                    "short_name": "Banfield",
+                    "url_name": "banfield",
+                    "id": "ihi",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "aldosivi-vs-banfield",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcd",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Barracas Central",
+                    "short_name": "Barracas",
+                    "url_name": "barracas-central",
+                    "id": "jafb",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Argentinos Juniors",
+                    "short_name": "Argentinos",
+                    "url_name": "argentinos-juniors",
+                    "id": "ihb",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#DD2D2F",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "barracas-central-vs-argentinos-juniors",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddce",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Gimnasia La Plata",
+                    "short_name": "Gimnasia",
+                    "url_name": "gimnasia-la-plata",
+                    "id": "iia",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#0E00FF",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Tigre",
+                    "short_name": "Tigre",
+                    "url_name": "tigre",
+                    "id": "iid",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#263142",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "gimnasia-la-plata-vs-tigre",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcf",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Unión de Santa Fe",
+                    "short_name": "Unión",
+                    "url_name": "union-santa-fe",
+                    "id": "hcag",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#E93F2D",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Instituto",
+                    "short_name": "Instituto",
+                    "url_name": "instituto-ac-cordoba",
+                    "id": "hchc",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FF0000",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "union-santa-fe-vs-instituto-ac-cordoba",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcg",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "San Lorenzo",
+                    "short_name": "San Lorenzo",
+                    "url_name": "san-lorenzo",
+                    "id": "igf",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#293592",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Talleres de Córdoba",
+                    "short_name": "Talleres",
+                    "url_name": "talleres-cordoba",
+                    "id": "jche",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "san-lorenzo-vs-talleres-cordoba",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddch",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Central Córdoba SdE",
+                    "short_name": "Central Córdoba",
+                    "url_name": "central-cordoba-sde",
+                    "id": "beafh",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#000000",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Independiente",
+                    "short_name": "Independiente",
+                    "url_name": "independiente",
+                    "id": "ihe",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FF0000",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "central-cordoba-sde-vs-independiente",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddci",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Gimnasia de Mendoza",
+                    "short_name": "Gimnasia (M)",
+                    "url_name": "gimnasia-mendoza",
+                    "id": "bbjbf",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Boca Juniors",
+                    "short_name": "Boca Jrs.",
+                    "url_name": "boca-juniors",
+                    "id": "igg",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#2D2E58",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "gimnasia-mendoza-vs-boca-juniors",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddcj",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Lanús",
+                    "short_name": "Lanús",
+                    "url_name": "lanus",
+                    "id": "igj",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#753E4A",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Defensa y Justicia",
+                    "short_name": "Defensa",
+                    "url_name": "defensa-y-justicia",
+                    "id": "hcbh",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFF00",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "lanus-vs-defensa-y-justicia",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egdddda",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Platense",
+                    "short_name": "Platense",
+                    "url_name": "platense",
+                    "id": "hcah",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FFFFFF",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Deportivo Riestra",
+                    "short_name": "Riestra",
+                    "url_name": "riestra",
+                    "id": "bbjea",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#28272C",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "platense-vs-riestra",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egddddb",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Vélez Sarsfield",
+                    "short_name": "Vélez",
+                    "url_name": "velez-sarsfield",
+                    "id": "ihc",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#2C3591",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Estudiantes de La Plata",
+                    "short_name": "Estudiantes",
+                    "url_name": "estudiantes-de-la-plata",
+                    "id": "igh",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#E31111",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "velez-sarsfield-vs-estudiantes-de-la-plata",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        },
+        {
+            "id": "egddddc",
+            "stage_round_name": "Fecha 8",
+            "winner": -1,
+            "teams": [
+                {
+                    "name": "Rosario Central",
+                    "short_name": "Central",
+                    "url_name": "rosario-central",
+                    "id": "ihf",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#004080",
+                        "text_color": "#FFFFFF"
+                    },
+                    "red_cards": 0
+                },
+                {
+                    "name": "Newell's Old Boys",
+                    "short_name": "Newell's",
+                    "url_name": "newell's-old-boys",
+                    "id": "ihh",
+                    "country_id": "ba",
+                    "allow_open": true,
+                    "colors": {
+                        "color": "#FD0808",
+                        "text_color": "#000000"
+                    },
+                    "red_cards": 0
+                }
+            ],
+            "url_name": "rosario-central-vs-newell's-old-boys",
+            "status": {
+                "enum": 1,
+                "name": "Prog.",
+                "short_name": "Prog.",
+                "symbol_name": "Prog."
+            },
+            "start_time": "06-09-2026 16:00",
+            "game_time": -1,
+            "game_time_to_display": "",
+            "game_time_status_to_display": "Prog."
+        }
+    ]
+}

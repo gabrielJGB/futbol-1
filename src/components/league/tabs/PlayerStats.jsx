@@ -27,8 +27,6 @@ const PlayerStats = ({  id }) => {
   return (
 
     <>
-      <SectionTitle title={"Estadísticas de jugadores"} />
-
       <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
 
 

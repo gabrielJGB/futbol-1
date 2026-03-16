@@ -14,6 +14,5 @@
     "Referer": "https://www.promiedos.com.ar/"
   },
   "body": null,
-  "method": "GET",
-    "cache":"no-store"
+  "method": "GET"
 }
