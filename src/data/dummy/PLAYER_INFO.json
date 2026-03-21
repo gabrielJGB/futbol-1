@@ -1,0 +1,3091 @@
+{
+    "lastUpdateId": 0,
+    "ttl": 0,
+    "athletes": [
+        {
+            "age": 37,
+            "gender": 1,
+            "position": {
+                "id": 4,
+                "name": "Delantero"
+            },
+            "formationPosition": {
+                "id": 12,
+                "name": "Centro Delantero",
+                "order": 15
+            },
+            "status": 1,
+            "contractUntil": "2026-07-01T00:00:00-03:00",
+            "nationalityName": "Polonia",
+            "playerDetails": [
+                {
+                    "title": "21/08/1988",
+                    "value": "37 años"
+                },
+                {
+                    "title": "Altura",
+                    "value": "1.85"
+                },
+                {
+                    "title": "Dorsal",
+                    "value": "9"
+                }
+            ],
+            "nationalTeamStatsText": "Partidos(163) Goles (87)",
+            "shortBio": "Robert Lewandowski (Polonia, 37) es un jugador de fútbol, actualmente juega en FC Barcelona en España.",
+            "highlightStats": [
+                {
+                    "competitionId": 11,
+                    "seasonNum": 98,
+                    "competitorId": -1,
+                    "name": "LaLiga",
+                    "stats": [
+                        {
+                            "type": 5,
+                            "value": "23/28",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Apariciones",
+                            "shortName": "Apariciones",
+                            "order": 1,
+                            "imageId": 5
+                        },
+                        {
+                            "type": 1,
+                            "value": "11(1Pen)",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Goles",
+                            "shortName": "Goles",
+                            "order": 2,
+                            "imageId": 1
+                        },
+                        {
+                            "type": 2,
+                            "value": "1",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Asistencias",
+                            "shortName": "Asistencias",
+                            "order": 3,
+                            "imageId": 2
+                        },
+                        {
+                            "type": 54,
+                            "value": "6.9",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Puntaje",
+                            "shortName": "Puntaje",
+                            "order": 6,
+                            "imageId": 54
+                        },
+                        {
+                            "type": 3,
+                            "value": "2",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Amarillas",
+                            "shortName": "Tarjetas Amarillas",
+                            "order": 4,
+                            "imageId": 3
+                        },
+                        {
+                            "type": 4,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Rojas",
+                            "shortName": "Tarjetas Rojas",
+                            "order": 5,
+                            "imageId": 4
+                        },
+                        {
+                            "type": 223,
+                            "value": "41",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Total de tiros",
+                            "shortName": "Total de tiros",
+                            "order": 223,
+                            "imageId": 223
+                        },
+                        {
+                            "type": 35,
+                            "value": "25",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros al arco",
+                            "shortName": "Tiros al arco",
+                            "order": 35,
+                            "imageId": 35
+                        },
+                        {
+                            "type": 34,
+                            "value": "16",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros fuera del arco",
+                            "shortName": "Tiros fuera del arco",
+                            "order": 34,
+                            "imageId": 34
+                        },
+                        {
+                            "type": 210,
+                            "value": "14",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances perdidas",
+                            "shortName": "Grandes chances perdidas",
+                            "order": 210,
+                            "imageId": 210
+                        },
+                        {
+                            "type": 211,
+                            "value": "8",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes ocasiones convertidas",
+                            "shortName": "Grandes ocasiones convertidas",
+                            "order": 211,
+                            "imageId": 211
+                        },
+                        {
+                            "type": 212,
+                            "value": "3",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances creadas",
+                            "shortName": "Grandes chances creadas",
+                            "order": 212,
+                            "imageId": 212
+                        },
+                        {
+                            "type": 213,
+                            "value": "11",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles en el área",
+                            "shortName": "Goles en el área",
+                            "order": 213,
+                            "imageId": 213
+                        },
+                        {
+                            "type": 214,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles fuera del área",
+                            "shortName": "Goles fuera del área",
+                            "order": 214,
+                            "imageId": 214
+                        },
+                        {
+                            "type": 215,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de zurda",
+                            "shortName": "Goles de zurda",
+                            "order": 215,
+                            "imageId": 215
+                        },
+                        {
+                            "type": 216,
+                            "value": "6",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de derecha",
+                            "shortName": "Goles de derecha",
+                            "order": 216,
+                            "imageId": 216
+                        },
+                        {
+                            "type": 217,
+                            "value": "3",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles con la cabeza",
+                            "shortName": "Goles con la cabeza",
+                            "order": 217,
+                            "imageId": 217
+                        },
+                        {
+                            "type": 218,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de tiro libre",
+                            "shortName": "Goles de tiro libre",
+                            "order": 218,
+                            "imageId": 218
+                        },
+                        {
+                            "type": 205,
+                            "value": "12.28",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados",
+                            "shortName": "Goles esperados",
+                            "order": 205,
+                            "imageId": 205
+                        },
+                        {
+                            "type": 208,
+                            "value": "8.98",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados de remates al arco",
+                            "shortName": "Goles esperados de remates al arco",
+                            "order": 208,
+                            "imageId": 208
+                        },
+                        {
+                            "type": 207,
+                            "value": "1.01",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Asistencias esperadas",
+                            "shortName": "Asistencias esperadas",
+                            "order": 207,
+                            "imageId": 207
+                        },
+                        {
+                            "type": 206,
+                            "value": "13.69",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 21,
+                            "name": "Goles esperados concedidos",
+                            "shortName": "Goles esperados concedidos",
+                            "order": 206,
+                            "imageId": 206
+                        },
+                        {
+                            "type": 44,
+                            "value": "421",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Toques",
+                            "shortName": "Toques",
+                            "order": 44,
+                            "imageId": 44
+                        },
+                        {
+                            "type": 222,
+                            "value": "1142",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 19,
+                            "name": "Minutos jugados",
+                            "shortName": "Minutos jugados",
+                            "order": 222,
+                            "imageId": 222
+                        }
+                    ],
+                    "competitionName": "LaLiga"
+                },
+                {
+                    "competitionId": 572,
+                    "seasonNum": 73,
+                    "competitorId": -1,
+                    "name": "UEFA Champions League",
+                    "stats": [
+                        {
+                            "type": 5,
+                            "value": "9/10",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Apariciones",
+                            "shortName": "Apariciones",
+                            "order": 1,
+                            "imageId": 5
+                        },
+                        {
+                            "type": 1,
+                            "value": "4",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Goles",
+                            "shortName": "Goles",
+                            "order": 2,
+                            "imageId": 1
+                        },
+                        {
+                            "type": 2,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Asistencias",
+                            "shortName": "Asistencias",
+                            "order": 3,
+                            "imageId": 2
+                        },
+                        {
+                            "type": 54,
+                            "value": "6.9",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Puntaje",
+                            "shortName": "Puntaje",
+                            "order": 6,
+                            "imageId": 54
+                        },
+                        {
+                            "type": 3,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Amarillas",
+                            "shortName": "Tarjetas Amarillas",
+                            "order": 4,
+                            "imageId": 3
+                        },
+                        {
+                            "type": 4,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Rojas",
+                            "shortName": "Tarjetas Rojas",
+                            "order": 5,
+                            "imageId": 4
+                        },
+                        {
+                            "type": 223,
+                            "value": "22",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Total de tiros",
+                            "shortName": "Total de tiros",
+                            "order": 223,
+                            "imageId": 223
+                        },
+                        {
+                            "type": 35,
+                            "value": "11",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros al arco",
+                            "shortName": "Tiros al arco",
+                            "order": 35,
+                            "imageId": 35
+                        },
+                        {
+                            "type": 34,
+                            "value": "5",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros fuera del arco",
+                            "shortName": "Tiros fuera del arco",
+                            "order": 34,
+                            "imageId": 34
+                        },
+                        {
+                            "type": 210,
+                            "value": "1",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances perdidas",
+                            "shortName": "Grandes chances perdidas",
+                            "order": 210,
+                            "imageId": 210
+                        },
+                        {
+                            "type": 211,
+                            "value": "4",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes ocasiones convertidas",
+                            "shortName": "Grandes ocasiones convertidas",
+                            "order": 211,
+                            "imageId": 211
+                        },
+                        {
+                            "type": 212,
+                            "value": "1",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances creadas",
+                            "shortName": "Grandes chances creadas",
+                            "order": 212,
+                            "imageId": 212
+                        },
+                        {
+                            "type": 213,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles en el área",
+                            "shortName": "Goles en el área",
+                            "order": 213,
+                            "imageId": 213
+                        },
+                        {
+                            "type": 214,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles fuera del área",
+                            "shortName": "Goles fuera del área",
+                            "order": 214,
+                            "imageId": 214
+                        },
+                        {
+                            "type": 215,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de zurda",
+                            "shortName": "Goles de zurda",
+                            "order": 215,
+                            "imageId": 215
+                        },
+                        {
+                            "type": 216,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de derecha",
+                            "shortName": "Goles de derecha",
+                            "order": 216,
+                            "imageId": 216
+                        },
+                        {
+                            "type": 217,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles con la cabeza",
+                            "shortName": "Goles con la cabeza",
+                            "order": 217,
+                            "imageId": 217
+                        },
+                        {
+                            "type": 218,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de tiro libre",
+                            "shortName": "Goles de tiro libre",
+                            "order": 218,
+                            "imageId": 218
+                        },
+                        {
+                            "type": 205,
+                            "value": "3.51",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados",
+                            "shortName": "Goles esperados",
+                            "order": 205,
+                            "imageId": 205
+                        },
+                        {
+                            "type": 208,
+                            "value": "4.69",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados de remates al arco",
+                            "shortName": "Goles esperados de remates al arco",
+                            "order": 208,
+                            "imageId": 208
+                        },
+                        {
+                            "type": 207,
+                            "value": "0.53",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Asistencias esperadas",
+                            "shortName": "Asistencias esperadas",
+                            "order": 207,
+                            "imageId": 207
+                        },
+                        {
+                            "type": 206,
+                            "value": "8.08",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 21,
+                            "name": "Goles esperados concedidos",
+                            "shortName": "Goles esperados concedidos",
+                            "order": 206,
+                            "imageId": 206
+                        },
+                        {
+                            "type": 44,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Toques",
+                            "shortName": "Toques",
+                            "order": 44,
+                            "imageId": 44
+                        },
+                        {
+                            "type": 222,
+                            "value": "70",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 19,
+                            "name": "Minutos jugados",
+                            "shortName": "Minutos jugados",
+                            "order": 222,
+                            "imageId": 222
+                        }
+                    ],
+                    "competitionName": "UEFA Champions League"
+                },
+                {
+                    "competitionId": 13,
+                    "seasonNum": 125,
+                    "competitorId": -1,
+                    "name": "Copa del Rey",
+                    "stats": [
+                        {
+                            "type": 5,
+                            "value": "3/5",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Apariciones",
+                            "shortName": "Apariciones",
+                            "order": 1,
+                            "imageId": 5
+                        },
+                        {
+                            "type": 1,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Goles",
+                            "shortName": "Goles",
+                            "order": 2,
+                            "imageId": 1
+                        },
+                        {
+                            "type": 2,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Asistencias",
+                            "shortName": "Asistencias",
+                            "order": 3,
+                            "imageId": 2
+                        },
+                        {
+                            "type": 54,
+                            "value": "6.5",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Puntaje",
+                            "shortName": "Puntaje",
+                            "order": 6,
+                            "imageId": 54
+                        },
+                        {
+                            "type": 3,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Amarillas",
+                            "shortName": "Tarjetas Amarillas",
+                            "order": 4,
+                            "imageId": 3
+                        },
+                        {
+                            "type": 4,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Rojas",
+                            "shortName": "Tarjetas Rojas",
+                            "order": 5,
+                            "imageId": 4
+                        },
+                        {
+                            "type": 223,
+                            "value": "4",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Total de tiros",
+                            "shortName": "Total de tiros",
+                            "order": 223,
+                            "imageId": 223
+                        },
+                        {
+                            "type": 35,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros al arco",
+                            "shortName": "Tiros al arco",
+                            "order": 35,
+                            "imageId": 35
+                        },
+                        {
+                            "type": 34,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros fuera del arco",
+                            "shortName": "Tiros fuera del arco",
+                            "order": 34,
+                            "imageId": 34
+                        },
+                        {
+                            "type": 210,
+                            "value": "3",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances perdidas",
+                            "shortName": "Grandes chances perdidas",
+                            "order": 210,
+                            "imageId": 210
+                        },
+                        {
+                            "type": 211,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes ocasiones convertidas",
+                            "shortName": "Grandes ocasiones convertidas",
+                            "order": 211,
+                            "imageId": 211
+                        },
+                        {
+                            "type": 212,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances creadas",
+                            "shortName": "Grandes chances creadas",
+                            "order": 212,
+                            "imageId": 212
+                        },
+                        {
+                            "type": 213,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles en el área",
+                            "shortName": "Goles en el área",
+                            "order": 213,
+                            "imageId": 213
+                        },
+                        {
+                            "type": 214,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles fuera del área",
+                            "shortName": "Goles fuera del área",
+                            "order": 214,
+                            "imageId": 214
+                        },
+                        {
+                            "type": 215,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de zurda",
+                            "shortName": "Goles de zurda",
+                            "order": 215,
+                            "imageId": 215
+                        },
+                        {
+                            "type": 216,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de derecha",
+                            "shortName": "Goles de derecha",
+                            "order": 216,
+                            "imageId": 216
+                        },
+                        {
+                            "type": 217,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles con la cabeza",
+                            "shortName": "Goles con la cabeza",
+                            "order": 217,
+                            "imageId": 217
+                        },
+                        {
+                            "type": 218,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de tiro libre",
+                            "shortName": "Goles de tiro libre",
+                            "order": 218,
+                            "imageId": 218
+                        },
+                        {
+                            "type": 205,
+                            "value": "0.63",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados",
+                            "shortName": "Goles esperados",
+                            "order": 205,
+                            "imageId": 205
+                        },
+                        {
+                            "type": 208,
+                            "value": "0.42",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados de remates al arco",
+                            "shortName": "Goles esperados de remates al arco",
+                            "order": 208,
+                            "imageId": 208
+                        },
+                        {
+                            "type": 207,
+                            "value": "0.00",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Asistencias esperadas",
+                            "shortName": "Asistencias esperadas",
+                            "order": 207,
+                            "imageId": 207
+                        },
+                        {
+                            "type": 206,
+                            "value": "1.78",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 21,
+                            "name": "Goles esperados concedidos",
+                            "shortName": "Goles esperados concedidos",
+                            "order": 206,
+                            "imageId": 206
+                        },
+                        {
+                            "type": 44,
+                            "value": "40",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Toques",
+                            "shortName": "Toques",
+                            "order": 44,
+                            "imageId": 44
+                        },
+                        {
+                            "type": 222,
+                            "value": "141",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 19,
+                            "name": "Minutos jugados",
+                            "shortName": "Minutos jugados",
+                            "order": 222,
+                            "imageId": 222
+                        }
+                    ],
+                    "competitionName": "Copa del Rey"
+                },
+                {
+                    "competitionId": 15,
+                    "seasonNum": 52,
+                    "competitorId": -1,
+                    "name": "Supercopa",
+                    "stats": [
+                        {
+                            "type": 5,
+                            "value": "1/2",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Apariciones",
+                            "shortName": "Apariciones",
+                            "order": 1,
+                            "imageId": 5
+                        },
+                        {
+                            "type": 1,
+                            "value": "1",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Goles",
+                            "shortName": "Goles",
+                            "order": 2,
+                            "imageId": 1
+                        },
+                        {
+                            "type": 2,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Asistencias",
+                            "shortName": "Asistencias",
+                            "order": 3,
+                            "imageId": 2
+                        },
+                        {
+                            "type": 54,
+                            "value": "7.6",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Puntaje",
+                            "shortName": "Puntaje",
+                            "order": 6,
+                            "imageId": 54
+                        },
+                        {
+                            "type": 3,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Amarillas",
+                            "shortName": "Tarjetas Amarillas",
+                            "order": 4,
+                            "imageId": 3
+                        },
+                        {
+                            "type": 4,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Rojas",
+                            "shortName": "Tarjetas Rojas",
+                            "order": 5,
+                            "imageId": 4
+                        },
+                        {
+                            "type": 223,
+                            "value": "4",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Total de tiros",
+                            "shortName": "Total de tiros",
+                            "order": 223,
+                            "imageId": 223
+                        },
+                        {
+                            "type": 35,
+                            "value": "1",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros al arco",
+                            "shortName": "Tiros al arco",
+                            "order": 35,
+                            "imageId": 35
+                        },
+                        {
+                            "type": 34,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros fuera del arco",
+                            "shortName": "Tiros fuera del arco",
+                            "order": 34,
+                            "imageId": 34
+                        },
+                        {
+                            "type": 210,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances perdidas",
+                            "shortName": "Grandes chances perdidas",
+                            "order": 210,
+                            "imageId": 210
+                        },
+                        {
+                            "type": 211,
+                            "value": "1",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes ocasiones convertidas",
+                            "shortName": "Grandes ocasiones convertidas",
+                            "order": 211,
+                            "imageId": 211
+                        },
+                        {
+                            "type": 212,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances creadas",
+                            "shortName": "Grandes chances creadas",
+                            "order": 212,
+                            "imageId": 212
+                        },
+                        {
+                            "type": 213,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles en el área",
+                            "shortName": "Goles en el área",
+                            "order": 213,
+                            "imageId": 213
+                        },
+                        {
+                            "type": 214,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles fuera del área",
+                            "shortName": "Goles fuera del área",
+                            "order": 214,
+                            "imageId": 214
+                        },
+                        {
+                            "type": 215,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de zurda",
+                            "shortName": "Goles de zurda",
+                            "order": 215,
+                            "imageId": 215
+                        },
+                        {
+                            "type": 216,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de derecha",
+                            "shortName": "Goles de derecha",
+                            "order": 216,
+                            "imageId": 216
+                        },
+                        {
+                            "type": 217,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles con la cabeza",
+                            "shortName": "Goles con la cabeza",
+                            "order": 217,
+                            "imageId": 217
+                        },
+                        {
+                            "type": 218,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de tiro libre",
+                            "shortName": "Goles de tiro libre",
+                            "order": 218,
+                            "imageId": 218
+                        },
+                        {
+                            "type": 205,
+                            "value": "1.00",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados",
+                            "shortName": "Goles esperados",
+                            "order": 205,
+                            "imageId": 205
+                        },
+                        {
+                            "type": 208,
+                            "value": "0.90",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados de remates al arco",
+                            "shortName": "Goles esperados de remates al arco",
+                            "order": 208,
+                            "imageId": 208
+                        },
+                        {
+                            "type": 207,
+                            "value": "0.02",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Asistencias esperadas",
+                            "shortName": "Asistencias esperadas",
+                            "order": 207,
+                            "imageId": 207
+                        },
+                        {
+                            "type": 206,
+                            "value": "1.10",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 21,
+                            "name": "Goles esperados concedidos",
+                            "shortName": "Goles esperados concedidos",
+                            "order": 206,
+                            "imageId": 206
+                        },
+                        {
+                            "type": 44,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Toques",
+                            "shortName": "Toques",
+                            "order": 44,
+                            "imageId": 44
+                        },
+                        {
+                            "type": 222,
+                            "value": "-",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 19,
+                            "name": "Minutos jugados",
+                            "shortName": "Minutos jugados",
+                            "order": 222,
+                            "imageId": 222
+                        }
+                    ],
+                    "competitionName": "Supercopa"
+                },
+                {
+                    "competitionId": 5421,
+                    "seasonNum": 8,
+                    "competitorId": -1,
+                    "name": "Clasificatorios UEFA",
+                    "stats": [
+                        {
+                            "type": 5,
+                            "value": "7/7",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Apariciones",
+                            "shortName": "Apariciones",
+                            "order": 1,
+                            "imageId": 5
+                        },
+                        {
+                            "type": 1,
+                            "value": "4",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Goles",
+                            "shortName": "Goles",
+                            "order": 2,
+                            "imageId": 1
+                        },
+                        {
+                            "type": 2,
+                            "value": "2",
+                            "isTop": true,
+                            "categoryId": 20,
+                            "name": "Asistencias",
+                            "shortName": "Asistencias",
+                            "order": 3,
+                            "imageId": 2
+                        },
+                        {
+                            "type": 54,
+                            "value": "7.8",
+                            "isTop": true,
+                            "categoryId": 19,
+                            "name": "Puntaje",
+                            "shortName": "Puntaje",
+                            "order": 6,
+                            "imageId": 54
+                        },
+                        {
+                            "type": 3,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Amarillas",
+                            "shortName": "Tarjetas Amarillas",
+                            "order": 4,
+                            "imageId": 3
+                        },
+                        {
+                            "type": 4,
+                            "value": "0",
+                            "isTop": true,
+                            "categoryId": 22,
+                            "name": "Tarjetas Rojas",
+                            "shortName": "Tarjetas Rojas",
+                            "order": 5,
+                            "imageId": 4
+                        },
+                        {
+                            "type": 223,
+                            "value": "11",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Total de tiros",
+                            "shortName": "Total de tiros",
+                            "order": 223,
+                            "imageId": 223
+                        },
+                        {
+                            "type": 35,
+                            "value": "6",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros al arco",
+                            "shortName": "Tiros al arco",
+                            "order": 35,
+                            "imageId": 35
+                        },
+                        {
+                            "type": 34,
+                            "value": "5",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Tiros fuera del arco",
+                            "shortName": "Tiros fuera del arco",
+                            "order": 34,
+                            "imageId": 34
+                        },
+                        {
+                            "type": 210,
+                            "value": "3",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances perdidas",
+                            "shortName": "Grandes chances perdidas",
+                            "order": 210,
+                            "imageId": 210
+                        },
+                        {
+                            "type": 211,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes ocasiones convertidas",
+                            "shortName": "Grandes ocasiones convertidas",
+                            "order": 211,
+                            "imageId": 211
+                        },
+                        {
+                            "type": 212,
+                            "value": "4",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Grandes chances creadas",
+                            "shortName": "Grandes chances creadas",
+                            "order": 212,
+                            "imageId": 212
+                        },
+                        {
+                            "type": 213,
+                            "value": "4",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles en el área",
+                            "shortName": "Goles en el área",
+                            "order": 213,
+                            "imageId": 213
+                        },
+                        {
+                            "type": 214,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles fuera del área",
+                            "shortName": "Goles fuera del área",
+                            "order": 214,
+                            "imageId": 214
+                        },
+                        {
+                            "type": 215,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de zurda",
+                            "shortName": "Goles de zurda",
+                            "order": 215,
+                            "imageId": 215
+                        },
+                        {
+                            "type": 216,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de derecha",
+                            "shortName": "Goles de derecha",
+                            "order": 216,
+                            "imageId": 216
+                        },
+                        {
+                            "type": 217,
+                            "value": "2",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles con la cabeza",
+                            "shortName": "Goles con la cabeza",
+                            "order": 217,
+                            "imageId": 217
+                        },
+                        {
+                            "type": 218,
+                            "value": "0",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles de tiro libre",
+                            "shortName": "Goles de tiro libre",
+                            "order": 218,
+                            "imageId": 218
+                        },
+                        {
+                            "type": 205,
+                            "value": "3.45",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados",
+                            "shortName": "Goles esperados",
+                            "order": 205,
+                            "imageId": 205
+                        },
+                        {
+                            "type": 208,
+                            "value": "3.32",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Goles esperados de remates al arco",
+                            "shortName": "Goles esperados de remates al arco",
+                            "order": 208,
+                            "imageId": 208
+                        },
+                        {
+                            "type": 207,
+                            "value": "0.41",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Asistencias esperadas",
+                            "shortName": "Asistencias esperadas",
+                            "order": 207,
+                            "imageId": 207
+                        },
+                        {
+                            "type": 206,
+                            "value": "5.26",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 21,
+                            "name": "Goles esperados concedidos",
+                            "shortName": "Goles esperados concedidos",
+                            "order": 206,
+                            "imageId": 206
+                        },
+                        {
+                            "type": 44,
+                            "value": "204",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 20,
+                            "name": "Toques",
+                            "shortName": "Toques",
+                            "order": 44,
+                            "imageId": 44
+                        },
+                        {
+                            "type": 222,
+                            "value": "510",
+                            "isTop": false,
+                            "isExpanded": true,
+                            "categoryId": 19,
+                            "name": "Minutos jugados",
+                            "shortName": "Minutos jugados",
+                            "order": 222,
+                            "imageId": 222
+                        }
+                    ],
+                    "competitionName": "Clasificatorios UEFA"
+                }
+            ],
+            "lastMatches": {
+                "games": [
+                    {
+                        "game": {
+                            "id": 4679449,
+                            "sportId": 1,
+                            "competitionId": 572,
+                            "seasonNum": 73,
+                            "stageNum": 3,
+                            "groupNum": 8,
+                            "competitionDisplayName": "UEFA Champions League - Octavos de final",
+                            "startTime": "2026-03-18T14:45:00-03:00",
+                            "statusGroup": 4,
+                            "statusText": "Finalizado",
+                            "shortStatusText": "Final",
+                            "gameTimeAndStatusDisplayType": 1,
+                            "homeCompetitor": {
+                                "id": 132,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "FC Barcelona",
+                                "shortName": "Barcelona",
+                                "score": 7,
+                                "aggregatedScore": 8,
+                                "isWinner": true,
+                                "nameForURL": "fc-barcelona",
+                                "type": 1,
+                                "popularityRank": 79013,
+                                "imageVersion": 6,
+                                "color": "#282E60",
+                                "awayColor": "#E2CFA5",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 1,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "awayCompetitor": {
+                                "id": 116,
+                                "countryId": 1,
+                                "sportId": 1,
+                                "name": "Newcastle United",
+                                "shortName": "Newcastle Utd",
+                                "score": 2,
+                                "aggregatedScore": 3,
+                                "isWinner": false,
+                                "nameForURL": "newcastle-united",
+                                "type": 1,
+                                "popularityRank": 7272,
+                                "imageVersion": 6,
+                                "color": "#FFFFFF",
+                                "awayColor": "#2CBA8A",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 2,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "winner": 1,
+                            "scores": [
+                                7,
+                                2
+                            ],
+                            "homeAwayTeamOrder": 1,
+                            "hasPointByPoint": false,
+                            "hasVideo": false
+                        },
+                        "played": true,
+                        "hasStats": true,
+                        "athleteStats": [
+                            {
+                                "type": 229,
+                                "value": "65",
+                                "logo": false
+                            },
+                            {
+                                "type": 226,
+                                "value": "2",
+                                "logo": true,
+                                "badge": true
+                            },
+                            {},
+                            {},
+                            {
+                                "type": 0,
+                                "value": "9.2",
+                                "logo": false,
+                                "bgColor": "#61B000"
+                            }
+                        ],
+                        "relatedCompetitor": 132
+                    },
+                    {
+                        "game": {
+                            "id": 4467374,
+                            "sportId": 1,
+                            "competitionId": 11,
+                            "seasonNum": 98,
+                            "stageNum": 1,
+                            "roundNum": 28,
+                            "roundName": "Fecha",
+                            "competitionDisplayName": "LaLiga",
+                            "startTime": "2026-03-15T12:15:00-03:00",
+                            "statusGroup": 4,
+                            "statusText": "Finalizado",
+                            "shortStatusText": "Final",
+                            "gameTimeAndStatusDisplayType": 1,
+                            "homeCompetitor": {
+                                "id": 132,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "FC Barcelona",
+                                "shortName": "Barcelona",
+                                "score": 5,
+                                "isWinner": true,
+                                "nameForURL": "fc-barcelona",
+                                "type": 1,
+                                "popularityRank": 79013,
+                                "imageVersion": 6,
+                                "color": "#282E60",
+                                "awayColor": "#E2CFA5",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 1,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "awayCompetitor": {
+                                "id": 135,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "Sevilla FC",
+                                "shortName": "Sevilla",
+                                "score": 2,
+                                "isWinner": false,
+                                "nameForURL": "sevilla",
+                                "type": 1,
+                                "popularityRank": 22364,
+                                "imageVersion": 11,
+                                "color": "#FFFFFF",
+                                "awayColor": "#C40000",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 2,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "winner": 1,
+                            "scores": [
+                                5,
+                                2
+                            ],
+                            "homeAwayTeamOrder": 1,
+                            "hasPointByPoint": false,
+                            "hasVideo": false
+                        },
+                        "played": true,
+                        "hasStats": true,
+                        "athleteStats": [
+                            {
+                                "type": 229,
+                                "value": "90",
+                                "logo": false
+                            },
+                            {},
+                            {},
+                            {},
+                            {
+                                "type": 0,
+                                "value": "5.9",
+                                "logo": false,
+                                "bgColor": "#E38218"
+                            }
+                        ],
+                        "relatedCompetitor": 132
+                    },
+                    {
+                        "game": {
+                            "id": 4679448,
+                            "sportId": 1,
+                            "competitionId": 572,
+                            "seasonNum": 73,
+                            "stageNum": 3,
+                            "groupNum": 8,
+                            "competitionDisplayName": "UEFA Champions League - Octavos de final",
+                            "startTime": "2026-03-10T17:00:00-03:00",
+                            "statusGroup": 4,
+                            "statusText": "Finalizado",
+                            "shortStatusText": "Final",
+                            "gameTimeAndStatusDisplayType": 1,
+                            "homeCompetitor": {
+                                "id": 116,
+                                "countryId": 1,
+                                "sportId": 1,
+                                "name": "Newcastle United",
+                                "shortName": "Newcastle Utd",
+                                "score": 1,
+                                "isWinner": false,
+                                "nameForURL": "newcastle-united",
+                                "type": 1,
+                                "popularityRank": 7272,
+                                "imageVersion": 6,
+                                "color": "#FFFFFF",
+                                "awayColor": "#2CBA8A",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 1,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "awayCompetitor": {
+                                "id": 132,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "FC Barcelona",
+                                "shortName": "Barcelona",
+                                "score": 1,
+                                "isWinner": false,
+                                "nameForURL": "fc-barcelona",
+                                "type": 1,
+                                "popularityRank": 79013,
+                                "imageVersion": 6,
+                                "color": "#282E60",
+                                "awayColor": "#E2CFA5",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 2,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "winner": -1,
+                            "scores": [
+                                1,
+                                1
+                            ],
+                            "homeAwayTeamOrder": 1,
+                            "hasPointByPoint": false,
+                            "hasVideo": false
+                        },
+                        "played": true,
+                        "hasStats": true,
+                        "athleteStats": [
+                            {
+                                "type": 229,
+                                "value": "69",
+                                "logo": false
+                            },
+                            {
+                                "type": 232,
+                                "value": "1",
+                                "logo": false
+                            },
+                            {},
+                            {},
+                            {
+                                "type": 0,
+                                "value": "6.1",
+                                "logo": false,
+                                "bgColor": "#FFC107"
+                            }
+                        ],
+                        "relatedCompetitor": 132
+                    },
+                    {
+                        "game": {
+                            "id": 4467383,
+                            "sportId": 1,
+                            "competitionId": 11,
+                            "seasonNum": 98,
+                            "stageNum": 1,
+                            "roundNum": 27,
+                            "roundName": "Fecha",
+                            "competitionDisplayName": "LaLiga",
+                            "startTime": "2026-03-07T17:00:00-03:00",
+                            "statusGroup": 4,
+                            "statusText": "Finalizado",
+                            "shortStatusText": "Final",
+                            "gameTimeAndStatusDisplayType": 1,
+                            "homeCompetitor": {
+                                "id": 144,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "Athletic Club",
+                                "shortName": "Athletic",
+                                "score": 0,
+                                "isWinner": false,
+                                "nameForURL": "athletic-bilbao",
+                                "type": 1,
+                                "popularityRank": 12297,
+                                "imageVersion": 8,
+                                "color": "#FF0000",
+                                "awayColor": "#252233",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 1,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "awayCompetitor": {
+                                "id": 132,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "FC Barcelona",
+                                "shortName": "Barcelona",
+                                "score": 1,
+                                "isWinner": true,
+                                "nameForURL": "fc-barcelona",
+                                "type": 1,
+                                "popularityRank": 79013,
+                                "imageVersion": 6,
+                                "color": "#282E60",
+                                "awayColor": "#E2CFA5",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 2,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "winner": 2,
+                            "scores": [
+                                0,
+                                1
+                            ],
+                            "homeAwayTeamOrder": 1,
+                            "hasPointByPoint": false,
+                            "hasVideo": false
+                        },
+                        "played": true,
+                        "hasStats": true,
+                        "athleteStats": [
+                            {
+                                "type": 229,
+                                "value": "29",
+                                "logo": false
+                            },
+                            {},
+                            {},
+                            {},
+                            {
+                                "type": 0,
+                                "value": "6.5",
+                                "logo": false,
+                                "bgColor": "#FFC107"
+                            }
+                        ],
+                        "relatedCompetitor": 132
+                    },
+                    {
+                        "game": {
+                            "id": 4667259,
+                            "sportId": 1,
+                            "competitionId": 13,
+                            "seasonNum": 125,
+                            "stageNum": 6,
+                            "groupNum": 1,
+                            "competitionDisplayName": "Copa del Rey - Semifinales",
+                            "startTime": "2026-03-03T17:00:00-03:00",
+                            "statusGroup": 4,
+                            "statusText": "Finalizado",
+                            "shortStatusText": "Final",
+                            "gameTimeAndStatusDisplayType": 1,
+                            "homeCompetitor": {
+                                "id": 132,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "FC Barcelona",
+                                "shortName": "Barcelona",
+                                "score": 3,
+                                "aggregatedScore": 3,
+                                "isWinner": true,
+                                "nameForURL": "fc-barcelona",
+                                "type": 1,
+                                "popularityRank": 79013,
+                                "imageVersion": 6,
+                                "color": "#282E60",
+                                "awayColor": "#E2CFA5",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 1,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "awayCompetitor": {
+                                "id": 134,
+                                "countryId": 2,
+                                "sportId": 1,
+                                "name": "Atlético de Madrid",
+                                "shortName": "Atlético",
+                                "score": 0,
+                                "aggregatedScore": 4,
+                                "isWinner": false,
+                                "nameForURL": "atletico-madrid",
+                                "type": 1,
+                                "popularityRank": 39982,
+                                "imageVersion": 9,
+                                "color": "#FFFFFF",
+                                "awayColor": "#2C335D",
+                                "hasSquad": true,
+                                "hasTransfers": false,
+                                "competitorNum": 2,
+                                "hideOnSearch": false,
+                                "hideOnCatalog": false
+                            },
+                            "winner": 1,
+                            "scores": [
+                                3,
+                                0
+                            ],
+                            "homeAwayTeamOrder": 1,
+                            "hasPointByPoint": false,
+                            "hasVideo": false
+                        },
+                        "played": false,
+                        "hasStats": false,
+                        "athleteStats": [],
+                        "didNotPlayReason": "Lesionado",
+                        "injuryCategory": 1,
+                        "relatedCompetitor": 132
+                    }
+                ]
+            },
+            "transfers": [
+                {
+                    "competitorId": 132,
+                    "date": "2022-07-19T00:00:00-03:00",
+                    "transferId": 244326,
+                    "transferType": 2,
+                    "transferTitle": "Transferencia",
+                    "price": "€50M",
+                    "contractUntil": "01-07-2026 00:00",
+                    "active": true
+                },
+                {
+                    "competitorId": 331,
+                    "date": "2014-07-01T00:00:00-03:00",
+                    "transferType": 1,
+                    "transferTitle": "Pase libre",
+                    "price": "",
+                    "active": false
+                },
+                {
+                    "competitorId": 341,
+                    "date": "2010-07-01T00:00:00-03:00",
+                    "transferType": 2,
+                    "transferTitle": "Transferencia",
+                    "price": "€4.8M",
+                    "active": false
+                },
+                {
+                    "competitorId": 2211,
+                    "date": "2008-07-01T00:00:00-03:00",
+                    "transferType": 0,
+                    "active": false
+                },
+                {
+                    "competitorId": 2229,
+                    "date": "2006-07-01T00:00:00-03:00",
+                    "transferType": 2,
+                    "transferTitle": "Transferencia",
+                    "price": "",
+                    "active": false
+                }
+            ],
+            "trophies": {
+                "categories": [
+                    {
+                        "type": 2,
+                        "name": "Club",
+                        "selected": true,
+                        "trophies": [
+                            {
+                                "competitionId": 572,
+                                "name": "UEFA Champions League",
+                                "displayName": "UEFA Champions League (Europa)",
+                                "count": 1,
+                                "stats": {
+                                    "showColumnIcons": true,
+                                    "rowEntityType": "Competitor",
+                                    "columns": [
+                                        {
+                                            "num": 5,
+                                            "name": "Apariciones",
+                                            "order": 1,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 5
+                                            }
+                                        },
+                                        {
+                                            "num": 1,
+                                            "name": "Goles",
+                                            "order": 2,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 1
+                                            }
+                                        },
+                                        {
+                                            "num": 2,
+                                            "name": "Asistencias",
+                                            "order": 3,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 2
+                                            }
+                                        }
+                                    ],
+                                    "rows": [
+                                        {
+                                            "entityId": 331,
+                                            "title": "Bayern Munich",
+                                            "secondaryTitle": "2019/2020",
+                                            "num": 1,
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "10"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "15"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "5"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "competitionId": 11,
+                                "name": "LaLiga",
+                                "displayName": "LaLiga (España)",
+                                "count": 2
+                            },
+                            {
+                                "competitionId": 25,
+                                "name": "Bundesliga",
+                                "displayName": "Bundesliga (Alemania)",
+                                "count": 10
+                            },
+                            {
+                                "competitionId": 13,
+                                "name": "Copa del Rey",
+                                "displayName": "Copa del Rey (España)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 5096,
+                                "name": "Mundial de Clubes",
+                                "displayName": "Mundial de Clubes (Internacional)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 15,
+                                "name": "Supercopa",
+                                "displayName": "Supercopa (España)",
+                                "count": 3
+                            },
+                            {
+                                "competitionId": 472,
+                                "name": "Supercopa Europa",
+                                "displayName": "Supercopa Europa (Europa)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 28,
+                                "name": "DFB-Pokal",
+                                "displayName": "DFB-Pokal (Alemania)",
+                                "count": 4
+                            },
+                            {
+                                "competitionId": 32,
+                                "name": "Supercopa Alemana",
+                                "displayName": "Supercopa Alemana (Alemania)",
+                                "count": 6
+                            },
+                            {
+                                "competitionId": 153,
+                                "name": "Ekstraklasa",
+                                "displayName": "Ekstraklasa (Polonia)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 6280,
+                                "name": "Audi Cup",
+                                "displayName": "Audi Cup (Internacional)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 156,
+                                "name": "Super Cup",
+                                "displayName": "Super Cup (Polonia)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 157,
+                                "name": "Poland Cup",
+                                "displayName": "Poland Cup (Polonia)",
+                                "count": 1
+                            },
+                            {
+                                "competitionId": 7737,
+                                "name": "Trofeo Joan Gamper",
+                                "displayName": "Trofeo Joan Gamper (Internacional)",
+                                "count": 3
+                            }
+                        ]
+                    }
+                ]
+            },
+            "careerStats": {
+                "seasons": [
+                    {
+                        "key": "2026",
+                        "name": "2025/2026",
+                        "shortName": "25/26",
+                        "stats": {
+                            "categories": [
+                                {
+                                    "id": 1,
+                                    "name": "Club (FC Barcelona)",
+                                    "competitorId": 132
+                                }
+                            ],
+                            "tables": [
+                                {
+                                    "showColumnIcons": true,
+                                    "rowEntityType": "Competition",
+                                    "columns": [
+                                        {
+                                            "num": 5,
+                                            "name": "Apariciones",
+                                            "shortName": "Apariciones",
+                                            "order": 1,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 5
+                                            }
+                                        },
+                                        {
+                                            "num": 6,
+                                            "name": "Formación",
+                                            "shortName": "Formación",
+                                            "order": 2,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 6
+                                            }
+                                        },
+                                        {
+                                            "num": 1,
+                                            "name": "Goles",
+                                            "shortName": "Goles",
+                                            "order": 3,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 1
+                                            }
+                                        },
+                                        {
+                                            "num": 2,
+                                            "name": "Asistencias",
+                                            "shortName": "Asistencias",
+                                            "order": 4,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 2
+                                            }
+                                        },
+                                        {
+                                            "num": 3,
+                                            "name": "Tarjetas Amarillas",
+                                            "shortName": "Tarjetas Amarillas",
+                                            "order": 5,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 3
+                                            }
+                                        },
+                                        {
+                                            "num": 4,
+                                            "name": "Tarjetas Rojas",
+                                            "shortName": "Tarjetas Rojas",
+                                            "order": 6,
+                                            "entity": {
+                                                "type": "AthleteStatisticType",
+                                                "id": 4
+                                            }
+                                        }
+                                    ],
+                                    "rows": [
+                                        {
+                                            "entityId": 11,
+                                            "title": "LaLiga",
+                                            "num": 1,
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "23"
+                                                },
+                                                {
+                                                    "columnNum": 6,
+                                                    "value": "11"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "11"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 3,
+                                                    "value": "2"
+                                                },
+                                                {
+                                                    "columnNum": 4,
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entityId": 572,
+                                            "title": "UEFA Champions League",
+                                            "num": 2,
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "9"
+                                                },
+                                                {
+                                                    "columnNum": 6,
+                                                    "value": "7"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "4"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 3,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 4,
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entityId": 13,
+                                            "title": "Copa del Rey",
+                                            "num": 3,
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "3"
+                                                },
+                                                {
+                                                    "columnNum": 6,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 3,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 4,
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "entityId": 15,
+                                            "title": "Supercopa",
+                                            "num": 4,
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 6,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 3,
+                                                    "value": "0"
+                                                },
+                                                {
+                                                    "columnNum": 4,
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "summary": [
+                                        {
+                                            "title": "Total",
+                                            "values": [
+                                                {
+                                                    "columnNum": 5,
+                                                    "value": "36"
+                                                },
+                                                {
+                                                    "columnNum": 6,
+                                                    "value": "20"
+                                                },
+                                                {
+                                                    "columnNum": 1,
+                                                    "value": "16"
+                                                },
+                                                {
+                                                    "columnNum": 2,
+                                                    "value": "1"
+                                                },
+                                                {
+                                                    "columnNum": 3,
+                                                    "value": "2"
+                                                },
+                                                {
+                                                    "columnNum": 4,
+                                                    "value": "0"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "legend": [
+                                {
+                                    "title": "Apariciones",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 5
+                                    }
+                                },
+                                {
+                                    "title": "Formación",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 6
+                                    }
+                                },
+                                {
+                                    "title": "Goles",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 1
+                                    }
+                                },
+                                {
+                                    "title": "Asistencias",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 2
+                                    }
+                                },
+                                {
+                                    "title": "Tarjetas Amarillas",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 3
+                                    }
+                                },
+                                {
+                                    "title": "Tarjetas Rojas",
+                                    "icon": true,
+                                    "entity": {
+                                        "type": "AthleteStatisticType",
+                                        "id": 4
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "key": "-1",
+                        "name": "Total de su carrera",
+                        "shortName": "CAREER",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2025",
+                        "name": "2024/2025",
+                        "shortName": "24/25",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2024",
+                        "name": "2023/2024",
+                        "shortName": "23/24",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2023",
+                        "name": "2022/2023",
+                        "shortName": "22/23",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2022",
+                        "name": "2021/2022",
+                        "shortName": "21/22",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2021",
+                        "name": "2020/2021",
+                        "shortName": "20/21",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2020",
+                        "name": "2019/2020",
+                        "shortName": "19/20",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2019",
+                        "name": "2018/2019",
+                        "shortName": "18/19",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2018",
+                        "name": "2017/2018",
+                        "shortName": "17/18",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2017",
+                        "name": "2016/2017",
+                        "shortName": "16/17",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2016",
+                        "name": "2015/2016",
+                        "shortName": "15/16",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2015",
+                        "name": "2014/2015",
+                        "shortName": "14/15",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2014",
+                        "name": "2013/2014",
+                        "shortName": "13/14",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2013",
+                        "name": "2012/2013",
+                        "shortName": "12/13",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2012",
+                        "name": "2011/2012",
+                        "shortName": "11/12",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2011",
+                        "name": "2010/2011",
+                        "shortName": "10/11",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2010",
+                        "name": "2009/2010",
+                        "shortName": "9/10",
+                        "stats": {
+                            "tables": []
+                        }
+                    },
+                    {
+                        "key": "2009",
+                        "name": "2008/2009",
+                        "shortName": "8/9",
+                        "stats": {
+                            "tables": []
+                        }
+                    }
+                ]
+            },
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "HasPenaltiesShots": true,
+            "id": 1857,
+            "name": "Robert Lewandowski",
+            "shortName": "Lewandowski",
+            "nameForURL": "robert-lewandowski",
+            "sportId": 1,
+            "clubId": 132,
+            "nationalityId": 37,
+            "nationalTeamId": 5038,
+            "imageVersion": 0
+        }
+    ],
+    "sports": [
+        {
+            "id": 1,
+            "name": "Fútbol",
+            "nameForURL": "football",
+            "drawSupport": true,
+            "imageVersion": 1
+        }
+    ],
+    "countries": [
+        {
+            "id": 2,
+            "name": "España",
+            "nameForURL": "spain",
+            "sportTypes": [
+                1,
+                2,
+                5,
+                8,
+                9
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        },
+        {
+            "id": 19,
+            "name": "Europa",
+            "nameForURL": "europe",
+            "sportTypes": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "imageVersion": 1,
+            "isInternational": true
+        },
+        {
+            "id": 4,
+            "name": "Alemania",
+            "nameForURL": "germany",
+            "sportTypes": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        },
+        {
+            "id": 54,
+            "name": "Internacional",
+            "nameForURL": "international",
+            "sportTypes": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                9,
+                11,
+                13
+            ],
+            "imageVersion": 1,
+            "isInternational": true
+        },
+        {
+            "id": 37,
+            "name": "Polonia",
+            "nameForURL": "poland",
+            "sportTypes": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                8
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        },
+        {
+            "id": 1,
+            "name": "Inglaterra",
+            "nameForURL": "england",
+            "sportTypes": [
+                1,
+                9,
+                11
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        },
+        {
+            "id": 3,
+            "name": "Italia",
+            "nameForURL": "italy",
+            "sportTypes": [
+                1,
+                2,
+                4,
+                6,
+                7,
+                8,
+                9
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        },
+        {
+            "id": 331,
+            "name": "Illinois (EEUU)",
+            "nameForURL": "illinois-(usa)",
+            "imageVersion": 2,
+            "isInternational": false
+        }
+    ],
+    "competitions": [
+        {
+            "id": 11,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "LaLiga",
+            "hasBrackets": false,
+            "nameForURL": "laliga",
+            "popularityRank": 98928258,
+            "imageVersion": 5,
+            "currentStageType": 1,
+            "color": "#121417",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 98,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 572,
+            "countryId": 19,
+            "sportId": 1,
+            "name": "UEFA Champions League",
+            "shortName": "Champions",
+            "hasBrackets": true,
+            "nameForURL": "uefa-champions-league",
+            "popularityRank": 117681917,
+            "imageVersion": 5,
+            "currentStageType": 3,
+            "color": "#09123E",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 73,
+            "currentStageNum": 3,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        },
+        {
+            "id": 13,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "Copa del Rey",
+            "hasBrackets": true,
+            "nameForURL": "copa-del-rey",
+            "popularityRank": 47426729,
+            "imageVersion": 5,
+            "currentStageType": 3,
+            "color": "#9C0223",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 125,
+            "currentStageNum": 7,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 15,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "Supercopa",
+            "longName": "Supercopa de España",
+            "hasBrackets": false,
+            "nameForURL": "super-cup",
+            "popularityRank": 22482759,
+            "imageVersion": 4,
+            "currentStageType": 3,
+            "color": "#71B5CC",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 52,
+            "currentStageNum": 2,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 5421,
+            "countryId": 19,
+            "sportId": 1,
+            "name": "Clasificatorios UEFA",
+            "longName": "Clasificatorios Europa - Mundial",
+            "hasBrackets": true,
+            "nameForURL": "uefa-wc-qualification",
+            "popularityRank": 25017509,
+            "imageVersion": 1,
+            "currentStageType": 3,
+            "color": "#A51111",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 8,
+            "currentStageNum": 2,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        },
+        {
+            "id": 25,
+            "countryId": 4,
+            "sportId": 1,
+            "name": "Bundesliga",
+            "hasBrackets": false,
+            "nameForURL": "bundesliga",
+            "popularityRank": 56534354,
+            "imageVersion": 2,
+            "currentStageType": 1,
+            "color": "#A82325",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 117,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 5096,
+            "countryId": 54,
+            "sportId": 1,
+            "name": "Mundial de Clubes",
+            "hasBrackets": true,
+            "nameForURL": "club-world-cup",
+            "popularityRank": 36710087,
+            "imageVersion": 9,
+            "currentStageType": 3,
+            "color": "#326295",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 26,
+            "currentStageNum": 5,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        },
+        {
+            "id": 472,
+            "countryId": 19,
+            "sportId": 1,
+            "name": "Supercopa Europa",
+            "hasBrackets": false,
+            "nameForURL": "uefa-super-cup",
+            "popularityRank": 18492144,
+            "imageVersion": 2,
+            "currentStageType": 3,
+            "color": "#0F2147",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 51,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        },
+        {
+            "id": 28,
+            "countryId": 4,
+            "sportId": 1,
+            "name": "DFB-Pokal",
+            "hasBrackets": true,
+            "nameForURL": "dfb-pokal",
+            "popularityRank": 18362918,
+            "imageVersion": 2,
+            "currentStageType": 3,
+            "color": "#20AE80",
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 83,
+            "currentStageNum": 5,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 32,
+            "countryId": 4,
+            "sportId": 1,
+            "name": "Supercopa Alemana",
+            "hasBrackets": false,
+            "nameForURL": "super-cup",
+            "popularityRank": 2954495,
+            "imageVersion": 3,
+            "currentStageType": 3,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 28,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 153,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Ekstraklasa",
+            "longName": "Poland  Ekstraklasa",
+            "hasBrackets": false,
+            "nameForURL": "ekstraklasa",
+            "popularityRank": 511352,
+            "imageVersion": 1,
+            "currentStageType": 1,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 94,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 6280,
+            "createdAt": "2015-07-25T01:08:02.57",
+            "countryId": 54,
+            "sportId": 1,
+            "name": "Audi Cup",
+            "hasBrackets": false,
+            "nameForURL": "audi-cup",
+            "popularityRank": 360705,
+            "imageVersion": 1,
+            "currentStageType": 1,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 2,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        },
+        {
+            "id": 156,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Super Cup",
+            "hasBrackets": false,
+            "nameForURL": "super-cup",
+            "popularityRank": 254192,
+            "imageVersion": 1,
+            "currentStageType": 3,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 36,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 157,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Poland Cup",
+            "shortName": "Cup",
+            "hasBrackets": false,
+            "nameForURL": "poland-cup",
+            "popularityRank": 237250,
+            "imageVersion": 2,
+            "currentStageType": 3,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 66,
+            "currentStageNum": 5,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": false
+        },
+        {
+            "id": 7737,
+            "createdAt": "2021-08-05T11:23:40.793",
+            "countryId": 54,
+            "sportId": 1,
+            "name": "Trofeo Joan Gamper",
+            "hasBrackets": false,
+            "nameForURL": "joan-gamper-trophy",
+            "popularityRank": 188851,
+            "imageVersion": 2,
+            "currentStageType": 3,
+            "competitorsType": 0,
+            "currentPhaseNum": -1,
+            "currentSeasonNum": 62,
+            "currentStageNum": 1,
+            "hideOnCatalog": false,
+            "hideOnSearch": false,
+            "isInternational": true
+        }
+    ],
+    "competitors": [
+        {
+            "id": 132,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "FC Barcelona",
+            "shortName": "Barcelona",
+            "symbolicName": "FCB",
+            "nameForURL": "fc-barcelona",
+            "type": 1,
+            "popularityRank": 79013,
+            "imageVersion": 6,
+            "color": "#282E60",
+            "awayColor": "#E2CFA5",
+            "mainCompetitionId": 11,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 5038,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Polonia",
+            "longName": "Selección de Polonia",
+            "symbolicName": "POL",
+            "nameForURL": "poland",
+            "type": 2,
+            "popularityRank": 5159,
+            "imageVersion": 1,
+            "color": "#FFFFFF",
+            "awayColor": "#AF0D1A",
+            "mainCompetitionId": 6316,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 331,
+            "countryId": 4,
+            "sportId": 1,
+            "name": "Bayern Munich",
+            "shortName": "Bayern",
+            "longName": "Bayern München",
+            "symbolicName": "BAM",
+            "nameForURL": "bayern-munich",
+            "type": 1,
+            "popularityRank": 47700,
+            "imageVersion": 4,
+            "color": "#F23A3A",
+            "awayColor": "#FFFFFF",
+            "mainCompetitionId": 25,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 341,
+            "countryId": 4,
+            "sportId": 1,
+            "name": "Borussia Dortmund",
+            "shortName": "Dortmund",
+            "symbolicName": "BDO",
+            "nameForURL": "borussia-dortmund",
+            "type": 1,
+            "popularityRank": 32519,
+            "imageVersion": 6,
+            "color": "#FFDA27",
+            "awayColor": "#C7CCD0",
+            "mainCompetitionId": 25,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 2211,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Lech Poznan",
+            "symbolicName": "POZ",
+            "nameForURL": "lech-poznan",
+            "type": 1,
+            "popularityRank": 466,
+            "imageVersion": 3,
+            "color": "#002F8D",
+            "awayColor": "#FFFFFF",
+            "mainCompetitionId": 153,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 2229,
+            "countryId": 37,
+            "sportId": 1,
+            "name": "Znicz Pruszkow",
+            "symbolicName": "ZNC",
+            "nameForURL": "znicz-pruszkow",
+            "type": 1,
+            "popularityRank": 2,
+            "imageVersion": 1,
+            "color": "#F2F200",
+            "mainCompetitionId": 154,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 116,
+            "countryId": 1,
+            "sportId": 1,
+            "name": "Newcastle United",
+            "shortName": "Newcastle Utd",
+            "longName": "Newcastle United FC",
+            "symbolicName": "NEW",
+            "nameForURL": "newcastle-united",
+            "type": 1,
+            "popularityRank": 7272,
+            "imageVersion": 6,
+            "color": "#FFFFFF",
+            "awayColor": "#2CBA8A",
+            "mainCompetitionId": 7,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 135,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "Sevilla FC",
+            "shortName": "Sevilla",
+            "symbolicName": "SEV",
+            "nameForURL": "sevilla",
+            "type": 1,
+            "popularityRank": 22364,
+            "imageVersion": 11,
+            "color": "#FFFFFF",
+            "awayColor": "#C40000",
+            "mainCompetitionId": 11,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 144,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "Athletic Club",
+            "shortName": "Athletic",
+            "symbolicName": "ATH",
+            "nameForURL": "athletic-bilbao",
+            "type": 1,
+            "popularityRank": 12297,
+            "imageVersion": 8,
+            "color": "#FF0000",
+            "awayColor": "#252233",
+            "mainCompetitionId": 11,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 134,
+            "countryId": 2,
+            "sportId": 1,
+            "name": "Atlético de Madrid",
+            "shortName": "Atlético",
+            "symbolicName": "ATM",
+            "nameForURL": "atletico-madrid",
+            "type": 1,
+            "popularityRank": 39982,
+            "imageVersion": 9,
+            "color": "#FFFFFF",
+            "awayColor": "#2C335D",
+            "mainCompetitionId": 11,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 227,
+            "countryId": 3,
+            "sportId": 1,
+            "name": "AC Milan",
+            "symbolicName": "MIL",
+            "nameForURL": "ac-milan",
+            "type": 1,
+            "popularityRank": 34079,
+            "imageVersion": 11,
+            "color": "#FF0000",
+            "awayColor": "#FFFFFF",
+            "mainCompetitionId": 17,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        },
+        {
+            "id": 1333,
+            "countryId": 331,
+            "sportId": 1,
+            "name": "Chicago Fire",
+            "symbolicName": "CHI",
+            "nameForURL": "chicago-fire",
+            "type": 1,
+            "popularityRank": 568,
+            "imageVersion": 5,
+            "color": "#FF2830",
+            "awayColor": "#D7E7EF",
+            "mainCompetitionId": 104,
+            "hasSquad": true,
+            "hasTransfers": false,
+            "competitorNum": 0,
+            "hideOnSearch": false,
+            "hideOnCatalog": false
+        }
+    ]
+}

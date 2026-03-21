@@ -46,7 +46,7 @@ const Player = ({ player }) => {
             <div class="flex flex-col ">
 
                 <div class={"flex flex-row items-center gap-2"}>
-                    <span class="font-mono text-lg text-center font-semibold w-5">{player.jersey_num}</span>
+                    <span class="font-mono text-lg text-center font-semibold w-5">{player.jersey_num != "0"? player.jersey_num:"-"}</span>
                     <p class="text-sm font-medium ">
                         {player.player_short_name}
                     </p>

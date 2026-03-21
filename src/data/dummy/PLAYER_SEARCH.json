@@ -1,0 +1,46 @@
+{
+    "sports": [
+        {
+            "id": 1,
+            "name": "Fútbol",
+            "nameForURL": "football",
+            "drawSupport": true,
+            "imageVersion": 1
+        }
+    ],
+    "countries": [
+        {
+            "id": 37,
+            "name": "Polonia",
+            "nameForURL": "poland",
+            "sportTypes": [
+                1,
+                2,
+                4,
+                5,
+                6,
+                8
+            ],
+            "imageVersion": 1,
+            "isInternational": false
+        }
+    ],
+    "competitions": [],
+    "competitors": [],
+    "athletes": [
+        {
+            "age": 0,
+            "gender": 0,
+            "popularityRank": 1540,
+            "id": 1857,
+            "name": "Robert Lewandowski",
+            "shortName": "Lewandowski",
+            "nameForURL": "robert-lewandowski",
+            "sportId": 1,
+            "clubId": 132,
+            "nationalityId": 37,
+            "imageVersion": 75,
+            "clubName": "FC Barcelona"
+        }
+    ]
+}

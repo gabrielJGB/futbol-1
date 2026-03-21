@@ -36,7 +36,7 @@ const Events = ({ id }) => {
                             <div class={"flex flex-col-reverse gap-2 "}>
                                 {
                                     stage.rows.map((row, j) => (
-                                        <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b3 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
+                                        <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b2 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
 
                                             <div class={"text-[20px] font-semibold text-primary"}>{row.time}</div>
                                             <Event event={row.events[0]} />

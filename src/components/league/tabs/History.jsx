@@ -16,7 +16,7 @@ const abbreviatePosition = (pos) => {
 };
 
 
-const History = ({ id}) => {
+const History = ({ id }) => {
 
 
   const [historyTable, setHistoryTable] = useState(false)
@@ -47,13 +47,13 @@ const History = ({ id}) => {
 
   return (
     <div class={"flex flex-col gap-2"}>
-      
+
 
       <div class={"grid md:grid-cols-2 grid-cols-1 gap-6"}>
 
 
-        {historyTable && <Table table={historyTable} leagueId={id}/>}
-        {rankingTable && <Table table={rankingTable} leagueId={id}/>}
+        {historyTable && <Table table={historyTable} leagueId={id} />}
+        {rankingTable && <Table table={rankingTable} leagueId={id} />}
 
 
       </div>
@@ -63,7 +63,7 @@ const History = ({ id}) => {
 }
 
 
-const Table = ({ table,leagueId }) => {
+const Table = ({ table, leagueId }) => {
   let isRankingTable = false
 
   if (table.length) {
@@ -84,7 +84,7 @@ const Table = ({ table,leagueId }) => {
         </span>
       </div>
 
-      <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+      <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px] "} >
         <thead>
 
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
@@ -93,7 +93,11 @@ const Table = ({ table,leagueId }) => {
             }
             {table.columns.map((col) => (
               <th key={col.key} class="text-center px-0 py-1">
-                {col.title.replace("Torneo", "CAMPEÓN").replace("Campeón", "AÑO")}
+                {
+                  col.title
+                    .replace("Torneo", "CAMPEÓN")
+                    .replace("Campeón", "AÑO")
+                }
               </th>
             ))}
           </tr>
@@ -105,7 +109,7 @@ const Table = ({ table,leagueId }) => {
             const teamId = player.id || 'unknown';
             const pos = abbreviatePosition(player.position);
             const tableId = row.trigger_type === 2 ? row.season_id : null
-            const leagueSeason = row.values[0].value.replaceAll("/","_")
+            const leagueSeason = row.values[0].value.replaceAll("/", "_")
 
             return (
               <tr
@@ -118,14 +122,14 @@ const Table = ({ table,leagueId }) => {
                   <Link
                     // @ts-ignore
                     href={`/team/${encodeURIComponent(teamId)}`}
-                    class="px-1 py-1 flex items-center text-sm  hover:underline"
+                    class="px-1 py-0 flex items-center text-sm  hover:underline"
                   >
                     <img
                       src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
                       alt="Escudo Equipo"
                       class="h-5 w-5 mr-2  object-contain"
                     />
-                    <div class={"w-max whitespace-nowrap text-[13px] font-semibold"}>
+                    <div class={"line-clamp-2  text-[13px] font-semibold"}>
                       {player.name}
                     </div>
                   </Link>

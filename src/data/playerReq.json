@@ -1,0 +1,9 @@
+{
+    "headers": {
+        "sec-fetch-site": "none",
+        "sec-fetch-user": "?1"
+    },
+    "referrerPolicy": "strict-origin-when-cross-origin",
+    "body": null,
+    "method": "GET"
+}

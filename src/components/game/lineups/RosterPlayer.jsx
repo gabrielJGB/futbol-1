@@ -122,52 +122,50 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
 
     return (
-        <div class={"flex flex-row justify-between items-center px-0 py-0 bg-[#015A1C] text-sm"}>
+        <Link href={`/player/${player.name}`} class={"bg-[#015A1C] hover:bg-[#0c792d] active:bg-[#0c792d]"}>
+            <div class={"flex flex-row justify-between items-center px-0 py-0  text-sm"}>
 
-            <div class={"flex flex-row items-center"}>
+                <div class={"flex flex-row items-center"}>
 
 
-                <div
-                    title={player.formation_position}
-                    class={`${getPosColor(player.position)} cursor-help ml-1 rounded w-[34px] text-center py-1 bg-black text-xs font-semibold`}>
-                    {getPosText(player.position)}
-                </div>
-
-                <div
-                    title={player.is_captain ? "Capitán" : undefined}
-                    class={`rounded  m-1 font-semibold text-xs w-[30px] ${player.is_captain ? "cursor-help bg-blue-600  border-white" : "bg-white text-black"} py-1 text-center`}>
-                    {player.jersey_num}
-                </div>
-
-                <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
-
-                <Link
-                    // @ts-ignore
-                    href={`/player/${player.name}`} class={"text-shadow-xs text-shadow-black hover:underline"}>{player.name}</Link>
-                {/* <a target={"_blank"} href={`https://www.google.com/search?q=${player.name}`} class={"text-shadow-xs text-shadow-black hover:underline"}>
-                    {player.name}
-                </a> */}
-                {
-                    missingReason &&
-                    <div class={"pl-2 text-sm text-white text-shadow-xs text-shadow-gray-900"}>
-
-                        {getMissingImg(missingReason)}
-
+                    <div
+                        title={player.formation_position}
+                        class={`${getPosColor(player.position)} cursor-help ml-1 rounded w-[34px] text-center py-1 bg-black text-xs font-semibold`}>
+                        {getPosText(player.position)}
                     </div>
-                }
 
-                <div class={"flex items-center flex-warp gap-1 px-1"}>
-                    {getEvents(player, isBench).map((x) => x)}
+                    <div
+                        title={player.is_captain ? "Capitán" : undefined}
+                        class={`rounded  m-1 font-semibold text-xs w-[30px] ${player.is_captain ? "cursor-help bg-blue-600  border-white" : "bg-white text-black"} py-1 text-center`}>
+                        {player.jersey_num}
+                    </div>
+
+                    <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
+
+                    <div class={"text-shadow-xs text-shadow-black "}>{player.name}</div>
+
+                    {
+                        missingReason &&
+                        <div class={"pl-2 text-sm text-white text-shadow-xs text-shadow-gray-900"}>
+
+                            {getMissingImg(missingReason)}
+
+                        </div>
+                    }
+
+                    <div class={"flex items-center flex-warp gap-1 px-1"}>
+                        {getEvents(player, isBench).map((x) => x)}
+                    </div>
+
+                </div>
+
+                <div class={"w-15 flex flex-row justify-between text-xs text-orange-300 pr-1"}>
+                    <div title="Altura" class={"cursor-help "}>{player.height ? player.height : ""}</div>
+                    <div title="Edad" class={"cursor-help "}>{player.age}</div>
                 </div>
 
             </div>
-
-            <div class={"w-15 flex flex-row justify-between text-xs text-orange-300 pr-1"}>
-                <div title="Altura" class={"cursor-help "}>{player.height ? player.height : ""}</div>
-                <div title="Edad" class={"cursor-help "}>{player.age}</div>
-            </div>
-
-        </div>
+        </Link>
     )
 }
 

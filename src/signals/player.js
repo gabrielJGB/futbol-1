@@ -1,3 +1,3 @@
 import { signal } from "@preact/signals";
 
-export const tabs = signal(false);
+export const selectedTab = signal(window.innerWidth < 768 ? "fixture":"principal");

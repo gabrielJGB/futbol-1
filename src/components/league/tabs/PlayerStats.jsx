@@ -43,7 +43,7 @@ const Table = ({ table }) => {
   const visibleRows = showAll ? table.rows : table.rows.slice(0, 10);
 
   return (
-    <div class="bg-[#000000] text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
+    <div class="bg-[#000000]  text-gray-100 rounded  overflow-hidden h-min shadow shadow-gray-900">
       <div class="px-4 py-1 bg-[#176115] border-b border-gray-700 flex items-center justify-between">
         <h2 class="text-xl font-bold">{table.name}</h2>
         <span class="text-sm text-gray-400">
@@ -51,7 +51,7 @@ const Table = ({ table }) => {
         </span>
       </div>
 
-      <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+      <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px]"} >
         <thead>
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
             <th class="">#</th>
@@ -78,7 +78,7 @@ const Table = ({ table }) => {
                 key={row.num}
                 class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
               >
-                <td class="px-1 py-1 font-semibold  text-start">{row.num}</td>
+                <td class="px-1 py-1 font-semibold  text-center">{row.num}</td>
 
                 <td class="" >
                   <Link
@@ -89,9 +89,9 @@ const Table = ({ table }) => {
                     <img
                       src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
                       alt="Escudo Equipo"
-                      class="h-5 w-5 mr-2  object-contain drop-shadow-xs drop-shadow-black"
+                      class="h-5 w-5 mr-2  object-contain "
                     />
-                    <div class={"w-max"}>
+                    <div class={"w-max text-sm"}>
                     {player.name}
                     </div>
                   </Link>

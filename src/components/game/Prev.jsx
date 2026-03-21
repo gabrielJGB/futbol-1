@@ -9,7 +9,7 @@ const Prev = ({ id }) => {
   const { data } = useGame(id)
   const { game } = data
 
-  console.log(game);
+  
 
 
   return (

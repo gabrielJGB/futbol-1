@@ -75,7 +75,7 @@ const Team = ({ team, showCountryFlags }) => {
                         <img src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-9 h-4" />
                     }
                 </div>
-                <div class={"md:text-sm text-xs text-center font-semibold"}>{team.name}</div>
+                <div class={"md:text-sm text-xs text-center font-semibold md:w-auto w-[82px]"}>{team.name}</div>
             </div>
         </Link>
     )

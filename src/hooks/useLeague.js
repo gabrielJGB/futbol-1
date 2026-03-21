@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import { fetcher } from '@/utils/fetcher';
 import { selectedRound } from '@/signals/league';
-import data from '@/data/dummy/LEAGUE_ARG1.json';
+import data from '@/data/dummy/LEAGUE_CHAMPIONS.json';
 import dataGames from '@/data/dummy/FECHA_GAMES.json';
 
 

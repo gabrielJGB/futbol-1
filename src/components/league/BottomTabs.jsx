@@ -33,7 +33,7 @@ export default function BottomTabs({ id }) {
 
     return (
 
-        <div class={"sticky md:relative md:order-none"}>
+        <div class={"md:relative fixed  w-full md:w-auto bottom-0 "}>
 
             <BottomNavigation
                 showLabels

@@ -34,10 +34,11 @@ const League = ({ id }) => {
   const { games, league, teamStats, leagueHistory, gamesError, leagueError, gamesLoading, leagueLoading } = useLeague(id)
 
   useEffect(() => {
-
+    document.title =  league.league.name + " - Fútbol 1"
     selectedTab.value = window.innerWidth < 768 ? "fixture" : "principal"
-
   }, [])
+
+      
 
 
   if (gamesLoading || leagueLoading)
@@ -46,15 +47,15 @@ const League = ({ id }) => {
         <Loading />
       </div>
     )
-
+  //"relative  md:mx-12 md:rounded-t md:p-0   md:mt-2  overflow-x-auto px-0 shadow-black md:shadow-lg bg-background/70 border-x-[1px] border-borderc  md:col-start-2 flex flex-col"
 
   return (
-    <div class="relative  md:mx-12 md:rounded-t md:p-0 min-h-screen  md:mt-2  overflow-x-auto px-0 shadow-black shadow-lg bg-background/70 border-x-[1px] border-borderc  md:col-start-2 flex flex-col">
+    <div class="relative min-h-screen md:mx-12 md:rounded-t md:p-0   md:mt-2  overflow-x-auto px-0 shadow-black md:shadow-lg bg-background/70 border-x-[1px] border-borderc  md:col-start-2 flex flex-col">
 
       <LeagueHeader id={id} />
-      <BottomTabs id={id} />
 
-      <div class={"md:order-2 mx-1 mb-4"}>
+
+      <div class={"md:order-2 mx-1 mb-20"}>
 
 
         <div class={`${selectedTab.value === "principal" ? "" : "hidden"}  grid ${league.tables_groups != undefined ? "grid-cols-2 mx-4" : "grid-cols-1 mx-50"} gap-10 md:mt-7  mb-20`}>
@@ -81,6 +82,9 @@ const League = ({ id }) => {
         </div>
 
       </div>
+
+
+      <BottomTabs id={id} />
 
     </div>
   )

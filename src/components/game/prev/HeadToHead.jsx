@@ -3,9 +3,9 @@ import { GameCard } from '@/components/home'
 
 const HeadToHead = ({ game }) => {
 
-    const games = game.head_to_head.games
+    let games = game?.head_to_head?.games
 
-    // console.log(game);
+    
 
 
     return (
@@ -22,7 +22,7 @@ const HeadToHead = ({ game }) => {
                                 key={i}
                                 // @ts-ignore
                                 game={_game}
-                                showCountryFlags={true}
+                                showCountryFlags={false}
                                 index={i}
                             />
                         </div>

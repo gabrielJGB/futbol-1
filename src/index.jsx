@@ -22,12 +22,19 @@ const RedirectToToday = () => {
 
 }
 
+/**
+ relative border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 max-lg:h-66 max-lg:border-t lg:border-l dark:[--pattern-fg:var(--color-white)]/10
+ * 
+
+ h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]
+ */
+
 export function App() {
 
 	return (
 		<LocationProvider  >
 			
-			<div class={" bg-[url('/bg.png')] h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
+			<div class={" bg-[url('/bg.png')] h-full  min-h-screen col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
 				<Header />
 				<main class={` grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}>
 					<Menu />

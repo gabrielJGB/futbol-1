@@ -17,17 +17,18 @@ const getResultElement = (elem) => {
 
 const Table = ({ table }) => {
 
+    console.log(table);
 
     return (
         <div>
             <h2 class={"w-full  px-3 shadow shadow-gray-900 bg-[#176115]  font-semibold text-white text-start rounded-t-sm"}>{table.name}</h2>
-            <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+            <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px] "} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-sm">
                         <th class="text-center">#</th>
                         <th class="w-[120px]">Equipo</th>
                         {
-                            table.columns.map((col) => (
+                            table.columns.filter(c => c.key != "{trend}").map((col) => (
 
                                 <th title={col.key} class="w-[25px] text-center text-xs">{col.title}</th>
                             ))
@@ -41,7 +42,7 @@ const Table = ({ table }) => {
                     {table.rows.map((row, i) => {
                         return (
                             <tr class={`text-black text-sm border-b border-[#333] even:bg-[#E7E7E7] odd:bg-[#D5D5D5]`}>
-                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[10px] hover:text-white"}>{i + 1}</td>
+                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : "") }} class={"text-center hover:text-white w-[20px]"}>{i + 1}</td>
 
                                 <td class="font-semibold   gap-1 p-[3px]">
                                     <Link
@@ -57,24 +58,15 @@ const Table = ({ table }) => {
                                     </Link>
                                 </td>
                                 {
-                                    row.values.map((item, i) => {
+                                    row.values.filter(c=>c.key!="{trend}").map((item, i) => {
                                         const key = table.columns[i].key
                                         const val = row.values.find(row => row.key === key)
 
-                                        return (<td class={`${key === "Points" ? "font-semibold" : ""} text-center`}>
-                                            {
-                                                typeof (val.value) === 'object' ?
-                                                    <div class={"flex text-xs font-semibold flex-row-reverse justify-center gap-[1px]"}>
-                                                        {
-                                                            val.value?.map((elem, i) => (
-                                                                getResultElement(elem)
-                                                            ))
-                                                        }
-                                                    </div>
-                                                    :
-                                                    <div>{val.value}</div>
-                                            }
-                                        </td>)
+                                        return (
+                                            <td class={`${key === "Points" ? "font-semibold" : ""} text-center`}>
+                                                <div class={"px-1"}>{val.value}</div>
+                                            </td>
+                                        )
                                     })
                                 }
                             </tr>

@@ -41,7 +41,7 @@ export default function Calendar_({ date }) {
   return (
 
 
-    <div class={`${showCalendar.value ? "md:static -right-[0%]" : "md:static -right-[100%]"} transition-all flex  flex-col items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  md:bg-transparent  md:h-max  md:rounded-lg md:mt-5 backdrop-blur-xs`}>
+    <div class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs" : "md:static -right-[100%] backdrop-blur-none"} transition-all flex  flex-col items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  md:bg-transparent  md:h-max  md:rounded-lg md:mt-5 `}>
 
       <div class={"flex flex-col gap-1"}>
 

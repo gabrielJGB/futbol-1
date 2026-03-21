@@ -151,12 +151,12 @@ const Team = ({ team, showCountryFlags }) => {
 
 
                 <div class={"z-0 relative"}>
-                    <img loading={"lazy"} style={{ height: 20, width: 20 }} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black  object-contain " />
+                    <img style={{ height: 20, width: 20 }} src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="drop-shadow-xs drop-shadow-black  object-contain " />
                     {/* drop-shadow-xs drop-shadow-black */}
 
                     {
                         showCountryFlags &&
-                        <img loading={"lazy"} style={{ height: 12, width: 12 }} src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3" />
+                        <img style={{ height: 12, width: 12 }} src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-4 h-3" />
                     }
                 </div>
 

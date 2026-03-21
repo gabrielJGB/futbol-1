@@ -23,7 +23,7 @@ const Table = ({ table }) => {
                 </span>
             </div>
 
-            <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+            <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px] "} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
                         <th class="">#</th>
@@ -49,7 +49,7 @@ const Table = ({ table }) => {
                                 key={row.num}
                                 class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
                             >
-                                <td class="px-1 py-1 font-semibold  text-start">{row.num}</td>
+                                <td class="px-1 py-1 font-semibold  text-center">{row.num}</td>
 
                                 <td class="">
                                     <Link

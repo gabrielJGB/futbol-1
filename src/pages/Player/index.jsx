@@ -1,108 +1,73 @@
 // @ts-nocheck
-import React from 'react'
+
 import { useEffect, useState } from "preact/hooks";
 import { useLocation } from 'preact-iso'
 import { fetcher } from "@/utils/fetcher";
-import player from '@/data/dummy/PLAYER2.json'
 import { MdStadium } from 'react-icons/md'
 import { BiCalendar } from "react-icons/bi";
 import { MapPin } from "lucide-preact";
 import { Loading } from "@/components/common";
-import {
-    PlayerInfo,
-    NextGame,
-    TeamHistory,
-    Stats,
-    Last5Games,
-    News,
-    Related,
-    Tabs
-} from '@/components/player'
+import { usePlayer } from '@/hooks/usePlayer';
+import PlayerHeader from '@/components/player/PlayerHeader';
+import BottomTabs from '@/components/player/BottomTabs';
+import LastGames from "@/components/player/LastGames";
+import Trophies from "@/components/player/Trophies";
+import Transfers from "@/components/player/Transfers";
+import Stats from "@/components/player/Stats";
 
 
 const Player = ({ name }) => {
 
-    const [loading, setLoading] = useState(false)
-    const [player, setPlayer] = useState(false)
-    const [events, setEvents] = useState(false)
-    const [eventsInfo, setEventsInfo] = useState(false)
-    const [stats, setStats] = useState(false)
-    const [tabs, setTabs] = useState([])
 
-    const URL_BASE = ""
+    const { player, isLoading, notFound, error } = usePlayer(name);
 
+    if (!name) return <p></p>;
+    if (isLoading) return <div class={"md:col-start-2 col-start-1"}>
+        <Loading />
+    </div>;
+    if (error) return <p>Error de conexión con la API.</p>;
+    if (notFound) return <p>Jugador "{name}" no encontrado.</p>;
 
-    // const [events, setEvents] = useState(player.gameLog.statistics[0].events)
-    // const [eventsInfo, setEventsInfo] = useState(player.gameLog.events)
-    // const [stats, setStats] = useState(player.gameLog.statistics[0])
-    // const [active, setActive] = useState(null)
+    /**
+     * HEADER: name, age, playerDetails[], nationalityName, position{}, contractUntil
+     * PALMARÉS: trophies.categories[] // [clubes,internacional]
+     * 
+     * ULTIMOS PARTIDOS: lastMatches[]
+     * 
+     * ESTADISTICAS: careerStats.seasons[] // (temporadas disponibles (.key))
+     * primer render: careerStats.seasons[0] // (temporada actual)
+     * 
+     * Stats endpoint (temporada):
+     * stats.tables[] // [clubes,internacional] 
+     * 
+     * CARRERA: transfers[]
+     */
 
 
     useEffect(() => {
         document.title = name + " - Fútbol 1"
-        setLoading(true)
-        const url = `${URL_BASE}https://site.web.api.espn.com/apis/search/v2?region=ar&lang=es&limit=10&page=1&dtciVideoSearch=true&query=${name}`
-        fetcher(url).then((res) => {
-            // console.log(res);
-
-            if (res.totalFound > 0 && res.results[0].totalFound > 0 && res.results[0].type === "player") {
-                const player = res.results[0].contents[0]
-                const id = player.uid.split("a:")[1]
-
-                const url1 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/bio?region=ar&lang=es`
-                const url2 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}?region=ar&lang=es`
-                const url3 = `${URL_BASE}https://site.web.api.espn.com/apis/common/v3/sports/soccer/athletes/${id}/overview?region=ar&lang=es`
-
-                fetcher(url1).then(res1 => {
-                    fetcher(url2).then(res2 => {
-                        fetcher(url3).then(res3 => {
-                            const player = { ...res1, ...res2, ...res3 }
-                            setPlayer(player)
-                            setStats("gameLog" in player && player.gameLog.statistics[0])
-                            setEvents("gameLog" in player && player.gameLog.statistics[0].events)
-                            setEventsInfo("gameLog" in player && player.gameLog.events)
-
-                        }).finally(() => {
-                            setLoading(false)
-                        })
-                    })
-                })
-
-            } else {
-                setPlayer(-1)
-                setLoading(false)
-            }
-
-        })
-    }, [name])
-
-    if (loading) return (
-        <div class={"w-full md:col-start-2 mt-5 "}>
-            <Loading />
-        </div>
-    )
-
-    if (!player || player === -1)
-        return <div class={"text-center mt-10"}>Sin datos del jugador</div>
+    }, [])
 
 
-    const getResultColor = r => r === "G" ? "bg-green-400" : r === "P" ? "bg-red-400" : "bg-yellow-300";
+
 
 
     return (
-        <div class={"bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative col-start-2 flex overflow-x-auto flex-col gap-3  text-white  font-sans md:px-4 px-1 pt-5 pb-20 md:mx-12 "}>
+        <div class={"flex flex-col md:gap-0 gap-3 md:col-start-2 col-start-1  text-white bg-background/70 shadow-black shadow-lg border-x-[1px] border-borderc relative  overflow-x-auto  md:mx-20 mx-0 md:mt-3 pb-20 min-h-screen"}>
+            <PlayerHeader name={name} />
 
-            <PlayerInfo title={"Resumen"} player={player} setTabs={setTabs} />
-            <NextGame title={"Próximo partido"} player={player} setTabs={setTabs} />
-            <Last5Games title={"Últimos partidos"} stats={stats} events={events} eventsInfo={eventsInfo} setTabs={setTabs} />
-            <Stats title={"Estadísticas"} player={player} setTabs={setTabs} />
-            <TeamHistory title={"Trayectoria"} player={player} setTabs={setTabs} />
-            <News title={"Noticias"} player={player} setTabs={setTabs} />
-            <Related title={"Relacionado"} player={player} setTabs={setTabs} />
+            <div class={"order-2 grid grid-cols-1 gap-2 md:mx-3 pt-2  mx-2 pb-40"}>
+                <LastGames name={name} />
+                <Stats name={name} />
+                <Trophies name={name} />
+                <Transfers name={name} />
 
-            {/* <Tabs tabs={tabs} /> */}
+            </div>
+            <BottomTabs name={name} />
         </div>
     )
 }
 
 export default Player
+
+
