@@ -71,7 +71,28 @@ export const usePlayerStats = (id, season) => {
         isLoading,
         error
     }
+}
 
+export const usePlayerGames = (id) => {
+
+
+    const baseURL = "https://webws.365scores.com/web/"
+
+    const { data:games, isLoading, error } = useSWR(
+        id ? `${baseURL}athletes/games/?appTypeId=5&langId=14&timezoneName=America/Buenos_Aires&userCountryId=382&athleteId=${id}` : null,
+        playerFetcher,
+        {
+            revalidateIfStale: true,
+            revalidateOnFocus: false,
+
+        },
+    )
+
+    return {
+        games:games?.games,
+        isLoading,
+        error
+    }
 }
 
 

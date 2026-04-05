@@ -12,8 +12,8 @@ import { memo } from 'preact/compat';
 // @ts-ignore
 const GameCard = ({ index, game, showCountryFlags }) => {
 
-    
-    
+
+
 
     const gameMap = gameMapper(game)
     const {
@@ -130,7 +130,7 @@ const GameStatus = ({ startTime, statusColor, statusText, TVLogoURL, TVName, isC
                 TVLogoURL && !isCompleted &&
                 <img src={TVLogoURL} class={"mx-auto mb-[2px] h-4"} title={TVName} />
             }
-            <span className="text-xs text-center">{statusText}</span>
+            <span className="text-xs text-center text-shadow-xs text-shadow-black">{statusText}</span>
 
         </div>
     )
@@ -198,14 +198,16 @@ const InfoButton = ({ id }) => {
 
 const Scorers = ({ teamScorers }) => {
     return (
-        <div className={`flex flex-row items-start flex-wrap gap-1 px-1  col-span-13  ${darkMode.value ? "text-white bg-gray-900 " : "bg-white text-black "} text-[11px] `}>
+        <div className={`flex flex-row items-start flex-wrap gap-x-1 px-1  col-span-13  ${darkMode.value ? "text-white bg-gray-900 " : "bg-white text-black "} text-[11px] `}>
             {
 
                 teamScorers.map((goal, i) => (
                     <>
                         <span key={i} className='flex flex-row items-center gap-1'>
                             <span className={`${darkMode.value ? "text-red-500" : "text-red-800"} text-xs`}>{goal.time_to_display}</span>
-                            <span>{goal.player_sname} {goal.goal_type != undefined && `(${goal.goal_type})`}</span>
+                            <Link href={`/player/${goal.player_name}`} class={"hover:underline active:underline"}>
+                                <span>{goal.player_sname} {goal.goal_type != undefined && `(${goal.goal_type})`}</span>
+                            </Link>
                         </span>
                         {i < teamScorers.length - 1 && <span>;</span>}
                     </>

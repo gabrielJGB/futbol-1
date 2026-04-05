@@ -40,7 +40,7 @@ const GameCard = () => (
         <div class={"col-span-2 h-[44px] bg-white"}></div>
         <div class={"col-span-2 h-[44px] bg-white"}></div>
         <div class={"col-span-8 h-[44px] bg-gray-200"}></div>
-        <div class={"col-span-3 h-[44px] bg-[#008000] text-white  text-center font-bold flex items-center justify-center"}>+</div>
+        <div class={"col-span-3 h-[44px] bg-[#008000] text-white  text-center font-bold flex items-center justify-center"}></div>
 
     </div>
 )

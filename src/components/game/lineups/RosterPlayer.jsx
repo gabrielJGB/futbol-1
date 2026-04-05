@@ -122,7 +122,9 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
 
     return (
-        <Link href={`/player/${player.name}`} class={"bg-[#015A1C] hover:bg-[#0c792d] active:bg-[#0c792d]"}>
+        <Link
+            // @ts-ignore
+            href={`/player/${player.name}`} class={"bg-[#015A1C] hover:bg-[#0c792d] active:bg-[#0c792d]"}>
             <div class={"flex flex-row justify-between items-center px-0 py-0  text-sm"}>
 
                 <div class={"flex flex-row items-center"}>
@@ -142,7 +144,10 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
                     <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
 
-                    <div class={"text-shadow-xs text-shadow-black "}>{player.name}</div>
+                    <div class={"text-shadow-xs text-shadow-black font-semibold md:tracking-wide "}>
+                        {player.name}
+                    </div>
+
 
                     {
                         missingReason &&
@@ -170,3 +175,10 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 }
 
 export default RosterPlayer
+
+
+
+const formatName = (name) => {
+
+    return name.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u").replace("Ú", "U").replace("Á", "A").replace("É", "E").replace("Í", "I").replace("Ó", "O")
+}

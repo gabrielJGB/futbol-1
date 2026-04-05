@@ -1,7 +1,7 @@
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { useEffect, useState } from 'preact/hooks';
-import { BarChartIcon, CalendarRangeIcon, CurlyBraces, HomeIcon, LucideChevronsRight, LucideListOrdered, Trophy } from 'lucide-preact';
+import { BarChartIcon, CalendarRangeIcon, CurlyBraces, HomeIcon, LucideChevronsRight, LucideListOrdered, Shield, Trophy } from 'lucide-preact';
 import { selectedTab } from '@/signals/player';
 import { usePlayer } from '@/hooks/usePlayer';
 
@@ -60,9 +60,9 @@ export default function BottomTabs({ name }) {
 
                 <BottomNavigationAction
 
-                    label="Transferencias"
+                    label="Carrera"
                     value={"transferencias"}
-                    icon={(<LucideChevronsRight size={25} />)}
+                    icon={(<Shield size={25} />)}
                     sx={sx} />
 
 

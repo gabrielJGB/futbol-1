@@ -7,7 +7,7 @@ const TeamField = ({ team, isHome, id }) => {
     
 
 
-    let formation = team?.formation?.split("-")
+    let formation = team?.formation === ""? ["4","4","2"]: team?.formation?.split("-")
     formation?.unshift("1")
     formation = formation?.map(Number)
     const colors = team.colors

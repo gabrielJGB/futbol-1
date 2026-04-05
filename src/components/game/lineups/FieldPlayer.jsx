@@ -69,13 +69,15 @@ const SubstitutePlayer = ({ substituteNumber, colors, i, id }) => {
     const { data } = useGame(id)
     const bench = data.game.players.lineups.teams[i]?.bench
     const player = bench.find(player => player.jersey_num === substituteNumber)
-    const { player_short_name, jersey_num, events, country_id } = player
+    const { player_short_name, jersey_num, events, country_id,name} = player
+
+
 
     return (
 
 
 
-        <Link href={`/player/${id}`} class={"hover:scale-105 transition-all"}>
+        <Link href={`/player/${name}`} class={"hover:scale-105 transition-all"}>
             <div class='flex flex-row  gap-1'>
 
                 <PlayerJersey
@@ -162,8 +164,8 @@ const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id }) => 
                         class={`
                             
                             ${isStarter ? "size-[36px] rounded-lg text-[18px]" : "text-[11px] size-[19px] rounded-md"} 
-                            ${showFlags.value ? "size-[19px] drop-shadow-xs bg-no-repeat bg-contain text-shadow-lg" : " border-gray-900 border-[2px] shadow-xs "}
-                            flex flex-col drop-shadow-black  text-shadow-xs shadow-black items-center justify-center font-bold  text-shadow-black
+                            ${showFlags.value ? "size-[19px] drop-shadow-xs text-shadow-sm bg-no-repeat bg-contain text-shadow-lg" : " border-gray-900 border-[2px] shadow-xs text-shadow-xs "}
+                            flex flex-col drop-shadow-black shadow-black items-center justify-center font-bold  text-shadow-black
                         `}
                     >
                         {

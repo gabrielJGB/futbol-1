@@ -18,8 +18,8 @@ export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
 
     return (
         <div
-            class="flex flex-col sm:flex-row justify-between backdrop-blur-md  items-center rounded-2xl p-5 mt-3 shadow-lg"
-            style={{ backgroundColor: bgColor, color: textColor }}
+            class="flex flex-col sm:flex-row justify-between backdrop-blur-md  items-center rounded-2xl p-5 mt-3 shadow-lg border-2 "
+            style={{ borderColor: bgColor,backgroundColor:bgColor, color: "white" }}
         >
             <div class="flex items-center gap-4">
                 <img

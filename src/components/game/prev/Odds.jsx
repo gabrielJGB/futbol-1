@@ -67,7 +67,7 @@ const Odds = ({ game }) => {
                             style={{ width: `${option.percentage}%` }}
                         ></div>
 
-                        <div class="relative z-0 flex  justify-between items-center h-full px-3 text-shadow-xs text-shadow-black text-white font-medium">
+                        <div class="relative z-0 flex  justify-between items-center h-full px-3 text-shadow-xs text-shadow-black text-white font-medium text-sm">
                             <span class={"flex flex-row items-center gap-1"}>
                                 {option.name === '1' ?
                                     <>

@@ -21,7 +21,7 @@ const Transfers = ({ name }) => {
         <Fade in timeout={300}>
             <div class=" text-white  font-sans ">
                 <h2 class="text-[#C2E213] text-xl font-bold  tracking-wider mb-6 border-b border-[#C2E213]/30 pb-1">
-                    Trayectoria
+                    Carrera
                 </h2>
 
                 <div class="flex flex-col-reverse gap-y-4 relative border-l border-white/10  pl-6 md:mx-auto md:w-1/2">

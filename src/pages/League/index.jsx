@@ -36,7 +36,7 @@ const League = ({ id }) => {
   useEffect(() => {
     document.title =  league.league.name + " - Fútbol 1"
     selectedTab.value = window.innerWidth < 768 ? "fixture" : "principal"
-  }, [])
+  }, [id])
 
       
 

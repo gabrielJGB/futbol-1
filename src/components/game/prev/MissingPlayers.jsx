@@ -41,7 +41,7 @@ export default MissingPlayers
 const Player = ({ player }) => {
 
     return (
-        <div class="flex items-center justify-between py-1 border-b border-gray-700 last:border-0 group">
+        <div class="flex items-center justify-between  border-b bg-b2/50 rounded-lg py-[2px] px-2 border-primary/50  group">
 
             <div class="flex flex-col ">
 

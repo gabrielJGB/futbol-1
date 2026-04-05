@@ -1,5 +1,4 @@
 // @ts-nocheck
-
 import { useEffect, useState } from "preact/hooks";
 import { useLocation } from 'preact-iso'
 import { fetcher } from "@/utils/fetcher";
@@ -61,8 +60,8 @@ const Player = ({ name }) => {
                 <Stats name={name} />
                 <Trophies name={name} />
                 <Transfers name={name} />
-
             </div>
+            
             <BottomTabs name={name} />
         </div>
     )

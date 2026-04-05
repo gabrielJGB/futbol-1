@@ -8,7 +8,7 @@ const Fixture = ({ id }) => {
 
   const { league } = useLeague(id)
   const rounds = league.games.filters
-  const currentRound = rounds.find(round => round.selected )
+  const currentRound = rounds.find(round => round.selected)
 
 
   const { games, gamesLoading } = useLeagueGames(id)
@@ -18,7 +18,7 @@ const Fixture = ({ id }) => {
   // const [_games, setGames] = useState(currentGames)
 
   useEffect(() => {
-    selectedRound.value = currentRound ?? rounds[rounds.length-1]
+    selectedRound.value = currentRound ?? rounds[rounds.length - 1]
 
 
   }, [])
@@ -49,17 +49,20 @@ const Fixture = ({ id }) => {
 
 
         {
-          !gamesLoading &&
-          groupGamesByDate(games?.games).map((item, i) => (
-            <div key={i} class={"flex flex-col"}>
-              <div class={"w-full text-center font-bold py-2 bg-gray-800 border-b-[1px] border-gray-700"}>{item.date_string}</div>
-              {
-                item.games.map((game, j) => (
-                  <GameCard key={game.id} showCountryFlags={false} game={game} index={-1} />
-                ))
-              }
+          !gamesLoading ?
+            groupGamesByDate(games?.games).map((item, i) => (
+              <div key={i} class={"flex flex-col"}>
+                <div class={"w-full text-center font-bold py-2 bg-gray-800 border-b-[1px] border-gray-700"}>{item.date_string}</div>
+                {
+                  item.games.map((game, j) => (
+                    <GameCard key={game.id} showCountryFlags={false} game={game} index={-1} />
+                  ))
+                }
+              </div>
+            ))
+            :
+            <div class={"w-full h-[800px] bg-zinc-800 transition-all animate-pulse"}>
             </div>
-          ))
         }
 
       </div>
