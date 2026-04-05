@@ -256,7 +256,8 @@ function PlayerStatsCard({ games, name }) {
 
     const avgGoals = stats.played > 0 ? (stats.goals / stats.played).toFixed(2) : 0
     const avgAssists = stats.played > 0 ? (stats.assists / stats.played).toFixed(2) : 0
-    const lastGameDate = new Date(games?.slice(0, gameCount).slice(-1)[0].game?.startTime)
+
+    const lastGameDate = new Date(games?.slice(0, gameCount).slice(-1)[0]?.game?.startTime)
         .toLocaleDateString('es-ES', {
             month: 'short',
             day: 'numeric',
@@ -289,7 +290,7 @@ function PlayerStatsCard({ games, name }) {
                 </div>
                 <div class={"md:w-[40%] w-[100%] px-4"}>
                     <Slider
-                        min={0}
+                        min={1}
                         max={games.length}
                         color="warning"
                         value={gameCount}
