@@ -33,7 +33,7 @@ const FieldContainer = ({ id }) => {
 
         {
           teams.map((team, i) => (
-            <TeamField isHome={i == 0} team={{ ...team, colors: colors[i] }} id={id} />
+            <TeamField isHome={i == 0} team={{ ...team, colors: colors[i] }} gameId={id} teamId={ids[i]} />
           ))
         }
 

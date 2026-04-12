@@ -29,8 +29,8 @@ const Events = ({ id }) => {
                 {
                     stages.map((stage, i) => {
 
-                        if (!stage.show_stage_title)
-                            return <></>
+                        // if (!stage.show_stage_title)
+                        //     return <></>
 
                         return <div class={"flex flex-col-reverse"}>
                             <div class={"flex flex-col-reverse gap-2 "}>
@@ -45,17 +45,20 @@ const Events = ({ id }) => {
                                     ))
                                 }
                             </div>
+                            {
 
-                            <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2"}>
+                                stage.show_stage_title &&
+                                <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2"}>
 
-                                <div>{stage.name.replace("Fin", "Final")}</div>
-                                {
-                                    "scores" in stage &&
-                                    <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
-                                }
+                                    <div>{stage.name.replace("Fin", "Final")}</div>
+                                    {
+                                        "scores" in stage &&
+                                        <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
+                                    }
 
 
-                            </div>
+                                </div>
+                            }
 
                         </div>
                     })

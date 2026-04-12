@@ -37,25 +37,25 @@ export default function Countdown({ start,showCountdown }) {
                 Empieza en
             </div>
 
-            <div className="text-red-600 mx-auto text-shadow-black text-shadow-xs flex gap-2  text-4xl sm:text-5xl md:text-6xl ">
+            <div className="text-primary mx-auto text-shadow-black rounded bg-black text-shadow-xs flex gap-0 divide-x divide-primary/20 text-4xl sm:text-5xl md:text-6xl ">
 
-                <div class={"flex flex-col items-center justify-center w-[84px] bg-black/80 rounded"}>
-                    <span class={"text-7xl font-digital"}>{String(days).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[84px] "}>
+                    <span class={"text-7xl font-digital"}>{String(days)}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Días</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center w-[84px] bg-black/80 rounded"}>
-                    <span class={"text-7xl font-digital"}>{String(hours).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[84px] "}>
+                    <span class={"text-7xl font-digital"}>{String(hours)}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Horas</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center w-[84px] bg-black/80 rounded"}>
-                    <span class={"text-7xl font-digital"}>{String(minutes).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[84px] "}>
+                    <span class={"text-7xl font-digital"}>{String(minutes)}</span>
                     <span class={"text-sm mb-2 text-white tracking-wider uppercase"}>Min</span>
                 </div>
 
-                <div class={"flex flex-col items-center justify-center w-[84px] bg-black/80 rounded"}>
-                    <span class={"text-7xl font-digital "}>{String(seconds).padStart(2, "0")}</span>
+                <div class={"flex flex-col items-center justify-center w-[84px] "}>
+                    <span class={"text-7xl font-digital "}>{String(seconds)}</span>
                     <span class={"text-sm mb-2  text-white tracking-wider uppercase"}>Seg</span>
                 </div>
             </div>

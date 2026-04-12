@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Title from './Title';
 
 const Odds = ({ game }) => {
     const data = game.prediction.options
@@ -43,16 +44,16 @@ const Odds = ({ game }) => {
     };
 
     return (
-        <div class="w-full max-w-md mx-auto rounded-xl ">
-            <div class={"w-full text-lg font-semibold text-[#C2E213] text-shadow-xs text-shadow-black  text-center "}>Pronóstico</div>
+        <div class="w-full max-w-md mx-auto rounded-lg bg-b2/30 p-2 shadow shadow-zinc-950">
+            <Title text={"Pronóstico"}/>
 
-            <div class="space-y-2">
+            <div class="mt-2 space-y-2">
                 {options.map((option) => (
                     <button
                         key={option.name}
-                        // onClick={() => handleVote(option)}
+                        onClick={() => handleVote(option)}
                         disabled={!!selected || loading}
-                        class={` relative w-full h-10 rounded-lg overflow-hidden bg-gray-800 text-left transition-all
+                        class={` relative w-full h-9 rounded-lg overflow-hidden bg-gray-800 text-left transition-all
               
             `}
                     // ${selected === option.name ? 'ring-2 ring-green-400' : 'hover:scale-[1.01]'}

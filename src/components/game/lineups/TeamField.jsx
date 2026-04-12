@@ -2,7 +2,7 @@ import FieldLine from '@/components/game/lineups/FieldLine'
 import { invertLines } from '@/signals/game';
 import React from 'react'
 
-const TeamField = ({ team, isHome, id }) => {
+const TeamField = ({ team, isHome, gameId ,teamId}) => {
 
     
 
@@ -17,6 +17,8 @@ const TeamField = ({ team, isHome, id }) => {
     const leftClass = "left-0 col-start-1 flex-row row-start-1"
     const rightClass = "right-0 col-start-2 flex-row-reverse row-start-1"
 
+
+
     return (
         <div class={`
             ${isHome ? (_invertLines ? rightClass : leftClass) : (_invertLines ? leftClass : rightClass)}
@@ -30,7 +32,8 @@ const TeamField = ({ team, isHome, id }) => {
                         players={players}
                         isHome={isHome}
                         colors={colors}
-                        id={id}
+                        gameId={gameId}
+                        teamId={teamId}
 
                     />
                 ))

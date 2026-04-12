@@ -157,7 +157,7 @@ const Match = ({ match }) => {
                       // @ts-ignore
                       href={`/game/${game.id}`}
                       title={i === 0 ? "Ida" : "Vuelta"}
-                      class={`flex flex-row hover:border-[#00ff00]/70 border px-[2px] border-transparent cursor-pointer `}
+                      class={`flex flex-row hover:border-[#00ff00]/70 active:border-[#00ff00]/70 border px-[2px] border-transparent cursor-pointer `}
                     >
                       <div class={"flex flex-row items-center justify-center gap-1"}>
 

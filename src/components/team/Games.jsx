@@ -18,15 +18,15 @@ export const Games = ({ games }) => {
         let resultSpecificContent;
         if (isResult) {
             const result = game.values?.find(v => v.key === 'result')?.value;
-            let bgColor = 'bg-transparent text-white'; // Empate por defecto
-            if (game.result_status === 1) bgColor = 'bg-green-700 text-green-100'; // Victoria
-            if (game.result_status === 2) bgColor = 'bg-red-700 text-red-100'; // Derrota
+            let bgColor = 'bg-transparent text-white'; 
+            if (game.result_status === 1) bgColor = 'bg-green-700 text-green-100'; 
+            if (game.result_status === 2) bgColor = 'bg-red-700 text-red-100'; 
             if (game.result_status === 3 && game.game.status.symbol_name === "Fin") bgColor = 'bg-yellow-300 text-black'; // Derrota
 
-            resultSpecificContent = <td class={`px-4 py-1 font-mono text-center font-semibold ${bgColor}`}><Link href={`/game/${game.game?.id}`}>{result}</Link></td>;
+            resultSpecificContent = <td class={`whitespace-nowrap px-4 py-1 font-mono text-center font-semibold ${bgColor}`}><Link href={`/game/${game.game?.id}`}>{result}</Link></td>;
         } else {
             const time = game.values?.find(v => v.key === 'time')?.value;
-            resultSpecificContent = <td class="px-4 py-1 font-mono text-black text-center"><Link href={`/game/${game.game?.id}`}>{time}</Link></td>;
+            resultSpecificContent = <td class="whitespace-nowrap px-4 py-1 font-mono text-black text-center"><Link href={`/game/${game.game?.id}`}>{time}</Link></td>;
         }
 
         return (
@@ -58,7 +58,7 @@ export const Games = ({ games }) => {
     return (
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8  ">
 
-            {/* Últimos Resultados */}
+            {/* ultimos */}
             {last && last.rows && (
                 <div class="bg-gray-800 p-2 rounded-lg shadow-lg h-min">
                     <h3 class="text-2xl font-bold px-2 pb-2 text-primary">Últimos partidos</h3>
@@ -80,7 +80,7 @@ export const Games = ({ games }) => {
             )}
 
 
-            {/* Próximos Partidos */}
+            {/* prox */}
             {next && next.rows && (
                 <div class="bg-gray-800 p-2 rounded-lg shadow-lg h-min">
                     <h3 class="text-2xl font-bold px-2 pb-2 text-primary">Próximos partidos</h3>

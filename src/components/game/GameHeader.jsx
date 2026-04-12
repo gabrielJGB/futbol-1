@@ -67,7 +67,7 @@ const Team = ({ team, showCountryFlags }) => {
         <Link
             // @ts-ignore
             href={`/team/${team.id}`}>
-            <div class={"relative hover:underline flex flex-col md:flex-row justify-center gap-1 items-center"}>
+            <div class={"relative active:scale-105 hover:scale-105 transition-all flex flex-col md:flex-row justify-center gap-1 items-center"}>
                 <div class={"relative"}>
                     <img src={`https://api.promiedos.com.ar/images/team/${team.id}/1`} alt="Escudo Equipo" className="h-12 w-12 drop-shadow-xs drop-shadow-black object-contain" />
                     {

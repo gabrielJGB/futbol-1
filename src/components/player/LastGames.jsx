@@ -286,7 +286,7 @@ function PlayerStatsCard({ games, name }) {
 
             <div class={"mb-1 flex flex-col  items-start justify-start font-light "}>
                 <div>
-                    En los últimos <span className="text-orange-400 font-bold not-italic">{stats.totalGames}</span> partidos, <span class={"font-semibold"}>{name}</span>:
+                    De los últimos <span className="text-orange-400 font-bold not-italic">{stats.totalGames}</span> partidos, <span class={"font-semibold"}>{name}</span>:
                 </div>
                 <div class={"md:w-[40%] w-[100%] px-4"}>
                     <Slider
@@ -326,16 +326,18 @@ function PlayerStatsCard({ games, name }) {
 
 
                 <p class={"md:text-md text-sm leading-5 font-light"}>
-                    <span class={"font-bold"}>•</span> Fué titular en <Num num={stats.played} /> ocasiones, en las que obtuvo <Num num={stats.won} /> victorias, <Num num={stats.tied} /> empates y <Num num={stats.lost} /> derrotas
+                    <span class={"font-bold"}>•</span> Fué titular en <Num num={stats.played} /> ocasiones, suplente  en <Num num={stats.gamesBench} />, tuvo <Num num={stats.gamesInjury} />  bajas por lesión y cumplió <Num num={stats.gamesSuspended} /> fechas de suspensión
+                </p>
+
+
+                <p class={"md:text-md text-sm leading-5 font-light"}>
+                    <span class={"font-bold"}>•</span> Obtuvo <Num num={stats.won} /> victorias, <Num num={stats.tied} /> empates y <Num num={stats.lost} /> derrotas
                 </p>
 
                 <p class={"md:text-md text-sm leading-5 font-light"}>
                     <span class={"font-bold"}>•</span> Convirtió <Num num={stats.goals} /> goles y dió <Num num={stats.assists} /> asistencias, con un promedio de <Num num={avgGoals} /> goles y <Num num={avgAssists} /> asistencias por partido.
                 </p>
 
-                <p class={"md:text-md text-sm leading-5 font-light"}>
-                    <span class={"font-bold"}>•</span> Fué suplente <Num num={stats.gamesBench} /> veces, tuvo <Num num={stats.gamesInjury} />  bajas por lesión y cumplió <Num num={stats.gamesSuspended} /> fechas de suspensión
-                </p>
 
                 <p class={"md:text-md text-sm leading-5 font-light"}>
                     <span class={"font-bold"}>•</span> Jugó <Num num={stats.minutes} /> minutos, promediando <Num num={avgMinutes} /> minutos por partido.
@@ -352,7 +354,7 @@ function PlayerStatsCard({ games, name }) {
                 {
                     stats.gamesNoStats > 0 &&
                     <p class={"text-xs text-gray-500 "}>
-                        {"("} {stats.gamesNoStats} patidos sin estadísticas disponibles {")"}
+                        {"("}{stats.gamesNoStats} partidos sin estadísticas disponibles{")"}
                     </p>
                 }
 

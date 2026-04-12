@@ -25,6 +25,7 @@ const TabsContainer = ({ id }) => {
 
 
 
+
     return (
         <div class={"relative flex flex-col md:flex-col-reverse"}>
 

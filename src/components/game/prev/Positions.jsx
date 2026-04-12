@@ -1,4 +1,5 @@
 import React from 'react'
+import Title from './Title'
 
 const Positions = ({ game }) => {
 
@@ -6,12 +7,11 @@ const Positions = ({ game }) => {
 
 
     return (
-        <div class={"flex justify-center items-center flex-col gap-1 rounded "}>
-            <div class={"w-full text-lg font-semibold text-[#C2E213] text-shadow-xs text-shadow-black  text-center "}>
-                {standings.title}
-            </div>
+        <div class={"flex justify-center items-center flex-col gap-1 rounded-lg bg-b2/30 p-2 shadow shadow-zinc-950 "}>
 
-            <table class={"shadow shadow-gray-900 bg-gray-500 w-full md:w-1/2 border-separate border-spacing-[2px]"} >
+            <Title text={standings.title}/>
+
+            <table class={" shadow shadow-gray-900 mt-2 bg-gray-500 w-full  border-separate border-spacing-[2px]"} >
                 <thead>
                     <tr class={"text-[14px]"}>
                         <th class={"bg-black text-white"}>#</th>
@@ -26,7 +26,7 @@ const Positions = ({ game }) => {
                 <tbody>
                     {
                         standings.rows.map((row, i) => (
-                            <tr >
+                            <tr class={"text-[15px]"} >
                                 <td class={"bg-gray-300 font-semibold text-center text-black px-1"}>
                                     {row.num}
                                 </td>
@@ -36,7 +36,7 @@ const Positions = ({ game }) => {
                                         className="h-4 object-contain"
                                         alt="Escudo Equipo"
                                     />
-                                    <div class={""}>{row.entity.object.name}</div>
+                                    {row.entity.object.name}
                                 </td>
                                 {
                                     row.values.map((item) => (

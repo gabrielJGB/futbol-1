@@ -1,4 +1,5 @@
 import React from 'react'
+import Title from './Title'
 
 const getString = (num) => {
     if (num === 0)
@@ -14,7 +15,7 @@ const getStringColor = (num) => {
     else if (num === 1)
         return "text-green-500"
     else if (num === 2)
-        return "text-yellow-500"
+        return "text-yellow-300"
 }
 
 const LastGames = ({ game }) => {
@@ -33,10 +34,10 @@ const LastGames = ({ game }) => {
 
 
     return (
-        <div class={"flex justify-center items-center flex-col gap-1 rounded p-1 "}>
-            <div class={"w-full text-lg font-semibold text-[#C2E213] text-shadow-xs text-shadow-black  text-center "}>Ultimos Partidos</div>
+        <div class={"flex justify-center items-center flex-col gap-1 rounded-lg bg-b2/30 p-2 shadow shadow-zinc-950"}>
+            <Title text={"Últimos Partidos"}/>
 
-            <div class={"flex flex-row  justify-between py-1 px-3 items-center w-full md:w-1/2"}>
+            <div class={"flex flex-row  justify-around py-1 items-center w-full  "}>
 
                 {
                     teams.map((team) => (
@@ -44,10 +45,10 @@ const LastGames = ({ game }) => {
                             <div class={"flex flex-col items-center gap-1 justify-center"}>
                                 <img
                                     src={`https://api.promiedos.com.ar/images/team/${team.id}/1`}
-                                    className="h-7 object-contain"
+                                    className="h-7 object-contain drop-shadow-lg drop-shadow-black"
                                     alt="Escudo Equipo"
                                 />
-                                <div class={"font-semibold text-[12px]  text-shadow-xs text-shadow-black"}>{team.name}</div>
+                                <div class={"font-semibold text-[12px] whitespace-nowrap text-center text-shadow-xs text-shadow-black"}>{team.name}</div>
                             </div>
 
                             <div class={"flex flex-row-reverse items-center gap-1 justify-center"}>
