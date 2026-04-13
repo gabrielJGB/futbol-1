@@ -5,7 +5,6 @@ const PlayerHeader = ({ name }) => {
 
     const { player } = usePlayer(name)
 
-    console.log(player);
 
 
     return (
@@ -24,9 +23,12 @@ const PlayerHeader = ({ name }) => {
                     {
                         player.injury != undefined &&
                         <div class={"flex flex-col mt-1"}>
-                            <div class={"flex flex-row items-center gap-1"}>
-                                <img src={injury} style={{ width: 14, height: 14 }} />
-                                <div class={"text-red-300 text-xs"}>{player.injury.name} ({new Date(player.injury.startDate).toLocaleDateString()})</div>
+                            <div class={"flex flex-col "}>
+                                <div class={"flex flex-row items-center gap-1"}>
+                                    <img src={injury} style={{ width: 14, height: 14 }} />
+                                    <div class={"text-red-300 text-xs"}>{player.injury.name} ({new Date(player.injury.startDate).toLocaleDateString()})</div>
+                                </div>
+                                <div class={"text-red-300  text-[11px]"}>Vuelta: {translateString(player.injury.expectedReturn)}</div>
                             </div>
                         </div>
                     }
@@ -100,3 +102,37 @@ const getImgElement = (id, type, size = 30) => {
 
 
 export default PlayerHeader
+
+
+
+
+const translateString = (input) => {
+  const dictionary = {
+    "Early": "principios de",
+    "Late": "finales de",
+    "Mid":"mediados de",
+    "January": "enero",
+    "February": "febrero",
+    "March": "marzo",
+    "April": "abril",
+    "May": "mayo",
+    "June": "junio",
+    "July": "julio",
+    "August": "agosto",
+    "September": "septiembre",
+    "October": "octubre",
+    "November": "noviembre",
+    "December": "diciembre"
+  };
+
+  if (input.startsWith("About")) {
+    return input.replace("About", "en").replace("weeks", "semanas").replace("week", "semana");
+  }
+
+  const parts = input.split(" ");
+  const prefix = dictionary[parts[0]] || parts[0];
+  const month = dictionary[parts[1]] || parts[1];
+  const year = parts[2];
+
+  return `${prefix} ${month} ${year}`;
+};

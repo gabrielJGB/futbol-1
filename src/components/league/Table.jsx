@@ -30,7 +30,7 @@ const Table = ({ table }) => {
 
     //bg-[#176115] 
     return (
-        <div class={"flex flex-col gap-0 w-full md:overflow-x-hidden overflow-x-auto rounded-t  "}>
+        <div class={"flex flex-col gap-0 w-full  overflow-x-auto rounded-t  "}>
             <h2 class={"text-center  px-2 py-1 font-semibold "}
             >
                 {table.name}

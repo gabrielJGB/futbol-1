@@ -38,11 +38,11 @@ export const TeamHeader = ({ id, competitor, main_league, team_info }) => {
                 </div>
             </div>
             {team_info && (
-                <div class="flex flex-col mt-4 sm:mt-0 text-right opacity-80">
+                <div class="flex flex-col mt-4 sm:mt-0 text-left opacity-80">
                     {
                         team_info.map((team) => (
                             <div>
-                                <span class={"text-gray-400 text-xs"}>{team.name.replace("Club de", "Ciudad")}: </span>
+                                <span class={"text-xs"}>{team.name.replace("Club de", "Ciudad")}: </span>
                                 <span class={"font-semibold text-sm"}>{team.value}</span>
                             </div>
                         ))

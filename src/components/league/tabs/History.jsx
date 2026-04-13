@@ -72,7 +72,7 @@ const Table = ({ table, leagueId }) => {
   }
 
 
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const visibleRows = showAll ? table.rows : table.rows.slice(0, table.rows.length > 10 ? 10 : table.rows.length);
 
   return (

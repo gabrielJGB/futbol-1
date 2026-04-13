@@ -26,19 +26,26 @@ import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
 import Stats from '@/components/league/tabs/Stats';
 import { Loading } from '@/components/common';
+import { useLocation } from 'preact-iso';
 
 
 const League = ({ id }) => {
 
-
+  const { query } = useLocation()
   const { games, league, teamStats, leagueHistory, gamesError, leagueError, gamesLoading, leagueLoading } = useLeague(id)
 
   useEffect(() => {
-    document.title =  league.league.name + " - Fútbol 1"
-    selectedTab.value = window.innerWidth < 768 ? "fixture" : "principal"
+
+    document.title = league.league.name + " - Fútbol 1"
+
+    if (query.tab != undefined)
+      selectedTab.value = query.tab
+    else
+      selectedTab.value = window.innerWidth < 768 ? "fixture" : "principal"
+
   }, [id])
 
-      
+
 
 
   if (gamesLoading || leagueLoading)

@@ -91,13 +91,15 @@ const getMissingImg = (missingReason) => {
 
     else if (missingReason === "tarjeta roja")
         return <div class={"w-[12px] h-[18px] bg-red-600 flex items-center justify-center"}></div>
+
     else if (missingReason === "lesionado")
         return <img src={injury} className="h-4 " title="Lesionado" />
-    if (missingReason === "en la seleccion")
-        return <div class={"text-xs"}>En la seleccion</div>
+
+    if (missingReason === "en la selección")
+        return <div class={"text-xs text-white"}>En la seleccion</div>
 
     else if (missingReason === "motivo personal")
-        return <div class={"text-xs"}>Motivo personal</div>
+        return <div class={"text-xs  text-white"}>Motivo personal</div>
 
     else 
         return <></>

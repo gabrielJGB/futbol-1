@@ -39,7 +39,7 @@ const PlayerStats = ({  id }) => {
 };
 
 const Table = ({ table }) => {
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const visibleRows = showAll ? table.rows : table.rows.slice(0, 10);
 
   return (

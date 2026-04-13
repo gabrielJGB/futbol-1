@@ -28,7 +28,7 @@ const TablesAndFixtures = ({ name, league, games, gamesLoading }) => {
                     group.name != "" &&
                     <h2 class={"font-semibold text-2xl  text-center mb-3"}>{group.name.toUpperCase()}</h2>
                   }
-                  <div class={"flex flex-col gap-4"}>
+                  <div class={"flex flex-col gap-4 "}>
                     {
                       group?.tables?.map((table => (
                         <Table table={table} />

@@ -37,7 +37,7 @@ export default function Countdown({ start,showCountdown }) {
                 Empieza en
             </div>
 
-            <div className="text-primary mx-auto text-shadow-black rounded bg-black text-shadow-xs flex gap-0 divide-x divide-primary/20 text-4xl sm:text-5xl md:text-6xl ">
+            <div className="text-primary mx-auto text-shadow-black rounded bg-black/70 text-shadow-xs flex gap-0 divide-x divide-primary/20 text-4xl sm:text-5xl md:text-6xl ">
 
                 <div class={"flex flex-col items-center justify-center w-[84px] "}>
                     <span class={"text-7xl font-digital"}>{String(days)}</span>

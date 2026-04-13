@@ -1,4 +1,3 @@
-import React from 'react'
 
 import { useGame } from '@/hooks/useGame'
 import { selectedTab } from '@/signals/game'
@@ -10,10 +9,13 @@ import {
 } from "@/components/game";
 import BottomTabs from '@/components/game/BottomTabs';
 import Events from '@/components/game/Events';
-import { GiHamburger, GiSoccerField } from 'react-icons/gi';
-import { BiHistory, BiStats } from 'react-icons/bi';
-import { MdGraphicEq, MdMenu } from 'react-icons/md';
-import { BarChart, BarChart2, BarChart4, BarChartIcon, LucideBarChart2 } from 'lucide-preact';
+import { GiSoccerField } from 'react-icons/gi';
+import { BiHistory } from 'react-icons/bi';
+import { MdMenu } from 'react-icons/md';
+import { BarChartIcon } from 'lucide-preact';
+import { useEffect } from 'react';
+import { useLocation } from 'preact-iso';
+
 
 
 const TabsContainer = ({ id }) => {
@@ -22,7 +24,20 @@ const TabsContainer = ({ id }) => {
     const { data } = useGame(id)
     const tabs = getTabsArray(data.game)
     const selected = tabs[i]
+    const { query } = useLocation()
 
+
+    useEffect(() => {
+
+
+
+        if (query.tab != undefined)
+            selectedTab.value = parseInt(query.tab)
+        else
+            selectedTab.value = 0
+
+
+    }, [id])
 
 
 
@@ -34,7 +49,7 @@ const TabsContainer = ({ id }) => {
             </div>
 
             <div class={"md:relative sticky bottom-0"}>
-                <BottomTabs tabs={tabs} />
+                <BottomTabs tabs={tabs} id={id} />
             </div>
         </div>
     )
