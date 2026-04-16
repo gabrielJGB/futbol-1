@@ -44,6 +44,6 @@ export default DailyStats
 const StatCard = ({ label, value }) => (
   <div class="flex-1  text-center flex flex-col justify-center py-[2px] px-2  bg-green-900 gap-0  items-center  shadow text-gray-200 rounded">
     <div class="text-md font-bold">{value}</div>
-    <div class="text-xs text-white w-max px-2">{label}</div>
+    <div class="text-xs text-white w-max  px-2">{label}</div>
   </div>
 );

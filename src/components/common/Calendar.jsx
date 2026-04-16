@@ -41,9 +41,9 @@ export default function Calendar_({ date }) {
   return (
 
 
-    <div class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs" : "md:static -right-[100%] backdrop-blur-none"} transition-all flex  flex-col items-center justify-center md:relative  fixed h-[100vh] w-full md:flex-none  md:bg-transparent  md:h-max  md:rounded-lg md:mt-5 `}>
+    <div class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs " : "md:static -right-[100%] backdrop-blur-none "} bg-black/50 transition-all flex  flex-col items-center justify-center md:relative max-lg:landscape:fixed fixed h-[100vh]  w-full md:flex-none  md:bg-transparent  md:h-max  md:rounded-lg z-100 md:pt-5`}>
 
-      <div class={"flex flex-col gap-1"}>
+      <div class={"flex flex-col justify-center items-center gap-1 "}>
 
         {
           typeof window !== "undefined" &&
@@ -63,7 +63,7 @@ export default function Calendar_({ date }) {
       {
         date != "hoy" &&
         <div
-          class={"bg-transparent text-shadow-xs text-shadow-black cursor-pointer text-sm text-center w- hover:underline"}
+          class={"bg-transparent text-shadow-xs h-full text-shadow-black cursor-pointer text-sm text-center w- hover:underline"}
           onClick={() => {
             showCalendar.value = false
             selectedDate.value = new Date()

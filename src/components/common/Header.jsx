@@ -37,7 +37,7 @@ export default function Header() {
 					{
 						isHome &&
 						<div
-							class={`${showCalendar.value?"bg-green-950 shadow-[0_0_5px_#000_inset]":""}  transition-all md:hidden block active:bg-green-950 rounded p-2 cursor-pointer `}
+							class={`${showCalendar.value?"bg-green-950 shadow-[0_0_5px_#000_inset]":""}  transition-all md:hidden max-lg:landscape:block block active:bg-green-950 rounded p-2 cursor-pointer `}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
 						>
 							<CalendarDaysIcon size={22} color={"#C2E213"} />

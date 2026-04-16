@@ -51,13 +51,13 @@ export const Home = ({ date }) => {
 
 	return (
 
-		<div class={" grid md:grid-cols-[2fr_1fr] grid-cols-1 md:col-start-2 gap-15 md:px-15   pb-20 "}>
+		<div class={" grid md:grid-cols-[2fr_1fr] max-lg:landscape:grid-cols-1 grid-cols-1 md:col-start-2 max-lg:landscape:gap-0 gap-15 max-lg:landscape:px-5 md:px-15  md:gap-15 pb-20 "}>
 
-			<div class={"w-full  md:mt-4 col-start-1"}>
+			<div class={"w-full landscape:mt-0  md:mt-4 col-start-1 md:pt-5"}>
 
 				<DateSelector />
 
-				<div class={"flex flex-col gap-2 w-full md:py-1 pt-2 px-1 md:bg-background md:border-[1px] border-borderc "}>
+				<div class={"flex flex-col gap-2 w-full   px-1  md:bg-background md:border-[1px] border-borderc "}>
 
 					<DateString />
 					<DailyStats date={date} />

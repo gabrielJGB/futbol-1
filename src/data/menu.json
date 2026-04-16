@@ -6,42 +6,37 @@
       {
         "league": "Mundial",
         "id": "fjda",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/fjda/1"
       },
       {
         "league": "Liga Profesional",
         "id": "hc",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/hc/1"
       },
       {
         "league": "Primera Nacional",
         "id": "ebj",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/ebj/1"
       },
       {
         "league": "Libertadores",
         "id": "bac",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/bac/1"
       },
       {
         "league": "Sudamericana",
         "id": "dij",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/dij/1"
       },
       {
         "league": "Copa Argentina",
         "id": "gea",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/gea/1"
       },
       {
         "league": "Champions",
         "id": "fhc",
-        "logo": ""
-      },
-      {
-        "league": "Eliminatorias Conmebol",
-        "id": "gbd",
-        "logo": ""
+        "logo": "https://api.promiedos.com.ar/images/league/fhc/1"
       }
     ]
   },
