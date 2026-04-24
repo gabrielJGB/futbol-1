@@ -74,8 +74,25 @@ const Team = ({ team, showCountryFlags }) => {
                         showCountryFlags &&
                         <img src={`https://api.promiedos.com.ar/images/country/${team.country_id}/1`} alt="Logo" className="absolute bottom-0 left-9 h-4" />
                     }
+
+                    <div class={"flex flex-row gap-1"}>
+                        {
+
+
+                            Array.from({ length: team.red_cards }).map((_, i) => (
+                                <div class={"w-[5px] h-[9px] m-[1px] bg-red-500"}></div>
+                            ))
+                        }
+                    </div>
                 </div>
-                <div class={"md:text-sm text-xs text-center font-semibold md:w-auto w-[82px]"}>{team.name}</div>
+
+                < div class={"flex flex-col justify-end items-end"}>
+                    <div class={"md:text-sm text-white text-xs text-center font-semibold md:w-auto w-[82px]"}>
+                        {team.name}
+                    </div>
+
+
+                </div>
             </div>
         </Link>
     )
@@ -93,13 +110,13 @@ const Scores = ({ game }) => {
 
             <div class={"flex  flex-row items-center justify-center gap-1  text-3xl md:text-4xl "}>
 
-                <div class={`${game.winner === 1 ? "text-[#41ffb2]" : ""} bg-gray-950 text-center rounded flex-1`}>
+                <div class={`${game.winner === 1 ? "text-[#41ffb2]" : "text-white"}  bg-gray-950 text-center rounded flex-1`}>
                     {"scores" in game ? game.scores[0] : `-`}</div>
-                <div class={`${game.winner === 2 ? "text-[#41ffb2]" : ""} bg-gray-950 text-center rounded flex-1`}>
+                <div class={`${game.winner === 2 ? "text-[#41ffb2]" : "text-white"} bg-gray-950 text-center rounded flex-1`}>
                     {"scores" in game ? game.scores[1] : `-`}</div>
             </div>
 
-            <div title={game.status.name} class={`${getStatusColor(game)}  text-center rounded py-[0px] font-semibold text-[12px] md:text-[14px]`}>
+            <div title={game.status.name} class={`${getStatusColor(game)} text-white text-center rounded py-[0px] font-semibold text-[12px] md:text-[14px]`}>
                 {getStatusText(game)}
             </div>
             {
@@ -200,9 +217,9 @@ const Penalties = ({ penalties }) => {
                                             :
                                             <div class={`${event.type === 17 ? "text-[#ff0000]" : "text-[#00e800]"} font-semibold text-center text-xs`}>
                                                 {
-                                                    event.type === 17 ?"x":"o"
+                                                    event.type === 17 ? "x" : "o"
                                                 }
-                                                
+
                                             </div>
 
                                     }
@@ -234,13 +251,13 @@ const Scorers = ({ goals }) => {
                 goals.map((goal, i) => {
 
 
-                    return goal != undefined && (goal.time_to_display.includes("'")) && (<div class={"gap-[1px] grid md:grid-cols-[6fr_1fr_6fr] grid-cols-[3fr_1fr_3fr]  p-0   text-xs font-semibold text-center"}>
+                    return goal != undefined && (goal.time_to_display.includes("'")) && (<div class={"gap-[1px] grid md:grid-cols-[6fr_1fr_6fr] grid-cols-[3fr_1fr_3fr]  p-0 text-xs font-semibold text-center"}>
 
-                        <div class={`${goal.isHome ? "bg-b3 " : ""}`}>
+                        <div class={`${goal.isHome ? "bg-b3 " : ""}text-white`}>
                             {goal.isHome ? `${goal.player_name}${"goal_type" in goal ? ` (${goal.goal_type})` : ""}` : ""}
                         </div>
-                        <div class={`bg-b3  font-semibold`}>{goal.time_to_display}</div>
-                        <div class={`${!goal.isHome ? "bg-gradient-to-r bg-b3 " : ""}`}>
+                        <div class={`bg-b3  font-semibold text-white`}>{goal.time_to_display}</div>
+                        <div class={`${!goal.isHome ? "bg-gradient-to-r bg-b3 " : ""} text-white`}>
                             {!goal.isHome ? `${goal.player_name}${"goal_type" in goal ? ` (${goal.goal_type})` : ""}` : ""}
                         </div>
 
@@ -257,7 +274,7 @@ const getStatusText = (game) => {
     if (game.status.enum === 1)
         return game.start_time.split(" ")[1]
     else if (game.status.enum === 2)
-        return game.game_time_status_to_display.replace("Pen","Penales")
+        return game.game_time_status_to_display.replace("Pen", "Penales")
     else if (game.status.enum === 3)
         return game.status.name
     else

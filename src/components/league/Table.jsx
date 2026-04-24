@@ -1,3 +1,4 @@
+import { darkMode } from '@/signals/common'
 import { Link } from 'preact-router/match'
 import React from 'react'
 
@@ -35,7 +36,7 @@ const Table = ({ table }) => {
             >
                 {table.name}
             </h2>
-            <table class={"md:w-auto min-w-full bg-gray-500  border-separate border-spacing-[1px] "} >
+            <table class={`md:w-auto min-w-full ${darkMode.value?"bg-slate-700":"bg-slate-500"} border-separate border-spacing-[1px]`} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-sm">
                         <th class="text-center">#</th>
@@ -54,14 +55,14 @@ const Table = ({ table }) => {
 
                     {table.table.rows.map((row, i) => {
                         return (
-                            <tr class={`text-black  text-sm border-b border-[#333] even:bg-[#E7E7E7] odd:bg-[#D5D5D5]`}>
-                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : "") }} class={"text-center w-[14px] px-1"}>{i + 1}</td>
+                            <tr class={`text-black  text-sm border-b ${darkMode.value?"border-slate-500 even:bg-slate-900 odd:bg-slate-800":"border-[#333] even:bg-[#E7E7E7] odd:bg-[#D5D5D5]"}`}>
+                                <td style={{ background: ("destination_color" in row ? row.destination_color : ""), color: ("destination_color" in row ? "black" : (darkMode.value?"white":"black")) }} class={"text-center w-[14px] px-1"}>{i + 1}</td>
 
                                 <td class="font-semibold   gap-1 p-1">
                                     <Link
                                         // @ts-ignore
                                         href={`/team/${row.entity.object.id}`}
-                                        class={"hover:underline w-max flex flex-row  items-center  gap-1"}
+                                        class={`${darkMode.value?"text-white":"text-black"} hover:underline w-max flex flex-row  items-center  gap-1`}
                                     >
 
                                         <img src={`https://api.promiedos.com.ar/images/team/${row.entity.object.id}/1`} style={{ height: 17 }} />
@@ -89,7 +90,7 @@ const Table = ({ table }) => {
                                                         }
                                                     </div>
                                                     :
-                                                    <div class={"px-2"}>{val.value}</div>
+                                                    <div class={`px-2 ${darkMode.value?"text-gray-200":"text-black"}`}>{val.value}</div>
                                             }
                                         </td>)
                                     })

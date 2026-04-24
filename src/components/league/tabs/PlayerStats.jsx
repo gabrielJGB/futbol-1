@@ -2,6 +2,7 @@ import { useState } from 'preact/hooks';
 import { Link } from 'preact-router';
 import { SectionTitle } from '@/components/common';
 import { useLeague } from '@/hooks/useLeague';
+import { darkMode } from '@/signals/common';
 
 const abbreviatePosition = (pos) => {
   if (!pos) return '';
@@ -51,7 +52,7 @@ const Table = ({ table }) => {
         </span>
       </div>
 
-      <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px]"} >
+      <table class={`w-full ${darkMode.value?"bg-gray-700":"bg-gray-500"}    border-separate border-spacing-[1px]`} >
         <thead>
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
             <th class="">#</th>
@@ -76,9 +77,9 @@ const Table = ({ table }) => {
             return (
               <tr
                 key={row.num}
-                class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
+                class={`text-black text-sm border-b border-[#333] ${darkMode.value?"odd:bg-slate-800 even:bg-slate-900":"odd:bg-[#E7E7E7] even:bg-[#D5D5D5]"}`}
               >
-                <td class="px-1 py-1 font-semibold  text-center">{row.num}</td>
+                <td class={`px-1 py-1 font-semibold  text-center ${darkMode.value?"text-white":"text-black"}`}>{row.num}</td>
 
                 <td class="" >
                   <Link
@@ -91,20 +92,20 @@ const Table = ({ table }) => {
                       alt="Escudo Equipo"
                       class="h-5 w-5 mr-2  object-contain "
                     />
-                    <div class={"w-max text-sm"}>
+                    <div class={`${darkMode.value?"text-white":"text-black"} w-max text-xs md:text-sm`}>
                     {player.name}
                     </div>
                   </Link>
                 </td>
 
-                <td class="px-1 py-1 text-xs table-cell text-center" title={player.position}>
+                <td class={`${darkMode.value?"text-white":"text-black"} px-1 py-1 text-xs table-cell text-center`} title={player.position}>
                   {pos}
                 </td>
 
                 {row.values.map((val) => (
                   <td
                     key={val.key}
-                    class="px-1 py-1 text-center font-semibold "
+                    class={`px-1 py-1 text-center font-semibold ${darkMode.value?"text-white":"text-black"}`}
                   >
                     {val.value}
                   </td>

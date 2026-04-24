@@ -8,6 +8,7 @@ import {
     Loading,
     SectionTitle
 } from '@/components/common';
+import { darkMode } from '@/signals/common';
 
 
 const Table = ({ table }) => {
@@ -23,15 +24,15 @@ const Table = ({ table }) => {
                 </span>
             </div>
 
-            <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px] "} >
+            <table class={`w-full  ${darkMode.value?"bg-gray-700":"bg-gray-500"} border-separate border-spacing-[1px] `} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
                         <th class="">#</th>
-                        <th class="text-left px-4 py-1">Equipo</th>
+                        <th class={`text-left px-4 py-1`}>Equipo</th>
 
 
                         {table.columns.map((col) => (
-                            <th key={col.key} class="text-center px-0 py-1">
+                            <th key={col.key} class={`text-center px-0 py-1 `}>
                                 {col.title.replace("Total Fouls Conceded", "Barridas ganadas").replace("Tarjetas", "")}
                             </th>
                         ))}
@@ -47,9 +48,9 @@ const Table = ({ table }) => {
                         return (
                             <tr
                                 key={row.num}
-                                class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
+                                class={`text-black text-sm border-b border-[#333] ${darkMode.value?"odd:bg-slate-800 even:bg-slate-900":"odd:bg-[#E7E7E7] even:bg-[#D5D5D5]"}`}
                             >
-                                <td class="px-1 py-1 font-semibold  text-center">{row.num}</td>
+                                <td class={`px-1 py-1 font-semibold  text-center ${darkMode.value?"text-white":"text-black"}`}>{row.num}</td>
 
                                 <td class="">
                                     <Link
@@ -62,7 +63,7 @@ const Table = ({ table }) => {
                                             alt="Escudo Equipo"
                                             class="h-5 w-5 mr-2  object-contain drop-shadow-xs drop-shadow-black"
                                         />
-                                        <div class={"w-max"}>
+                                        <div class={`w-max text-xs md:text-sm ${darkMode.value?"text-white":"text-black"}`}>
                                             {player.name}
                                         </div>
                                     </Link>
@@ -72,7 +73,7 @@ const Table = ({ table }) => {
                                 {row.values.map((val) => (
                                     <td
                                         key={val.key}
-                                        class="px-1 py-1 text-center font-semibold "
+                                        class={`px-1 py-1 text-center font-semibold ${darkMode.value?"text-white":"text-black"}`}
                                     >
                                         {val.value}
                                     </td>
@@ -118,8 +119,6 @@ const TeamStats = ({ id }) => {
 
     const { stats } = data
 
-    console.log(stats);
-    
 
     if (stats === undefined) return;
 

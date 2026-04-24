@@ -8,6 +8,7 @@ import { Link } from 'preact-router';
 import { getDisplayDateString, getURLDateString } from '@/utils/time';
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import Slider from '@mui/material/Slider';
+import { darkMode } from '@/signals/common';
 
 
 const LastGames = ({ name }) => {
@@ -19,8 +20,7 @@ const LastGames = ({ name }) => {
 
 
     const { games, isLoading, error } = usePlayerGames(player.id)
-
-
+    
     if (isLoading)
         return (
             <div class={"w-full flex items-center justify-center"}>
@@ -34,7 +34,7 @@ const LastGames = ({ name }) => {
 
 
     const sortedGames = games?.sort((a, b) => (new Date(b.game.startTime) - new Date(a.game.startTime)))
-
+    const [gameCount, setGameCount] = useState(games.length)
 
     return (
         <Fade in timeout={300}>
@@ -43,14 +43,11 @@ const LastGames = ({ name }) => {
                     Últimos partidos
                 </h2>
 
-                {/* <GamesStats games={games} name={name} /> */}
-
-
-                <PlayerStatsCard games={games} name={name} />
+                <PlayerStatsCard games={games} name={name} gameCount={gameCount} setGameCount={setGameCount} />
 
                 <div class={"flex flex-row flex-wrap gap-2"}>
                     {
-                        sortedGames.map((item, i) => (
+                        sortedGames.slice(0,gameCount).map((item, i) => (
                             <div class={"bg-slate-800 rounded md:w-[49%] w-full self-start"}>
                                 <div class={"flex flex-row items-center justify-center h-full border-[1px] rounded border-slate-700"}>
                                     <div class={"font-semibold text-shadow-xs w-[27px] text-center text-shadow-black rounded-l px-1  text-white"}>{i + 1}</div>
@@ -92,7 +89,7 @@ const Game = ({ game }) => {
 
     return (
 
-        <div class={`grid grid-cols-26 gap-[1px]  bg-gray-600 text-white text-sm self-stretch`}>
+        <div class={`grid grid-cols-26 gap-[1px]   ${darkMode.value ? "bg-gray-800" : "bg-gray-500"}  text-white text-sm self-stretch`}>
             <div class={"col-span-26 flex flex-row  justify-between px-1 gap-1 text-center py-[2px] text-xs bg-gray-800"}>
                 <div class={"text-start"}>{competitionDisplayName.replace("-", "|")}</div>
                 <Link
@@ -115,15 +112,15 @@ const Game = ({ game }) => {
                 {shortStatusText.replace("penaltis", "penales")}
             </div>
 
-            <div class={`col-span-8 h-full flex flex-col border-transparent bg-gray-200 text-black items-center justify-center p-1`}>
+            <div class={`col-span-8 h-full flex flex-col border-transparent ${darkMode.value ? "bg-slate-950/80 text-white  border-gray-400" : "bg-gray-200 text-black  border-black"} items-center justify-center p-1`}>
                 <img src={`https://imagecache.365scores.com/image/upload/f_png,w_34,h_34,c_limit,q_auto:eco,dpr_2,d_Competitors:default1.png/v1/Competitors/${homeCompetitor.id}`} style={{ height: 20, width: 20 }} alt="Team" />
                 <div class={"text-center line-clamp-1 text-xs font-semibold"}>{homeCompetitor.name}</div>
             </div>
 
-            <div class={` bg-white text-black  border-black col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${homeCompetitor.isWinner && "border-b-[1px]"}`}>{scores[0]}</div>
-            <div class={`col-span-2  bg-white text-black  border-black  flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${awayCompetitor.isWinner && "border-b-[1px]"}`}>{scores[1]}</div>
+            <div class={` ${darkMode.value ? "bg-gray-900 text-white  border-gray-400" : "bg-white text-black  border-black"}  border-black col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${homeCompetitor.isWinner && "border-b-[1px]"}`}>{scores[0]}</div>
+            <div class={`col-span-2  ${darkMode.value ? "bg-gray-900 text-white  border-gray-400" : "bg-white text-black  border-black"} border-black  flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${awayCompetitor.isWinner && "border-b-[1px]"}`}>{scores[1]}</div>
 
-            <div class={`col-span-8 h-full flex flex-col border-transparent bg-gray-200 text-black items-center justify-center p-1`}>
+            <div class={`col-span-8 h-full flex flex-col border-transparent ${darkMode.value ? "bg-slate-950/80 text-white  border-gray-400" : "bg-gray-200 text-black  border-black"}  items-center justify-center p-1`}>
                 <img src={`https://imagecache.365scores.com/image/upload/f_png,w_34,h_34,c_limit,q_auto:eco,dpr_2,d_Competitors:default1.png/v1/Competitors/${awayCompetitor.id}`} style={{ height: 20, width: 20 }} alt="Team" />
                 <div class={"text-center line-clamp-1 text-xs font-semibold"}>{awayCompetitor.name}</div>
             </div>
@@ -138,8 +135,8 @@ const Game = ({ game }) => {
                 {tied ? "E" : (winner ? "V" : "D")}
 
             </div>
-            <div class={"w-full flex flex-row justify-between col-span-26  bg-white px-4 "}>
-                <div class={"col-span-26 bg-white px-1 py-[2px] h-full "}>
+            <div class={`w-full flex flex-row justify-between col-span-26 ${darkMode.value ? "bg-slate-900 text-white  border-gray-400" : "bg-white text-black  border-black"}  px-4 `}>
+                <div class={`col-span-26 ${darkMode.value ? "bg-slate-900 text-white  border-gray-400" : "bg-white text-black  border-black"} px-1 py-[2px] h-full `}>
                     {
                         didNotPlayReason != undefined &&
                         <div class={"flex flex-row items-center gap-1"}>
@@ -147,9 +144,9 @@ const Game = ({ game }) => {
                                 didNotPlayReason === "Lesionado" ?
                                     <img src={injury} style={{ width: 20, height: 20 }} />
                                     :
-                                    <Info color="black" size={20} />
+                                    <Info color={darkMode.value ? 'white' : "black"} size={20} />
                             }
-                            <div class={"text-black text-xs"}>{
+                            <div class={`${darkMode.value ? "text-white" : "text-black"} text-xs`}>{
                                 didNotPlayReason
                                     .replace("Suplente", "Banco de suplentes")
                                     .replace("Suspendido", "Fecha de suspensión")
@@ -158,7 +155,7 @@ const Game = ({ game }) => {
                     }
                     {
                         hasStats &&
-                        <ul class={"col-span-26 list-disc list-inside flex flex-col h-full text-black text-xs "}>
+                        <ul class={"col-span-26 list-disc list-inside flex flex-col h-full  text-xs "}>
 
                             {
                                 groupNum != undefined &&
@@ -212,7 +209,7 @@ const Game = ({ game }) => {
 
                     hasStats && Object.entries(athleteStats[4]).length > 0 &&
 
-                    <div class={"flex flex-col justify-center items-center gap-0 bg-white pt-1"}>
+                    <div class={`flex flex-col justify-center items-center gap-0 ${darkMode.value ? "bg-slate-900 text-white  border-gray-400" : "bg-white text-black  border-black"} pt-1`}>
                         <div
                             style={{ backgroundColor: athleteStats[4].bgColor, color: (athleteStats[4].bgColor === "#FFC107" ? "black" : "white") }}
                             class={"px-2 py-0 text-xs w-min rounded  font-semibold"}
@@ -237,9 +234,9 @@ const Num = ({ num, color = "#C2E213" }) => {
     return <span style={{ color }} className="md:text-lg text-[15px] font-bold not-italic">{num}</span>
 }
 
-function PlayerStatsCard({ games, name }) {
+function PlayerStatsCard({ games, name ,setGameCount,gameCount}) {
 
-    const [gameCount, setGameCount] = useState(games.length)
+    
     const [stats, setStats] = useState(getStats(games))
 
     useEffect(() => {
@@ -307,7 +304,7 @@ function PlayerStatsCard({ games, name }) {
             <div class={"flex flex-col md:gap-1 gap-3 text-sm pb-2 px-2 md:text-base text-gray-200"}>
 
                 <div class={"flex flex-row items-center gap-1"}>
-                    <CalendarDays size={15} color='white' />
+                    <CalendarDays size={15} color={"white"} />
                     <p class={"text-xs font-light "}>
                         {lastGameDate} - {currentDate}
                     </p>

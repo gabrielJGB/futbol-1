@@ -8,6 +8,7 @@ import {
     Loading,
     SectionTitle
 } from '@/components/common';
+import { darkMode } from '@/signals/common';
 
 
 const TeamStats = ({ id }) => {
@@ -32,7 +33,7 @@ const TeamStats = ({ id }) => {
     const { stats } = data
 
 
-    console.log(stats);
+
     
 
     if (stats === undefined) return;
@@ -70,7 +71,7 @@ const Table = ({ table }) => {
                 </span>
             </div>
 
-            <table class={"w-full  bg-gray-500   border-separate border-spacing-[2px] "} >
+            <table class={`w-full ${darkMode.value?"odd:bg-slate-800 even:bg-slate-900":"odd:bg-[#E7E7E7] even:bg-[#D5D5D5]"}  border-separate border-spacing-[2px] `} >
                 <thead>
                     <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
                         <th class="">#</th>
@@ -94,7 +95,7 @@ const Table = ({ table }) => {
                         return (
                             <tr
                                 key={row.num}
-                                class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
+                                class={`text-black text-sm border-b border-[#333] `}
                             >
                                 <td class="px-1 py-1 font-semibold  text-start">{row.num}</td>
 
@@ -109,7 +110,7 @@ const Table = ({ table }) => {
                                             alt="Escudo Equipo"
                                             class="h-5 w-5 mr-2  object-contain drop-shadow-xs drop-shadow-black"
                                         />
-                                        <div class={"w-max"}>
+                                        <div class={"w-max "}>
                                             {player.name}
                                         </div>
                                     </Link>

@@ -8,7 +8,7 @@ const LeagueHeader = ({ id }) => {
     const leagueName = league.league.name
     const countryName = league.league.country_name
     const countryId = league.league.country_id
-    console.log(league);
+
 
 
     // bg-gradient-to-r from-[#C2E213] to-[#C2E213]/70

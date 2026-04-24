@@ -13,6 +13,8 @@ const FieldContainer = ({ id }) => {
   const colors = [data.game.teams[0].colors, data.game.teams[1].colors]
   const formations = [teams[0].formation, teams[1].formation]
   const ids = [data.game.teams[0].id, data.game.teams[1].id]
+  const assists = data.game.events.flatMap(x=>x.rows).filter(e=>e.events[0].type === 1 && e.events[0].texts.length >1).map(e=>e.events[0].texts[1])
+
 
   return (
     <div class={"flex flex-col gap-1"}>
@@ -33,7 +35,7 @@ const FieldContainer = ({ id }) => {
 
         {
           teams.map((team, i) => (
-            <TeamField isHome={i == 0} team={{ ...team, colors: colors[i] }} gameId={id} teamId={ids[i]} />
+            <TeamField isHome={i == 0} team={{ ...team, colors: colors[i] }} gameId={id} teamId={ids[i]} assists={assists}/>
           ))
         }
 

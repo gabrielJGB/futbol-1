@@ -15,7 +15,7 @@ const Options = () => {
                     onChange={() => showFlags.value = !showFlags.value}
                 />
 
-                <span class={"pl-1 cursor-pointer"}>Banderas</span>
+                <span class={"pl-1 cursor-pointer text-white"}>Banderas</span>
             </label>
 
 
@@ -29,7 +29,7 @@ const Options = () => {
                     onChange={() => invertLines.value = !invertLines.value}
                 />
 
-                <span class={"pl-1 cursor-pointer"}>Invertir</span>
+                <span class={"pl-1 cursor-pointer text-white"}>Invertir</span>
             </label>
 
             <label htmlFor="jersey" class={"text-xs"}>
@@ -42,7 +42,7 @@ const Options = () => {
                     onChange={() => showNumbers.value = ! showNumbers.value }
                 />
 
-                <span class={"pl-1 cursor-pointer"}>Numeros</span>
+                <span class={"pl-1 cursor-pointer text-white"}>Numeros</span>
             </label>
 
 
@@ -57,7 +57,7 @@ const Options = () => {
                     onChange={() => showSubPlayers.value = ! showSubPlayers.value }
                 />
 
-                <span class={"pl-1 cursor-pointer"}>Suplentes</span>
+                <span class={"pl-1 cursor-pointer text-white"}>Suplentes</span>
             </label>
 
         </div>

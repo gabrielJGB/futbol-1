@@ -48,7 +48,7 @@ const LastGames = ({ game }) => {
                                     className="h-7 object-contain drop-shadow-lg drop-shadow-black"
                                     alt="Escudo Equipo"
                                 />
-                                <div class={"font-semibold text-[12px] whitespace-nowrap text-center text-shadow-xs text-shadow-black"}>{team.name}</div>
+                                <div class={"font-semibold text-white text-[12px] whitespace-nowrap text-center text-shadow-xs text-shadow-black"}>{team.name}</div>
                             </div>
 
                             <div class={"flex flex-row-reverse items-center gap-1 justify-center"}>

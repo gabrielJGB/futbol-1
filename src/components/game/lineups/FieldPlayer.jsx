@@ -4,13 +4,14 @@ import { useGame } from '@/hooks/useGame'
 import goal from '@/assets/goal.png'
 import ownGoal from '@/assets/own-goal.png'
 // @ts-ignore
+import boot from '@/assets/boot.png'
 import { GiSoccerBall } from 'react-icons/gi'
 import { ChevronLeft, ChevronRight } from 'lucide-preact'
 import { showFlags, showNumbers, showSubPlayers } from '@/signals/game'
 import { Link } from 'preact-router'
 
 
-const FieldPlayer = ({ player, colors, isHome, gameId, teamId }) => {
+const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
 
     if (player === undefined)
         return <></>
@@ -23,12 +24,13 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId }) => {
         colors.text_color = "#fbff00"
     }
 
-
-    //  flex flex-col  items-center justify-center  text-white text-xs font-bold z-10 
+    const playerAssists = assists.filter(p => p === player.name).length
 
     return (
         <div class='flex flex-col items-center justify-center z-20'>
+            {
 
+            }
             <Link
                 // @ts-ignore
                 href={`/player/${name}`} class={"hover:scale-105 active:scale-105 "}>
@@ -37,6 +39,7 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId }) => {
                         isStarter={true}
                         jersey_num={jersey_num}
                         events={events}
+                        playerAssists={playerAssists}
                         colors={colors}
                         country_id={country_id}
                         teamId={teamId}
@@ -57,6 +60,7 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId }) => {
                     colors={colors}
                     substituteNumber={player.substitution.player ?? false}
                     gameId={gameId}
+                    assists={assists}
                     i={isHome ? 0 : 1}
                 />
 
@@ -72,7 +76,7 @@ export default FieldPlayer
 
 
 
-const SubstitutePlayer = ({ substituteNumber, colors, i, gameId, teamId }) => {
+const SubstitutePlayer = ({ substituteNumber, colors, i, gameId, teamId, assists }) => {
 
     if (!substituteNumber)
         return <></>
@@ -84,7 +88,7 @@ const SubstitutePlayer = ({ substituteNumber, colors, i, gameId, teamId }) => {
     const { player_short_name, jersey_num, events, country_id, name } = player
 
 
-
+    const playerAssists = assists.filter(p => p === player.name).length
     return (
 
 
@@ -99,6 +103,7 @@ const SubstitutePlayer = ({ substituteNumber, colors, i, gameId, teamId }) => {
                     jersey_num={jersey_num}
                     events={events}
                     colors={colors}
+                    playerAssists={playerAssists}
                     country_id={country_id}
                     teamId={teamId}
                 />
@@ -119,20 +124,21 @@ const SubstitutePlayer = ({ substituteNumber, colors, i, gameId, teamId }) => {
 
 
 
-const Goals = ({ events }) => {
+const Goals = ({ events ,isStarter}) => {
+    const SIZE = isStarter?12:10
 
     return (
         <div class='flex flex-row gap-[2px] mb-[2px]'>
             {
                 // @ts-ignore
                 Array.from({ length: events.goals.goals }).map((_goal, i) => (
-                    <img src={goal} width={11} height={11} />
+                    <img src={goal} width={SIZE} height={SIZE} />
                 ))
             }
             {
                 // @ts-ignore
                 Array.from({ length: events.goals.own_goals }).map((_goal, i) => (
-                    <img src={ownGoal} width={11} height={11} />
+                    <img src={ownGoal} width={SIZE} height={SIZE} />
                 ))
             }
         </div>
@@ -141,7 +147,7 @@ const Goals = ({ events }) => {
 
 
 
-const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamId }) => {
+const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamId, playerAssists }) => {
 
 
     return (
@@ -159,10 +165,18 @@ const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamI
             }
             <div class=' flex flex-col items-center justify-center '>
 
-                {
-                    events != undefined && events.goals.goals > 0 &&
-                    <Goals events={events} />
-                }
+                <div class={"flex flex-row items-center gap-[2px]"}>
+                    {
+                        events != undefined && events.goals.goals > 0 &&
+                        <Goals events={events} isStarter={isStarter}/>
+                    }
+                    {
+                        Array.from({ length: playerAssists }).map(a => (
+                            <img title="Asistencia" src={boot} width={isStarter?12:10} />
+                        ))
+                    }
+
+                </div>
 
 
                 {
@@ -173,7 +187,7 @@ const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamI
                             color: showFlags.value ? "white" : (colors.text_color ?? "white")
                         }}
                         class={`
-                            ${ showFlags.value ? "text-shadow-sm ":(teamId === "igg" ? "text-shadow-md":"text-shadow-xs ")}
+                            ${showFlags.value ? "text-shadow-sm " : (teamId === "igg" ? "text-shadow-md" : "text-shadow-xs ")}
                             ${isStarter ? "size-[36px] rounded-lg text-[18px]" : "text-[11px] size-[19px] rounded-md"} 
                             ${showFlags.value ? "size-[19px] drop-shadow-xs bg-no-repeat bg-contain" : " border-gray-900 border-[2px] shadow-xs "}
                             flex flex-col drop-shadow-black shadow-black items-center justify-center font-bold  text-shadow-black
@@ -188,7 +202,7 @@ const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamI
                             </div>
                         }
                         <div
-                            style={{color:`${teamId === "igg"? "white":"unset"}`}}
+                            style={{ color: `${teamId === "igg" ? "white" : "unset"}` }}
                             class={"z-0"}>
                             {
                                 showNumbers.value ? jersey_num : ""

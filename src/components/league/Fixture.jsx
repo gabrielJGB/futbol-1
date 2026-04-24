@@ -4,6 +4,7 @@ import React from 'react'
 import { GameCard } from "@/components/home";
 import { BiArrowToLeft, BiArrowToRight } from 'react-icons/bi';
 import { round } from "@/signals/league";
+import { darkMode } from "@/signals/common";
 
 
 const Fixture = ({ games, rounds }) => {
@@ -28,7 +29,7 @@ const Fixture = ({ games, rounds }) => {
                 {
                     groupedByDate.map((item, i) => (
                         <div key={i} class={"flex flex-col"}>
-                            <div class={"w-full text-center font-bold py-2 bg-gray-800"}>{item.date_string}</div>
+                            <div class={`w-full text-center font-bold py-2 ${darkMode.value?"bg-gray-600":"bg-gray-800"}`}>{item.date_string}</div>
 
                             {
                                 item.games.map((game, j) => (

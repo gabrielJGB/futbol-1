@@ -148,7 +148,7 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
                     <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
 
-                    <div class={"text-shadow-xs text-shadow-black font-semibold "}>
+                    <div class={"text-shadow-xs text-white text-shadow-black font-semibold "}>
                         {player.name}
                     </div>
 

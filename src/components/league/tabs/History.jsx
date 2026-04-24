@@ -4,6 +4,7 @@ import { SectionTitle } from '@/components/common';
 import { fetcher } from '@/utils/fetcher';
 import useSWR from 'swr';
 import { Link } from 'preact-router/match';
+import { darkMode } from '@/signals/common';
 
 const abbreviatePosition = (pos) => {
   if (!pos) return '';
@@ -30,7 +31,7 @@ const History = ({ id }) => {
       revalidateIfStale: true,
       revalidateOnFocus: false,
       onSuccess: (data) => {
-        console.log(data);
+
 
         setHistoryTable("history" in data && data.history)
         setRankingTable("ranking_tables" in data && data.ranking_tables)
@@ -84,7 +85,7 @@ const Table = ({ table, leagueId }) => {
         </span>
       </div>
 
-      <table class={"w-full  bg-gray-500   border-separate border-spacing-[1px] "} >
+      <table class={`w-full ${darkMode.value?"bg-gray-700":"bg-gray-500"} border-separate border-spacing-[1px] `} >
         <thead>
 
           <tr class="bg-black text-[#C2E213] uppercase  text-[13px]">
@@ -92,7 +93,7 @@ const Table = ({ table, leagueId }) => {
               isRankingTable && <th>Equipo</th>
             }
             {table.columns.map((col) => (
-              <th key={col.key} class="text-center px-0 py-1">
+              <th key={col.key} class={`text-center px-0 py-1 `}>
                 {
                   col.title
                     .replace("Torneo", "CAMPEÓN")
@@ -114,7 +115,7 @@ const Table = ({ table, leagueId }) => {
             return (
               <tr
                 key={row.num}
-                class={`text-black text-sm border-b border-[#333] ${i % 2 === 0 ? "bg-[#E7E7E7]" : "bg-[#D5D5D5]"}`}
+                class={`text-black text-sm border-b border-[#333] ${darkMode.value?"odd:bg-slate-800 even:bg-slate-900":"odd:bg-[#E7E7E7] even:bg-[#D5D5D5]"}`}
               >
 
 
@@ -122,14 +123,14 @@ const Table = ({ table, leagueId }) => {
                   <Link
                     // @ts-ignore
                     href={`/team/${encodeURIComponent(teamId)}`}
-                    class="px-1 py-0 flex items-center text-sm  hover:underline"
+                    class="px-1 py-[5px] flex items-center text-sm  hover:underline"
                   >
                     <img
                       src={`https://api.promiedos.com.ar/images/team/${teamId}/1`}
                       alt="Escudo Equipo"
                       class="h-5 w-5 mr-2  object-contain"
                     />
-                    <div class={"line-clamp-2  text-[13px] font-semibold"}>
+                    <div class={`hover:underline active:underline md:w-[210px] w-[150px] text-[13px] font-semibold ${darkMode.value?"text-white":"text-black"}`}>
                       {player.name}
                     </div>
                   </Link>
@@ -168,10 +169,12 @@ const Table = ({ table, leagueId }) => {
                         <Link
                           // @ts-ignore
                           href={tableId != null && `/table/${leagueId}-${tableId}-${leagueSeason}`}
-                          class={"hover:underline"}
+                          class={`hover:underline ${darkMode.value?"text-white":"text-black"}`}
                         >
+                          <div  class={`text-xs ${darkMode.value?"text-white":"text-black"}`}>
 
                           {val.value.replace(">", "")}
+                          </div>
                         </Link>
                     }
                   </td>

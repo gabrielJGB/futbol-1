@@ -1,8 +1,9 @@
 import { useLocation } from 'preact-iso';
 import { Link } from 'preact-router/match';
 import { showMenu, showCalendar } from '@/signals/home';
-import { CalendarDaysIcon } from 'lucide-preact';
+import { CalendarDaysIcon, MoonIcon, SunIcon } from 'lucide-preact';
 import fp_icon from '@/assets/futbolplay_icon.png'
+import { darkMode } from '@/signals/common';
 
 export default function Header() {
 	const { path } = useLocation();
@@ -21,14 +22,14 @@ export default function Header() {
 			<div class={"flex flex-row justify-between w-full items-center"}>
 				<Link
 					// @ts-ignore
-					href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 text-3xl md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51]"}>
+					href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 text-3xl md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51] active:text-[#e5ff51]"}>
 					FUTBOL 1
 				</Link>
 
 
-				<div class={"flex items-center gap-2 "}>
+				<div class={"flex items-center md:gap-2 "}>
 
-					<a class={"mr-2 flex items-center gap-2 hover:underline "} target="_blank" href={"https://futbolplay.vercel.app"} >
+					<a class={"mr-2 flex items-center gap-2 hover:bg-b5/40 active:bg-b5/40 rounded-full p-2 md:rounded md:py-1 md:px-2 "} target="_blank" href={"https://futbolplay.vercel.app"} >
 						<div class={"text-xs hidden md:block font-semibold"}>Fútbol Play</div>
 						<img src={fp_icon} class={" md:size-8 size-6 cursor-pointer "} alt="Futbol Play Icon" />
 					</a>
@@ -37,12 +38,22 @@ export default function Header() {
 					{
 						isHome &&
 						<div
-							class={`${showCalendar.value?"bg-green-950 shadow-[0_0_5px_#000_inset]":""}  transition-all md:hidden max-lg:landscape:block block active:bg-green-950 rounded p-2 cursor-pointer `}
+							class={`${showCalendar.value ? "bg-green-950 shadow-[0_0_5px_#032e15_inset]" : ""}  transition-all md:hidden max-lg:landscape:block block  hover:bg-b5/40 rounded-full active:bg-b5/40  p-2 cursor-pointer `}
 							onClick={() => { showCalendar.value = !showCalendar.value }}
 						>
 							<CalendarDaysIcon size={22} color={"#C2E213"} />
 						</div>
 					}
+
+					<button class={"cursor-pointer hover:bg-b5/40 active:bg-b5/40 rounded-full p-2"} onClick={() => { darkMode.value = !darkMode.value }}>
+						{
+							darkMode.value ?
+								<SunIcon size={22} color='white' />
+								:
+								<MoonIcon size={22} color='white' />
+						}
+					</button>
+
 				</div>
 
 			</div>

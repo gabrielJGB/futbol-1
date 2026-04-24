@@ -2,7 +2,7 @@ import FieldLine from '@/components/game/lineups/FieldLine'
 import { invertLines } from '@/signals/game';
 import React from 'react'
 
-const TeamField = ({ team, isHome, gameId ,teamId}) => {
+const TeamField = ({ team, isHome, gameId ,teamId,assists}) => {
 
     
 
@@ -34,7 +34,7 @@ const TeamField = ({ team, isHome, gameId ,teamId}) => {
                         colors={colors}
                         gameId={gameId}
                         teamId={teamId}
-
+                        assists={assists}
                     />
                 ))
             }

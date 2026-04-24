@@ -61,40 +61,41 @@ export default TabsContainer
 
 const getTabsArray = (game) => {
     const tabs = []
+    if (game != undefined) {
 
-    if (game.players != undefined && game.players.lineups != undefined) {
+        if (game.players != undefined && game.players.lineups != undefined) {
+            tabs.push({
+                name: "lineups",
+                label: "Formaciones",
+                icon: () => (<GiSoccerField size={25} />),
+                component: (id) => (<Lineups id={id} />)
+            })
+        }
+
+        if (game.events != undefined) {
+            tabs.push({
+                name: "events",
+                label: "Eventos",
+                icon: () => (<MdMenu size={25} />),
+                component: (id) => (<Events id={id} />)
+            })
+        }
+
         tabs.push({
-            name: "lineups",
-            label: "Formaciones",
-            icon: () => (<GiSoccerField size={25} />),
-            component: (id) => (<Lineups id={id} />)
+            name: "prev",
+            label: "Previa",
+            icon: () => (<BiHistory size={25} />),
+            component: (id) => (<Prev id={id} />)
         })
+
+        if (game.statistics != undefined) {
+            tabs.push({
+                name: "stats",
+                label: "Estadísticas",
+                icon: () => (<BarChartIcon size={25} />),
+                component: (id) => (<Stats id={id} />)
+            })
+        }
     }
-
-    if (game.events != undefined) {
-        tabs.push({
-            name: "events",
-            label: "Eventos",
-            icon: () => (<MdMenu size={25} />),
-            component: (id) => (<Events id={id} />)
-        })
-    }
-
-    tabs.push({
-        name: "prev",
-        label: "Previa",
-        icon: () => (<BiHistory size={25} />),
-        component: (id) => (<Prev id={id} />)
-    })
-
-    if (game.statistics != undefined) {
-        tabs.push({
-            name: "stats",
-            label: "Estadísticas",
-            icon: () => (<BarChartIcon size={25} />),
-            component: (id) => (<Stats id={id} />)
-        })
-    }
-
     return tabs
 }

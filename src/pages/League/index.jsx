@@ -36,7 +36,8 @@ const League = ({ id }) => {
 
   useEffect(() => {
 
-    document.title = league.league.name + " - Fútbol 1"
+    if(league != undefined)
+      document.title = league.league.name + " - Fútbol 1"
 
     if (query.tab != undefined)
       selectedTab.value = query.tab

@@ -30,7 +30,7 @@ const Positions = ({ game }) => {
                                 <td class={"bg-gray-300 font-semibold text-center text-black px-1"}>
                                     {row.num}
                                 </td>
-                                <td class={"flex flex-row items-center gap-1 bg-gray-300 text-black"}>
+                                <td class={"flex flex-row items-center gap-1 pl-1 bg-gray-300 text-black"}>
                                     <img
                                         src={`https://api.promiedos.com.ar/images/team/${row.entity.object.id}/1`}
                                         className="h-4 object-contain"

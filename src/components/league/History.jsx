@@ -30,7 +30,6 @@ const History = ({ name, league, games,leagueId }) => {
       revalidateIfStale: true,
       revalidateOnFocus: false,
       onSuccess: (data) => {
-        console.log(data);
 
         setHistoryTable("history" in data && data.history)
         setRankingTable("ranking_tables" in data && data.ranking_tables)

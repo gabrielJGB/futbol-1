@@ -24,43 +24,52 @@ const Events = ({ id }) => {
         <Fade in={true} timeout={300} >
             <div class={"md:mx-40  flex flex-col-reverse gap-2 p-2 mb-40"}>
 
-                <div class={"w-full text-center font-semibold"}>Inicio del partido</div>
+                <div class={"w-full text-center font-semibold  bg-b2/70 py-3 rounded-lg mt-2 uppercase text-primary"}>Inicio del partido</div>
 
                 {
                     stages.map((stage, i) => {
 
-                        // if (!stage.show_stage_title)
-                        //     return <></>
+                        return (
+                            <div class={"flex flex-col-reverse"}>
+                                <div class={"flex flex-col-reverse gap-2 "}>
+                                    {/* <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b2 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
 
-                        return <div class={"flex flex-col-reverse"}>
-                            <div class={"flex flex-col-reverse gap-2 "}>
-                                {
-                                    stage.rows.map((row, j) => (
-                                        <div class={`${row.events[0].team === 1 ? "flex-row bg-gradient-to-l from-transparent to-b2 border-l-[1px]" : "flex-row-reverse bg-gradient-to-l from-b3 to-transparent border-r-[1px]"} border-primary w-full flex  gap-2 items-center justify-start rounded-lg px-3 p-1< `}>
+                                                <div class={"text-[20px] font-semibold text-primary"}>{row.time}</div>
+                                                <Event event={row.events[0]} />
 
-                                            <div class={"text-[20px] font-semibold text-primary"}>{row.time}</div>
-                                            <Event event={row.events[0]} />
-
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                            {
-
-                                stage.show_stage_title &&
-                                <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2"}>
-
-                                    <div>{stage.name.replace("Fin", "Final")}</div>
+                                            </div> */}
                                     {
-                                        "scores" in stage &&
-                                        <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
+                                        stage.rows.map((row, j) => (
+                                            <div class={`grid grid-cols-[1fr_100px_1fr] `}>
+
+                                   
+                                                <div class={"text-[20px] text-center  row-start-1 col-start-2 font-semibold text-primary bg-b2/70 pt-1"}>{row.time}</div>
+
+                                                <div class={`${row.events[0].team === 1 ? "rounded-l-lg col-start-1" : "col-start-3  rounded-r-lg"} bg-b2 row-start-1 h-full`}>
+                                                    <Event event={row.events[0]} />
+                                                </div>
+
+                                            </div>
+                                        ))
                                     }
-
-
                                 </div>
-                            }
+                                {
 
-                        </div>
+                                    stage.show_stage_title &&
+                                    <div class={"flex flex-row justify-center items-center gap-2 w-full text-center font-semibold mb-4  mt-2 bg-b2/70 py-3 rounded-lg"}>
+
+                                        <div class={"text-primary uppercase"}>{stage.name.replace("Fin", "Final")}</div>
+                                        {
+                                            "scores" in stage &&
+                                            <div class={"text-gray-400"}>({stage.scores[0]} - {stage.scores[1]})</div>
+                                        }
+
+
+                                    </div>
+                                }
+
+                            </div>
+                        )
                     })
                 }
 
@@ -78,19 +87,21 @@ const Event = ({ event }) => {
 
 
     return (
-        <div class={"flex flex-col "}>
-            {
-                texts.map((text, i) => (
+        <div class={"flex flex-row justify-center items-center h-full"}>
+            <div class={"flex flex-col  justify-center p-1 h-full"}>
+                {
+                    texts.map((text, i) => (
 
-                    <div class={"flex flex-row items-center gap-2"}>
-                        {getIcon(type, i)}
-                        <div class={"md:text-[13px] text-xs"}>{text}</div>
-                    </div>
+                        <div class={"flex flex-row items-center gap-2"}>
+                            {getIcon(type, i)}
+                            <div class={`md:text-[13px] text-xs text-white`}>{text}</div>
+                        </div>
 
 
-                ))
-            }
+                    ))
+                }
 
+            </div>
         </div>
     )
 }

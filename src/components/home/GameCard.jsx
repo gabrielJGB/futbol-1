@@ -39,9 +39,9 @@ const GameCard = ({ index, game, showCountryFlags }) => {
     return (
 
         <div
-            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} w-full overflow-hidden `}>
+            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-slate-800" : "bg-gray-400"} w-full overflow-hidden `}>
 
-            <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? "bg-gray-600" : "bg-gray-400"} text-white text-sm`}>
+            <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? "bg-slate-800" : "bg-gray-400"} text-white text-sm`}>
 
                 <RoundDescription
                     isFirstGame={index === 0}
@@ -80,7 +80,7 @@ const GameCard = ({ index, game, showCountryFlags }) => {
             </div>
             {
 
-                <div className={`grid grid-cols-26 gap-[1px] ${awayScorers.length > 0 || homeScorers.length > 0 ? "border-b-[1px]" : "border-b-[0px]"}  ${darkMode.value ? "border-gray-600" : "border-gray-400"}  text-xs font-stretch-50% font-semibold`}>
+                <div className={`grid grid-cols-26 gap-[1px] ${awayScorers.length > 0 || homeScorers.length > 0 ? "border-b-[1px]" : "border-b-[0px]"}  ${darkMode.value ? "border-slate-800" : "border-gray-400"}  text-xs font-stretch-50% font-semibold`}>
 
                     <Scorers teamScorers={homeScorers} />
                     <Scorers teamScorers={awayScorers} />
@@ -108,13 +108,13 @@ const RoundDescription = ({ description, roundName, isFirstGame }) => {
         <>
             {
                 description &&
-                <div className={`col-span-26 text-center py-[2px] text-xs ${darkMode.value ? "bg-gray-950" : "bg-gray-800"}`}>
+                <div className={`col-span-26 text-center py-[2px] text-xs ${darkMode.value ? "bg-gray-700" : "bg-gray-800"}`}>
                     {description}
                 </div>
             }
             {
                 isFirstGame && roundName && (
-                    <div className={`col-span-26 text-center py-[2px] text-xs ${darkMode.value ? "bg-gray-950" : "bg-gray-800"}`}>
+                    <div className={`col-span-26 text-center py-[2px] text-xs ${darkMode.value ? "bg-gray-700" : "bg-gray-800"}`}>
                         {roundName}
                     </div>)
             }
@@ -147,7 +147,7 @@ const Team = ({ team, showCountryFlags }) => {
             // @ts-ignore
             href={`/team/${team.id}`} class={"col-span-8"}
         >
-            <div className={`h-full flex flex-col border-transparent hover:bg-gray-300 active:bg-gray-300 ${darkMode.value ? "bg-gray-800 text-white" : "bg-gray-200 text-black"} items-center justify-center p-1`}>
+            <div className={`h-full flex flex-col border-transparent ${darkMode.value ? "bg-slate-950/80 text-white  hover:bg-slate-700 active:bg-slate-700" : "bg-gray-200 text-black hover:bg-gray-300 active:bg-gray-300"} items-center justify-center p-1`}>
 
 
                 <div class={"z-0 relative"}>
@@ -160,7 +160,7 @@ const Team = ({ team, showCountryFlags }) => {
                     }
                 </div>
 
-                <div className='flex flex-row items-center  text-center  text-xs font-semibold'>
+                <div className={`flex flex-row items-center  text-center  text-xs font-semibold ${darkMode.value?"text-gray-200":"text-black"}`}>
 
                     {team.short_name}
 
@@ -179,7 +179,7 @@ const Team = ({ team, showCountryFlags }) => {
 
 const Score = ({ isWinner, score }) => {
     return (
-        <span className={` ${darkMode.value ? "bg-gray-900 text-white  border-white" : "bg-white text-black  border-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${isWinner && "border-b-[1px]"}`}>
+        <span className={` ${darkMode.value ? "bg-gray-900 text-white  border-gray-400" : "bg-white text-black  border-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${isWinner && "border-b-[1px]"}`}>
             {score ?? ""}
         </span>
     )
@@ -205,7 +205,9 @@ const Scorers = ({ teamScorers }) => {
                     <>
                         <span key={i} className='flex flex-row items-center gap-1'>
                             <span className={`${darkMode.value ? "text-red-500" : "text-red-800"} text-xs`}>{goal.time_to_display}</span>
-                            <Link href={`/player/${goal.player_name}`} class={"hover:underline active:underline"}>
+                            <Link
+                                // @ts-ignore
+                                href={`/player/${goal.player_name}`} class={"hover:underline active:underline"}>
                                 <span>{goal.player_sname} {goal.goal_type != undefined && `(${goal.goal_type})`}</span>
                             </Link>
                         </span>

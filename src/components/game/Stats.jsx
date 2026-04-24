@@ -19,10 +19,11 @@ const Stats = ({ id }) => {
 
         <div class={"w-full text-lg font-semibold  mb-3 text-[#C2E213] text-shadow-xs text-shadow-black  text-center "}>Estadísticas</div>
 
-
-        {stats.map((stat, idx) => (
-          <StatBar key={idx} stat={stat} colors={colors} />
-        ))}
+        <div class={"flex flex-col gap-3"}>
+          {stats.map((stat, idx) => (
+            <StatBar key={idx} stat={stat} colors={colors} />
+          ))}
+        </div>
       </div>
     </Fade>
   )
@@ -46,19 +47,36 @@ const StatBar = ({ stat, colors }) => {
   const rightWidth = isLoaded ? `${stat.percentages[1] * 100}%` : '0%';
 
   return (
-    <div class="group flex flex-col mb-0 last:mb-0 w-full ">
+    <div class="bg-b5/20 rounded-lg group flex flex-col mb-0 last:mb-0 w-full p-2">
 
 
-      <span class="text-[10px] w-full mb-1 text-center  tracking-[0.2em] font-bold text-gray-100 uppercase transition-colors  ">
-        {stat.name}
-      </span>
 
 
+
+      <div class="flex justify-between items-center px-2">
+
+        <div class="flex flex-col items-start leading-none">
+          <span class="text-lg font-bold  text-white transition-all " >
+            {stat.values[0]}
+          </span>
+        </div>
+
+        <span class="text-[12px] w-full  text-center  tracking-[0.2em] font-bold text-gray-100 uppercase transition-colors  ">
+          {stat.name}
+        </span>
+
+        <div class="flex flex-col items-end leading-none">
+          <span class="text-lg font-bold text-white transition-all ">
+            {stat.values[1]}
+          </span>
+        </div>
+
+      </div>
 
 
       <div
         style={{ backgroundColor: `${colors[1].color}` }}
-        class="relative h-5 w-full rounded overflow-hidden   shadow shadow-gray-900 flex"
+        class="relative h-4 w-full rounded overflow-hidden flex"
       >
 
         <div
@@ -93,18 +111,6 @@ const StatBar = ({ stat, colors }) => {
       </div>
 
 
-      <div class="flex justify-between mt-1.5 px-2">
-        <div class="flex flex-col items-start leading-none">
-          <span class="text-lg font-bold  text-white transition-all " >
-            {stat.values[0]}
-          </span>
-        </div>
-        <div class="flex flex-col items-end leading-none">
-          <span class="text-lg font-bold text-white transition-all ">
-            {stat.values[1]}
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

@@ -17,7 +17,6 @@ const getResultElement = (elem) => {
 
 const Table = ({ table }) => {
 
-    console.log(table);
 
     return (
         <div>

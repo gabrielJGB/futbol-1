@@ -18,8 +18,8 @@ const HeadToHead = ({ game }) => {
 
                         <div class={"flex flex-col shadow-xs w-full shadow-black"}>
                             <div class={"flex flex-row items-center justify-between bg-slate-800 w-full text-center py-[2px] text-[12px] px-1"}>
-                                <div>{_game.league.name}</div>
-                                <div>{_game.start_time.split(" ")[0].replaceAll("-", "/")} </div>
+                                <div class={"text-white"}>{_game.league.name}</div>
+                                <div class={"text-white"}>{_game.start_time.split(" ")[0].replaceAll("-", "/")} </div>
                             </div>
                             <GameCard
                                 key={i}

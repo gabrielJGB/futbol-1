@@ -2,10 +2,12 @@ import FieldPlayer from '@/components/game/lineups/FieldPlayer'
 import { invertLines } from '@/signals/game'
 import React from 'react'
 
-const FieldLine = ({ players, isHome, gameId, colors ,teamId}) => {
+const FieldLine = ({ players, isHome, gameId, colors ,teamId,assists}) => {
 
 
     const _invertLines = invertLines.value
+
+    
 
     return (
         <div class={`flex ${isHome ?
@@ -15,7 +17,7 @@ const FieldLine = ({ players, isHome, gameId, colors ,teamId}) => {
 
             {
                 players?.map((player, i) => (
-                    <FieldPlayer key={i} player={player} isHome={isHome} colors={colors} gameId={gameId} teamId={teamId}/>
+                    <FieldPlayer key={i} player={player} assists={assists} isHome={isHome} colors={colors} gameId={gameId} teamId={teamId}/>
                 ))
             }
 
