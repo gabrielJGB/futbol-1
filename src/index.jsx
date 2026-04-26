@@ -12,6 +12,9 @@ import ArticlePage from './pages/Article/index.jsx';
 import TablePage from './pages/Table/index.jsx';
 import { Menu,Header } from '@/components/common'
 import Testpage from '@/pages/TestPage';
+import { storage } from '@/utils/storage';
+import { darkMode } from '@/signals/common';
+import VideoPage from '@/pages/Video';
 
 
 const RedirectToToday = () => {
@@ -31,6 +34,17 @@ const RedirectToToday = () => {
 
 export function App() {
 
+
+
+	useEffect(() => {
+    storage.get('darkMode').then((savedTheme) => {
+      if (savedTheme !== null) {
+        darkMode.value = savedTheme
+      }
+    })
+
+  }, [])
+
 	return (
 		<LocationProvider  >
 			
@@ -47,6 +61,7 @@ export function App() {
 						<Route path="/team/:id" component={Team} />
 						<Route path="/player/:name" component={Player} />
 						<Route path="/article/:id" component={ArticlePage} />
+						<Route path="/video/:id" component={VideoPage} />
 						<Route path="/table/:id" component={TablePage} />
 						<Route path="/testpage/:id" component={Testpage} />
 						<Route default component={NotFound} />

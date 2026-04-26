@@ -39,7 +39,7 @@ const Fixture = ({ id }) => {
             <div
               title={round.name}
               onClick={() => { selectedRound.value = round }}
-              class={`${round.key === selectedRound.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} ${ round.key===currentRound.key?"border-primary ":"border-transparent"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213]  py-1 md:py-[2px] px-1 font-semibold text-start md:text-xs text-xs shadow shadow-gray-800  truncate `}>{round.name}</div>
+              class={`${round.key === selectedRound.value.key ? "bg-[#C2E213] text-black hover:text-black" : "bg-[#008000] text-white"} ${ round.key===currentRound?.key?"border-primary ":"border-transparent"} cursor-pointer hover:border-[#C2E213] border-[1px] hover:text-[#C2E213]  py-1 md:py-[2px] px-1 font-semibold text-start md:text-xs text-xs shadow shadow-gray-800  truncate `}>{round.name}</div>
           ))
         }
       </div>

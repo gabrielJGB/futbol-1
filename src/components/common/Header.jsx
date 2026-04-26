@@ -1,9 +1,10 @@
 import { useLocation } from 'preact-iso';
 import { Link } from 'preact-router/match';
-import { showMenu, showCalendar } from '@/signals/home';
-import { CalendarDaysIcon, MoonIcon, SunIcon } from 'lucide-preact';
+import { showMenu, showCalendar, showNews } from '@/signals/home';
+import { CalendarDaysIcon, MoonIcon, NewspaperIcon, SunIcon } from 'lucide-preact';
 import fp_icon from '@/assets/futbolplay_icon.png'
 import { darkMode } from '@/signals/common';
+import { storage } from '@/utils/storage';
 
 export default function Header() {
 	const { path } = useLocation();
@@ -22,14 +23,14 @@ export default function Header() {
 			<div class={"flex flex-row justify-between w-full items-center"}>
 				<Link
 					// @ts-ignore
-					href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 text-3xl md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51] active:text-[#e5ff51]"}>
+					href="/" class={"font-bold text-shadow-xs text-shadow-gray-900 md:text-3xl text-2xl  md:pl-1 pl-0 cursor-pointer text-[#C2E213]  hover:text-[#e5ff51] active:text-[#e5ff51]"}>
 					FUTBOL 1
 				</Link>
 
 
-				<div class={"flex items-center md:gap-2 "}>
+				<div class={"flex items-center gap-1 "}>
 
-					<a class={"mr-2 flex items-center gap-2 hover:bg-b5/40 active:bg-b5/40 rounded-full p-2 md:rounded md:py-1 md:px-2 "} target="_blank" href={"https://futbolplay.vercel.app"} >
+					<a class={"flex items-center gap-2 hover:bg-b5/40 active:bg-b5/40 rounded-full p-2 md:rounded md:py-1 md:px-2 "} target="_blank" href={"https://futbolplay.vercel.app"} >
 						<div class={"text-xs hidden md:block font-semibold"}>Fútbol Play</div>
 						<img src={fp_icon} class={" md:size-8 size-6 cursor-pointer "} alt="Futbol Play Icon" />
 					</a>
@@ -45,7 +46,20 @@ export default function Header() {
 						</div>
 					}
 
-					<button class={"cursor-pointer hover:bg-b5/40 active:bg-b5/40 rounded-full p-2"} onClick={() => { darkMode.value = !darkMode.value }}>
+					{
+						isHome && 
+						<div onClick={()=>{showNews.value = !showNews.value }} class={`${showNews.value ? "bg-green-950 shadow-[0_0_5px_#032e15_inset]" : ""}  md:hidden cursor-pointer hover:bg-b5/40 active:bg-b5/40 rounded-full p-2`}>
+							<NewspaperIcon color={"#C2E213"} size={22} />
+						</div>
+					}
+
+					<button
+						class={" cursor-pointer hover:bg-b5/40 active:bg-b5/40 rounded-full p-2"}
+						onClick={async () => {
+							darkMode.value = !darkMode.value
+							await storage.save('darkMode', darkMode.value );
+						}}
+					>
 						{
 							darkMode.value ?
 								<SunIcon size={22} color='white' />

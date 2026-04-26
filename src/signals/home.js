@@ -4,6 +4,7 @@ export const selectedDate = signal(new Date());
 export const selectedButton = signal(-1);
 export const showMenu = signal(false);
 export const showCalendar = signal(false);
+export const showNews = signal(false);
 
 export const sortByDate = signal(false);
 export const showOnlyLive = signal(false);
