@@ -1,14 +1,16 @@
+import { useFavorites } from '@/hooks/useFavorites'
 import { useLeague } from '@/hooks/useLeague'
 import React from 'react'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
 const LeagueHeader = ({ id }) => {
 
     const { games, league, gamesError, leagueError, gamesLoading, leagueLoading } = useLeague(id)
+    const { toggleFavorite, isFavorite, loadingFavorites } = useFavorites()
 
     const leagueName = league.league.name
     const countryName = league.league.country_name
     const countryId = league.league.country_id
-
 
 
     // bg-gradient-to-r from-[#C2E213] to-[#C2E213]/70
@@ -21,8 +23,22 @@ const LeagueHeader = ({ id }) => {
             <img src={`https://api.promiedos.com.ar/images/league/${id}/1`} alt="Logo" className="h-15 rounded" />
 
             <div class={"flex flex-col gap-1"}>
+                <div class={"flex items-center gap-1"}>
+                    <h2 class="text-3xl tracking-wide font-semibold text-white text-shadow-xs text-shadow-black">{leagueName}</h2>
+                    {
+                        <button
+                            class={"rounded-full p-2 cursor-pointer hover:bg-primary active:bg-primary transition-all hover:text-black"}
+                            onClick={() => { toggleFavorite({ name: leagueName, id, type: "league" }) }} >
+                            {
+                                !loadingFavorites && isFavorite({ name: leagueName, id, type: "league" }) ?
+                                    <AiFillStar size={25} color={"white"} />
+                                    :
+                                    <AiOutlineStar size={25} color={"white"} />
+                            }
+                        </button>
 
-                <h2 class="text-3xl tracking-wide font-semibold text-white text-shadow-xs text-shadow-black">{leagueName}</h2>
+                    }
+                </div>
 
                 <div class={"flex flex-row items-center gap-1"}>
                     <img src={`https://api.promiedos.com.ar/images/country/${countryId}/1`} alt="Logo" className="h-4 rounded" />

@@ -1,3 +1,5 @@
+import { darkMode } from "@/signals/common"
+
 export const gameMapper = (game) => {
 
 
@@ -59,7 +61,7 @@ const getStatusTextColor = (statusCode, statusName) => {
 
     //finalizado (Final, Pen, TE,)
     else if (statusCode === 3) {
-        return "bg-gray-950"
+        return darkMode.value?"bg-black":"bg-gray-950"
     }
 }
 

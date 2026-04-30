@@ -12,7 +12,7 @@ import { memo } from 'preact/compat';
 // @ts-ignore
 const GameCard = ({ index, game, showCountryFlags }) => {
 
-
+    const borderDark = "bg-slate-700"
 
 
     const gameMap = gameMapper(game)
@@ -39,9 +39,9 @@ const GameCard = ({ index, game, showCountryFlags }) => {
     return (
 
         <div
-            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? "bg-slate-800" : "bg-gray-400"} w-full overflow-hidden `}>
+            className={`${showOnlyLive.value && !isPlaying ? "hidden" : "flex"}  flex-col gap-[1px] ${darkMode.value ? borderDark : "bg-gray-400"} w-full overflow-hidden `}>
 
-            <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? "bg-slate-800" : "bg-gray-400"} text-white text-sm`}>
+            <div className={`grid grid-cols-26 gap-[1px] ${darkMode.value ? borderDark : "bg-gray-400"} text-white text-sm`}>
 
                 <RoundDescription
                     isFirstGame={index === 0}
@@ -80,7 +80,7 @@ const GameCard = ({ index, game, showCountryFlags }) => {
             </div>
             {
 
-                <div className={`grid grid-cols-26 gap-[1px] ${awayScorers.length > 0 || homeScorers.length > 0 ? "border-b-[1px]" : "border-b-[0px]"}  ${darkMode.value ? "border-slate-800" : "border-gray-400"}  text-xs font-stretch-50% font-semibold`}>
+                <div className={`grid grid-cols-26 gap-[1px] ${awayScorers.length > 0 || homeScorers.length > 0 ? "border-b-[1px]" : "border-b-[0px]"}  ${darkMode.value ? borderDark.replace("bg","border") : "border-gray-400"}  text-xs font-stretch-50% font-semibold`}>
 
                     <Scorers teamScorers={homeScorers} />
                     <Scorers teamScorers={awayScorers} />
@@ -139,7 +139,7 @@ const GameStatus = ({ startTime, statusColor, statusText, TVLogoURL, TVName, isC
 
 const Team = ({ team, showCountryFlags }) => {
 
-    const hover = "hover:" + "bg-[" + team.colors.color + "]"
+    
 
     return (
 
@@ -179,7 +179,7 @@ const Team = ({ team, showCountryFlags }) => {
 
 const Score = ({ isWinner, score }) => {
     return (
-        <span className={` ${darkMode.value ? "bg-gray-900 text-white  border-gray-400" : "bg-white text-black  border-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${isWinner && "border-b-[1px]"}`}>
+        <span className={` ${darkMode.value ? "bg-gray-800 text-white  border-gray-400" : "bg-white text-black  border-black"} col-span-2 flex items-center justify-center text-lg font-semibold p-2 space-x-1 ${isWinner && "border-b-[1px]"}`}>
             {score ?? ""}
         </span>
     )
@@ -198,13 +198,13 @@ const InfoButton = ({ id }) => {
 
 const Scorers = ({ teamScorers }) => {
     return (
-        <div className={`flex flex-row items-start flex-wrap gap-x-1 px-1  col-span-13  ${darkMode.value ? "text-white bg-gray-900 " : "bg-white text-black "} text-[11px] `}>
+        <div className={`flex flex-row items-start flex-wrap gap-x-1 px-1  col-span-13  ${darkMode.value ? "text-white bg-gray-800 " : "bg-white text-black "} text-[11px] `}>
             {
 
                 teamScorers.map((goal, i) => (
                     <>
                         <span key={i} className='flex flex-row items-center gap-1'>
-                            <span className={`${darkMode.value ? "text-red-500" : "text-red-800"} text-xs`}>{goal.time_to_display}</span>
+                            <span className={`${darkMode.value ? "text-red-300" : "text-red-800"} text-xs`}>{goal.time_to_display}</span>
                             <Link
                                 // @ts-ignore
                                 href={`/player/${goal.player_name}`} class={"hover:underline active:underline"}>

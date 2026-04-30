@@ -20,8 +20,8 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
 
 
     if (teamId === "igg") {
-        colors.color = "#1238a3"
-        colors.text_color = "#fbff00"
+        colors.color = "#182a4e"
+        colors.text_color = "#ffc13b"
     }
 
     const playerAssists = assists.filter(p => p === player.name).length
@@ -196,9 +196,9 @@ const PlayerJersey = ({ jersey_num, colors, isStarter, events, country_id, teamI
                         {
                             teamId === "igg" && !showFlags.value &&
                             <div class={"absolute"}>
-                                <div class={`-z-100 bg-blue-800 rounded-t-[5px] ${isStarter ? "h-[8px] w-[32px]" : "h-[4px] w-[15px]"}`}></div>
-                                <div class={`bg-[#eac807] ${isStarter ? "h-[16px] w-[32px]" : "h-[7px] w-[15px]"} `}></div>
-                                <div class={`bg-blue-800  rounded-b-[5px] ${isStarter ? "h-[8px] w-[32px]" : "h-[4px] w-[15px]"}`}></div>
+                                <div style={{backgroundColor:colors.color}} class={`-z-100  rounded-t-[5px] ${isStarter ? "h-[8px] w-[32px]" : "h-[4px] w-[15px]"}`}></div>
+                                <div style={{backgroundColor:colors.text_color}} class={` ${isStarter ? "h-[16px] w-[32px]" : "h-[7px] w-[15px]"} `}></div>
+                                <div style={{backgroundColor:colors.color}} class={`  rounded-b-[5px] ${isStarter ? "h-[8px] w-[32px]" : "h-[4px] w-[15px]"}`}></div>
                             </div>
                         }
                         <div

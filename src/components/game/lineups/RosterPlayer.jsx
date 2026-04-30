@@ -7,6 +7,7 @@ import arrowIn from '@/assets/arrow-in.png'
 import arrowOut from '@/assets/arrow-out.png'
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import { Link } from 'preact-router/match'
+import { darkMode } from '@/signals/common'
 
 const getPosText = (position) => {
 
@@ -128,7 +129,9 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
     return (
         <Link
             // @ts-ignore
-            href={`/player/${player.name}`} class={"bg-[#015A1C] hover:bg-[#0c792d] active:bg-[#0c792d]"}>
+            href={`/player/${player.name}`}
+            class={`${darkMode.value?"bg-[#05412a] active:bg-[#0d6641]  hover:bg-[#0d6641] ":" bg-[#015A1C] active:bg-[#0c792d] hover:bg-[#0c792d]"} `}
+        >
             <div class={"flex flex-row justify-between items-center px-0 py-0  text-sm"}>
 
                 <div class={"flex flex-row items-center"}>

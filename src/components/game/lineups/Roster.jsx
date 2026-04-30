@@ -1,4 +1,5 @@
 import RosterPlayer from "@/components/game/lineups/RosterPlayer"
+import { darkMode } from "@/signals/common"
 import { invertLines, } from "@/signals/game"
 
 const Roster = ({team }) => {
@@ -17,7 +18,7 @@ const Roster = ({team }) => {
 
             <div class={`bg-[#032E15] py-2 text-[#C2E213] text-xs text-center font-semibold shadow shadow-gray-800`}>TITULARES</div>
 
-            <div class={"flex flex-col divide-y-[1px] divide-[#073f18] shadow shadow-gray-800"}>
+            <div class={`flex flex-col divide-y-[1px]  ${darkMode.value?"divide-[#052b11]":"divide-[#073f18]"} shadow shadow-gray-800`}>
                 {
                     team.starting.map((player, i) => (
                         <RosterPlayer key={i} player={player} isBench={false} missingReason={false} />
@@ -32,7 +33,7 @@ const Roster = ({team }) => {
 
             <div class={"bg-[#032E15] py-2 text-[#ffffff] text-xs text-center font-semibold shadow shadow-gray-800"}>SUPLENTES</div>
 
-            <div class={"flex flex-col divide-y-[2px] divide-[#024817] shadow shadow-gray-800"}>
+            <div class={`flex flex-col divide-y-[1px] ${darkMode.value?"divide-[#052b11]":"divide-[#073f18]"} shadow shadow-gray-800`}>
                 {
                     team.bench.map((player, i) => (
                         <RosterPlayer player={player} isBench={true} missingReason={false} />

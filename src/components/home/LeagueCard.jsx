@@ -18,7 +18,7 @@ export default function LeagueCard({ league }) {
     return (
         <div
             
-            className=" flex flex-col gap-[0px] justify-center items-center  w-full border-[1px] border-gray-500 ">
+            className=" flex flex-col gap-[0px] justify-center items-center  w-full border-[1px] border-gray-700 ">
 
             <Link href={`/league/${leagueId}`} className=" active:bg-[#024640] hover:bg-[#024640] bg-[#002D29] border-b-[1px] pb-[5px] pt-[3px] px-[4px] border-gray-500 flex items-center justify-between w-full">
 
