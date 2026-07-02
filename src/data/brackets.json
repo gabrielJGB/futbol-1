@@ -1,0 +1,1581 @@
+[
+  {
+    "name": "16avos de final",
+    "groups": [
+      {
+        "participants": [
+          {
+            "name": "Alemania",
+            "short_name": "Alemania",
+            "symbol_name": "ALE",
+            "id": "cdhc"
+          },
+          {
+            "name": "Paraguay",
+            "short_name": "Paraguay",
+            "symbol_name": "PAR",
+            "id": "faha"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheicce",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+              {
+                "name": "Alemania",
+                "short_name": "Alemania",
+                "url_name": "germany",
+                "id": "cdhc",
+                "country_id": "e",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Paraguay",
+                "short_name": "Paraguay",
+                "url_name": "paraguay",
+                "id": "faha",
+                "country_id": "bai",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "germany-vs-paraguay",
+            "scores": [1, 1],
+            "status": {
+              "enum": 3,
+              "name": "Por penales",
+              "short_name": "Por penales",
+              "symbol_name": "Pen"
+            },
+            "start_time": "29-06-2026 17:30",
+            "game_time_status_to_display": "Por penales"
+          }
+        ],
+        "score": [1, 1],
+        "show_games": false,
+        "winner": 2
+      },
+      {
+        "participants": [
+          {
+            "name": "Francia",
+            "short_name": "Francia",
+            "symbol_name": "FRA",
+            "id": "fagb"
+          },
+          {
+            "name": "Suecia",
+            "short_name": "Suecia",
+            "symbol_name": "SUE",
+            "id": "cdhb"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheicde",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+              {
+                "name": "Francia",
+                "short_name": "Francia",
+                "url_name": "france",
+                "id": "fagb",
+                "country_id": "f",
+                "allow_open": true,
+                "colors": {
+                  "color": "#1A55BD",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Suecia",
+                "short_name": "Suecia",
+                "url_name": "sweden",
+                "id": "cdhb",
+                "country_id": "ce",
+                "allow_open": true,
+                "colors": {
+                  "color": "#F9DE52",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "france-vs-sweden",
+            "scores": [3, 0],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "30-06-2026 18:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [3, 0],
+        "show_games": false,
+        "winner": 1
+      },
+      {
+        "participants": [
+          {
+            "name": "Sudáfrica",
+            "short_name": "Sudáfrica",
+            "symbol_name": "SUD",
+            "id": "fbad"
+          },
+          {
+            "name": "Canadá",
+            "short_name": "Canadá",
+            "symbol_name": "CAN",
+            "id": "cdii"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehefgah",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+              {
+                "name": "Sudáfrica",
+                "short_name": "Sudáfrica",
+                "url_name": "south-africa",
+                "id": "fbad",
+                "country_id": "bde",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FDD301",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Canadá",
+                "short_name": "Canadá",
+                "url_name": "canada",
+                "id": "cdii",
+                "country_id": "gg",
+                "allow_open": true,
+                "colors": {
+                  "color": "#A70115",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "south-africa-vs-canada",
+            "scores": [0, 1],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "28-06-2026 16:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [0, 1],
+        "show_games": false,
+        "winner": 2
+      },
+      {
+        "participants": [
+          {
+            "name": "Países Bajos",
+            "short_name": "Países Bajos",
+            "symbol_name": "HOL",
+            "id": "cdhh"
+          },
+          {
+            "name": "Marruecos",
+            "short_name": "Marruecos",
+            "symbol_name": "MAR",
+            "id": "fajd"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehehgjh",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+              {
+                "name": "Países Bajos",
+                "short_name": "Países Bajos",
+                "url_name": "netherlands",
+                "id": "cdhh",
+                "country_id": "h",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FF6803",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Marruecos",
+                "short_name": "Marruecos",
+                "url_name": "morocco",
+                "id": "fajd",
+                "country_id": "bch",
+                "allow_open": true,
+                "colors": {
+                  "color": "#E60000",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "netherlands-vs-morocco",
+            "scores": [1, 1],
+            "status": {
+              "enum": 3,
+              "name": "Por penales",
+              "short_name": "Por penales",
+              "symbol_name": "Pen"
+            },
+            "start_time": "29-06-2026 22:00",
+            "game_time_status_to_display": "Por penales"
+          }
+        ],
+        "score": [1, 1],
+        "show_games": false,
+        "winner": 2
+      },
+      {
+        "participants": [
+          {
+            "name": "Portugal",
+            "short_name": "Portugal",
+            "symbol_name": "POR",
+            "id": "faci"
+          },
+          {
+            "name": "Croacia",
+            "short_name": "Croacia",
+            "symbol_name": "CRO",
+            "id": "faff"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejcgi",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Portugal",
+                "short_name": "Portugal",
+                "url_name": "portugal",
+                "id": "faci",
+                "country_id": "bb",
+                "allow_open": true,
+                "colors": {
+                  "color": "#A81D30",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Croacia",
+                "short_name": "Croacia",
+                "url_name": "croatia",
+                "id": "faff",
+                "country_id": "di",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "portugal-vs-croatia",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "02-07-2026 20:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "España",
+            "short_name": "España",
+            "symbol_name": "ESP",
+            "id": "fafa"
+          },
+          {
+            "name": "Austria",
+            "short_name": "Austria",
+            "symbol_name": "AUS",
+            "id": "fafj"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejchd",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "España",
+                "short_name": "España",
+                "url_name": "spain",
+                "id": "fafa",
+                "country_id": "c",
+                "allow_open": true,
+                "colors": {
+                  "color": "#F94046",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Austria",
+                "short_name": "Austria",
+                "url_name": "austria",
+                "id": "fafj",
+                "country_id": "ca",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FF0000",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "spain-vs-austria",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "02-07-2026 16:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Estados Unidos",
+            "short_name": "Estados Unidos",
+            "symbol_name": "USA",
+            "id": "cdij"
+          },
+          {
+            "name": "Bosnia Herzegovina",
+            "short_name": "Bosnia Herzegovina",
+            "symbol_name": "BYH",
+            "id": "faei"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehehgjj",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Estados Unidos",
+                "short_name": "Estados Unidos",
+                "url_name": "usa",
+                "id": "cdij",
+                "country_id": "bi",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Bosnia Herzegovina",
+                "short_name": "Bosnia Herzegovina",
+                "url_name": "bosnia-&-herzegovina",
+                "id": "faei",
+                "country_id": "fh",
+                "allow_open": true,
+                "colors": {
+                  "color": "#1752A7",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "usa-vs-bosnia-&-herzegovina",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "01-07-2026 21:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Bélgica",
+            "short_name": "Bélgica",
+            "symbol_name": "BEL",
+            "id": "cdhd"
+          },
+          {
+            "name": "Senegal",
+            "short_name": "Senegal",
+            "symbol_name": "SEN",
+            "id": "fbac"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejchc",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Bélgica",
+                "short_name": "Bélgica",
+                "url_name": "belgium",
+                "id": "cdhd",
+                "country_id": "bg",
+                "allow_open": true,
+                "colors": {
+                  "color": "#D42838",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Senegal",
+                "short_name": "Senegal",
+                "url_name": "senegal",
+                "id": "fbac",
+                "country_id": "bdd",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "belgium-vs-senegal",
+            "scores": [0, 0],
+            "status": {
+              "enum": 2,
+              "name": "Primer Tiempo",
+              "short_name": "1°",
+              "symbol_name": "1°"
+            },
+            "start_time": "01-07-2026 17:00",
+            "game_time_to_display": "6'",
+            "game_time_status_to_display": "6'"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Brasil",
+            "short_name": "Brasil",
+            "symbol_name": "BRA",
+            "id": "cdhj"
+          },
+          {
+            "name": "Japón",
+            "short_name": "Japón",
+            "symbol_name": "JPN",
+            "id": "cdic"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehehgjg",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+              {
+                "name": "Brasil",
+                "short_name": "Brasil",
+                "url_name": "brazil",
+                "id": "cdhj",
+                "country_id": "cb",
+                "allow_open": true,
+                "colors": {
+                  "color": "#EAE380",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Japón",
+                "short_name": "Japón",
+                "url_name": "japan",
+                "id": "cdic",
+                "country_id": "de",
+                "allow_open": true,
+                "colors": {
+                  "color": "#233251",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "brazil-vs-japan",
+            "scores": [2, 1],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "29-06-2026 14:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [2, 1],
+        "show_games": false,
+        "winner": 1
+      },
+      {
+        "participants": [
+          {
+            "name": "Costa de Marfil",
+            "short_name": "Costa de Marfil",
+            "symbol_name": "CIV",
+            "id": "cdif"
+          },
+          {
+            "name": "Noruega",
+            "short_name": "Noruega",
+            "symbol_name": "NOR",
+            "id": "cdhg"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheibaj",
+            "winner": 2,
+            "to_qualify": 2,
+            "teams": [
+              {
+                "name": "Costa de Marfil",
+                "short_name": "Costa de Marfil",
+                "url_name": "ivory-coast",
+                "id": "cdif",
+                "country_id": "he",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FF7C0A",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Noruega",
+                "short_name": "Noruega",
+                "url_name": "norway",
+                "id": "cdhg",
+                "country_id": "ch",
+                "allow_open": true,
+                "colors": {
+                  "color": "#E63237",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "ivory-coast-vs-norway",
+            "scores": [1, 2],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "30-06-2026 14:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [1, 2],
+        "show_games": false,
+        "winner": 2
+      },
+      {
+        "participants": [
+          {
+            "name": "México",
+            "short_name": "México",
+            "symbol_name": "MEX",
+            "id": "fbag"
+          },
+          {
+            "name": "Ecuador",
+            "short_name": "Ecuador",
+            "symbol_name": "ECU",
+            "id": "fahf"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheiiii",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+              {
+                "name": "México",
+                "short_name": "México",
+                "url_name": "mexico",
+                "id": "fbag",
+                "country_id": "db",
+                "allow_open": true,
+                "colors": {
+                  "color": "#298B77",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Ecuador",
+                "short_name": "Ecuador",
+                "url_name": "ecuador",
+                "id": "fahf",
+                "country_id": "fb",
+                "allow_open": true,
+                "colors": {
+                  "color": "#EBD31E",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "mexico-vs-ecuador",
+            "scores": [2, 0],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "30-06-2026 23:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [2, 0],
+        "show_games": false,
+        "winner": 1
+      },
+      {
+        "participants": [
+          {
+            "name": "Inglaterra",
+            "short_name": "Inglaterra",
+            "symbol_name": "ING",
+            "id": "fafe"
+          },
+          {
+            "name": "RD Congo",
+            "short_name": "RD Congo",
+            "symbol_name": "RD ",
+            "id": "begfa"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejchb",
+            "winner": 1,
+            "to_qualify": 1,
+            "teams": [
+              {
+                "name": "Inglaterra",
+                "short_name": "Inglaterra",
+                "url_name": "england",
+                "id": "fafe",
+                "country_id": "b",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "RD Congo",
+                "short_name": "RD Congo",
+                "url_name": "dr-congo",
+                "id": "begfa",
+                "country_id": "cdf",
+                "allow_open": true,
+                "colors": {
+                  "color": "#6BC7F1",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "england-vs-dr-congo",
+            "scores": [2, 1],
+            "status": {
+              "enum": 3,
+              "name": "Finalizado",
+              "short_name": "Final",
+              "symbol_name": "Fin"
+            },
+            "start_time": "01-07-2026 13:00",
+            "game_time_status_to_display": "Final"
+          }
+        ],
+        "score": [2, 1],
+        "show_games": false,
+        "winner": 1
+      },
+      {
+        "participants": [
+          {
+            "name": "Argentina",
+            "short_name": "Argentina",
+            "symbol_name": "ARG",
+            "id": "cdhi"
+          },
+          {
+            "name": "Cabo Verde",
+            "short_name": "Cabo Verde",
+            "symbol_name": "CPV",
+            "id": "febb"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheiccf",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Argentina",
+                "short_name": "Argentina",
+                "url_name": "argentina",
+                "id": "cdhi",
+                "country_id": "ba",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Cabo Verde",
+                "short_name": "Cabo Verde",
+                "url_name": "cape-verde",
+                "id": "febb",
+                "country_id": "bef",
+                "allow_open": true,
+                "colors": {
+                  "color": "#0A478A",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "argentina-vs-cape-verde",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "03-07-2026 19:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Australia",
+            "short_name": "Australia",
+            "symbol_name": "AUS",
+            "id": "cdia"
+          },
+          {
+            "name": "Egipto",
+            "short_name": "Egipto",
+            "symbol_name": "EGY",
+            "id": "fbaa"
+          }
+        ],
+        "games": [
+          {
+            "id": "eheicee",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Australia",
+                "short_name": "Australia",
+                "url_name": "australia",
+                "id": "cdia",
+                "country_id": "dg",
+                "allow_open": true,
+                "colors": {
+                  "color": "#F0BD49",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Egipto",
+                "short_name": "Egipto",
+                "url_name": "egypt",
+                "id": "fbaa",
+                "country_id": "bdb",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FF0000",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "australia-vs-egypt",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "03-07-2026 15:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Suiza",
+            "short_name": "Suiza",
+            "symbol_name": "SUI",
+            "id": "fadc"
+          },
+          {
+            "name": "Argelia",
+            "short_name": "Argelia",
+            "symbol_name": "ARG",
+            "id": "fbaj"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejche",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Suiza",
+                "short_name": "Suiza",
+                "url_name": "switzerland",
+                "id": "fadc",
+                "country_id": "bf",
+                "allow_open": true,
+                "colors": {
+                  "color": "#DE152F",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Argelia",
+                "short_name": "Argelia",
+                "url_name": "algeria",
+                "id": "fbaj",
+                "country_id": "bdj",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "switzerland-vs-algeria",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "03-07-2026 00:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Colombia",
+            "short_name": "Colombia",
+            "symbol_name": "COL",
+            "id": "fahb"
+          },
+          {
+            "name": "Ghana",
+            "short_name": "Ghana",
+            "symbol_name": "GHA",
+            "id": "faje"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehejcha",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Colombia",
+                "short_name": "Colombia",
+                "url_name": "colombia",
+                "id": "fahb",
+                "country_id": "baj",
+                "allow_open": true,
+                "colors": {
+                  "color": "#F7F62E",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Ghana",
+                "short_name": "Ghana",
+                "url_name": "ghana",
+                "id": "faje",
+                "country_id": "gf",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "colombia-vs-ghana",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "03-07-2026 22:30",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      }
+    ],
+    "connect_to_next_stage": true
+  },
+  {
+    "name": "Octavos de Final",
+    "groups": [
+      {
+        "participants": [
+          {
+            "name": "Paraguay",
+            "short_name": "Paraguay",
+            "symbol_name": "PAR",
+            "id": "faha"
+          },
+          {
+            "name": "Francia",
+            "short_name": "Francia",
+            "symbol_name": "FRA",
+            "id": "fagb"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehfajad",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Paraguay",
+                "short_name": "Paraguay",
+                "url_name": "paraguay",
+                "id": "faha",
+                "country_id": "bai",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Francia",
+                "short_name": "Francia",
+                "url_name": "france",
+                "id": "fagb",
+                "country_id": "f",
+                "allow_open": true,
+                "colors": {
+                  "color": "#1A55BD",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "paraguay-vs-france",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "04-07-2026 18:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Canadá",
+            "short_name": "Canadá",
+            "symbol_name": "CAN",
+            "id": "cdii"
+          },
+          {
+            "name": "Marruecos",
+            "short_name": "Marruecos",
+            "symbol_name": "MAR",
+            "id": "fajd"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehfaaaj",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Canadá",
+                "short_name": "Canadá",
+                "url_name": "canada",
+                "id": "cdii",
+                "country_id": "gg",
+                "allow_open": true,
+                "colors": {
+                  "color": "#A70115",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Marruecos",
+                "short_name": "Marruecos",
+                "url_name": "morocco",
+                "id": "fajd",
+                "country_id": "bch",
+                "allow_open": true,
+                "colors": {
+                  "color": "#E60000",
+                  "text_color": "#FFFFFF"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "canada-vs-morocco",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "04-07-2026 14:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Portugal/Croacia",
+            "short_name": "G83",
+            "symbol_name": "G83",
+            "id": -1
+          },
+          {
+            "name": "España/Austria",
+            "short_name": "G84",
+            "symbol_name": "G84",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "06-07-2026 16:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "EEUU/Bosnia",
+            "short_name": "G81",
+            "symbol_name": "G81",
+            "id": -1
+          },
+          {
+            "name": "Bélgica/Senegal",
+            "short_name": "G82",
+            "symbol_name": "G82",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "06-07-2026 21:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Brasil",
+            "short_name": "Brasil",
+            "symbol_name": "BRA",
+            "id": "cdhj"
+          },
+          {
+            "name": "Noruega",
+            "short_name": "Noruega",
+            "symbol_name": "NOR",
+            "id": "cdhg"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehfafad",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "Brasil",
+                "short_name": "Brasil",
+                "url_name": "brazil",
+                "id": "cdhj",
+                "country_id": "cb",
+                "allow_open": true,
+                "colors": {
+                  "color": "#EAE380",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Noruega",
+                "short_name": "Noruega",
+                "url_name": "norway",
+                "id": "cdhg",
+                "country_id": "ch",
+                "allow_open": true,
+                "colors": {
+                  "color": "#E63237",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "brazil-vs-norway",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "05-07-2026 17:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "México",
+            "short_name": "México",
+            "symbol_name": "MEX",
+            "id": "fbag"
+          },
+          {
+            "name": "Inglaterra",
+            "short_name": "Inglaterra",
+            "symbol_name": "ING",
+            "id": "fafe"
+          }
+        ],
+        "games": [
+          {
+            "id": "ehfdebf",
+            "winner": -1,
+            "teams": [
+              {
+                "name": "México",
+                "short_name": "México",
+                "url_name": "mexico",
+                "id": "fbag",
+                "country_id": "db",
+                "allow_open": true,
+                "colors": {
+                  "color": "#298B77",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              },
+              {
+                "name": "Inglaterra",
+                "short_name": "Inglaterra",
+                "url_name": "england",
+                "id": "fafe",
+                "country_id": "b",
+                "allow_open": true,
+                "colors": {
+                  "color": "#FFFFFF",
+                  "text_color": "#000000"
+                },
+                "red_cards": 0
+              }
+            ],
+            "url_name": "mexico-vs-england",
+            "status": {
+              "enum": 1,
+              "name": "Prog.",
+              "short_name": "Prog.",
+              "symbol_name": "Prog."
+            },
+            "start_time": "05-07-2026 21:00",
+            "game_time_status_to_display": "Prog."
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Argentina/Cabo Verde",
+            "short_name": "G86",
+            "symbol_name": "G86",
+            "id": -1
+          },
+          {
+            "name": "Australia/Egipto",
+            "short_name": "G88",
+            "symbol_name": "G88",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "07-07-2026 13:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Suiza/Argelia",
+            "short_name": "G85",
+            "symbol_name": "G85",
+            "id": -1
+          },
+          {
+            "name": "Colombia/Ghana",
+            "short_name": "G87",
+            "symbol_name": "G87",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "07-07-2026 17:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      }
+    ],
+    "connect_to_next_stage": true
+  },
+  {
+    "name": "Cuartos de Final",
+    "groups": [
+      {
+        "participants": [
+          {
+            "name": "Paraguay/Francia",
+            "short_name": "G89",
+            "symbol_name": "G89",
+            "id": -1
+          },
+          {
+            "name": "Canadá/Marruecos",
+            "short_name": "G90",
+            "symbol_name": "G90",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "09-07-2026 17:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Ganador del partido 93",
+            "short_name": "G93",
+            "symbol_name": "G93",
+            "id": -1
+          },
+          {
+            "name": "Ganador del partido 94",
+            "short_name": "G94",
+            "symbol_name": "G94",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "10-07-2026 16:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Brasil/Noruega",
+            "short_name": "G91",
+            "symbol_name": "G91",
+            "id": -1
+          },
+          {
+            "name": "México/Inglaterra",
+            "short_name": "G92",
+            "symbol_name": "G92",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "11-07-2026 18:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Ganador del partido 95",
+            "short_name": "G95",
+            "symbol_name": "G95",
+            "id": -1
+          },
+          {
+            "name": "Ganador del partido 96",
+            "short_name": "G96",
+            "symbol_name": "G96",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "11-07-2026 22:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      }
+    ],
+    "connect_to_next_stage": true
+  },
+  {
+    "name": "Semifinales",
+    "groups": [
+      {
+        "participants": [
+          {
+            "name": "Ganador del partido 97",
+            "short_name": "G97",
+            "symbol_name": "G97",
+            "id": -1
+          },
+          {
+            "name": "Ganador del partido 98",
+            "short_name": "G98",
+            "symbol_name": "G98",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "14-07-2026 16:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Ganador del partido 99",
+            "short_name": "G99",
+            "symbol_name": "G99",
+            "id": -1
+          },
+          {
+            "name": "Ganador del partido 100",
+            "short_name": "G100",
+            "symbol_name": "G100",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "15-07-2026 16:00"
+          }
+        ],
+        "score": [],
+        "show_games": false,
+        "winner": -1
+      }
+    ],
+    "connect_to_next_stage": true
+  },
+  {
+    "name": "Final",
+    "groups": [
+      {
+        "participants": [
+          {
+            "name": "Ganador del partido 101",
+            "short_name": "G101",
+            "symbol_name": "G101",
+            "id": -1
+          },
+          {
+            "name": "Ganador del partido 102",
+            "short_name": "G102",
+            "symbol_name": "G102",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "19-07-2026 16:00"
+          }
+        ],
+        "score": [],
+        "is_final": true,
+        "show_games": false,
+        "winner": -1
+      },
+      {
+        "participants": [
+          {
+            "name": "Perdedor del partido 101",
+            "short_name": "P101",
+            "symbol_name": "P101",
+            "id": -1
+          },
+          {
+            "name": "Perdedor del partido 102",
+            "short_name": "P102",
+            "symbol_name": "P102",
+            "id": -1
+          }
+        ],
+        "games": [
+          {
+            "start_time": "18-07-2026 18:00"
+          }
+        ],
+        "score": [],
+        "is_third_place": true,
+        "show_games": false,
+        "winner": -1
+      }
+    ],
+    "connect_to_next_stage": false,
+    "is_final": true
+  }
+]

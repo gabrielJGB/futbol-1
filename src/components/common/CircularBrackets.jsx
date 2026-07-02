@@ -1,18 +1,43 @@
-import { useMemo, useState } from "preact/hooks";
+import { useEffect, useMemo, useState } from "preact/hooks";
+import { Link } from "preact-router/match";
 import stages from "@/data/brackets.json";
 import worldcup from "@/assets/worldcup.png";
 import cross from "@/assets/x.png";
 import { signal } from "@preact/signals";
-const CENTER_X = 400; // Centro del lienzo
-const CENTER_Y = 400;
+import { useLeague } from "@/hooks/useLeague";
 
-export default function RadialBracketsWithLines() {
-  // Radios de cada ronda (de afuera hacia adentro)
-  const roundRadii = [340, 260, 180, 100, 20];
+export default function CircularBrackets({ m = 0.6, id }) {
+  const CENTER_X = 400 * m;
+  const CENTER_Y = 400 * m;
+  const roundRadii = [340 * m, 260 * m, 180 * m, 100 * m, 20 * m];
 
-  console.log(stages);
+  const { league, leagueError, leagueLoading } = useLeague(id);
 
-  const tournamentData = stages.map((stage) => {
+  // useEffect(() => {
+  //   setLoading(true);
+  //   fetch("https://api.promiedos.com.ar/league/tables_and_fixtures/fjda")
+  //     .then((r) => r.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       const obj = data.brackets.stages.map((stage) => {
+  //         return {
+  //           roundName: stage.name,
+  //           count: stage.is_final ? 2 : stage.groups.length * 2,
+  //           color: "bg-slate-950",
+  //           circles: stage.groups.flatMap((g) => {
+  //             return [g, g];
+  //           }),
+  //         };
+  //       });
+
+  //       setTournamentData(obj);
+  //     })
+  //     .finally(() => setLoading(false));
+  // }, []);
+
+  if (leagueLoading) return <div>Cargando...</div>;
+
+  const tournamentData = league.brackets.stages.map((stage) => {
     return {
       roundName: stage.name,
       count: stage.is_final ? 2 : stage.groups.length * 2,
@@ -23,7 +48,6 @@ export default function RadialBracketsWithLines() {
     };
   });
 
-  // Configuración de las rondas
   // const tournamentData = useMemo(() => {
   //   return [
   //     { roundName: "Ronda de 32", count: 32, color: "bg-blue-500" },
@@ -34,12 +58,7 @@ export default function RadialBracketsWithLines() {
   //   ];
   // }, []);
 
-  // Función utilitaria para obtener las coordenadas (X, Y) basadas en el radio, índice y total de nodos
   const getCoordinates = (radius, nodeIndex, totalNodes) => {
-    // Calculamos el ángulo en radianes.
-    // Restamos Math.PI / 2 para que el primer nodo empiece arriba (12 en punto) si lo deseas,
-    // o déjalo así para que empiece a la derecha (3 en punto) como en la imagen original.
-
     const angle = (nodeIndex * 2 * Math.PI + Math.PI) / totalNodes;
     return {
       x: CENTER_X + radius * Math.cos(angle),
@@ -49,13 +68,11 @@ export default function RadialBracketsWithLines() {
   };
 
   return (
-    <div className="relative flex flex-col items-center col-start-2 justify-center min-h-screen  text-white p-3">
+    <div className="relative ">
       <div
-        className=" relative bg-slate-800 border-2 border-gray-700 rounded-full rotate-[90deg] scale-70 shadow-2xl flex items-center justify-center"
+        className="relative top-0 left-0  bg-slate-800  scale-100 border-2 border-gray-700 rounded-full rotate-[90deg]  shadow-2xl flex items-center justify-center"
         style={{ width: `${CENTER_X * 2}px`, height: `${CENTER_Y * 2}px` }}
       >
-        {/* Capa SVG para las líneas conectoras */}
-
         <svg className="absolute inset-0 w-full h-full pointer-events-none">
           <g>
             <line
@@ -71,7 +88,7 @@ export default function RadialBracketsWithLines() {
               <circle
                 cx={CENTER_X}
                 cy={CENTER_X}
-                r={r + 41}
+                r={r + 41 * m}
                 stroke={"rgba(0,50,20,0.5)"}
                 stroke-width={"1"}
                 fill={
@@ -88,8 +105,6 @@ export default function RadialBracketsWithLines() {
           viewBox={`0 0 ${CENTER_X * 2} ${CENTER_Y * 2}`}
         >
           {tournamentData.map((round, roundIndex) => {
-            // No dibujamos líneas desde la última ronda (la final) hacia el centro aquí,
-            // ya que se conecta directamente al trofeo.
             if (roundIndex >= tournamentData.length - 1) return null;
 
             const currentRadius = roundRadii[roundIndex];
@@ -104,17 +119,12 @@ export default function RadialBracketsWithLines() {
                 round.count,
               );
 
-              // Coordenadas del nodo destino (Ronda interna)
-              // Dos nodos externos van al mismo nodo interno (ej: nodo 0 y 1 van al 0 de la sig. ronda)
               const parentIndex = Math.floor(nodeIndex / 2);
               const end = getCoordinates(
                 nextRadius,
                 parentIndex,
                 nextRoundCount,
               );
-
-              // Para hacer el efecto de la imagen donde las líneas se juntan en un ángulo angular:
-              // Calculamos un "punto medio" en el radio intermedio entre ambas rondas
               const midRadius =
                 currentRadius - (currentRadius - nextRadius) * 0.5;
               const midX = CENTER_X + midRadius * Math.cos(start.angle);
@@ -125,7 +135,6 @@ export default function RadialBracketsWithLines() {
 
               return (
                 <g key={`line-${roundIndex}-${nodeIndex}`}>
-                  {/* Línea desde el nodo actual hasta el radio medio */}
                   <line
                     x1={start.x}
                     y1={start.y}
@@ -134,7 +143,7 @@ export default function RadialBracketsWithLines() {
                     stroke="rgba(255, 255, 255, 0.2)"
                     strokeWidth="2"
                   />
-                  {/* Línea que une el quiebre hacia la trayectoria del nodo hijo */}
+
                   <line
                     x1={midX}
                     y1={midY}
@@ -143,7 +152,7 @@ export default function RadialBracketsWithLines() {
                     stroke="rgba(255, 255, 255, 0.2)"
                     strokeWidth="2"
                   />
-                  {/* Línea final que entra al nodo hijo */}
+
                   <line
                     x1={midXEnd}
                     y1={midYEnd}
@@ -166,7 +175,14 @@ export default function RadialBracketsWithLines() {
             const { x, y } = getCoordinates(radius, nodeIndex, round.count);
             const [showPopup, setShowPopup] = useState(false);
             return (
-              <div
+              <Link
+                // @ts-ignore
+                href={
+                  round.circles[nodeIndex].games[0].id != undefined
+                    ? `/game/${round.circles[nodeIndex].games[0].id}`
+                    : ""
+                }
+
                 key={`node-${roundIndex}-${nodeIndex}`}
                 onClick={() => {
                   setShowPopup((prev) => !prev);
@@ -181,7 +197,7 @@ export default function RadialBracketsWithLines() {
                     "/",
                   )
                 }
-                className={` absolute transform -translate-x-1/2 bg-zinc-600 -rotate-[90deg] -translate-y-1/2
+                className={`mx-auto absolute transform -translate-x-1/2  bg-zinc-600 -rotate-[90deg] -translate-y-1/2
                             rounded-full flex items-center justify-center
                               cursor-pointer hover:ring-1 ring-lime-400
                             transition-all duration-200   bg-no-repeat bg-contain
@@ -190,6 +206,18 @@ export default function RadialBracketsWithLines() {
                              ${round.circles[nodeIndex].winner === 2 && nodeIndex % 2 === 0 && "brightness-25"}
                           `}
                 style={{
+                  width:
+                    round.circles[nodeIndex].participants[
+                      nodeIndex % 2 === 0 ? 0 : 1
+                    ].id != -1
+                      ? m * 40
+                      : m * 20,
+                  height:
+                    round.circles[nodeIndex].participants[
+                      nodeIndex % 2 === 0 ? 0 : 1
+                    ].id != -1
+                      ? m * 40
+                      : m * 20,
                   backgroundImage:
                     round.circles[nodeIndex].participants != undefined
                       ? `url(https://api.promiedos.com.ar/images/team/${round.circles[nodeIndex].participants[nodeIndex % 2 === 0 ? 0 : 1].id}/1)`
@@ -213,17 +241,20 @@ export default function RadialBracketsWithLines() {
                   {/* {round.teams[nodeIndex].symbol_name}*/}
                   {/* {round.scores[nodeIndex]}*/}
                 </div>
-              </div>
+              </Link>
             );
           });
         })}
 
-        {/* Centro del Torneo (Copa / Ganador) */}
         <div className="absolute mr-15 w-10 -rotate-[90deg] h-10   items-center justify-center z-10 flex flex-col">
-          {/* <span className="text-3xl">🏆 </span>*/}
           {/* <div style={{ backgroundImage: wo rldcup }} />*/}
           {/* <img src={worldcup} width={40} height={120} />*/}
-          <span className={"text-xs font-semibold font-mono"}>FINAL</span>
+          <span
+            style={{ fontSize: 12 * m * 2 }}
+            className={" font-semibold font-mono"}
+          >
+            FINAL
+          </span>
         </div>
       </div>
     </div>
