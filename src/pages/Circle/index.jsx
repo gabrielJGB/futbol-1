@@ -5,8 +5,22 @@ import cross from "@/assets/x.png";
 import { signal } from "@preact/signals";
 const CENTER_X = 400; // Centro del lienzo
 const CENTER_Y = 400;
+const CENTER = 200;
 
-export default function RadialBracketsWithLines() {
+const Comp = () => {
+  return (
+    <div className={"flex flex-col gap-5 justify-center items-center"}>
+      <Circles />
+      <Drawing />
+    </div>
+  );
+};
+
+export default Comp;
+
+// ----------------------------------------------------------------------------------------------------
+
+const Circles = () => {
   // Radios de cada ronda (de afuera hacia adentro)
   const roundRadii = [340, 260, 180, 100, 20];
 
@@ -55,6 +69,32 @@ export default function RadialBracketsWithLines() {
         style={{ width: `${CENTER_X * 2}px`, height: `${CENTER_Y * 2}px` }}
       >
         {/* Capa SVG para las líneas conectoras */}
+
+        <svg className="absolute inset-0 w-full h-full pointer-events-none">
+          <g>
+            <line
+              stroke="rgba(255, 255, 255,0.07)"
+              strokeWidth="2"
+              x1={CENTER_X * 2}
+              y1={CENTER_X}
+              x2={0}
+              y2={CENTER_X}
+            />
+
+            {roundRadii.map((r, i) => (
+              <circle
+                cx={CENTER_X}
+                cy={CENTER_X}
+                r={r + 41}
+                stroke={"rgba(0,50,20,0.5)"}
+                stroke-width={"1"}
+                fill={
+                  i % 2 === 0 ? "rgba(0, 255, 0,0.07)" : "rgba(0, 0, 150,0.07)"
+                }
+              />
+            ))}
+          </g>
+        </svg>
 
         {/* ---------LINEAS CONECTORES--------------*/}
         <svg
@@ -145,24 +185,14 @@ export default function RadialBracketsWithLines() {
                 onClick={() => {
                   setShowPopup((prev) => !prev);
                 }}
-                title={
-                  round.circles[nodeIndex].participants[0].name +
-                  " vs " +
-                  round.circles[nodeIndex].participants[1].name +
-                  " | " +
-                  round.circles[nodeIndex].games[0].start_time.replaceAll(
-                    "-",
-                    "/",
-                  )
-                }
                 className={` absolute transform -translate-x-1/2 bg-zinc-600 -rotate-[90deg] -translate-y-1/2
-                            rounded-full flex items-center justify-center
-                              cursor-pointer hover:ring-1 ring-lime-400
-                            transition-all duration-200   bg-no-repeat bg-contain
-                            ${round.circles[nodeIndex].participants[nodeIndex % 2 === 0 ? 0 : 1].id != -1 ? "size-10 shadow shadow-black/60" : "size-5"}
-                            ${round.circles[nodeIndex].winner === 1 && nodeIndex % 2 === 1 && "brightness-25"}
-                             ${round.circles[nodeIndex].winner === 2 && nodeIndex % 2 === 0 && "brightness-25"}
-                          `}
+                                rounded-full flex items-center justify-center
+                                  cursor-pointer hover:ring-1 ring-lime-400
+                                transition-all duration-200   bg-no-repeat bg-contain
+                                ${round.circles[nodeIndex].participants[nodeIndex % 2 === 0 ? 0 : 1].id != -1 ? "size-10 shadow shadow-black/60" : "size-5"}
+                                ${round.circles[nodeIndex].winner === 1 && nodeIndex % 2 === 1 && "brightness-25"}
+                                 ${round.circles[nodeIndex].winner === 2 && nodeIndex % 2 === 0 && "brightness-25"}
+                              `}
                 style={{
                   backgroundImage:
                     round.circles[nodeIndex].participants != undefined
@@ -202,4 +232,65 @@ export default function RadialBracketsWithLines() {
       </div>
     </div>
   );
-}
+};
+
+// ----------------------------------------------------------------------------------------------------
+
+const Drawing = () => {
+  return (
+    <div
+      class={
+        "relative flex flex-col m-10 w-min h-min justify-center items-center bg-slate-900 "
+      }
+    >
+      <div
+        className={"absolute h-[200px] w-[200px] bg-slate-800 rounded-full"}
+        style={{ left: 200, top: 200 }}
+      ></div>
+
+      <svg width="600px" height="600px" viewBox="600 600">
+        <path
+          d="
+          M 300 0
+          A 300 300 0 0 1 600 300
+
+          "
+          fill="none"
+          stroke="red"
+          stroke-width="8"
+        />
+        <circle
+          cx={300}
+          cy={300}
+          r={300}
+          stroke="lime"
+          stroke-width="2"
+          fill="transparent"
+        />
+      </svg>
+
+      {/*
+        <svg width="600px" height="600px" viewBox="-300 -300 600 600">
+        <path
+          d="
+            M -200 0
+            A 200 200 0 0 0 0 200
+
+            "
+          fill="none"
+          stroke="red"
+          stroke-width="8"
+        />
+        <circle
+          cx={0}
+          cy={0}
+          r={200}
+          stroke="lime"
+          stroke-width="2"
+          fill="transparent"
+        />
+      </svg>
+      */}
+    </div>
+  );
+};

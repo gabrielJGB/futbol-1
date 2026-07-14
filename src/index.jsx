@@ -1,82 +1,89 @@
-import './style.css';
-import { useLocation, LocationProvider, Router, Route, hydrate, prerender as ssr } from 'preact-iso';
-import { useEffect } from 'preact/hooks';
+import "./style.css";
+import {
+  useLocation,
+  LocationProvider,
+  Router,
+  Route,
+  hydrate,
+  prerender as ssr,
+} from "preact-iso";
+import { useEffect } from "preact/hooks";
 
-import { Home } from './pages/Home/index.jsx';
-import { NotFound } from './pages/_404.jsx';
-import { Game } from './pages/Game/index.jsx';
-import Team from './pages/Team/index.jsx';
-import League from './pages/League/index.jsx';
-import Player from './pages/Player/index.jsx';
-import ArticlePage from './pages/Article/index.jsx';
-import TablePage from './pages/Table/index.jsx';
-import { Menu,Header } from '@/components/common'
-import Testpage from '@/pages/TestPage';
-import { storage } from '@/utils/storage';
-import { darkMode } from '@/signals/common';
-import VideoPage from '@/pages/Video';
-
+import { Home } from "./pages/Home/index.jsx";
+import { NotFound } from "./pages/_404.jsx";
+import { Game } from "./pages/Game/index.jsx";
+import Team from "./pages/Team/index.jsx";
+import League from "./pages/League/index.jsx";
+import Player from "./pages/Player/index.jsx";
+import ArticlePage from "./pages/Article/index.jsx";
+import TablePage from "./pages/Table/index.jsx";
+import { Menu, Header } from "@/components/common";
+import Testpage from "@/pages/TestPage";
+import { storage } from "@/utils/storage";
+import { darkMode } from "@/signals/common";
+import VideoPage from "@/pages/Video";
+import Comp from "./pages/Circle";
 
 const RedirectToToday = () => {
-
-	const { route } = useLocation()
-	useEffect(() => { route("/hoy", true) }, [])
-	return null
-
-}
+  const { route } = useLocation();
+  useEffect(() => {
+    route("/hoy", true);
+  }, []);
+  return null;
+};
 
 /**
  relative border-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-black)]/5 max-lg:h-66 max-lg:border-t lg:border-l dark:[--pattern-fg:var(--color-white)]/10
- * 
+ *
 
  h-full  min-h-screen   col-start-2 row-span-5 row-start-1 bg-[#010e06]
  */
 
 export function App() {
-
-
-
-	useEffect(() => {
-    storage.get('darkMode').then((savedTheme) => {
+  useEffect(() => {
+    storage.get("darkMode").then((savedTheme) => {
       if (savedTheme !== null) {
-        darkMode.value = savedTheme
+        darkMode.value = savedTheme;
       }
-    })
+    });
+  }, []);
 
-  }, [])
-
-	return (
-		<LocationProvider  >
-			
-			<div class={" bg-[url('/bg.png')] h-full  min-h-screen col-start-2 row-span-5 row-start-1 bg-[#010e06]"}>
-				<Header />
-				<main class={` grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}>
-					<Menu />
-					<Router>
-
-						<Route path="/" component={RedirectToToday} />
-						<Route path="/:date?" component={Home} />
-						<Route path="/game/:id" component={Game} />
-						<Route path="/league/:id" component={League} />
-						<Route path="/team/:id" component={Team} />
-						<Route path="/player/:name" component={Player} />
-						<Route path="/article/:id" component={ArticlePage} />
-						<Route path="/video/:id" component={VideoPage} />
-						<Route path="/table/:id" component={TablePage} />
-						<Route path="/testpage/:id" component={Testpage} />
-						<Route default component={NotFound} />
-
-					</Router>
-				</main>
-			</div>
-		</LocationProvider>
-	);
+  return (
+    <LocationProvider>
+      <div
+        class={
+          " bg-[url('/bg.png')] h-full  min-h-screen col-start-2 row-span-5 row-start-1 bg-[#010e06]"
+        }
+      >
+        <Header />
+        <main
+          class={` grid md:grid-cols-[250px_1fr] grid-cols-1 justify-between`}
+        >
+          <Menu />
+          <Router>
+            <Route path="/" component={RedirectToToday} />
+            <Route path="/:date?" component={Home} />
+            <Route path="/game/:id" component={Game} />
+            <Route path="/league/:id" component={League} />
+            <Route path="/team/:id" component={Team} />
+            <Route path="/player/:name" component={Player} />
+            <Route path="/article/:id" component={ArticlePage} />
+            <Route path="/video/:id" component={VideoPage} />
+            <Route path="/table/:id" component={TablePage} />
+            <Route path="/testpage/:id" component={Testpage} />
+            <Route path="/circle/:id" component={Comp} />
+            <Route default component={NotFound} />
+          </Router>
+        </main>
+      </div>
+    </LocationProvider>
+  );
 }
 
-if (typeof window !== 'undefined') {
-	hydrate(<App />, document.getElementById('app'));
+if (typeof window !== "undefined") {
+  hydrate(<App />, document.getElementById("app"));
 }
 
 export async function prerender(data) {
-	return await ssr(<App {...data} />);
+  return await ssr(<App {...data} />);
 }

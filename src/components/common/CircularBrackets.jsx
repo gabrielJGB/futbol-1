@@ -68,7 +68,7 @@ export default function CircularBrackets({ m = 0.6, id }) {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <div
         className="relative top-0 left-0  bg-slate-800  scale-100 border-2 border-gray-700 rounded-full rotate-[90deg]  shadow-2xl flex items-center justify-center"
         style={{ width: `${CENTER_X * 2}px`, height: `${CENTER_Y * 2}px` }}

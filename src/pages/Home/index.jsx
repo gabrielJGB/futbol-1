@@ -43,8 +43,8 @@ export const Home = ({ date }) => {
   // 			<Loading />
   // 		</div>
   // 	)
-  if (isLoading) return <div>Cargando...</div>;
-  if (error) return <Error />;
+  // if (isLoading) return <div>Cargando...</div>;
+  // if (error) return <Error />;
 
   return (
     <div
@@ -68,7 +68,7 @@ export const Home = ({ date }) => {
       </div>
 
       <div
-        class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs " : "md:static -right-[100%] backdrop-blur-none "} bg-black/50 transition-all flex  flex-col items-center justify-center md:relative max-lg:landscape:fixed fixed h-[100vh]  w-full md:flex-none  md:bg-transparent  pt-18 md:pt-5 md:h-max  md:rounded-lg z-100 `}
+        class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs " : "md:static -right-[100%] backdrop-blur-none "}  transition-all flex  flex-col items-center justify-center md:relative max-lg:landscape:fixed fixed h-[100vh]  w-full md:flex-none  md:bg-transparent  pt-18 md:pt-5 md:h-max  md:rounded-lg z-100 `}
       >
         <Calendar date={date} />
         <div class={"my-5 flex flex-col items-center justify-center "}>
