@@ -6,6 +6,7 @@ import { GiWhistle } from 'react-icons/gi';
 import { MdStadium } from 'react-icons/md';
 import { Countdown } from '@/components/game/';
 import { useGame } from '@/hooks/useGame';
+import { getDisplayDateString, getURLDateString } from '@/utils/time';
 
 const GameHeader = ({ id }) => {
 
@@ -157,11 +158,14 @@ const LeagueAndRound = ({ game }) => {
 
 const GameInfo = ({ game }) => {
     return (
-        <div class={"col-span-5 flex flex-col  md:flex-row items-center justify-start md:justify-center gap-x-3 flex-wrap text-xs mx-2 mt-3 font-semibold text-gray-300"}>
-            <div class={"flex flex-row items-center gap-1"}>
+      <div class={"col-span-5 flex flex-col  md:flex-row items-center justify-start md:justify-center gap-x-3 md:gap-y-0 gap-y-1 flex-wrap text-xs mx-2 mt-3 font-semibold text-gray-300"}>
+        <Link href={`/${game.start_time.split(" ")[0].replaceAll("/","-")}`}>
+
+            <div class={"flex flex-row items-center gap-1 hover:underline"}>
                 <BiCalendar color='white' size={14} />
                 <div>{game.start_time.replaceAll("-", "/")}</div>
-            </div>
+        </div>
+      </Link>
             <span class={"md:block hidden"}>-</span>
 
             <a

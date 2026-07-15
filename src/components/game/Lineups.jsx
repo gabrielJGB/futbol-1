@@ -26,20 +26,7 @@ const Lineups = ({ id }) => {
     "statistics" in game &&
     game.statistics.find((stat) => stat.name === "Total Remates");
 
-  console.log(game.statistics);
-  const homePrec =
-    ((posession.percentages[0] +
-      shootsOnGoal.percentages[0] +
-      totalShoots.percentages[0]) /
-      3) *
-    100;
 
-  const awayPerc =
-    ((posession.percentages[1] +
-      shootsOnGoal.percentages[1] +
-      totalShoots.percentages[1]) /
-      3) *
-    100;
 
   return (
     <Fade in={true} timeout={300}>
@@ -55,12 +42,12 @@ const Lineups = ({ id }) => {
             <Bar colors={game.teams.map((x) => x.colors)} stat={posession} />
           )}
 
-          {shootsOnGoal && (
-            <Bar colors={game.teams.map((x) => x.colors)} stat={shootsOnGoal} />
-          )}
 
           {totalShoots && (
             <Bar colors={game.teams.map((x) => x.colors)} stat={totalShoots} />
+          )}
+          {shootsOnGoal && (
+            <Bar colors={game.teams.map((x) => x.colors)} stat={shootsOnGoal} />
           )}
         </div>
 

@@ -139,7 +139,7 @@ const GameStatus = ({ startTime, statusColor, statusText, TVLogoURL, TVName, isC
 
 const Team = ({ team, showCountryFlags }) => {
 
-    
+
 
     return (
 
@@ -160,7 +160,7 @@ const Team = ({ team, showCountryFlags }) => {
                     }
                 </div>
 
-                <div className={`flex flex-row items-center  text-center  text-xs font-semibold ${darkMode.value?"text-gray-200":"text-black"}`}>
+                <div className={`flex flex-row items-center  text-center  text-xs font-semibold ${darkMode.value?"text-gray-200":"text-black "}`}>
 
                     {team.short_name}
 
@@ -207,7 +207,7 @@ const Scorers = ({ teamScorers }) => {
                             <span className={`${darkMode.value ? "text-red-300" : "text-red-800"} text-xs`}>{goal.time_to_display}</span>
                             <Link
                                 // @ts-ignore
-                                href={`/player/${goal.player_name}`} class={"hover:underline active:underline"}>
+                                href={`/player/${goal.player_name}`} class={"hover:underline font-mono active:underline"}>
                                 <span>{goal.player_sname} {goal.goal_type != undefined && `(${goal.goal_type})`}</span>
                             </Link>
                         </span>

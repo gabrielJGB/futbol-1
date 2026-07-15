@@ -68,35 +68,22 @@ export const Home = ({ date }) => {
       </div>
 
       <div
-        class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs " : "md:static -right-[100%] backdrop-blur-none "}  transition-all flex  flex-col items-center justify-center md:relative max-lg:landscape:fixed fixed h-[100vh]  w-full md:flex-none  md:bg-transparent  pt-18 md:pt-5 md:h-max  md:rounded-lg z-100 `}
+        class={`${showCalendar.value ? "md:static -right-[0%] backdrop-blur-xs md:bg-transparent bg-black/30" : "md:static -right-[100%] backdrop-blur-none "}  transition-all flex  flex-col items-center justify-center md:relative max-lg:landscape:fixed fixed h-[100vh]  w-full md:flex-none  md:pt-5 md:h-max  md:rounded-lg z-100 `}
       >
-        <Calendar date={date} />
-        <div class={"my-5 flex flex-col items-center justify-center "}>
-          <Link
-            href="/league/fjda"
-            class={
-              "w-full  my-1 font-semibold  text-primary text-center hover:underline"
-            }
-          >
-            Mundial FIFA 2026
-          </Link>
-          <CircularBrackets m={0.42} id={"fjda"} />
-        </div>
-
-        {false && date != "hoy" && (
-          <div
-            class={
-              "bg-transparent text-shadow-xs h-full text-shadow-black cursor-pointer text-sm text-center w- hover:underline"
-            }
-            onClick={() => {
-              showCalendar.value = false;
-              selectedDate.value = new Date();
-              route("/hoy");
-            }}
-          >
-            Volver a hoy
+        <div class={"overflow-y-auto bg-transparent py-10"}>
+          <Calendar date={date} />
+          <div class={"mt-5 flex flex-col items-center justify-center "}>
+            <Link
+              href="/league/fjda"
+              class={
+                "w-full  my-1 font-semibold  text-primary text-center hover:underline"
+              }
+            >
+              Mundial FIFA 2026
+            </Link>
+            <CircularBrackets m={0.42} id={"fjda"} />
           </div>
-        )}
+        </div>
 
         <HomeNews date={date} />
       </div>

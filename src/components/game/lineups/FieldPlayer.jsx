@@ -20,6 +20,11 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
     colors.text_color = "#ffc13b";
   }
 
+  if (teamId === "cdhi") {
+    colors.color = "#63dbff";
+    colors.text_color = "#000000"
+}
+
   const playerAssists = assists
     ? assists.filter((p) => p === player.name).length
     : false;
