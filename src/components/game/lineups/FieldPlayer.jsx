@@ -32,11 +32,12 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
         href={`/player/${name}`}
         class={"hover:scale-105 active:scale-105 "}
       >
-        <div class={"flex flex-col justify-center items-center"}>
+        <div class={`flex flex-col justify-center items-center`}>
           <PlayerJersey
             isStarter={true}
             jersey_num={jersey_num}
             events={events}
+            substituted={"substitution" in player}
             playerAssists={playerAssists}
             colors={colors}
             country_id={country_id}
@@ -45,6 +46,7 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
 
           <PlayerName
             isStarter={true}
+            substituted={"substitution" in player}
             playerShortName={player_short_name}
             events={player.events ?? false}
             isCaptain={player.is_captain}
@@ -141,12 +143,15 @@ const PlayerJersey = ({
   country_id,
   teamId,
   playerAssists,
+  substituted,
 }) => {
+  const CHEVRON_SIZE = 17;
+
   return (
     <div class={`flex flex-row items-center`}>
       {isStarter && events?.substitution?.has_substitution && (
         <ChevronLeft
-          size={16}
+          size={CHEVRON_SIZE}
           color={"red"}
           class={"min-w-min drop-shadow-xs drop-shadow-black "}
         />
@@ -154,7 +159,7 @@ const PlayerJersey = ({
 
       {!isStarter && (
         <ChevronRight
-          size={16}
+          size={CHEVRON_SIZE}
           color={"lime"}
           class={"min-w-min drop-shadow-xs drop-shadow-black "}
         />
@@ -183,6 +188,8 @@ const PlayerJersey = ({
               color: showFlags.value ? "white" : (colors.text_color ?? "white"),
             }}
             class={`
+
+                            ${substituted || (events && "cards" in events && events.cards.red) ? "saturate-25 brightness-90" : ""}
                             ${showFlags.value ? "text-shadow-sm " : teamId === "igg" ? "text-shadow-md" : "text-shadow-xs "}
                             ${isStarter ? "size-[36px] rounded-lg text-[18px]" : "text-[11px] size-[19px] rounded-md"}
                             ${showFlags.value ? "size-[19px] drop-shadow-xs bg-no-repeat bg-contain" : " border-gray-900 border-[2px] shadow-xs "}
@@ -229,18 +236,20 @@ const PlayerName = ({
   isCaptain,
   isStarter,
   colors,
+  substituted,
 }) => {
   return (
     <div
-      style={{ color: getPlayerNameColor(events) }}
-      class={` text-shadow-sm text-shadow-zinc-800 text-white text-center ${isStarter ? "text-[14px] max-w-[77px]" : "text-[11px] max-w-[70px]"} mx-auto font-bold  self-end`}
+      style={{ color: getPlayerNameColor(substituted, isStarter, events) }}
+      class={` text-shadow-sm text-shadow-zinc-800 text-white text-center  ${isStarter ? "text-[14px] max-w-[77px]" : "text-[11px] max-w-[70px]"} mx-auto font-semibold  self-end`}
     >
       {playerShortName} {isCaptain ? "(C)" : ""}
     </div>
   );
 };
 
-const getPlayerNameColor = (events) => {
+const getPlayerNameColor = (substituted, isStarter, events) => {
+  if (substituted && isStarter) return "#e1e1e1";
   if (!events) return "#ffffff";
   else if (events.cards.red) return "#ff2020";
   else if (events.cards.yellow) return "yellow";
