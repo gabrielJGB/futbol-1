@@ -5,7 +5,7 @@ import { invertLines, } from "@/signals/game"
 const Roster = ({team }) => {
 
 
-    
+
 
     return (
 
@@ -55,7 +55,7 @@ const Roster = ({team }) => {
                                         <RosterPlayer player={player} isBench={true} missingReason={player.missing_details?.reason} />
                                     ))
                                     :
-                                    <div class={"text-xs text-center bg-[#015A1C] py-2"}>
+                                    <div class={`text-xs font-mono text-center ${darkMode.value?"bg-[#05412a] ":" bg-[#015A1C]"} py-2`}>
                                         Sin bajas
                                     </div>
                             }

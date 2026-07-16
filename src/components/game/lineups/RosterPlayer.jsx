@@ -151,14 +151,15 @@ const RosterPlayer = ({ player, isBench, missingReason }) => {
 
                     <img src={`https://api.promiedos.com.ar/images/country/${player.country_id}/1`} alt="Logo" className="h-5 w-5 mx-1" />
 
-                    <div class={"text-shadow-xs text-white text-shadow-black font-semibold "}>
-                        {player.name}
+                    <div class={"text-shadow-xs text-white text-shadow-black font-semibold font-mono"}>
+
+              {player.name.replace(player.player_short_name,player.player_short_name.toUpperCase())}
                     </div>
 
 
                     {
                         missingReason &&
-                        <div class={"pl-2 text-sm text-white text-shadow-xs text-shadow-gray-900"}>
+                        <div class={"pl-2 text-sm text-white text-center text-shadow-xs text-shadow-gray-900"}>
 
                             {getMissingImg(missingReason)}
 

@@ -20,10 +20,10 @@ const FieldPlayer = ({ player, colors, isHome, gameId, teamId, assists }) => {
     colors.text_color = "#ffc13b";
   }
 
-  if (teamId === "cdhi") {
-    colors.color = "#63dbff";
-    colors.text_color = "#000000"
-}
+  if (teamId === "cdhi" ) {
+    colors.color = "#75aadb";
+    colors.text_color = "#000000";
+  }
 
   const playerAssists = assists
     ? assists.filter((p) => p === player.name).length
@@ -153,7 +153,12 @@ const PlayerJersey = ({
   const CHEVRON_SIZE = 17;
 
   return (
-    <div class={`flex flex-row items-center`}>
+    <div
+      class={`
+      flex flex-row items-center
+      ${substituted || (events && "cards" in events && events.cards.red) ? " brightness-60" : ""}
+      `}
+    >
       {isStarter && events?.substitution?.has_substitution && (
         <ChevronLeft
           size={CHEVRON_SIZE}
@@ -194,12 +199,11 @@ const PlayerJersey = ({
             }}
             class={`
 
-                            ${substituted || (events && "cards" in events && events.cards.red) ? "saturate-25 brightness-90" : ""}
-                            ${showFlags.value ? "text-shadow-sm " : teamId === "igg" ? "text-shadow-md" : "text-shadow-xs "}
-                            ${isStarter ? "size-[36px] rounded-lg text-[18px]" : "text-[11px] size-[19px] rounded-md"}
-                            ${showFlags.value ? "size-[19px] drop-shadow-xs bg-no-repeat bg-contain" : " border-gray-900 border-[2px] shadow-xs "}
-                            flex flex-col drop-shadow-black shadow-black items-center justify-center font-bold  text-shadow-black
-                        `}
+                    ${showFlags.value ? "text-shadow-sm " : teamId === "igg" ? "text-shadow-md" : "text-shadow-xs "}
+                    ${isStarter ? "size-[36px] rounded-lg text-[19px]" : "text-[11px] size-[19px] rounded-md"}
+                    ${showFlags.value ? "size-[19px] drop-shadow-xs bg-no-repeat bg-contain" : " border-gray-900 border-[2px] shadow-xs "}
+                    flex flex-col drop-shadow-black shadow-black items-center justify-center font-bold  text-shadow-black
+                `}
           >
             {teamId === "igg" && !showFlags.value && (
               <div class={"absolute"}>
@@ -219,7 +223,7 @@ const PlayerJersey = ({
             )}
             <div
               style={{ color: `${teamId === "igg" ? "white" : "unset"}` }}
-              class={"z-0"}
+              class={"z-0 font-mono"}
             >
               {showNumbers.value ? jersey_num : ""}
             </div>
@@ -246,9 +250,11 @@ const PlayerName = ({
   return (
     <div
       style={{ color: getPlayerNameColor(substituted, isStarter, events) }}
-      class={` text-shadow-sm text-shadow-zinc-800 text-white text-center  ${isStarter ? "text-[14px] max-w-[77px]" : "text-[11px] max-w-[70px]"} mx-auto font-semibold  self-end`}
+      class={`
+${substituted || (events && "cards" in events && events.cards.red) ? " brightness-80" : ""}
+        text-shadow-sm text-shadow-zinc-900 text-white text-center  ${isStarter ? "text-[14px] max-w-[77px]" : "text-[11px] max-w-[70px]"} mx-auto font-semibold  self-end font-mono`}
     >
-      {playerShortName} {isCaptain ? "(C)" : ""}
+      {playerShortName}{isCaptain ? "(C)" : ""}
     </div>
   );
 };

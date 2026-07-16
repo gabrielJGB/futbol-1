@@ -289,7 +289,7 @@ const Game = ({ game }) => {
                 color:
                   athleteStats[4].bgColor === "#FFC107" ? "black" : "white",
               }}
-              class={"px-2 py-0 text-xs w-min rounded  font-semibold"}
+              class={"px-2 py-0 text-xs w-min rounded text-shadow-xs text-shadow-black font-semibold"}
             >
               {athleteStats[4].value}
             </div>
